@@ -1,0 +1,27 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "rating",
+    "domain": "beckn.one:commerce:hospitality:1.0",
+    "timestamp": "2025-12-15T14:00:00+07:00",
+    "message_id": "msg-rating-hotel-001",
+    "transaction_id": "txn-hotel-bangkok-001",
+    "bap_id": "travel-booking-app.example.com",
+    "bap_uri": "https://travel-booking-app.example.com",
+    "bpp_id": "hotel-aggregator-platform.com",
+    "bpp_uri": "https://hotel-aggregator-platform.com",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "id": "order-hotel-bangkok-001",
+    "value": 5,
+    "best": 5,
+    "worst": 1,
+    "category": "order",
+    "feedback": {
+      "comments": "Amazing experience, very clean and friendly staff! The room was spacious and comfortable. Breakfast was excellent and the pool area was beautiful. Highly recommended!",
+      "tags": ["clean", "friendly-staff", "excellent-breakfast", "comfortable-room", "great-location"]
+    }
+  }
+}
+

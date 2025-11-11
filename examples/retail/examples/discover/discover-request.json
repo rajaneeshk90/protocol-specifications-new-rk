@@ -17,7 +17,7 @@
     "text_search": "Hawaiian macadamia nuts",
     "filters": {
       "type": "jsonpath",
-      "expression": "$[?(@.grocery.category == 'packaged_food' && @.grocery.origin =~ 'Hawaii')]"
+      "expression": "$[?(@.beckn:itemAttributes.grocery:category == 'packaged_food' && @.beckn:itemAttributes.grocery:origin =~ /Hawaii/)]"
     },
     "spatial": [
       {

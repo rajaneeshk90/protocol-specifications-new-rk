@@ -1,0 +1,36 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "update",
+    "domain": "beckn.one:commerce:aviation:1.0",
+    "timestamp": "2025-12-15T08:45:00-08:00",
+    "message_id": "msg-update-flight-001",
+    "transaction_id": "txn-flight-sfo-jfk-001",
+    "bap_id": "travel-booking-app.example.com",
+    "bap_uri": "https://travel-booking-app.example.com",
+    "bpp_id": "delta-airlines-platform.com",
+    "bpp_uri": "https://delta-airlines-platform.com",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "order-dl145-20251201-001",
+      "beckn:orderStatus": "UPDATE_REQUESTED",
+      "beckn:orderAttributes": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FlightBooking/v1/context.jsonld",
+        "@type": "beckn:FlightBooking",
+        "passengers": [
+          {
+            "passengerId": "PAX001",
+            "seatPreference": "WINDOW",
+            "assignedSeat": "14B",
+            "updateReason": "Passenger requested seat change from 12A to 14B"
+          }
+        ]
+      }
+    }
+  }
+}
+

@@ -1,0 +1,34 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "discover",
+    "domain": "beckn.one:mobility:ride-hailing:1.0",
+    "timestamp": "2025-12-10T09:50:00+07:00",
+    "message_id": "msg-discover-cab-001",
+    "transaction_id": "txn-cab-bangkok-001",
+    "bap_id": "travel-booking-app.example.com",
+    "bap_uri": "https://travel-booking-app.example.com",
+    "ttl": "PT30S",
+    "schema_context": [
+      "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/RideService/v1/context.jsonld"
+    ]
+  },
+  "message": {
+    "filters": {
+      "type": "jsonpath",
+      "expression": "$[?(@.beckn:availableAt[0].geo.coordinates[0] == 100.7501 && @.beckn:availableAt[0].geo.coordinates[1] == 13.6900 && @.beckn:availableAt[1].geo.coordinates[0] == 100.5698 && @.beckn:availableAt[1].geo.coordinates[1] == 13.7563)]"
+    },
+    "spatial": [
+      {
+        "op": "s_dwithin",
+        "targets": "$['beckn:availableAt'][0]['geo']",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [100.7501, 13.6900]
+        },
+        "distanceMeters": 5000
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,52 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "update",
+    "domain": "beckn.one:mobility:ride-hailing:1.0",
+    "timestamp": "2025-12-10T10:25:00+07:00",
+    "message_id": "msg-update-cab-001",
+    "transaction_id": "txn-cab-bangkok-001",
+    "bap_id": "travel-booking-app.example.com",
+    "bap_uri": "https://travel-booking-app.example.com",
+    "bpp_id": "bangkok-cab-service.com",
+    "bpp_uri": "https://bangkok-cab-service.com",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "order-cab-bangkok-001",
+      "beckn:orderStatus": "UPDATE_REQUESTED",
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "fulfillment-ride-sedan",
+        "beckn:end": {
+          "@type": "beckn:FulfillmentPoint",
+          "beckn:location": {
+            "@type": "beckn:Location",
+            "beckn:id": "dropoff-hotel-updated",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Riverside Palace Hotel"
+            },
+            "beckn:address": {
+              "@type": "schema:PostalAddress",
+              "schema:streetAddress": "456 Charoen Krung Road",
+              "schema:addressLocality": "Bang Rak",
+              "schema:addressRegion": "Bangkok",
+              "schema:postalCode": "10500",
+              "schema:addressCountry": "TH"
+            },
+            "beckn:geo": {
+              "type": "Point",
+              "coordinates": [100.5018, 13.7248]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

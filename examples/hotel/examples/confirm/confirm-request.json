@@ -1,0 +1,100 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "confirm",
+    "domain": "beckn.one:commerce:hospitality:1.0",
+    "timestamp": "2025-12-01T10:15:00+07:00",
+    "message_id": "msg-confirm-hotel-001",
+    "transaction_id": "txn-hotel-bangkok-001",
+    "bap_id": "travel-booking-app.example.com",
+    "bap_uri": "https://travel-booking-app.example.com",
+    "bpp_id": "hotel-aggregator-platform.com",
+    "bpp_uri": "https://hotel-aggregator-platform.com",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "order-hotel-bangkok-001",
+      "beckn:orderStatus": "CONFIRMED",
+      "beckn:seller": "provider-grand-siam-hotel",
+      "beckn:buyer": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Buyer",
+        "schema:name": "Sarah Johnson",
+        "schema:email": "sarah.johnson@example.com",
+        "schema:telephone": "+1 555 123 4567"
+      },
+      "beckn:orderItems": [
+        {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:OrderItem",
+          "beckn:lineId": "line-001",
+          "beckn:orderedItem": "item-hotel-grand-siam-deluxe",
+          "beckn:acceptedOffer": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-grand-siam-deluxe-base",
+            "beckn:addOnItems": [
+              {
+                "@type": "schema:Offer",
+                "@id": "addon-item-late-checkout"
+              },
+              {
+                "@type": "schema:Offer",
+                "@id": "addon-item-airport-transfer"
+              }
+            ]
+          },
+          "beckn:quantity": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 5,
+            "schema:unitCode": "NIGHTS"
+          }
+        }
+      ],
+      "beckn:payment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Payment",
+        "beckn:type": "PRE_FULFILLMENT",
+        "beckn:status": "PAID",
+        "beckn:amount": {
+          "@type": "schema:PriceSpecification",
+          "schema:priceCurrency": "USD",
+          "schema:price": 752.25
+        },
+        "beckn:params": {
+          "currency": "USD",
+          "amount": "752.25",
+          "transaction_id": "TXN-PAY-HOTEL-20251201-001"
+        }
+      },
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "fulfillment-hotel-stay",
+        "beckn:type": "hotel_stay",
+        "beckn:time": {
+          "@type": "beckn:TimePeriod",
+          "schema:startDate": "2025-12-10T14:00:00+07:00",
+          "schema:endDate": "2025-12-15T12:00:00+07:00"
+        }
+      },
+      "beckn:orderAttributes": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/HotelBooking/v1/context.jsonld",
+        "@type": "beckn:HotelBooking",
+        "guests": [
+          {
+            "guestId": "GUEST001",
+            "name": "Sarah Johnson",
+            "email": "sarah.johnson@example.com",
+            "phone": "+1 555 123 4567",
+            "specialRequests": "Late check-in expected"
+          }
+        ]
+      }
+    }
+  }
+}
+

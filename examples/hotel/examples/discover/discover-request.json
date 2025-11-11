@@ -1,0 +1,23 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "discover",
+    "domain": "beckn.one:commerce:hospitality:1.0",
+    "timestamp": "2025-12-01T10:00:00+07:00",
+    "message_id": "msg-discover-hotel-001",
+    "transaction_id": "txn-hotel-bangkok-001",
+    "bap_id": "travel-booking-app.example.com",
+    "bap_uri": "https://travel-booking-app.example.com",
+    "ttl": "PT30S",
+    "schema_context": [
+      "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/HotelService/v1/context.jsonld"
+    ]
+  },
+  "message": {
+    "filters": {
+      "type": "jsonpath",
+      "expression": "$[?(@.beckn:availableAt[*].beckn:address.schema:addressRegion == 'Bangkok' && @.beckn:price.schema:price >= 80 && @.beckn:price.schema:price <= 150 && @.beckn:itemAttributes.hotel:amenities.wifi == true && @.beckn:itemAttributes.hotel:amenities.breakfast == true && @.beckn:itemAttributes.hotel:amenities.pool == true)]"
+    }
+  }
+}
+

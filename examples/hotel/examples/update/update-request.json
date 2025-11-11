@@ -1,0 +1,35 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "update",
+    "domain": "beckn.one:commerce:hospitality:1.0",
+    "timestamp": "2025-12-11T10:00:00+07:00",
+    "message_id": "msg-update-hotel-001",
+    "transaction_id": "txn-hotel-bangkok-001",
+    "bap_id": "travel-booking-app.example.com",
+    "bap_uri": "https://travel-booking-app.example.com",
+    "bpp_id": "hotel-aggregator-platform.com",
+    "bpp_uri": "https://hotel-aggregator-platform.com",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "order-hotel-bangkok-001",
+      "beckn:orderStatus": "UPDATE_REQUESTED",
+      "beckn:orderAttributes": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/HotelBooking/v1/context.jsonld",
+        "@type": "beckn:HotelBooking",
+        "guests": [
+          {
+            "guestId": "GUEST001",
+            "specialRequests": "Please arrange room service for dinner at 7 PM",
+            "updateReason": "Guest requested additional services during stay"
+          }
+        ]
+      }
+    }
+  }
+}
+

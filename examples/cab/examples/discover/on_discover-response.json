@@ -1,0 +1,438 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_discover",
+    "domain": "beckn.one:mobility:ride-hailing:1.0",
+    "timestamp": "2025-12-10T09:50:02+07:00",
+    "message_id": "msg-on-discover-cab-001",
+    "transaction_id": "txn-cab-bangkok-001",
+    "bpp_id": "bangkok-cab-service.com",
+    "bpp_uri": "https://bangkok-cab-service.com",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "catalogs": [
+      {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Catalog",
+        "beckn:id": "catalog-bangkok-cabs-001",
+        "beckn:descriptor": {
+          "@type": "beckn:Descriptor",
+          "schema:name": "Bangkok Cab Services",
+          "beckn:shortDesc": "Available cabs from Suvarnabhumi Airport to Grand Siam Hotel"
+        },
+        "beckn:validity": {
+          "@type": "beckn:TimePeriod",
+          "schema:startDate": "2025-12-10T09:50:00+07:00",
+          "schema:endDate": "2025-12-10T11:00:00+07:00"
+        },
+        "beckn:provider": {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:Provider",
+          "beckn:id": "provider-bangkok-cab-service",
+          "beckn:descriptor": {
+            "@type": "beckn:Descriptor",
+            "schema:name": "Bangkok Cab Service",
+            "beckn:shortDesc": "Reliable cab service in Bangkok"
+          },
+          "beckn:rateable": true,
+          "beckn:rating": {
+            "@type": "beckn:Rating",
+            "beckn:ratingValue": 4.6,
+            "beckn:ratingCount": 42460
+          }
+        },
+        "beckn:items": [
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Item",
+            "beckn:id": "item-cab-economy",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Economy Cab",
+              "beckn:shortDesc": "Affordable ride with standard comfort",
+              "beckn:longDesc": "Economy sedan perfect for solo travelers or couples. Air-conditioned with professional drivers."
+            },
+            "beckn:category": {
+              "@type": "schema:CategoryCode",
+              "schema:codeValue": "cab_ride",
+              "schema:name": "Cab Ride"
+            },
+            "beckn:provider": {
+              "beckn:id": "provider-bangkok-cab-service",
+              "beckn:descriptor": {
+                "@type": "beckn:Descriptor",
+                "schema:name": "Bangkok Cab Service",
+                "beckn:shortDesc": "Reliable cab service in Bangkok"
+              }
+            },
+            "beckn:itemAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/RideService/v1/context.jsonld",
+              "@type": "beckn:RideService",
+              "ride:vehicleType": "Economy",
+              "ride:vehicleCategory": "Sedan",
+              "ride:maxPassengers": 3,
+              "ride:maxLuggage": 2,
+              "ride:estimatedDistance": 25,
+              "ride:distanceUnit": "KM",
+              "ride:estimatedDuration": "PT40M",
+              "ride:eta": "PT5M",
+              "ride:amenities": {
+                "airConditioning": true,
+                "wifi": false,
+                "charger": false,
+                "bottledWater": false
+              },
+              "ride:cancellationPolicy": {
+                "freeCancellationWindow": "PT5M",
+                "cancellationFee": 2.00
+              }
+            },
+            "beckn:availableAt": [
+              {
+                "geo": {
+                  "type": "Point",
+                  "coordinates": [100.7501, 13.6900]
+                },
+                "address": {
+                  "streetAddress": "999 Moo 1, Nong Prue",
+                  "addressLocality": "Bang Phli",
+                  "addressRegion": "Samut Prakan",
+                  "postalCode": "10540",
+                  "addressCountry": "TH"
+                }
+              },
+              {
+                "geo": {
+                  "type": "Point",
+                  "coordinates": [100.5698, 13.7563]
+                },
+                "address": {
+                  "streetAddress": "123 Sukhumvit Road",
+                  "addressLocality": "Khlong Toei",
+                  "addressRegion": "Bangkok",
+                  "postalCode": "10110",
+                  "addressCountry": "TH"
+                }
+              }
+            ]
+          },
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Item",
+            "beckn:id": "item-cab-sedan",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Sedan Cab",
+              "beckn:shortDesc": "Comfortable sedan with extra amenities",
+              "beckn:longDesc": "Premium sedan with comfortable seating, WiFi, phone chargers, and complimentary bottled water."
+            },
+            "beckn:category": {
+              "@type": "schema:CategoryCode",
+              "schema:codeValue": "cab_ride",
+              "schema:name": "Cab Ride"
+            },
+            "beckn:provider": {
+              "beckn:id": "provider-bangkok-cab-service",
+              "beckn:descriptor": {
+                "@type": "beckn:Descriptor",
+                "schema:name": "Bangkok Cab Service",
+                "beckn:shortDesc": "Reliable cab service in Bangkok"
+              }
+            },
+            "beckn:itemAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/RideService/v1/context.jsonld",
+              "@type": "beckn:RideService",
+              "ride:vehicleType": "Sedan",
+              "ride:vehicleCategory": "Sedan",
+              "ride:maxPassengers": 4,
+              "ride:maxLuggage": 3,
+              "ride:estimatedDistance": 25,
+              "ride:distanceUnit": "KM",
+              "ride:estimatedDuration": "PT40M",
+              "ride:eta": "PT5M",
+              "ride:amenities": {
+                "airConditioning": true,
+                "wifi": true,
+                "charger": true,
+                "bottledWater": true
+              },
+              "ride:cancellationPolicy": {
+                "freeCancellationWindow": "PT5M",
+                "cancellationFee": 3.00
+              }
+            },
+            "beckn:availableAt": [
+              {
+                "geo": {
+                  "type": "Point",
+                  "coordinates": [100.7501, 13.6900]
+                },
+                "address": {
+                  "streetAddress": "999 Moo 1, Nong Prue",
+                  "addressLocality": "Bang Phli",
+                  "addressRegion": "Samut Prakan",
+                  "postalCode": "10540",
+                  "addressCountry": "TH"
+                }
+              },
+              {
+                "geo": {
+                  "type": "Point",
+                  "coordinates": [100.5698, 13.7563]
+                },
+                "address": {
+                  "streetAddress": "123 Sukhumvit Road",
+                  "addressLocality": "Khlong Toei",
+                  "addressRegion": "Bangkok",
+                  "postalCode": "10110",
+                  "addressCountry": "TH"
+                }
+              }
+            ]
+          },
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Item",
+            "beckn:id": "item-cab-suv",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "SUV Cab",
+              "beckn:shortDesc": "Spacious SUV for families or groups",
+              "beckn:longDesc": "Large SUV with plenty of space for passengers and luggage. Perfect for families or groups traveling together."
+            },
+            "beckn:category": {
+              "@type": "schema:CategoryCode",
+              "schema:codeValue": "cab_ride",
+              "schema:name": "Cab Ride"
+            },
+            "beckn:provider": {
+              "beckn:id": "provider-bangkok-cab-service",
+              "beckn:descriptor": {
+                "@type": "beckn:Descriptor",
+                "schema:name": "Bangkok Cab Service",
+                "beckn:shortDesc": "Reliable cab service in Bangkok"
+              }
+            },
+            "beckn:itemAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/RideService/v1/context.jsonld",
+              "@type": "beckn:RideService",
+              "ride:vehicleType": "SUV",
+              "ride:vehicleCategory": "SUV",
+              "ride:maxPassengers": 6,
+              "ride:maxLuggage": 5,
+              "ride:estimatedDistance": 25,
+              "ride:distanceUnit": "KM",
+              "ride:estimatedDuration": "PT40M",
+              "ride:eta": "PT5M",
+              "ride:amenities": {
+                "airConditioning": true,
+                "wifi": true,
+                "charger": true,
+                "bottledWater": true
+              },
+              "ride:cancellationPolicy": {
+                "freeCancellationWindow": "PT5M",
+                "cancellationFee": 4.00
+              }
+            },
+            "beckn:availableAt": [
+              {
+                "geo": {
+                  "type": "Point",
+                  "coordinates": [100.7501, 13.6900]
+                },
+                "address": {
+                  "streetAddress": "999 Moo 1, Nong Prue",
+                  "addressLocality": "Bang Phli",
+                  "addressRegion": "Samut Prakan",
+                  "postalCode": "10540",
+                  "addressCountry": "TH"
+                }
+              },
+              {
+                "geo": {
+                  "type": "Point",
+                  "coordinates": [100.5698, 13.7563]
+                },
+                "address": {
+                  "streetAddress": "123 Sukhumvit Road",
+                  "addressLocality": "Khlong Toei",
+                  "addressRegion": "Bangkok",
+                  "postalCode": "10110",
+                  "addressCountry": "TH"
+                }
+              }
+            ]
+          },
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Item",
+            "beckn:id": "item-cab-luxury",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Luxury Cab",
+              "beckn:shortDesc": "Premium luxury experience",
+              "beckn:longDesc": "High-end luxury sedan with leather seats, premium amenities, and professional chauffeur service."
+            },
+            "beckn:category": {
+              "@type": "schema:CategoryCode",
+              "schema:codeValue": "cab_ride",
+              "schema:name": "Cab Ride"
+            },
+            "beckn:provider": {
+              "beckn:id": "provider-bangkok-cab-service",
+              "beckn:descriptor": {
+                "@type": "beckn:Descriptor",
+                "schema:name": "Bangkok Cab Service",
+                "beckn:shortDesc": "Reliable cab service in Bangkok"
+              }
+            },
+            "beckn:itemAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/RideService/v1/context.jsonld",
+              "@type": "beckn:RideService",
+              "ride:vehicleType": "Luxury",
+              "ride:vehicleCategory": "Luxury Sedan",
+              "ride:maxPassengers": 3,
+              "ride:maxLuggage": 3,
+              "ride:estimatedDistance": 25,
+              "ride:distanceUnit": "KM",
+              "ride:estimatedDuration": "PT35M",
+              "ride:eta": "PT5M",
+              "ride:amenities": {
+                "airConditioning": true,
+                "wifi": true,
+                "charger": true,
+                "bottledWater": true,
+                "newspapers": true,
+                "refreshments": true
+              },
+              "ride:cancellationPolicy": {
+                "freeCancellationWindow": "PT10M",
+                "cancellationFee": 8.00
+              }
+            },
+            "beckn:availableAt": [
+              {
+                "geo": {
+                  "type": "Point",
+                  "coordinates": [100.7501, 13.6900]
+                },
+                "address": {
+                  "streetAddress": "999 Moo 1, Nong Prue",
+                  "addressLocality": "Bang Phli",
+                  "addressRegion": "Samut Prakan",
+                  "postalCode": "10540",
+                  "addressCountry": "TH"
+                }
+              },
+              {
+                "geo": {
+                  "type": "Point",
+                  "coordinates": [100.5698, 13.7563]
+                },
+                "address": {
+                  "streetAddress": "123 Sukhumvit Road",
+                  "addressLocality": "Khlong Toei",
+                  "addressRegion": "Bangkok",
+                  "postalCode": "10110",
+                  "addressCountry": "TH"
+                }
+              }
+            ]
+          }
+        ],
+        "beckn:offers": [
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-cab-economy",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Economy Cab - Airport to Hotel"
+            },
+            "beckn:items": [
+              "item-cab-economy"
+            ],
+            "beckn:price": {
+              "currency": "USD",
+              "value": 12.00
+            },
+            "beckn:validity": {
+              "@type": "beckn:TimePeriod",
+              "schema:startDate": "2025-12-10T09:50:00+07:00",
+              "schema:endDate": "2025-12-10T11:00:00+07:00"
+            },
+            "beckn:provider": "provider-bangkok-cab-service"
+          },
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-cab-sedan",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Sedan Cab - Airport to Hotel"
+            },
+            "beckn:items": [
+              "item-cab-sedan"
+            ],
+            "beckn:price": {
+              "currency": "USD",
+              "value": 18.00
+            },
+            "beckn:validity": {
+              "@type": "beckn:TimePeriod",
+              "schema:startDate": "2025-12-10T09:50:00+07:00",
+              "schema:endDate": "2025-12-10T11:00:00+07:00"
+            },
+            "beckn:provider": "provider-bangkok-cab-service"
+          },
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-cab-suv",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "SUV Cab - Airport to Hotel"
+            },
+            "beckn:items": [
+              "item-cab-suv"
+            ],
+            "beckn:price": {
+              "currency": "USD",
+              "value": 25.00
+            },
+            "beckn:validity": {
+              "@type": "beckn:TimePeriod",
+              "schema:startDate": "2025-12-10T09:50:00+07:00",
+              "schema:endDate": "2025-12-10T11:00:00+07:00"
+            },
+            "beckn:provider": "provider-bangkok-cab-service"
+          },
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-cab-luxury",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Luxury Cab - Airport to Hotel"
+            },
+            "beckn:items": [
+              "item-cab-luxury"
+            ],
+            "beckn:price": {
+              "currency": "USD",
+              "value": 40.00
+            },
+            "beckn:validity": {
+              "@type": "beckn:TimePeriod",
+              "schema:startDate": "2025-12-10T09:50:00+07:00",
+              "schema:endDate": "2025-12-10T11:00:00+07:00"
+            },
+            "beckn:provider": "provider-bangkok-cab-service"
+          }
+        ]
+      }
+    ]
+  }
+}

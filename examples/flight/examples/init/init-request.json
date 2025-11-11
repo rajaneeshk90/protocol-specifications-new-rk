@@ -1,0 +1,85 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "init",
+    "domain": "beckn.one:commerce:aviation:1.0",
+    "timestamp": "2025-12-01T08:10:00-08:00",
+    "message_id": "msg-init-flight-001",
+    "transaction_id": "txn-flight-sfo-jfk-001",
+    "bap_id": "travel-booking-app.example.com",
+    "bap_uri": "https://travel-booking-app.example.com",
+    "bpp_id": "delta-airlines-platform.com",
+    "bpp_uri": "https://delta-airlines-platform.com",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:orderStatus": "INIT_REQUESTED",
+      "beckn:seller": "provider-delta-airlines",
+      "beckn:buyer": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Buyer",
+        "beckn:id": "buyer-fide-beckn",
+        "beckn:role": "BUYER",
+        "beckn:name": "Fide Beckn",
+        "beckn:address": "123 Market St, San Francisco, CA 94102, USA",
+        "beckn:email": "beckn@eminds.ai",
+        "beckn:phone": "+1-555-123-4567"
+      },
+      "beckn:orderItems": [
+        {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:OrderItem",
+          "beckn:lineId": "line-001",
+          "beckn:orderedItem": "item-flight-dl145-economy",
+          "beckn:acceptedOffer": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-dl145-economy-base",
+            "beckn:addOnItems": [
+              {
+                "@type": "schema:Offer",
+                "@id": "addon-item-checked-baggage"
+              },
+              {
+                "@type": "schema:Offer",
+                "@id": "addon-item-seat-selection"
+              },
+              {
+                "@type": "schema:Offer",
+                "@id": "addon-item-travel-insurance"
+              }
+            ]
+          },
+          "beckn:quantity": 1
+        }
+      ],
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "fulfillment-dl145-flight",
+        "beckn:mode": "FLIGHT"
+      },
+      "beckn:orderAttributes": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FlightBooking/v1/context.jsonld",
+        "@type": "FlightBooking",
+        "passengers": [
+          {
+            "id": "pax-001",
+            "type": "ADULT",
+            "title": "Mr",
+            "firstName": "Fide",
+            "lastName": "Beckn",
+            "dateOfBirth": "1995-01-20",
+            "gender": "Male",
+            "nationality": "US",
+            "frequentFlyerNumber": "DL987654321"
+          }
+        ]
+      }
+    }
+  }
+}
+

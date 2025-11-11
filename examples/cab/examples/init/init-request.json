@@ -1,0 +1,94 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "init",
+    "domain": "beckn.one:mobility:ride-hailing:1.0",
+    "timestamp": "2025-12-10T09:54:00+07:00",
+    "message_id": "msg-init-cab-001",
+    "transaction_id": "txn-cab-bangkok-001",
+    "bap_id": "travel-booking-app.example.com",
+    "bap_uri": "https://travel-booking-app.example.com",
+    "bpp_id": "bangkok-cab-service.com",
+    "bpp_uri": "https://bangkok-cab-service.com",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "order-cab-bangkok-001",
+      "beckn:orderStatus": "INITIALIZED",
+      "beckn:seller": "provider-bangkok-cab-service",
+      "beckn:buyer": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Buyer",
+        "schema:name": "Sarah Johnson",
+        "schema:email": "sarah.johnson@example.com",
+        "schema:telephone": "+1 555 123 4567"
+      },
+      "beckn:orderItems": [
+        {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:OrderItem",
+          "beckn:lineId": "line-001",
+          "beckn:orderedItem": "item-cab-sedan",
+          "beckn:acceptedOffer": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-sedan-base"
+          }
+        }
+      ],
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "fulfillment-ride-sedan",
+        "beckn:mode": "RESERVATION",
+        "beckn:status": "QUOTED",
+        "beckn:deliveryAttributes": {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/RideService/v1/context.jsonld",
+          "@type": "beckn:RideDelivery",
+          "ride:type": "ride",
+          "ride:waitTime": "PT5M",
+          "ride:start": {
+            "@type": "beckn:FulfillmentPoint",
+            "beckn:location": {
+              "@type": "beckn:Location",
+              "beckn:id": "pickup-airport",
+              "beckn:descriptor": {
+                "@type": "beckn:Descriptor",
+                "schema:name": "Suvarnabhumi Airport - Arrivals Hall"
+              },
+              "beckn:geo": {
+                "type": "Point",
+                "coordinates": [100.7501, 13.6900]
+              }
+            },
+            "beckn:time": {
+              "@type": "beckn:TimePeriod",
+              "schema:startDate": "2025-12-10T10:00:00+07:00"
+            },
+            "beckn:contact": {
+              "@type": "beckn:Contact",
+              "schema:name": "Sarah Johnson",
+              "schema:telephone": "+1 555 123 4567",
+              "schema:email": "sarah.johnson@example.com"
+            }
+          },
+          "ride:end": {
+            "@type": "beckn:FulfillmentPoint",
+            "beckn:location": {
+              "@type": "beckn:Location",
+              "beckn:id": "dropoff-hotel",
+              "beckn:geo": {
+                "type": "Point",
+                "coordinates": [100.5698, 13.7563]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

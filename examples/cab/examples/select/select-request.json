@@ -1,0 +1,68 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "select",
+    "domain": "beckn.one:mobility:ride-hailing:1.0",
+    "timestamp": "2025-12-10T09:52:00+07:00",
+    "message_id": "msg-select-cab-001",
+    "transaction_id": "txn-cab-bangkok-001",
+    "bap_id": "travel-booking-app.example.com",
+    "bap_uri": "https://travel-booking-app.example.com",
+    "bpp_id": "bangkok-cab-service.com",
+    "bpp_uri": "https://bangkok-cab-service.com",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:orderStatus": "QUOTE_REQUESTED",
+      "beckn:seller": "provider-bangkok-cab-service",
+      "beckn:orderItems": [
+        {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:OrderItem",
+          "beckn:orderedItem": "item-cab-sedan"
+        }
+      ],
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "fulfillment-ride-sedan",
+        "beckn:mode": "RESERVATION",
+        "beckn:deliveryAttributes": {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/RideService/v1/context.jsonld",
+          "@type": "beckn:RideDelivery",
+          "ride:type": "ride",
+          "ride:start": {
+            "@type": "beckn:FulfillmentPoint",
+            "beckn:location": {
+              "@type": "beckn:Location",
+              "beckn:id": "pickup-airport",
+              "beckn:geo": {
+                "type": "Point",
+                "coordinates": [100.7501, 13.6900]
+              }
+            },
+            "beckn:time": {
+              "@type": "beckn:TimePeriod",
+              "schema:startDate": "2025-12-10T10:00:00+07:00"
+            }
+          },
+          "ride:end": {
+            "@type": "beckn:FulfillmentPoint",
+            "beckn:location": {
+              "@type": "beckn:Location",
+              "beckn:id": "dropoff-hotel",
+              "beckn:geo": {
+                "type": "Point",
+                "coordinates": [100.5698, 13.7563]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

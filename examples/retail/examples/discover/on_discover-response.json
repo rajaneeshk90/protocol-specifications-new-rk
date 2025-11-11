@@ -37,16 +37,8 @@
               "beckn:shortDesc": "Premium honey-roasted macadamia nuts from Big Island farms",
               "beckn:longDesc": "Locally sourced macadamia nuts from Big Island, Hawaii, expertly roasted and glazed with pure Hawaiian honey. Rich, buttery flavor with a delicate sweetness.",
               "schema:image": [
-                {
-                  "@type": "schema:ImageObject",
-                  "schema:url": "https://cdn.aloha-foods.com/products/macadamia-honey-roasted-150g-front.jpg",
-                  "schema:contentUrl": "https://cdn.aloha-foods.com/products/macadamia-honey-roasted-150g-front.jpg"
-                },
-                {
-                  "@type": "schema:ImageObject",
-                  "schema:url": "https://cdn.aloha-foods.com/products/macadamia-honey-roasted-150g-back.jpg",
-                  "schema:contentUrl": "https://cdn.aloha-foods.com/products/macadamia-honey-roasted-150g-back.jpg"
-                }
+                "https://cdn.aloha-foods.com/products/macadamia-honey-roasted-150g-front.jpg",
+                "https://cdn.aloha-foods.com/products/macadamia-honey-roasted-150g-back.jpg"
               ]
             },
             "beckn:category": {
@@ -54,19 +46,34 @@
               "schema:codeValue": "packaged_food",
               "schema:name": "Packaged Food"
             },
+            "beckn:availableAt": [
+              {
+                "address": {
+                  "streetAddress": "1450 Ala Moana Blvd",
+                  "addressLocality": "Honolulu",
+                  "addressRegion": "HI",
+                  "postalCode": "96814",
+                  "addressCountry": "US"
+                },
+                "geo": {
+                  "type": "Point",
+                  "coordinates": [-157.8420, 21.2905]
+                }
+              }
+            ],
             "beckn:rateable": true,
             "beckn:rating": {
               "@type": "beckn:Rating",
               "beckn:ratingValue": 4.8,
-              "beckn:ratingCount": 347,
-              "schema:bestRating": 5,
-              "schema:worstRating": 1
+              "beckn:ratingCount": 347
             },
-            "beckn:price": {
-              "@type": "schema:PriceSpecification",
-              "schema:price": 12.99,
-              "schema:priceCurrency": "USD",
-              "schema:valueAddedTaxIncluded": true
+            "beckn:provider": {
+              "beckn:id": "provider-mauna-loa-store",
+              "beckn:descriptor": {
+                "@type": "beckn:Descriptor",
+                "schema:name": "Mauna Loa Store",
+                "beckn:shortDesc": "Authentic Hawaiian macadamia nuts since 1946"
+              }
             },
             "beckn:itemAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/GroceryItem/v1/context.jsonld",
@@ -90,62 +97,6 @@
               },
               "grocery:certifications": ["USDA Organic", "Non-GMO"],
               "grocery:storageInstructions": "Store in a cool, dry place"
-            },
-            "beckn:availableAt": [
-              {
-                "@type": "beckn:Location",
-                "beckn:id": "store-mauna-loa-honolulu",
-                "beckn:descriptor": {
-                  "@type": "beckn:Descriptor",
-                  "schema:name": "Mauna Loa Store - Honolulu"
-                },
-                "beckn:address": {
-                  "@type": "schema:PostalAddress",
-                  "schema:streetAddress": "1450 Ala Moana Blvd",
-                  "schema:addressLocality": "Honolulu",
-                  "schema:addressRegion": "HI",
-                  "schema:postalCode": "96814",
-                  "schema:addressCountry": "US"
-                },
-                "beckn:geo": {
-                  "type": "Point",
-                  "coordinates": [-157.8420, 21.2905]
-                }
-              }
-            ],
-            "beckn:quantity": {
-              "@type": "schema:QuantitativeValue",
-              "schema:value": 150,
-              "schema:unitCode": "GRM"
-            },
-            "beckn:stock": {
-              "available": true,
-              "quantity": 248,
-              "maxOrderQuantity": 20
-            },
-            "beckn:fulfillment": [
-              {
-                "@type": "beckn:Fulfillment",
-                "beckn:id": "fulfillment-hotel-delivery",
-                "beckn:type": "delivery",
-                "beckn:descriptor": {
-                  "@type": "beckn:Descriptor",
-                  "schema:name": "Hotel Delivery"
-                },
-                "beckn:time": {
-                  "@type": "beckn:TimePeriod",
-                  "beckn:duration": "P1D",
-                  "beckn:label": "1-Day Delivery"
-                }
-              }
-            ],
-            "beckn:provider": {
-              "beckn:id": "provider-mauna-loa-store",
-              "beckn:descriptor": {
-                "@type": "beckn:Descriptor",
-                "schema:name": "Mauna Loa Store",
-                "beckn:shortDesc": "Authentic Hawaiian macadamia nuts since 1946"
-              }
             }
           },
           {
@@ -158,10 +109,7 @@
               "beckn:shortDesc": "Dry roasted macadamia nuts with sea salt",
               "beckn:longDesc": "Premium whole macadamia nuts dry-roasted to perfection and lightly salted with Hawaiian sea salt. Simple, classic, and delicious.",
               "schema:image": [
-                {
-                  "@type": "schema:ImageObject",
-                  "schema:url": "https://cdn.aloha-foods.com/products/macadamia-salted-200g-front.jpg"
-                }
+                "https://cdn.aloha-foods.com/products/macadamia-salted-200g-front.jpg"
               ]
             },
             "beckn:category": {
@@ -169,19 +117,34 @@
               "schema:codeValue": "packaged_food",
               "schema:name": "Packaged Food"
             },
+            "beckn:availableAt": [
+              {
+                "address": {
+                  "streetAddress": "300 Rodgers Blvd, Terminal 2",
+                  "addressLocality": "Honolulu",
+                  "addressRegion": "HI",
+                  "postalCode": "96819",
+                  "addressCountry": "US"
+                },
+                "geo": {
+                  "type": "Point",
+                  "coordinates": [-157.9220, 21.3187]
+                }
+              }
+            ],
             "beckn:rateable": true,
             "beckn:rating": {
               "@type": "beckn:Rating",
               "beckn:ratingValue": 4.6,
-              "beckn:ratingCount": 521,
-              "schema:bestRating": 5,
-              "schema:worstRating": 1
+              "beckn:ratingCount": 521
             },
-            "beckn:price": {
-              "@type": "schema:PriceSpecification",
-              "schema:price": 10.50,
-              "schema:priceCurrency": "USD",
-              "schema:valueAddedTaxIncluded": true
+            "beckn:provider": {
+              "beckn:id": "provider-island-treats",
+              "beckn:descriptor": {
+                "@type": "beckn:Descriptor",
+                "schema:name": "Island Treats Co.",
+                "beckn:shortDesc": "Hawaiian snacks and treats"
+              }
             },
             "beckn:itemAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/GroceryItem/v1/context.jsonld",
@@ -197,61 +160,6 @@
               "grocery:allergens": ["Tree nuts"],
               "grocery:certifications": ["Kosher"],
               "grocery:storageInstructions": "Store at room temperature"
-            },
-            "beckn:availableAt": [
-              {
-                "@type": "beckn:Location",
-                "beckn:id": "store-island-treats-airport",
-                "beckn:descriptor": {
-                  "@type": "beckn:Descriptor",
-                  "schema:name": "Island Treats Co. - Airport Location"
-                },
-                "beckn:address": {
-                  "@type": "schema:PostalAddress",
-                  "schema:streetAddress": "300 Rodgers Blvd, Terminal 2",
-                  "schema:addressLocality": "Honolulu",
-                  "schema:addressRegion": "HI",
-                  "schema:postalCode": "96819",
-                  "schema:addressCountry": "US"
-                },
-                "beckn:geo": {
-                  "type": "Point",
-                  "coordinates": [-157.9220, 21.3187]
-                }
-              }
-            ],
-            "beckn:quantity": {
-              "@type": "schema:QuantitativeValue",
-              "schema:value": 200,
-              "schema:unitCode": "GRM"
-            },
-            "beckn:stock": {
-              "available": true,
-              "quantity": 312,
-              "maxOrderQuantity": 15
-            },
-            "beckn:fulfillment": [
-              {
-                "@type": "beckn:Fulfillment",
-                "beckn:id": "fulfillment-airport-pickup",
-                "beckn:type": "pickup",
-                "beckn:descriptor": {
-                  "@type": "beckn:Descriptor",
-                  "schema:name": "Airport Pickup"
-                },
-                "beckn:time": {
-                  "@type": "beckn:TimePeriod",
-                  "beckn:label": "Same-day pickup available"
-                }
-              }
-            ],
-            "beckn:provider": {
-              "beckn:id": "provider-island-treats",
-              "beckn:descriptor": {
-                "@type": "beckn:Descriptor",
-                "schema:name": "Island Treats Co.",
-                "beckn:shortDesc": "Hawaiian snacks and treats"
-              }
             }
           },
           {
@@ -264,10 +172,7 @@
               "beckn:shortDesc": "Premium dark chocolate covered macadamias in gift box",
               "beckn:longDesc": "Whole roasted macadamia nuts enrobed in rich Hawaiian dark chocolate (60% cacao). Beautifully packaged in a premium gift box perfect for souvenirs or gifts.",
               "schema:image": [
-                {
-                  "@type": "schema:ImageObject",
-                  "schema:url": "https://cdn.aloha-foods.com/products/macadamia-chocolate-box-front.jpg"
-                }
+                "https://cdn.aloha-foods.com/products/macadamia-chocolate-box-front.jpg"
               ]
             },
             "beckn:category": {
@@ -275,19 +180,34 @@
               "schema:codeValue": "packaged_food",
               "schema:name": "Packaged Food"
             },
+            "beckn:availableAt": [
+              {
+                "address": {
+                  "streetAddress": "2424 Kalakaua Ave",
+                  "addressLocality": "Honolulu",
+                  "addressRegion": "HI",
+                  "postalCode": "96815",
+                  "addressCountry": "US"
+                },
+                "geo": {
+                  "type": "Point",
+                  "coordinates": [-157.8267, 21.2783]
+                }
+              }
+            ],
             "beckn:rateable": true,
             "beckn:rating": {
               "@type": "beckn:Rating",
               "beckn:ratingValue": 4.9,
-              "beckn:ratingCount": 892,
-              "schema:bestRating": 5,
-              "schema:worstRating": 1
+              "beckn:ratingCount": 892
             },
-            "beckn:price": {
-              "@type": "schema:PriceSpecification",
-              "schema:price": 15.00,
-              "schema:priceCurrency": "USD",
-              "schema:valueAddedTaxIncluded": true
+            "beckn:provider": {
+              "beckn:id": "provider-aloha-foods",
+              "beckn:descriptor": {
+                "@type": "beckn:Descriptor",
+                "schema:name": "Aloha Foods",
+                "beckn:shortDesc": "Premium Hawaiian chocolates and treats"
+              }
             },
             "beckn:itemAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/GroceryItem/v1/context.jsonld",
@@ -303,67 +223,78 @@
               "grocery:allergens": ["Tree nuts", "Milk (may contain traces)"],
               "grocery:certifications": ["Fair Trade Chocolate"],
               "grocery:storageInstructions": "Store in a cool, dry place below 20°C"
-            },
-            "beckn:availableAt": [
-              {
-                "@type": "beckn:Location",
-                "beckn:id": "store-aloha-foods-waikiki",
-                "beckn:descriptor": {
-                  "@type": "beckn:Descriptor",
-                  "schema:name": "Aloha Foods - Waikiki"
-                },
-                "beckn:address": {
-                  "@type": "schema:PostalAddress",
-                  "schema:streetAddress": "2424 Kalakaua Ave",
-                  "schema:addressLocality": "Honolulu",
-                  "schema:addressRegion": "HI",
-                  "schema:postalCode": "96815",
-                  "schema:addressCountry": "US"
-                },
-                "beckn:geo": {
-                  "type": "Point",
-                  "coordinates": [-157.8267, 21.2783]
-                }
-              }
-            ],
-            "beckn:quantity": {
-              "@type": "schema:QuantitativeValue",
-              "schema:value": 180,
-              "schema:unitCode": "GRM"
-            },
-            "beckn:stock": {
-              "available": true,
-              "quantity": 156,
-              "maxOrderQuantity": 10
-            },
-            "beckn:fulfillment": [
-              {
-                "@type": "beckn:Fulfillment",
-                "beckn:id": "fulfillment-standard-delivery",
-                "beckn:type": "delivery",
-                "beckn:descriptor": {
-                  "@type": "beckn:Descriptor",
-                  "schema:name": "Standard Delivery"
-                },
-                "beckn:time": {
-                  "@type": "beckn:TimePeriod",
-                  "beckn:duration": "P2D",
-                  "beckn:label": "2-Day Delivery"
-                }
-              }
-            ],
-            "beckn:provider": {
-              "beckn:id": "provider-aloha-foods",
-              "beckn:descriptor": {
-                "@type": "beckn:Descriptor",
-                "schema:name": "Aloha Foods",
-                "beckn:shortDesc": "Premium Hawaiian chocolates and treats"
-              }
             }
+          }
+        ],
+        "beckn:offers": [
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-macadamia-honey-roasted-150g",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Honey Roasted Hawaiian Macadamia Nuts - 150g"
+            },
+            "beckn:items": [
+              "item-macadamia-honey-roasted-150g"
+            ],
+            "beckn:price": {
+              "currency": "USD",
+              "value": 12.99
+            },
+            "beckn:validity": {
+              "@type": "beckn:TimePeriod",
+              "schema:startDate": "2025-01-01T00:00:00Z",
+              "schema:endDate": "2025-12-31T23:59:59Z"
+            },
+            "beckn:provider": "provider-mauna-loa-store"
+          },
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-macadamia-salted-200g",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Classic Salted Macadamia Nuts - 200g"
+            },
+            "beckn:items": [
+              "item-macadamia-salted-200g"
+            ],
+            "beckn:price": {
+              "currency": "USD",
+              "value": 10.50
+            },
+            "beckn:validity": {
+              "@type": "beckn:TimePeriod",
+              "schema:startDate": "2025-01-01T00:00:00Z",
+              "schema:endDate": "2025-12-31T23:59:59Z"
+            },
+            "beckn:provider": "provider-island-treats"
+          },
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-macadamia-chocolate-box",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Chocolate Covered Macadamia Nuts Gift Box - 180g"
+            },
+            "beckn:items": [
+              "item-macadamia-chocolate-box"
+            ],
+            "beckn:price": {
+              "currency": "USD",
+              "value": 15.00
+            },
+            "beckn:validity": {
+              "@type": "beckn:TimePeriod",
+              "schema:startDate": "2025-01-01T00:00:00Z",
+              "schema:endDate": "2025-12-31T23:59:59Z"
+            },
+            "beckn:provider": "provider-aloha-foods"
           }
         ]
       }
     ]
   }
 }
-

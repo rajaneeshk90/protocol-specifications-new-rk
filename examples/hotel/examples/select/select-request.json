@@ -1,0 +1,47 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "select",
+    "domain": "beckn.one:commerce:hospitality:1.0",
+    "timestamp": "2025-12-01T10:05:00+07:00",
+    "message_id": "msg-select-hotel-001",
+    "transaction_id": "txn-hotel-bangkok-001",
+    "bap_id": "travel-booking-app.example.com",
+    "bap_uri": "https://travel-booking-app.example.com",
+    "bpp_id": "hotel-aggregator-platform.com",
+    "bpp_uri": "https://hotel-aggregator-platform.com",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:orderStatus": "QUOTE_REQUESTED",
+      "beckn:seller": "provider-grand-siam-hotel",
+      "beckn:orderItems": [
+        {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:OrderItem",
+          "beckn:orderedItem": "item-hotel-grand-siam-deluxe",
+          "beckn:quantity": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 5,
+            "schema:unitCode": "NIGHTS"
+          }
+        }
+      ],
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "fulfillment-hotel-stay",
+        "beckn:type": "hotel_stay",
+        "beckn:time": {
+          "@type": "beckn:TimePeriod",
+          "schema:startDate": "2025-12-10T14:00:00+07:00",
+          "schema:endDate": "2025-12-15T12:00:00+07:00"
+        }
+      }
+    }
+  }
+}
+

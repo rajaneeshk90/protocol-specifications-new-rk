@@ -1,0 +1,420 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_discover",
+    "domain": "beckn.one:commerce:aviation:1.0",
+    "timestamp": "2025-12-01T08:00:02-08:00",
+    "message_id": "msg-on-discover-flight-001",
+    "transaction_id": "txn-flight-sfo-jfk-001",
+    "bpp_id": "flight-aggregator-platform.com",
+    "bpp_uri": "https://flight-aggregator-platform.com",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "catalogs": [
+      {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Catalog",
+        "beckn:id": "catalog-sfo-jfk-flights-001",
+        "beckn:descriptor": {
+          "@type": "beckn:Descriptor",
+          "schema:name": "San Francisco to New York Flights",
+          "beckn:shortDesc": "Available flights from San Francisco to New York on December 15, 2025"
+        },
+        "beckn:validity": {
+          "@type": "beckn:TimePeriod",
+          "schema:startDate": "2025-12-01T00:00:00Z",
+          "schema:endDate": "2025-12-31T23:59:59Z"
+        },
+        "beckn:items": [
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Item",
+            "beckn:id": "item-flight-dl145-economy",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Delta Airlines Flight DL145 - Economy",
+              "beckn:shortDesc": "Nonstop flight from San Francisco to New York",
+              "beckn:longDesc": "Delta Airlines nonstop service from SFO to JFK. Modern Boeing 767-400 aircraft with in-flight entertainment and WiFi.",
+              "schema:image": [
+                "https://cdn.delta.com/aircraft/boeing-767-400.jpg"
+              ]
+            },
+            "beckn:category": {
+              "@type": "schema:CategoryCode",
+              "schema:codeValue": "flight",
+              "schema:name": "Flight"
+            },
+            "beckn:availableAt": [
+              {
+                "address": {
+                  "streetAddress": "San Francisco International Airport",
+                  "addressLocality": "San Francisco",
+                  "addressRegion": "CA",
+                  "postalCode": "94128",
+                  "addressCountry": "US"
+                },
+                "geo": {
+                  "type": "Point",
+                  "coordinates": [-122.3789, 37.6213]
+                }
+              }
+            ],
+            "beckn:rateable": true,
+            "beckn:rating": {
+              "@type": "beckn:Rating",
+              "beckn:ratingValue": 4.6,
+              "beckn:ratingCount": 12847
+            },
+            "beckn:provider": {
+              "beckn:id": "provider-delta-airlines",
+              "beckn:descriptor": {
+                "@type": "beckn:Descriptor",
+                "schema:name": "Delta Air Lines",
+                "beckn:shortDesc": "America's most awarded airline",
+                "beckn:code": "DL"
+              }
+            },
+            "beckn:itemAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FlightService/v1/context.jsonld",
+              "@type": "beckn:FlightService",
+              "flight:flightNumber": "DL145",
+              "flight:airline": "Delta Air Lines",
+              "flight:airlineCode": "DL",
+              "flight:aircraft": {
+                "type": "Boeing 767-400ER",
+                "registration": "N845MH"
+              },
+              "flight:departureAirport": {
+                "code": "SFO",
+                "name": "San Francisco International Airport",
+                "terminal": "2",
+                "city": "San Francisco",
+                "country": "USA"
+              },
+              "flight:arrivalAirport": {
+                "code": "JFK",
+                "name": "John F. Kennedy International Airport",
+                "terminal": "4",
+                "city": "New York",
+                "country": "USA"
+              },
+              "flight:departureTime": "2025-12-15T09:30:00-08:00",
+              "flight:arrivalTime": "2025-12-15T18:15:00-05:00",
+              "flight:duration": "PT5H45M",
+              "flight:distance": 2586,
+              "flight:distanceUnit": "MI",
+              "flight:cabinClass": "ECONOMY",
+              "flight:fareClass": "M",
+              "flight:fareType": "MAIN_CABIN",
+              "flight:stopCount": 0,
+              "flight:amenities": {
+                "wifi": true,
+                "power": true,
+                "entertainment": true,
+                "meal": "Complimentary snacks and beverages",
+                "seatPitch": "31-32 inches"
+              },
+              "flight:baggage": {
+                "carryOn": {
+                  "included": 1,
+                  "maxWeight": 10,
+                  "maxWeightUnit": "KG"
+                },
+                "personalItem": {
+                  "included": 1
+                },
+                "checked": {
+                  "includedCount": 0,
+                  "feePerBag": 35.00,
+                  "maxWeight": 23,
+                  "maxWeightUnit": "KG"
+                }
+              }
+            }
+          },
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Item",
+            "beckn:id": "item-flight-ua2345-economy",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "United Airlines Flight UA2345 - Economy",
+              "beckn:shortDesc": "Nonstop flight from San Francisco to New York",
+              "beckn:longDesc": "United Airlines nonstop service from SFO to JFK. Boeing 777-300ER with premium entertainment and WiFi.",
+              "schema:image": [
+                "https://cdn.united.com/aircraft/boeing-777-300.jpg"
+              ]
+            },
+            "beckn:category": {
+              "@type": "schema:CategoryCode",
+              "schema:codeValue": "flight",
+              "schema:name": "Flight"
+            },
+            "beckn:availableAt": [
+              {
+                "address": {
+                  "streetAddress": "San Francisco International Airport",
+                  "addressLocality": "San Francisco",
+                  "addressRegion": "CA",
+                  "postalCode": "94128",
+                  "addressCountry": "US"
+                },
+                "geo": {
+                  "type": "Point",
+                  "coordinates": [-122.3789, 37.6213]
+                }
+              }
+            ],
+            "beckn:rateable": true,
+            "beckn:rating": {
+              "@type": "beckn:Rating",
+              "beckn:ratingValue": 4.4,
+              "beckn:ratingCount": 9834
+            },
+            "beckn:provider": {
+              "beckn:id": "provider-united-airlines",
+              "beckn:descriptor": {
+                "@type": "beckn:Descriptor",
+                "schema:name": "United Airlines",
+                "beckn:shortDesc": "Connecting people, uniting the world",
+                "beckn:code": "UA"
+              }
+            },
+            "beckn:itemAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FlightService/v1/context.jsonld",
+              "@type": "beckn:FlightService",
+              "flight:flightNumber": "UA2345",
+              "flight:airline": "United Airlines",
+              "flight:airlineCode": "UA",
+              "flight:aircraft": {
+                "type": "Boeing 777-300ER",
+                "registration": "N2749U"
+              },
+              "flight:departureAirport": {
+                "code": "SFO",
+                "name": "San Francisco International Airport",
+                "terminal": "3",
+                "city": "San Francisco",
+                "country": "USA"
+              },
+              "flight:arrivalAirport": {
+                "code": "JFK",
+                "name": "John F. Kennedy International Airport",
+                "terminal": "7",
+                "city": "New York",
+                "country": "USA"
+              },
+              "flight:departureTime": "2025-12-15T11:00:00-08:00",
+              "flight:arrivalTime": "2025-12-15T19:45:00-05:00",
+              "flight:duration": "PT5H45M",
+              "flight:distance": 2586,
+              "flight:distanceUnit": "MI",
+              "flight:cabinClass": "ECONOMY",
+              "flight:fareClass": "Y",
+              "flight:fareType": "ECONOMY",
+              "flight:stopCount": 0,
+              "flight:amenities": {
+                "wifi": true,
+                "power": true,
+                "entertainment": true,
+                "meal": "Complimentary snacks and beverages",
+                "seatPitch": "31 inches"
+              },
+              "flight:baggage": {
+                "carryOn": {
+                  "included": 1,
+                  "maxWeight": 10,
+                  "maxWeightUnit": "KG"
+                },
+                "personalItem": {
+                  "included": 1
+                },
+                "checked": {
+                  "includedCount": 0,
+                  "feePerBag": 35.00,
+                  "maxWeight": 23,
+                  "maxWeightUnit": "KG"
+                }
+              }
+            }
+          },
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Item",
+            "beckn:id": "item-flight-aa123-economy",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "American Airlines Flight AA123 - Economy",
+              "beckn:shortDesc": "Nonstop flight from San Francisco to New York",
+              "beckn:longDesc": "American Airlines nonstop service from SFO to JFK. Airbus A321neo with modern amenities and WiFi.",
+              "schema:image": [
+                "https://cdn.aa.com/aircraft/airbus-a321neo.jpg"
+              ]
+            },
+            "beckn:category": {
+              "@type": "schema:CategoryCode",
+              "schema:codeValue": "flight",
+              "schema:name": "Flight"
+            },
+            "beckn:availableAt": [
+              {
+                "address": {
+                  "streetAddress": "San Francisco International Airport",
+                  "addressLocality": "San Francisco",
+                  "addressRegion": "CA",
+                  "postalCode": "94128",
+                  "addressCountry": "US"
+                },
+                "geo": {
+                  "type": "Point",
+                  "coordinates": [-122.3789, 37.6213]
+                }
+              }
+            ],
+            "beckn:rateable": true,
+            "beckn:rating": {
+              "@type": "beckn:Rating",
+              "beckn:ratingValue": 4.5,
+              "beckn:ratingCount": 11256
+            },
+            "beckn:provider": {
+              "beckn:id": "provider-american-airlines",
+              "beckn:descriptor": {
+                "@type": "beckn:Descriptor",
+                "schema:name": "American Airlines",
+                "beckn:shortDesc": "Going for great",
+                "beckn:code": "AA"
+              }
+            },
+            "beckn:itemAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FlightService/v1/context.jsonld",
+              "@type": "beckn:FlightService",
+              "flight:flightNumber": "AA123",
+              "flight:airline": "American Airlines",
+              "flight:airlineCode": "AA",
+              "flight:aircraft": {
+                "type": "Airbus A321neo",
+                "registration": "N400AN"
+              },
+              "flight:departureAirport": {
+                "code": "SFO",
+                "name": "San Francisco International Airport",
+                "terminal": "1",
+                "city": "San Francisco",
+                "country": "USA"
+              },
+              "flight:arrivalAirport": {
+                "code": "JFK",
+                "name": "John F. Kennedy International Airport",
+                "terminal": "8",
+                "city": "New York",
+                "country": "USA"
+              },
+              "flight:departureTime": "2025-12-15T14:30:00-08:00",
+              "flight:arrivalTime": "2025-12-15T23:10:00-05:00",
+              "flight:duration": "PT5H40M",
+              "flight:distance": 2586,
+              "flight:distanceUnit": "MI",
+              "flight:cabinClass": "ECONOMY",
+              "flight:fareClass": "T",
+              "flight:fareType": "BASIC_ECONOMY",
+              "flight:stopCount": 0,
+              "flight:amenities": {
+                "wifi": true,
+                "power": true,
+                "entertainment": true,
+                "meal": "Snacks available for purchase",
+                "seatPitch": "30 inches"
+              },
+              "flight:baggage": {
+                "carryOn": {
+                  "included": 1,
+                  "maxWeight": 10,
+                  "maxWeightUnit": "KG"
+                },
+                "personalItem": {
+                  "included": 1
+                },
+                "checked": {
+                  "includedCount": 0,
+                  "feePerBag": 40.00,
+                  "maxWeight": 23,
+                  "maxWeightUnit": "KG"
+                }
+              }
+            }
+          }
+        ],
+        "beckn:offers": [
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-flight-dl145-economy",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Delta Airlines Flight DL145 - Economy"
+            },
+            "beckn:items": [
+              "item-flight-dl145-economy"
+            ],
+            "beckn:price": {
+              "currency": "USD",
+              "value": 280.00
+            },
+            "beckn:validity": {
+              "@type": "beckn:TimePeriod",
+              "schema:startDate": "2025-12-01T00:00:00Z",
+              "schema:endDate": "2025-12-31T23:59:59Z"
+            },
+            "beckn:provider": "provider-delta-airlines"
+          },
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-flight-ua2345-economy",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "United Airlines Flight UA2345 - Economy"
+            },
+            "beckn:items": [
+              "item-flight-ua2345-economy"
+            ],
+            "beckn:price": {
+              "currency": "USD",
+              "value": 295.00
+            },
+            "beckn:validity": {
+              "@type": "beckn:TimePeriod",
+              "schema:startDate": "2025-12-01T00:00:00Z",
+              "schema:endDate": "2025-12-31T23:59:59Z"
+            },
+            "beckn:provider": "provider-united-airlines"
+          },
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-flight-aa123-economy",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "American Airlines Flight AA123 - Economy"
+            },
+            "beckn:items": [
+              "item-flight-aa123-economy"
+            ],
+            "beckn:price": {
+              "currency": "USD",
+              "value": 265.00
+            },
+            "beckn:validity": {
+              "@type": "beckn:TimePeriod",
+              "schema:startDate": "2025-12-01T00:00:00Z",
+              "schema:endDate": "2025-12-31T23:59:59Z"
+            },
+            "beckn:provider": "provider-american-airlines"
+          }
+        ]
+      }
+    ]
+  }
+}
