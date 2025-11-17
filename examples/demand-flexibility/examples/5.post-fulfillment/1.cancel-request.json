@@ -23,8 +23,8 @@
       "beckn:orderAttributes": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/DemandFlexibility/v1/context.jsonld",
         "@type": "beckn:DemandFlexibilitySubscription",
-        "df:subscriptionId": "sub-df-peak-saver-001",
-        "df:cancellationReason": "No longer required"
+        "beckn:subscriptionId": "sub-df-peak-saver-001",
+        "beckn:cancellationReason": "No longer required"
       }
     }
   }

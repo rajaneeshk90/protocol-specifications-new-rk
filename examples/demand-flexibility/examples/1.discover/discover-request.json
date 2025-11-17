@@ -17,7 +17,7 @@
     "text_search": "Demand flexibility Programs",
     "filters": {
       "type": "jsonpath",
-      "expression": "$[?(@.beckn:itemAttributes.df:participantCapabilities.participantType =~ /commercial/ && @.beckn:itemAttributes.df:participantCapabilities.loadCapacity.min <= 500 && @.beckn:itemAttributes.df:participantCapabilities.loadCapacity.max >= 500 && @.beckn:itemAttributes.df:participantCapabilities.controlType == 'automated' && @.beckn:itemAttributes.df:participantCapabilities.responseTime == 'PT5M' && @.beckn:itemAttributes.df:eventParameters.notificationType == 'instant' && @.beckn:itemAttributes.df:incentiveParameters.rate >= 5.00)]"
+      "expression": "$[?(@.beckn:itemAttributes.beckn:participantCapabilities.participantType =~ /commercial/ && @.beckn:itemAttributes.beckn:participantCapabilities.loadCapacity.min <= 500 && @.beckn:itemAttributes.beckn:participantCapabilities.loadCapacity.max >= 500 && @.beckn:itemAttributes.beckn:participantCapabilities.controlType == 'automated' && @.beckn:itemAttributes.beckn:participantCapabilities.responseTime == 'PT5M' && @.beckn:itemAttributes.beckn:eventParameters.notificationType == 'instant' && @.beckn:itemAttributes.beckn:incentiveParameters.rate >= 5.00)]"
     },
     "spatial": [
       {

@@ -42,8 +42,8 @@
           "beckn:orderItemAttributes": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/DemandFlexibility/v1/context.jsonld",
             "@type": "beckn:DemandFlexibilitySubscription",
-            "df:subscriptionId": "sub-df-peak-saver-001",
-            "df:participantCapabilities": {
+            "beckn:subscriptionId": "sub-df-peak-saver-001",
+            "beckn:participantCapabilities": {
               "participantType": ["commercial"],
               "loadCapacity": {
                 "min": 100,
@@ -53,7 +53,7 @@
               "controlType": "manual",
               "responseTime": "PT30M"
             },
-            "df:availabilityParameters": {
+            "beckn:availabilityParameters": {
               "hours": {
                 "start": "14:00",
                 "end": "17:00"
@@ -61,7 +61,7 @@
               "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
               "seasonal": ["summer", "monsoon"]
             },
-            "df:eventParameters": {
+            "beckn:eventParameters": {
               "duration": {
                 "min": "PT60M",
                 "max": "PT180M"
@@ -70,13 +70,13 @@
               "priority": "medium",
               "gridConditionTrigger": "peak_demand"
             },
-            "df:incentiveParameters": {
+            "beckn:incentiveParameters": {
               "rate": 5.00,
               "currency": "INR",
               "type": "per_kWh_reduced",
               "settlementFrequency": "monthly"
             },
-            "df:priorityParameters": {
+            "beckn:priorityParameters": {
               "eventPriority": ["high", "medium"],
               "participationMode": "voluntary"
             }
@@ -92,8 +92,8 @@
         "beckn:deliveryAttributes": {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/DemandFlexibility/v1/context.jsonld",
           "@type": "beckn:DemandFlexibilitySubscription",
-          "df:meterId": "meter://abc/98765456",
-          "df:location": {
+          "beckn:meterId": "meter://abc/98765456",
+          "beckn:location": {
             "@type": "beckn:Location",
             "geo": {
               "type": "Point",
@@ -107,13 +107,13 @@
               "addressCountry": "IN"
             }
           },
-          "df:startDate": "2025-08-26T00:00:00+05:30"
+          "beckn:startDate": "2025-08-26T00:00:00+05:30"
         }
       },
       "beckn:orderAttributes": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/DemandFlexibility/v1/context.jsonld",
         "@type": "beckn:DemandFlexibilitySubscription",
-        "df:requestType": "program_subscription"
+        "beckn:requestType": "program_subscription"
       }
     }
   }

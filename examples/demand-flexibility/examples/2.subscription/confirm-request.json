@@ -53,8 +53,8 @@
         "beckn:deliveryAttributes": {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/DemandFlexibility/v1/context.jsonld",
           "@type": "beckn:DemandFlexibilitySubscription",
-          "df:meterId": "meter://abc/98765456",
-          "df:location": {
+          "beckn:meterId": "meter://abc/98765456",
+          "beckn:location": {
             "@type": "beckn:Location",
             "geo": {
               "type": "Point",
@@ -68,13 +68,13 @@
               "addressCountry": "IN"
             }
           },
-          "df:startDate": "2025-08-26T00:00:00+05:30"
+          "beckn:startDate": "2025-08-26T00:00:00+05:30"
         }
       },
       "beckn:orderAttributes": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/DemandFlexibility/v1/context.jsonld",
         "@type": "beckn:DemandFlexibilitySubscription",
-        "df:requestType": "program_subscription"
+        "beckn:requestType": "program_subscription"
       }
     }
   }

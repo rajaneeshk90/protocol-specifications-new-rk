@@ -61,15 +61,15 @@
             "beckn:offerAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
               "@type": "beckn:ComputeEnergyPricing",
-              "ce:unit": "per_kWh",
-              "ce:priceStability": "volatile"
+              "beckn:unit": "per_kWh",
+              "beckn:priceStability": "volatile"
             }
           },
           "beckn:orderItemAttributes": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
             "@type": "beckn:ComputeEnergyWindow",
-            "ce:slotId": "slot-cambridge-morning-20251117-001",
-            "ce:gridParameters": {
+            "beckn:slotId": "slot-cambridge-morning-20251117-001",
+            "beckn:gridParameters": {
               "gridArea": "Cambridge-East",
               "gridZone": "UK-EAST-1",
               "renewableMix": 45,
@@ -92,12 +92,12 @@
               "frequency": 49.8,
               "frequencyUnit": "Hz"
             },
-            "ce:timeWindow": {
+            "beckn:timeWindow": {
               "start": "2025-11-17T10:00:00Z",
               "end": "2025-11-17T14:00:00Z",
               "duration": "PT4H"
             },
-            "ce:pricingParameters": {
+            "beckn:pricingParameters": {
               "spotPrice": 0.132,
               "currency": "GBP",
               "unit": "per_kWh",
@@ -115,7 +115,7 @@
                 "currency": "GBP"
               }
             },
-            "ce:capacityParameters": {
+            "beckn:capacityParameters": {
               "activeCapacity": 0.9,
               "capacityUnit": "MW"
             }
@@ -131,9 +131,9 @@
         "beckn:deliveryAttributes": {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
           "@type": "beckn:ComputeEnergyFulfillment",
-          "ce:computeLoad": 0.9,
-          "ce:computeLoadUnit": "MW",
-          "ce:location": {
+          "beckn:computeLoad": 0.9,
+          "beckn:computeLoadUnit": "MW",
+          "beckn:location": {
             "@type": "beckn:Location",
             "geo": {
               "type": "Point",
@@ -147,18 +147,18 @@
               "addressCountry": "GB"
             }
           },
-          "ce:timeWindow": {
+          "beckn:timeWindow": {
             "start": "2025-11-17T10:00:00Z",
             "end": "2025-11-17T14:00:00Z"
           },
-          "ce:workloadMetadata": {
+          "beckn:workloadMetadata": {
             "workloadType": "AI_TRAINING",
             "workloadId": "batch-a-001",
             "gpuHours": 3600,
             "carbonBudget": 432,
             "carbonBudgetUnit": "kgCO2"
           },
-          "ce:shiftDetails": {
+          "beckn:shiftDetails": {
             "shiftedLoad": 0.3,
             "shiftedLoadUnit": "MW",
             "targetLocation": "Manchester",
@@ -169,7 +169,7 @@
             "batteryDischarge": 0.15,
             "batteryDischargeUnit": "MW"
           },
-          "ce:flexibilityProvided": {
+          "beckn:flexibilityProvided": {
             "loadReduction": 0.3,
             "reductionUnit": "MW",
             "responseTime": "PT2M",
@@ -180,10 +180,10 @@
       "beckn:orderAttributes": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
         "@type": "beckn:ComputeEnergyOrder",
-        "ce:requestType": "workload_shift",
-        "ce:responseToEvent": "grid-event-cambridge-20251117-001",
-        "ce:confirmationTimestamp": "2025-11-17T08:15:02Z",
-        "ce:updateTimestamp": "2025-11-17T14:02:02Z"
+        "beckn:requestType": "workload_shift",
+        "beckn:responseToEvent": "grid-event-cambridge-20251117-001",
+        "beckn:confirmationTimestamp": "2025-11-17T08:15:02Z",
+        "beckn:updateTimestamp": "2025-11-17T14:02:02Z"
       }
     }
   }

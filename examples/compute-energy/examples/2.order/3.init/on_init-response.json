@@ -61,15 +61,15 @@
             "beckn:offerAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
               "@type": "beckn:ComputeEnergyPricing",
-              "ce:unit": "per_kWh",
-              "ce:priceStability": "stable"
+              "beckn:unit": "per_kWh",
+              "beckn:priceStability": "stable"
             }
           },
           "beckn:orderItemAttributes": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
             "@type": "beckn:ComputeEnergyWindow",
-            "ce:slotId": "slot-cambridge-morning-20251117-001",
-            "ce:gridParameters": {
+            "beckn:slotId": "slot-cambridge-morning-20251117-001",
+            "beckn:gridParameters": {
               "gridArea": "Cambridge-East",
               "gridZone": "UK-EAST-1",
               "renewableMix": 80,
@@ -78,19 +78,19 @@
               "frequency": 50.0,
               "frequencyUnit": "Hz"
             },
-            "ce:timeWindow": {
+            "beckn:timeWindow": {
               "start": "2025-11-17T10:00:00Z",
               "end": "2025-11-17T14:00:00Z",
               "duration": "PT4H"
             },
-            "ce:pricingParameters": {
+            "beckn:pricingParameters": {
               "spotPrice": 0.102,
               "currency": "GBP",
               "unit": "per_kWh",
               "priceStability": "stable",
               "estimatedCost": 489.6
             },
-            "ce:capacityParameters": {
+            "beckn:capacityParameters": {
               "reservedCapacity": 1.2,
               "capacityUnit": "MW",
               "availableCapacity": 3.8
@@ -107,9 +107,9 @@
         "beckn:deliveryAttributes": {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
           "@type": "beckn:ComputeEnergyFulfillment",
-          "ce:computeLoad": 1.2,
-          "ce:computeLoadUnit": "MW",
-          "ce:location": {
+          "beckn:computeLoad": 1.2,
+          "beckn:computeLoadUnit": "MW",
+          "beckn:location": {
             "@type": "beckn:Location",
             "geo": {
               "type": "Point",
@@ -123,11 +123,11 @@
               "addressCountry": "GB"
             }
           },
-          "ce:timeWindow": {
+          "beckn:timeWindow": {
             "start": "2025-11-17T10:00:00Z",
             "end": "2025-11-17T14:00:00Z"
           },
-          "ce:workloadMetadata": {
+          "beckn:workloadMetadata": {
             "workloadType": "AI_TRAINING",
             "workloadId": "batch-a-001",
             "gpuHours": 4800,
@@ -139,14 +139,14 @@
       "beckn:orderAttributes": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
         "@type": "beckn:ComputeEnergyOrder",
-        "ce:requestType": "compute_slot_reservation",
-        "ce:priority": "medium",
-        "ce:flexibilityLevel": "high"
+        "beckn:requestType": "compute_slot_reservation",
+        "beckn:priority": "medium",
+        "beckn:flexibilityLevel": "high"
       },
       "beckn:payment": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
         "@type": "beckn:ComputeEnergyPayment",
-        "ce:settlement": "next-billing-cycle"
+        "beckn:settlement": "next-billing-cycle"
       }
     }
   }

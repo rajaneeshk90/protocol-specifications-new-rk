@@ -17,7 +17,7 @@
     "text_search": "Grid flexibility windows",
     "filters": {
       "type": "jsonpath",
-      "expression": "$[?(@.beckn:itemAttributes.ce:gridParameters.gridArea in ['Cambridge-East', 'Manchester'] && @.beckn:itemAttributes.ce:gridParameters.renewableMix >= 70)]"
+      "expression": "$[?(@.beckn:itemAttributes.beckn:gridParameters.gridArea in ['Cambridge-East', 'Manchester'] && @.beckn:itemAttributes.beckn:gridParameters.renewableMix >= 70)]"
     },
     "spatial": [
       {

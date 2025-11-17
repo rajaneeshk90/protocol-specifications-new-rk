@@ -45,8 +45,8 @@
           "beckn:orderItemAttributes": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
             "@type": "beckn:ComputeEnergyWindow",
-            "ce:slotId": "slot-cambridge-morning-20251117-001",
-            "ce:performanceMetrics": {
+            "beckn:slotId": "slot-cambridge-morning-20251117-001",
+            "beckn:performanceMetrics": {
               "plannedLoad": 1.2,
               "actualLoad": 0.9,
               "loadUnit": "MW",
@@ -55,7 +55,7 @@
               "uptime": 100,
               "uptimeUnit": "percent"
             },
-            "ce:carbonMetrics": {
+            "beckn:carbonMetrics": {
               "plannedCarbonBudget": 576,
               "actualCarbon": 432,
               "carbonUnit": "kgCO2",
@@ -63,7 +63,7 @@
               "carbonReduction": 25,
               "carbonReductionUnit": "percent"
             },
-            "ce:costMetrics": {
+            "beckn:costMetrics": {
               "estimatedCost": 489.6,
               "actualCost": 475.2,
               "costSavings": 14.4,
@@ -71,7 +71,7 @@
               "costReduction": 2.9,
               "costReductionUnit": "percent"
             },
-            "ce:flexibilityMetrics": {
+            "beckn:flexibilityMetrics": {
               "flexibilityProvided": 0.3,
               "flexibilityUnit": "MW",
               "responseTime": "PT2M",
@@ -98,8 +98,8 @@
             "beckn:offerAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
               "@type": "beckn:ComputeEnergyPricing",
-              "ce:unit": "per_kWh",
-              "ce:priceStability": "volatile"
+              "beckn:unit": "per_kWh",
+              "beckn:priceStability": "volatile"
             }
           }
         }
@@ -113,9 +113,9 @@
         "beckn:deliveryAttributes": {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
           "@type": "beckn:ComputeEnergyFulfillment",
-          "ce:computeLoad": 0.9,
-          "ce:computeLoadUnit": "MW",
-          "ce:location": {
+          "beckn:computeLoad": 0.9,
+          "beckn:computeLoadUnit": "MW",
+          "beckn:location": {
             "@type": "beckn:Location",
             "geo": {
               "type": "Point",
@@ -129,17 +129,17 @@
               "addressCountry": "GB"
             }
           },
-          "ce:timeWindow": {
+          "beckn:timeWindow": {
             "start": "2025-11-17T10:00:00Z",
             "end": "2025-11-17T14:00:00Z"
           },
-          "ce:workloadMetadata": {
+          "beckn:workloadMetadata": {
             "workloadType": "AI_TRAINING",
             "workloadId": "batch-a-001",
             "gpuHours": 3600,
             "completionStatus": "success"
           },
-          "ce:settlementDetails": {
+          "beckn:settlementDetails": {
             "settlementMethod": "grid_incentive_credit",
             "incentiveAmount": 45.0,
             "incentiveCurrency": "GBP",
@@ -153,10 +153,10 @@
       "beckn:orderAttributes": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
         "@type": "beckn:ComputeEnergyOrder",
-        "ce:requestType": "compute_slot_reservation",
-        "ce:confirmationTimestamp": "2025-11-17T08:15:02Z",
-        "ce:completionTimestamp": "2025-11-17T14:00:00Z",
-        "ce:auditTrail": {
+        "beckn:requestType": "compute_slot_reservation",
+        "beckn:confirmationTimestamp": "2025-11-17T08:15:02Z",
+        "beckn:completionTimestamp": "2025-11-17T14:00:00Z",
+        "beckn:auditTrail": {
           "energyUseLogs": "https://compflex-agent.computecloud.ai/logs/order-ce-cambridge-morning-001/energy",
           "carbonReport": "https://compflex-agent.computecloud.ai/reports/order-ce-cambridge-morning-001/carbon",
           "costSummary": "https://compflex-agent.computecloud.ai/reports/order-ce-cambridge-morning-001/cost",

@@ -29,26 +29,26 @@
           "beckn:orderItemAttributes": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/DemandFlexibility/v1/context.jsonld",
             "@type": "beckn:DemandFlexibilityEvent",
-            "df:eventDetails": {
+            "beckn:eventDetails": {
               "subscriptionId": "sub-df-peak-saver-001",
               "programId": "item-df-peak-saver-001",
               "eventId": "event-20250826-001",
               "priority": "high",
               "responseDeadline": "2025-08-26T14:00:00+05:30"
             },
-            "df:gridConditions": {
+            "beckn:gridConditions": {
               "frequency": "49.7Hz"
             },
-            "df:baselineParameters": {
+            "beckn:baselineParameters": {
               "baselineLoad": 400,
               "baselineUnit": "kW",
               "baselineMethod": "3-of-5_average"
             },
-            "df:reductionRequest": {
+            "beckn:reductionRequest": {
               "requestedReduction": 150,
               "reductionUnit": "kW"
             },
-            "df:incentiveParameters": {
+            "beckn:incentiveParameters": {
               "rate": 5.00,
               "currency": "INR",
               "type": "per_kWh_reduced"
@@ -65,10 +65,10 @@
         "beckn:deliveryAttributes": {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/DemandFlexibility/v1/context.jsonld",
           "@type": "beckn:DemandFlexibilityEvent",
-          "df:meterId": "meter://abc/98765456",
-          "df:startTime": "2025-08-26T14:00:00+05:30",
-          "df:endTime": "2025-08-26T17:00:00+05:30",
-          "df:location": {
+          "beckn:meterId": "meter://abc/98765456",
+          "beckn:startTime": "2025-08-26T14:00:00+05:30",
+          "beckn:endTime": "2025-08-26T17:00:00+05:30",
+          "beckn:location": {
             "@type": "beckn:Location",
             "geo": {
               "type": "Point",
@@ -87,7 +87,7 @@
       "beckn:orderAttributes": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/DemandFlexibility/v1/context.jsonld",
         "@type": "beckn:DemandFlexibilityEvent",
-        "df:requestType": "event_participation"
+        "beckn:requestType": "event_participation"
       }
     }
   }

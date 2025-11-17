@@ -48,8 +48,8 @@
             "beckn:offerAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
               "@type": "beckn:ComputeEnergyPricing",
-              "ce:unit": "per_kWh",
-              "ce:priceStability": "stable"
+              "beckn:unit": "per_kWh",
+              "beckn:priceStability": "stable"
             }
           }
         }

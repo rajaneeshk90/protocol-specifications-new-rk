@@ -95,8 +95,8 @@
             "beckn:itemAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/DemandFlexibility/v1/context.jsonld",
               "@type": "beckn:DemandFlexibilityProgram",
-              "df:programType": "voluntary",
-              "df:participantCapabilities": {
+              "beckn:programType": "voluntary",
+              "beckn:participantCapabilities": {
                 "participantType": ["commercial", "residential"],
                 "loadCapacity": {
                   "min": 100,
@@ -106,7 +106,7 @@
                 "controlType": "manual",
                 "responseTime": "PT30M"
               },
-              "df:availabilityParameters": {
+              "beckn:availabilityParameters": {
                 "hours": {
                   "start": "14:00",
                   "end": "17:00"
@@ -114,7 +114,7 @@
                 "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
                 "seasonal": ["summer", "monsoon"]
               },
-              "df:eventParameters": {
+              "beckn:eventParameters": {
                 "duration": {
                   "min": "PT60M",
                   "max": "PT180M"
@@ -123,13 +123,13 @@
                 "priority": "medium",
                 "gridConditionTrigger": "peak_demand"
               },
-              "df:incentiveParameters": {
+              "beckn:incentiveParameters": {
                 "rate": 5.00,
                 "currency": "INR",
                 "type": "per_kWh_reduced",
                 "settlementFrequency": "monthly"
               },
-              "df:priorityParameters": {
+              "beckn:priorityParameters": {
                 "eventPriority": ["high", "medium"],
                 "participationMode": "voluntary"
               }
@@ -182,8 +182,8 @@
             "beckn:itemAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/DemandFlexibility/v1/context.jsonld",
               "@type": "beckn:DemandFlexibilityProgram",
-              "df:programType": "mandatory",
-              "df:participantCapabilities": {
+              "beckn:programType": "mandatory",
+              "beckn:participantCapabilities": {
                 "participantType": ["commercial", "industrial"],
                 "loadCapacity": {
                   "min": 500,
@@ -193,7 +193,7 @@
                 "controlType": "automated",
                 "responseTime": "PT5M"
               },
-              "df:availabilityParameters": {
+              "beckn:availabilityParameters": {
                 "hours": {
                   "start": "00:00",
                   "end": "23:59"
@@ -201,7 +201,7 @@
                 "days": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"],
                 "seasonal": ["all"]
               },
-              "df:eventParameters": {
+              "beckn:eventParameters": {
                 "duration": {
                   "min": "PT30M",
                   "max": "PT240M"
@@ -210,13 +210,13 @@
                 "priority": "high",
                 "gridConditionTrigger": "emergency"
               },
-              "df:incentiveParameters": {
+              "beckn:incentiveParameters": {
                 "rate": 10.00,
                 "currency": "INR",
                 "type": "per_kWh_reduced",
                 "settlementFrequency": "weekly"
               },
-              "df:priorityParameters": {
+              "beckn:priorityParameters": {
                 "eventPriority": ["high"],
                 "participationMode": "mandatory"
               }

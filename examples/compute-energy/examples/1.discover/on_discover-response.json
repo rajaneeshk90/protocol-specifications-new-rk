@@ -80,7 +80,7 @@
             "beckn:itemAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
               "@type": "beckn:ComputeEnergyWindow",
-              "ce:gridParameters": {
+              "beckn:gridParameters": {
                 "gridArea": "Cambridge-East",
                 "gridZone": "UK-EAST-1",
                 "renewableMix": 80,
@@ -88,12 +88,12 @@
                 "carbonIntensity": 120,
                 "carbonIntensityUnit": "gCO2/kWh"
               },
-              "ce:timeWindow": {
+              "beckn:timeWindow": {
                 "start": "10:00:00Z",
                 "end": "14:00:00Z",
                 "duration": "PT4H"
               },
-              "ce:capacityParameters": {
+              "beckn:capacityParameters": {
                 "availableCapacity": 5.0,
                 "capacityUnit": "MW",
                 "reservationRequired": false
@@ -132,7 +132,7 @@
             "beckn:itemAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
               "@type": "beckn:ComputeEnergyWindow",
-              "ce:gridParameters": {
+              "beckn:gridParameters": {
                 "gridArea": "Manchester",
                 "gridZone": "UK-NORTH-1",
                 "renewableMix": 75,
@@ -140,12 +140,12 @@
                 "carbonIntensity": 140,
                 "carbonIntensityUnit": "gCO2/kWh"
               },
-              "ce:timeWindow": {
+              "beckn:timeWindow": {
                 "start": "14:00:00Z",
                 "end": "18:00:00Z",
                 "duration": "PT4H"
               },
-              "ce:capacityParameters": {
+              "beckn:capacityParameters": {
                 "availableCapacity": 4.5,
                 "capacityUnit": "MW",
                 "reservationRequired": false
@@ -173,8 +173,8 @@
             "beckn:offerAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
               "@type": "beckn:ComputeEnergyPricing",
-              "ce:unit": "per_kWh",
-              "ce:priceStability": "stable"
+              "beckn:unit": "per_kWh",
+              "beckn:priceStability": "stable"
             }
           },
           {
@@ -196,8 +196,8 @@
             "beckn:offerAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/ComputeEnergy/v1/context.jsonld",
               "@type": "beckn:ComputeEnergyPricing",
-              "ce:unit": "per_kWh",
-              "ce:priceStability": "stable"
+              "beckn:unit": "per_kWh",
+              "beckn:priceStability": "stable"
             }
           }
         ]
