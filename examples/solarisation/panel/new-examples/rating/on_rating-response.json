@@ -1,0 +1,50 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_rating",
+    "domain": "beckn.one:solar:rooftop-installation:1.0",
+    "timestamp": "2025-12-15T18:00:02Z",
+    "message_id": "msg-on-rating-solar-rooftop-001",
+    "transaction_id": "txn-solar-rooftop-001",
+    "bap_id": "example-bap.com",
+    "bap_uri": "https://api.example-bap.com/beckn/v2",
+    "bpp_id": "example-bpp.com",
+    "bpp_uri": "https://api.example-bpp.com/beckn/v2",
+    "ttl": "PT30S",
+    "schema_context": [
+      "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld"
+    ]
+  },
+  "message": {
+    "feedback": [
+      {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
+        "@type": "beckn:SolarRooftopRating",
+        "beckn:ratingCategory": "overall_satisfaction",
+        "beckn:ratingValue": 4.8,
+        "beckn:ratingCount": 47,
+        "beckn:ratingBreakdown": {
+          "5_star": 35,
+          "4_star": 10,
+          "3_star": 2,
+          "2_star": 0,
+          "1_star": 0
+        }
+      },
+      {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
+        "@type": "beckn:SolarRooftopRating",
+        "beckn:ratingCategory": "installation_quality",
+        "beckn:ratingValue": 4.9,
+        "beckn:ratingCount": 47
+      },
+      {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
+        "@type": "beckn:SolarRooftopRating",
+        "beckn:ratingCategory": "technician_professionalism",
+        "beckn:ratingValue": 4.7,
+        "beckn:ratingCount": 47
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "discover",
+    "domain": "beckn.one:solar:rooftop-installation:1.0",
+    "timestamp": "2025-11-20T10:00:00Z",
+    "message_id": "msg-discover-solar-rooftop-001",
+    "transaction_id": "txn-solar-rooftop-001",
+    "bap_id": "example-bap.com",
+    "bap_uri": "https://api.example-bap.com/beckn/v2",
+    "bpp_id": "example-bpp.com",
+    "bpp_uri": "https://api.example-bpp.com/beckn/v2",
+    "ttl": "PT30S",
+    "schema_context": [
+      "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld"
+    ]
+  },
+  "message": {
+    "text_search": "Solar rooftop installation services",
+    "filters": {
+      "type": "jsonpath",
+      "expression": "$[?(@.beckn:itemAttributes.beckn:rooftopRequirements.minRoofArea <= 100 && @.beckn:itemAttributes.beckn:rooftopRequirements.maxRoofArea >= 100)]"
+    },
+    "spatial": [
+      {
+        "targets": "$['beckn:availableAt'][*]['geo']",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [77.5946, 12.9716]
+        }
+      }
+    ]
+  }
+}
