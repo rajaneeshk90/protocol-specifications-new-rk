@@ -42,8 +42,10 @@
               "item-solar-rooftop-100kw"
             ],
             "beckn:price": {
-              "currency": "INR",
-              "price": 750000
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+              "@type": "schema:PriceSpecification",
+              "schema:priceCurrency": "INR",
+              "schema:price": 750000
             },
             "beckn:offerAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
@@ -59,8 +61,14 @@
               ],
               "beckn:paymentTerms": "30%_advance_70%_on_completion",
               "beckn:subsidies": {
-                "governmentSubsidy": 30000,
-                "netMeteringBenefit": 15000
+                "governmentSubsidy": {
+                  "value": 30000,
+                  "currency": "INR"
+                },
+                "netMeteringBenefit": {
+                  "value": 15000,
+                  "currency": "INR"
+                }
               }
             }
           },
@@ -70,6 +78,28 @@
             "beckn:capacity": {
               "value": 100,
               "unit": "kW"
+            },
+            "beckn:rooftopRequirements": {
+              "minRoofArea": {
+                "value": 500,
+                "unit": "sqm"
+              },
+              "maxRoofArea": {
+                "value": 800,
+                "unit": "sqm"
+              },
+              "roofType": "RCC",
+              "orientation": "South",
+              "tiltAngle": 15,
+              "shadowFree": true
+            },
+            "beckn:equipmentDetails": {
+              "panelType": "Monocrystalline",
+              "panelEfficiency": 22.5,
+              "panelWarranty": 25,
+              "inverterType": "String Inverter",
+              "inverterEfficiency": 98.5,
+              "mountingType": "Rooftop"
             },
             "beckn:estimatedGeneration": {
               "daily": 400,
@@ -111,8 +141,14 @@
         "beckn:customerDetails": {
           "propertyType": "residential",
           "roofType": "RCC",
-          "electricityBill": 8000,
-          "monthlyConsumption": 800
+          "electricityBill": {
+            "value": 8000,
+            "currency": "INR"
+          },
+          "monthlyConsumption": {
+            "value": 800,
+            "unit": "kWh"
+          }
         }
       }
     }

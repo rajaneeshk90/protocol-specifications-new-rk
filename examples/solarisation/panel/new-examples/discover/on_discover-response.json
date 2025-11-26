@@ -67,8 +67,14 @@
                   "unit": "kW"
                 },
                 "beckn:rooftopRequirements": {
-                  "minRoofArea": 500,
-                  "maxRoofArea": 800,
+                  "minRoofArea": {
+                    "value": 500,
+                    "unit": "sqm"
+                  },
+                  "maxRoofArea": {
+                    "value": 800,
+                    "unit": "sqm"
+                  },
                   "roofType": "RCC",
                   "orientation": "South",
                   "tiltAngle": 15,
@@ -125,8 +131,14 @@
                   "unit": "kW"
                 },
                 "beckn:rooftopRequirements": {
-                  "minRoofArea": 250,
-                  "maxRoofArea": 400,
+                  "minRoofArea": {
+                    "value": 250,
+                    "unit": "sqm"
+                  },
+                  "maxRoofArea": {
+                    "value": 400,
+                    "unit": "sqm"
+                  },
                   "roofType": "RCC",
                   "orientation": "South",
                   "tiltAngle": 15,
@@ -183,8 +195,14 @@
                   "unit": "kW"
                 },
                 "beckn:rooftopRequirements": {
-                  "minRoofArea": 50,
-                  "maxRoofArea": 100,
+                  "minRoofArea": {
+                    "value": 50,
+                    "unit": "sqm"
+                  },
+                  "maxRoofArea": {
+                    "value": 100,
+                    "unit": "sqm"
+                  },
                   "roofType": "RCC",
                   "orientation": "South",
                   "tiltAngle": 15,
@@ -234,8 +252,14 @@
                 ],
                 "beckn:paymentTerms": "30%_advance_70%_on_completion",
                 "beckn:subsidies": {
-                  "governmentSubsidy": 30000,
-                  "netMeteringBenefit": 15000
+                  "governmentSubsidy": {
+                    "value": 30000,
+                    "currency": "INR"
+                  },
+                  "netMeteringBenefit": {
+                    "value": 15000,
+                    "currency": "INR"
+                  }
                 }
               }
             },
@@ -271,8 +295,14 @@
                 ],
                 "beckn:paymentTerms": "30%_advance_70%_on_completion",
                 "beckn:subsidies": {
-                  "governmentSubsidy": 20000,
-                  "netMeteringBenefit": 10000
+                  "governmentSubsidy": {
+                    "value": 20000,
+                    "currency": "INR"
+                  },
+                  "netMeteringBenefit": {
+                    "value": 10000,
+                    "currency": "INR"
+                  }
                 }
               }
             },
@@ -308,8 +338,14 @@
                 ],
                 "beckn:paymentTerms": "30%_advance_70%_on_completion",
                 "beckn:subsidies": {
-                  "governmentSubsidy": 8000,
-                  "netMeteringBenefit": 4000
+                  "governmentSubsidy": {
+                    "value": 8000,
+                    "currency": "INR"
+                  },
+                  "netMeteringBenefit": {
+                    "value": 4000,
+                    "currency": "INR"
+                  }
                 }
               }
             }

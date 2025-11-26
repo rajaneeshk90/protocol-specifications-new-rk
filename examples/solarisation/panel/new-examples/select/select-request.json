@@ -28,7 +28,6 @@
           "@type": "beckn:OrderItem",
           "beckn:lineId": "order-item-solar-001",
           "beckn:orderedItem": "item-solar-rooftop-100kw",
-          "beckn:quantity": 1,
           "beckn:acceptedOffer": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
             "@type": "beckn:Offer",
@@ -40,29 +39,7 @@
             "beckn:provider": "provider-solar-installer-001",
             "beckn:items": [
               "item-solar-rooftop-100kw"
-            ],
-            "beckn:price": {
-              "currency": "INR",
-              "price": 750000
-            },
-            "beckn:offerAttributes": {
-              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
-              "@type": "beckn:SolarRooftopPricing",
-              "beckn:pricingModel": "fixed_price",
-              "beckn:includes": [
-                "site_survey",
-                "system_design",
-                "equipment_installation",
-                "commissioning",
-                "warranty",
-                "maintenance_plan"
-              ],
-              "beckn:paymentTerms": "30%_advance_70%_on_completion",
-              "beckn:subsidies": {
-                "governmentSubsidy": 30000,
-                "netMeteringBenefit": 15000
-              }
-            }
+            ]
           }
         }
       ],
