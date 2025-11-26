@@ -59,8 +59,14 @@
               ],
               "beckn:paymentTerms": "30%_advance_70%_on_completion",
               "beckn:subsidies": {
-                "governmentSubsidy": 30000,
-                "netMeteringBenefit": 15000
+                "governmentSubsidy": {
+                  "value": 30000,
+                  "currency": "INR"
+                },
+                "netMeteringBenefit": {
+                  "value": 15000,
+                  "currency": "INR"
+                }
               }
             }
           },

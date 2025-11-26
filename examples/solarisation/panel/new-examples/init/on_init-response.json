@@ -58,8 +58,10 @@
               "item-solar-rooftop-100kw"
             ],
             "beckn:price": {
-              "currency": "INR",
-              "price": 750000
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+              "@type": "schema:PriceSpecification",
+              "schema:priceCurrency": "INR",
+              "schema:price": 750000
             },
             "beckn:offerAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
@@ -75,8 +77,14 @@
               ],
               "beckn:paymentTerms": "30%_advance_70%_on_completion",
               "beckn:subsidies": {
-                "governmentSubsidy": 30000,
-                "netMeteringBenefit": 15000
+                "governmentSubsidy": {
+                  "value": 30000,
+                  "currency": "INR"
+                },
+                "netMeteringBenefit": {
+                  "value": 15000,
+                  "currency": "INR"
+                }
               }
             }
           },
@@ -87,14 +95,45 @@
               "value": 100,
               "unit": "kW"
             },
+            "beckn:rooftopRequirements": {
+              "minRoofArea": {
+                "value": 500,
+                "unit": "sqm"
+              },
+              "maxRoofArea": {
+                "value": 800,
+                "unit": "sqm"
+              },
+              "roofType": "RCC",
+              "orientation": "South",
+              "tiltAngle": 15,
+              "shadowFree": true
+            },
+            "beckn:equipmentDetails": {
+              "panelType": "Monocrystalline",
+              "panelEfficiency": 22.5,
+              "panelWarranty": 25,
+              "inverterType": "String Inverter",
+              "inverterEfficiency": 98.5,
+              "mountingType": "Rooftop"
+            },
+            "beckn:estimatedGeneration": {
+              "daily": 400,
+              "monthly": 12000,
+              "annual": 144000,
+              "unit": "kWh"
+            },
+            "beckn:paybackPeriod": {
+              "value": 7.2,
+              "unit": "years"
+            },
+            "beckn:roi": {
+              "value": 13.9,
+              "unit": "percent_per_year"
+            },
             "beckn:customerRequirements": {
               "preferredInstallationDate": "2025-12-01",
               "specialInstructions": "Install panels facing south with optimal tilt"
-            },
-            "beckn:providerConfirmation": {
-              "siteFeasibility": "confirmed",
-              "estimatedInstallationDate": "2025-12-05",
-              "warrantyTerms": "25_years_panels_10_years_inverter"
             }
           }
         }
@@ -146,11 +185,15 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Payment",
         "beckn:id": "payment-solar-rooftop-001",
-        "beckn:method": "PREPAID",
+        "beckn:method": "POSTPAID",
         "beckn:status": "NOT-PAID",
         "beckn:amount": {
           "currency": "INR",
-          "value": 225000
+          "value": 5000
+        },
+        "beckn:descriptor": {
+          "@type": "beckn:Descriptor",
+          "schema:description": "Site inspection fee"
         },
         "beckn:paymentURL": "https://payments.example-bpp.com/initiate/order-solar-rooftop-001"
       },
@@ -161,10 +204,40 @@
         "beckn:customerDetails": {
           "propertyType": "residential",
           "roofType": "RCC",
-          "electricityBill": 8000,
-          "monthlyConsumption": 800
+          "electricityBill": {
+            "value": 8000,
+            "currency": "INR"
+          },
+          "monthlyConsumption": {
+            "value": 800,
+            "unit": "kWh"
+          }
         },
         "beckn:providerNotes": "Site survey scheduled for tomorrow. Customer has confirmed south-facing roof."
+      },
+      "beckn:orderValue": {
+        "currency": "INR",
+        "value": 705000,
+        "components": [
+          {
+            "type": "UNIT",
+            "value": 750000,
+            "currency": "INR",
+            "description": "Base installation cost"
+          },
+          {
+            "type": "DISCOUNT",
+            "value": -30000,
+            "currency": "INR",
+            "description": "Government subsidy"
+          },
+          {
+            "type": "DISCOUNT",
+            "value": -15000,
+            "currency": "INR",
+            "description": "Net metering benefit"
+          }
+        ]
       }
     }
   }

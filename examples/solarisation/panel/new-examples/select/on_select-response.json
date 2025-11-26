@@ -42,10 +42,8 @@
               "item-solar-rooftop-100kw"
             ],
             "beckn:price": {
-              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-              "@type": "schema:PriceSpecification",
-              "schema:priceCurrency": "INR",
-              "schema:price": 750000
+              "currency": "INR",
+              "price": 750000
             },
             "beckn:offerAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
@@ -78,28 +76,6 @@
             "beckn:capacity": {
               "value": 100,
               "unit": "kW"
-            },
-            "beckn:rooftopRequirements": {
-              "minRoofArea": {
-                "value": 500,
-                "unit": "sqm"
-              },
-              "maxRoofArea": {
-                "value": 800,
-                "unit": "sqm"
-              },
-              "roofType": "RCC",
-              "orientation": "South",
-              "tiltAngle": 15,
-              "shadowFree": true
-            },
-            "beckn:equipmentDetails": {
-              "panelType": "Monocrystalline",
-              "panelEfficiency": 22.5,
-              "panelWarranty": 25,
-              "inverterType": "String Inverter",
-              "inverterEfficiency": 98.5,
-              "mountingType": "Rooftop"
             },
             "beckn:estimatedGeneration": {
               "daily": 400,
@@ -141,15 +117,33 @@
         "beckn:customerDetails": {
           "propertyType": "residential",
           "roofType": "RCC",
-          "electricityBill": {
-            "value": 8000,
-            "currency": "INR"
-          },
-          "monthlyConsumption": {
-            "value": 800,
-            "unit": "kWh"
-          }
+          "electricityBill": 8000,
+          "monthlyConsumption": 800
         }
+      },
+      "beckn:orderValue": {
+        "currency": "INR",
+        "value": 705000,
+        "components": [
+          {
+            "type": "UNIT",
+            "value": 750000,
+            "currency": "INR",
+            "description": "Base installation cost"
+          },
+          {
+            "type": "DISCOUNT",
+            "value": -30000,
+            "currency": "INR",
+            "description": "Government subsidy"
+          },
+          {
+            "type": "DISCOUNT",
+            "value": -15000,
+            "currency": "INR",
+            "description": "Net metering benefit"
+          }
+        ]
       }
     }
   }

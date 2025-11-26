@@ -44,41 +44,13 @@
           "@type": "beckn:OrderItem",
           "beckn:lineId": "order-item-solar-001",
           "beckn:orderedItem": "item-solar-rooftop-100kw",
-          "beckn:quantity": 1,
           "beckn:acceptedOffer": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
             "@type": "beckn:Offer",
             "beckn:id": "offer-solar-rooftop-100kw-001",
-            "beckn:descriptor": {
-              "@type": "beckn:Descriptor",
-              "schema:name": "100kW Solar Installation Package"
-            },
-            "beckn:provider": "provider-solar-installer-001",
             "beckn:items": [
               "item-solar-rooftop-100kw"
-            ],
-            "beckn:price": {
-              "currency": "INR",
-              "price": 750000
-            },
-            "beckn:offerAttributes": {
-              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
-              "@type": "beckn:SolarRooftopPricing",
-              "beckn:pricingModel": "fixed_price",
-              "beckn:includes": [
-                "site_survey",
-                "system_design",
-                "equipment_installation",
-                "commissioning",
-                "warranty",
-                "maintenance_plan"
-              ],
-              "beckn:paymentTerms": "30%_advance_70%_on_completion",
-              "beckn:subsidies": {
-                "governmentSubsidy": 30000,
-                "netMeteringBenefit": 15000
-              }
-            }
+            ]
           },
           "beckn:orderItemAttributes": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
@@ -125,13 +97,6 @@
           }
         }
       },
-      "beckn:payment": {
-        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-        "@type": "beckn:Payment",
-        "beckn:id": "payment-solar-rooftop-001",
-        "beckn:method": "PREPAID",
-        "beckn:status": "NOT-PAID"
-      },
       "beckn:orderAttributes": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
         "@type": "beckn:SolarRooftopOrder",
@@ -139,8 +104,14 @@
         "beckn:customerDetails": {
           "propertyType": "residential",
           "roofType": "RCC",
-          "electricityBill": 8000,
-          "monthlyConsumption": 800
+          "electricityBill": {
+            "value": 8000,
+            "currency": "INR"
+          },
+          "monthlyConsumption": {
+            "value": 800,
+            "unit": "kWh"
+          }
         }
       }
     }

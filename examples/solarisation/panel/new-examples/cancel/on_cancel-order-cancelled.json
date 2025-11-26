@@ -85,8 +85,14 @@
               ],
               "beckn:paymentTerms": "30%_advance_70%_on_completion",
               "beckn:subsidies": {
-                "governmentSubsidy": 30000,
-                "netMeteringBenefit": 15000
+                "governmentSubsidy": {
+                  "value": 30000,
+                  "currency": "INR"
+                },
+                "netMeteringBenefit": {
+                  "value": 15000,
+                  "currency": "INR"
+                }
               }
             }
           },
@@ -120,11 +126,11 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Payment",
         "beckn:id": "payment-solar-rooftop-001",
-        "beckn:method": "PREPAID",
+        "beckn:method": "POSTPAID",
         "beckn:status": "REFUND_INITIATED",
         "beckn:amount": {
           "currency": "INR",
-          "value": 225000
+          "value": 655000
         }
       },
       "beckn:orderAttributes": {
@@ -145,6 +151,36 @@
           "finalSettlementAmount": 25000,
           "settlementReason": "deduction_for_processing_and_site_visit"
         }
+      },
+      "beckn:orderValue": {
+        "currency": "INR",
+        "value": 655000,
+        "components": [
+          {
+            "type": "UNIT",
+            "value": 750000,
+            "currency": "INR",
+            "description": "Base installation cost"
+          },
+          {
+            "type": "DISCOUNT",
+            "value": -30000,
+            "currency": "INR",
+            "description": "Government subsidy"
+          },
+          {
+            "type": "DISCOUNT",
+            "value": -15000,
+            "currency": "INR",
+            "description": "Net metering benefit"
+          },
+          {
+            "type": "FEE",
+            "value": 50000,
+            "currency": "INR",
+            "description": "Cancellation charges"
+          }
+        ]
       }
     }
   }
