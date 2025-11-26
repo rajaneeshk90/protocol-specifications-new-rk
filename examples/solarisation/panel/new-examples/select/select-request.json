@@ -40,6 +40,18 @@
             "beckn:items": [
               "item-solar-rooftop-100kw"
             ]
+          },
+          "beckn:orderItemAttributes": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
+            "@type": "beckn:SolarRooftopInstallation",
+            "beckn:capacity": {
+              "value": 100,
+              "unit": "kW"
+            },
+            "beckn:customerRequirements": {
+              "preferredInstallationDate": "2025-12-01",
+              "specialInstructions": "Install panels facing south with optimal tilt"
+            }
           }
         }
       ],
@@ -47,7 +59,6 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Fulfillment",
         "beckn:id": "fulfillment-solar-installation-001",
-        "beckn:mode": "ON_SITE",
         "beckn:deliveryAttributes": {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
           "@type": "beckn:SolarRooftopFulfillment",

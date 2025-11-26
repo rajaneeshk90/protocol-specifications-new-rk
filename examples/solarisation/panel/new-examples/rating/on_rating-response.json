@@ -16,35 +16,11 @@
     ]
   },
   "message": {
-    "feedback": [
-      {
-        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
-        "@type": "beckn:SolarRooftopRating",
-        "beckn:ratingCategory": "overall_satisfaction",
-        "beckn:ratingValue": 4.8,
-        "beckn:ratingCount": 47,
-        "beckn:ratingBreakdown": {
-          "5_star": 35,
-          "4_star": 10,
-          "3_star": 2,
-          "2_star": 0,
-          "1_star": 0
-        }
-      },
-      {
-        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
-        "@type": "beckn:SolarRooftopRating",
-        "beckn:ratingCategory": "installation_quality",
-        "beckn:ratingValue": 4.9,
-        "beckn:ratingCount": 47
-      },
-      {
-        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
-        "@type": "beckn:SolarRooftopRating",
-        "beckn:ratingCategory": "technician_professionalism",
-        "beckn:ratingValue": 4.7,
-        "beckn:ratingCount": 47
-      }
-    ]
+    "received": true,
+    "feedbackForm": {
+      "url": "https://example-bpp.com/feedback/portal",
+      "mime_type": "application/xml",
+      "submission_id": "feedback-123e4567-e89b-12d3-a456-426614174000"
+    }
   }
 }

@@ -3,57 +3,27 @@
     "version": "2.0.0",
     "action": "on_support",
     "domain": "beckn.one:solar:rooftop-installation:1.0",
-    "timestamp": "2025-12-12T14:00:02Z",
-    "message_id": "msg-on-support-solar-rooftop-001",
-    "transaction_id": "txn-solar-rooftop-001",
-    "bap_id": "example-bap.com",
-    "bap_uri": "https://api.example-bap.com/beckn/v2",
     "bpp_id": "example-bpp.com",
     "bpp_uri": "https://api.example-bpp.com/beckn/v2",
-    "ttl": "PT30S",
-    "schema_context": [
-      "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld"
-    ]
+    "transaction_id": "txn-solar-rooftop-001",
+    "message_id": "msg-on-support-solar-rooftop-001",
+    "timestamp": "2025-12-12T14:00:02Z",
+    "ttl": "PT30S"
   },
   "message": {
-    "phone": "+91-1800-123-4567",
-    "email": "support@solarinstaller.com",
-    "support_attributes": {
-      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
-      "@type": "beckn:SolarRooftopSupport",
-      "beckn:supportChannels": [
-        {
-          "type": "phone",
-          "contact": "+91-1800-123-4567",
-          "availability": "24/7",
-          "languages": ["English", "Hindi", "Kannada"]
-        },
-        {
-          "type": "email",
-          "contact": "support@solarinstaller.com",
-          "availability": "24/7",
-          "responseTime": "PT4H"
-        },
-        {
-          "type": "whatsapp",
-          "contact": "+91-9876543214",
-          "availability": "9AM-9PM IST",
-          "languages": ["English", "Hindi", "Kannada"]
-        }
-      ],
-      "beckn:serviceAreas": ["Bangalore", "Mumbai", "Delhi", "Chennai"],
-      "beckn:specializations": [
-        "system_monitoring",
-        "maintenance_support",
-        "performance_optimization",
-        "warranty_claims",
-        "emergency_repairs"
-      ],
-      "beckn:responseTimes": {
-        "emergency": "PT1H",
-        "urgent": "PT4H",
-        "normal": "PT24H"
-      }
+    "support": {
+      "name": "Solar Installer Support Team",
+      "phone": "18001234567",
+      "email": "support@solarinstaller.com",
+      "url": "https://support.solarinstaller.com/ticket/SUP-20251212-001",
+      "hours": "Mon–Sun 24/7 IST",
+      "channels": [
+        "PHONE",
+        "EMAIL",
+        "WEB",
+        "CHAT",
+        "WHATSAPP"
+      ]
     }
   }
 }

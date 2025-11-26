@@ -3,8 +3,8 @@
     "version": "2.0.0",
     "action": "on_status",
     "domain": "beckn.one:solar:rooftop-installation:1.0",
-    "timestamp": "2025-11-25T10:00:02Z",
-    "message_id": "msg-on-status-solar-rooftop-001",
+    "timestamp": "2025-11-21T09:00:02Z",
+    "message_id": "msg-on-status-agent-assigned-001",
     "transaction_id": "txn-solar-rooftop-001",
     "bap_id": "example-bap.com",
     "bap_uri": "https://api.example-bap.com/beckn/v2",
@@ -68,8 +68,10 @@
               "item-solar-rooftop-100kw"
             ],
             "beckn:price": {
-              "currency": "INR",
-              "price": 750000
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+              "@type": "schema:PriceSpecification",
+              "schema:priceCurrency": "INR",
+              "schema:price": 750000
             },
             "beckn:offerAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
@@ -103,30 +105,52 @@
               "value": 100,
               "unit": "kW"
             },
+            "beckn:rooftopRequirements": {
+              "minRoofArea": {
+                "value": 500,
+                "unit": "sqm"
+              },
+              "maxRoofArea": {
+                "value": 800,
+                "unit": "sqm"
+              },
+              "roofType": "RCC",
+              "shadowFree": true
+            },
+            "beckn:equipmentDetails": {
+              "panelType": "Monocrystalline",
+              "panelEfficiency": {
+                "value": 22.5,
+                "unit": "percent"
+              },
+              "panelWarranty": {
+                "value": 25,
+                "unit": "years"
+              },
+              "inverterType": "String Inverter",
+              "inverterEfficiency": {
+                "value": 98.5,
+                "unit": "percent"
+              },
+              "mountingType": "Rooftop"
+            },
+            "beckn:estimatedGeneration": {
+              "daily": 400,
+              "monthly": 12000,
+              "annual": 144000,
+              "unit": "kWh"
+            },
+            "beckn:paybackPeriod": {
+              "value": 7.2,
+              "unit": "years"
+            },
+            "beckn:roi": {
+              "value": 13.9,
+              "unit": "percent_per_year"
+            },
             "beckn:customerRequirements": {
               "preferredInstallationDate": "2025-12-01",
               "specialInstructions": "Install panels facing south with optimal tilt"
-            },
-            "beckn:providerConfirmation": {
-              "siteFeasibility": "confirmed",
-              "estimatedInstallationDate": "2025-12-05",
-              "warrantyTerms": "25_years_panels_10_years_inverter"
-            },
-            "beckn:installationDetails": {
-              "panelsCount": 400,
-              "invertersCount": 2,
-              "mountingStructure": "galvanized_steel",
-              "cablingType": "dc_ac_cabling",
-              "monitoringSystem": "iot_based_monitoring"
-            },
-            "beckn:siteInspection": {
-              "inspectionDate": "2025-11-22",
-              "inspectorName": "Rajesh Kumar",
-              "roofCondition": "excellent",
-              "structuralIntegrity": "confirmed",
-              "electricalConnection": "available",
-              "shadowAnalysis": "minimal_shading",
-              "finalAssessment": "site_ready_for_installation"
             }
           }
         }
@@ -136,7 +160,7 @@
         "@type": "beckn:Fulfillment",
         "beckn:id": "fulfillment-solar-rooftop-001",
         "beckn:mode": "DIGITAL",
-        "beckn:status": "SITE_INSPECTION_COMPLETED",
+        "beckn:status": "AGENT_ASSIGNED",
         "beckn:deliveryAttributes": {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
           "@type": "beckn:SolarRooftopFulfillment",
@@ -144,10 +168,9 @@
             "surveyDays": 3,
             "installationDays": 10,
             "commissioningDays": 2,
-            "totalDays": 15,
-            "actualSurveyCompletion": "2025-11-22"
+            "totalDays": 15
           },
-          "beckn:customerLocation": {
+          "beckn:installationLocation": {
             "@type": "beckn:Location",
             "geo": {
               "type": "Point",
@@ -169,16 +192,11 @@
             "agentEmail": "rajesh.kumar@solarinstaller.com",
             "agentPhoto": "https://example.com/agents/rajesh-kumar.jpg"
           },
-          "beckn:contactDetails": {
-            "customerPhone": "+91-9876543210",
-            "customerEmail": "customer@example.com",
-            "emergencyContact": "+91-9876543212"
-          },
-          "beckn:progressUpdates": {
-            "siteInspectionCompleted": true,
-            "equipmentProcured": true,
-            "installationScheduled": "2025-11-28",
-            "customerNotified": true
+          "beckn:statusUpdates": {
+            "lastUpdate": "2025-11-21T09:00:00Z",
+            "currentStage": "agent_assigned",
+            "nextMilestone": "site_inspection_scheduled",
+            "progressPercentage": 10
           }
         }
       },
@@ -204,20 +222,20 @@
         "beckn:customerDetails": {
           "propertyType": "residential",
           "roofType": "RCC",
-          "electricityBill": 8000,
-          "monthlyConsumption": 800
+          "electricityBill": {
+            "value": 8000,
+            "currency": "INR"
+          },
+          "monthlyConsumption": {
+            "value": 800,
+            "unit": "kWh"
+          }
         },
         "beckn:confirmationDetails": {
           "confirmedBy": "customer",
           "confirmationTimestamp": "2025-11-20T10:45:00Z",
           "termsAccepted": true,
           "paymentInitiated": true
-        },
-        "beckn:statusUpdates": {
-          "lastUpdate": "2025-11-25T10:00:00Z",
-          "nextMilestone": "equipment_delivery",
-          "estimatedCompletion": "2025-12-10",
-          "progressPercentage": 20
         }
       },
       "beckn:orderValue": {
@@ -247,3 +265,4 @@
     }
   }
 }
+

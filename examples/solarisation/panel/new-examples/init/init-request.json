@@ -80,7 +80,7 @@
             "installationDays": 10,
             "commissioningDays": 2
           },
-          "beckn:customerLocation": {
+          "beckn:installationLocation": {
             "@type": "beckn:Location",
             "geo": {
               "type": "Point",
@@ -94,23 +94,6 @@
               "schema:postalCode": "560001",
               "schema:addressCountry": "IN"
             }
-          }
-        }
-      },
-      "beckn:orderAttributes": {
-        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
-        "@type": "beckn:SolarRooftopOrder",
-        "beckn:requestType": "installation_booking",
-        "beckn:customerDetails": {
-          "propertyType": "residential",
-          "roofType": "RCC",
-          "electricityBill": {
-            "value": 8000,
-            "currency": "INR"
-          },
-          "monthlyConsumption": {
-            "value": 800,
-            "unit": "kWh"
           }
         }
       }

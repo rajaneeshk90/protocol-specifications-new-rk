@@ -106,15 +106,27 @@
               },
               "roofType": "RCC",
               "orientation": "South",
-              "tiltAngle": 15,
+              "tiltAngle": {
+                "value": 15,
+                "unit": "degrees"
+              },
               "shadowFree": true
             },
             "beckn:equipmentDetails": {
               "panelType": "Monocrystalline",
-              "panelEfficiency": 22.5,
-              "panelWarranty": 25,
+              "panelEfficiency": {
+                "value": 22.5,
+                "unit": "percent"
+              },
+              "panelWarranty": {
+                "value": 25,
+                "unit": "years"
+              },
               "inverterType": "String Inverter",
-              "inverterEfficiency": 98.5,
+              "inverterEfficiency": {
+                "value": 98.5,
+                "unit": "percent"
+              },
               "mountingType": "Rooftop"
             },
             "beckn:estimatedGeneration": {
@@ -153,7 +165,7 @@
             "commissioningDays": 2,
             "totalDays": 15
           },
-          "beckn:customerLocation": {
+          "beckn:installationLocation": {
             "@type": "beckn:Location",
             "geo": {
               "type": "Point",
@@ -167,12 +179,6 @@
               "schema:postalCode": "560001",
               "schema:addressCountry": "IN"
             }
-          },
-          "beckn:assignedAgent": {
-            "agentId": "agent-solar-001",
-            "agentName": "Rajesh Kumar",
-            "agentPhone": "+91-9876543211",
-            "agentEmail": "rajesh.kumar@solarinstaller.com"
           }
         }
       },
@@ -191,11 +197,6 @@
             "value": 800,
             "unit": "kWh"
           }
-        },
-        "beckn:confirmationDetails": {
-          "confirmedBy": "customer",
-          "confirmationTimestamp": "2025-11-20T10:45:00Z",
-          "termsAccepted": true
         }
       }
     }

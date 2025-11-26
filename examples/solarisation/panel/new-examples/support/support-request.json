@@ -13,6 +13,7 @@
     "ttl": "PT30S"
   },
   "message": {
-    "ref_id": "order-solar-rooftop-001"
+    "ref_id": "order-solar-rooftop-001",
+    "ref_type": "order"
   }
 }

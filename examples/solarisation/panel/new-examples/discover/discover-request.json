@@ -19,7 +19,7 @@
     "text_search": "Solar rooftop installation services",
     "filters": {
       "type": "jsonpath",
-      "expression": "$[?(@.beckn:itemAttributes.beckn:rooftopRequirements.minRoofArea.value <= 80 && @.beckn:itemAttributes.beckn:rooftopRequirements.minRoofArea.unit == 'sqm' && @.beckn:itemAttributes.beckn:rooftopRequirements.maxRoofArea.value >= 80 && @.beckn:itemAttributes.beckn:rooftopRequirements.maxRoofArea.unit == 'sqm')]"
+      "expression": "$[?(@.beckn:itemAttributes.beckn:rooftopRequirements.minRoofArea.value = 80 && @.beckn:itemAttributes.beckn:rooftopRequirements.minRoofArea.unit == 'sqm' && @.beckn:itemAttributes.beckn:rooftopRequirements.maxRoofArea.value = 800 && @.beckn:itemAttributes.beckn:rooftopRequirements.maxRoofArea.unit == 'sqm')]"
     },
     "spatial": [
       {

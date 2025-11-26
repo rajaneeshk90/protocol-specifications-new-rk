@@ -77,15 +77,27 @@
                   },
                   "roofType": "RCC",
                   "orientation": "South",
-                  "tiltAngle": 15,
+                  "tiltAngle": {
+                    "value": 15,
+                    "unit": "degrees"
+                  },
                   "shadowFree": true
                 },
                 "beckn:equipmentDetails": {
                   "panelType": "Monocrystalline",
-                  "panelEfficiency": 22.5,
-                  "panelWarranty": 25,
+                  "panelEfficiency": {
+                    "value": 22.5,
+                    "unit": "percent"
+                  },
+                  "panelWarranty": {
+                    "value": 25,
+                    "unit": "years"
+                  },
                   "inverterType": "String Inverter",
-                  "inverterEfficiency": 98.5,
+                  "inverterEfficiency": {
+                    "value": 98.5,
+                    "unit": "percent"
+                  },
                   "mountingType": "Rooftop"
                 }
               }
@@ -141,15 +153,27 @@
                   },
                   "roofType": "RCC",
                   "orientation": "South",
-                  "tiltAngle": 15,
+                  "tiltAngle": {
+                    "value": 15,
+                    "unit": "degrees"
+                  },
                   "shadowFree": true
                 },
                 "beckn:equipmentDetails": {
                   "panelType": "Monocrystalline",
-                  "panelEfficiency": 21.5,
-                  "panelWarranty": 25,
+                  "panelEfficiency": {
+                    "value": 21.5,
+                    "unit": "percent"
+                  },
+                  "panelWarranty": {
+                    "value": 25,
+                    "unit": "years"
+                  },
                   "inverterType": "String Inverter",
-                  "inverterEfficiency": 98.0,
+                  "inverterEfficiency": {
+                    "value": 98.0,
+                    "unit": "percent"
+                  },
                   "mountingType": "Rooftop"
                 }
               }
@@ -205,15 +229,27 @@
                   },
                   "roofType": "RCC",
                   "orientation": "South",
-                  "tiltAngle": 15,
+                  "tiltAngle": {
+                    "value": 15,
+                    "unit": "degrees"
+                  },
                   "shadowFree": true
                 },
                 "beckn:equipmentDetails": {
                   "panelType": "Polycrystalline",
-                  "panelEfficiency": 19.5,
-                  "panelWarranty": 25,
+                  "panelEfficiency": {
+                    "value": 19.5,
+                    "unit": "percent"
+                  },
+                  "panelWarranty": {
+                    "value": 25,
+                    "unit": "years"
+                  },
                   "inverterType": "Micro Inverter",
-                  "inverterEfficiency": 97.5,
+                  "inverterEfficiency": {
+                    "value": 97.5,
+                    "unit": "percent"
+                  },
                   "mountingType": "Rooftop"
                 }
               }

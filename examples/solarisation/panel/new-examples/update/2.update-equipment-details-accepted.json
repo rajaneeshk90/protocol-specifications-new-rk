@@ -1,10 +1,10 @@
 {
   "context": {
     "version": "2.0.0",
-    "action": "on_confirm",
+    "action": "update",
     "domain": "beckn.one:solar:rooftop-installation:1.0",
-    "timestamp": "2025-11-20T10:45:02Z",
-    "message_id": "msg-on-confirm-solar-rooftop-001",
+    "timestamp": "2025-11-26T10:00:02Z",
+    "message_id": "msg-on-status-equipment-details-001",
     "transaction_id": "txn-solar-rooftop-001",
     "bap_id": "example-bap.com",
     "bap_uri": "https://api.example-bap.com/beckn/v2",
@@ -20,7 +20,7 @@
       "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
       "@type": "beckn:Order",
       "beckn:id": "order-solar-rooftop-001",
-      "beckn:orderStatus": "CONFIRMED",
+      "beckn:orderStatus": "IN_PROGRESS",
       "beckn:seller": "provider-solar-installer-001",
       "beckn:buyer": "buyer-homeowner-001",
       "beckn:invoice": {
@@ -115,6 +115,11 @@
                 "unit": "sqm"
               },
               "roofType": "RCC",
+              "orientation": "South",
+              "tiltAngle": {
+                "value": 15,
+                "unit": "degrees"
+              },
               "shadowFree": true
             },
             "beckn:equipmentDetails": {
@@ -151,6 +156,77 @@
             "beckn:customerRequirements": {
               "preferredInstallationDate": "2025-12-01",
               "specialInstructions": "Install panels facing south with optimal tilt"
+            },
+            "beckn:providerConfirmation": {
+              "siteFeasibility": "confirmed",
+              "estimatedInstallationDate": "2025-12-05",
+              "warrantyTerms": "25_years_panels_10_years_inverter"
+            },
+            "beckn:installationDetails": {
+              "panelsCount": 400,
+              "invertersCount": 2,
+              "mountingStructure": "galvanized_steel",
+              "cablingType": "dc_ac_cabling",
+              "monitoringSystem": "iot_based_monitoring"
+            },
+            "beckn:siteInspection": {
+              "inspectionDate": "2025-11-22",
+              "inspectorName": "Rajesh Kumar",
+              "roofCondition": "excellent",
+              "structuralIntegrity": "confirmed",
+              "electricalConnection": "available",
+              "shadowAnalysis": "minimal_shading",
+              "finalAssessment": "site_ready_for_installation"
+            },
+            "beckn:detailedEquipmentList": {
+              "solarPanels": {
+                "description": "400W Monocrystalline",
+                "quantity": 6,
+                "unitPrice": {
+                  "value": 40000,
+                  "currency": "INR"
+                }
+              },
+              "inverter": {
+                "description": "2kW Hybrid Inverter",
+                "quantity": 1,
+                "unitPrice": {
+                  "value": 10000,
+                  "currency": "INR"
+                }
+              },
+              "mountingStructure": {
+                "description": "Ballasted Racking",
+                "quantity": 2,
+                "unitPrice": {
+                  "value": 8000,
+                  "currency": "INR"
+                }
+              },
+              "wiringAndConnectors": {
+                "description": "Copper Wiring and MC4 Connectors",
+                "quantity": "As required",
+                "unitPrice": {
+                  "value": 4000,
+                  "currency": "INR"
+                }
+              },
+              "battery": {
+                "description": "10kWh Lithium-ion",
+                "quantity": 1,
+                "unitPrice": {
+                  "value": 15000,
+                  "currency": "INR"
+                }
+              },
+              "monitoringSystem": {
+                "description": "Smart Energy Monitor",
+                "quantity": 1,
+                "unitPrice": {
+                  "value": 3000,
+                  "currency": "INR"
+                }
+              }
             }
           }
         }
@@ -160,7 +236,7 @@
         "@type": "beckn:Fulfillment",
         "beckn:id": "fulfillment-solar-rooftop-001",
         "beckn:mode": "DIGITAL",
-        "beckn:status": "CONFIRMED",
+        "beckn:status": "EQUIPMENT_DETAILS_SHARED",
         "beckn:deliveryAttributes": {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
           "@type": "beckn:SolarRooftopFulfillment",
@@ -168,7 +244,9 @@
             "surveyDays": 3,
             "installationDays": 10,
             "commissioningDays": 2,
-            "totalDays": 15
+            "totalDays": 15,
+            "actualSurveyCompletion": "2025-11-22",
+            "expectedInstallationStart": "2025-11-28"
           },
           "beckn:installationLocation": {
             "@type": "beckn:Location",
@@ -184,6 +262,19 @@
               "schema:postalCode": "560001",
               "schema:addressCountry": "IN"
             }
+          },
+          "beckn:assignedAgent": {
+            "agentId": "agent-solar-001",
+            "agentName": "Rajesh Kumar",
+            "agentPhone": "+91-9876543211",
+            "agentEmail": "rajesh.kumar@solarinstaller.com",
+            "agentPhoto": "https://example.com/agents/rajesh-kumar.jpg"
+          },
+          "beckn:statusUpdates": {
+            "lastUpdate": "2025-11-26T10:00:00Z",
+            "currentStage": "equipment_details_shared",
+            "nextMilestone": "customer_confirmation",
+            "progressPercentage": 30
           }
         }
       },
@@ -223,7 +314,8 @@
           "confirmationTimestamp": "2025-11-20T10:45:00Z",
           "termsAccepted": true,
           "paymentInitiated": true
-        }
+        },
+        "beckn:equipmentDetailsConfirmed": true
       },
       "beckn:orderValue": {
         "currency": "INR",
@@ -231,9 +323,39 @@
         "components": [
           {
             "type": "UNIT",
-            "value": 750000,
+            "value": 40000,
             "currency": "INR",
-            "description": "Base installation cost"
+            "description": "Solar Panels"
+          },
+          {
+            "type": "UNIT",
+            "value": 10000,
+            "currency": "INR",
+            "description": "Inverter"
+          },
+          {
+            "type": "UNIT",
+            "value": 8000,
+            "currency": "INR",
+            "description": "Mounting Structure"
+          },
+          {
+            "type": "UNIT",
+            "value": 4000,
+            "currency": "INR",
+            "description": "Wiring and Connectors"
+          },
+          {
+            "type": "UNIT",
+            "value": 15000,
+            "currency": "INR",
+            "description": "Battery"
+          },
+          {
+            "type": "UNIT",
+            "value": 3000,
+            "currency": "INR",
+            "description": "Monitoring System"
           },
           {
             "type": "DISCOUNT",
@@ -252,3 +374,4 @@
     }
   }
 }
+

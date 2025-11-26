@@ -14,7 +14,14 @@
   },
   "message": {
     "order": {
+      "@type": "beckn:Order",
       "beckn:id": "order-solar-rooftop-001",
+      "beckn:orderStatus": "CONFIRMED",
+      "beckn:orderItems": [
+        {
+          "beckn:orderedItem": "item-solar-rooftop-100kw"
+        }
+      ],
       "cancellation_reason_id": "customer_changed_mind"
     }
   }

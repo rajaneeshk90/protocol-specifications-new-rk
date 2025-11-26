@@ -44,7 +44,6 @@
           "@type": "beckn:OrderItem",
           "beckn:lineId": "order-item-solar-001",
           "beckn:orderedItem": "item-solar-rooftop-100kw",
-          "beckn:quantity": 1,
           "beckn:acceptedOffer": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
             "@type": "beckn:Offer",
@@ -106,15 +105,27 @@
               },
               "roofType": "RCC",
               "orientation": "South",
-              "tiltAngle": 15,
+              "tiltAngle": {
+                "value": 15,
+                "unit": "degrees"
+              },
               "shadowFree": true
             },
             "beckn:equipmentDetails": {
               "panelType": "Monocrystalline",
-              "panelEfficiency": 22.5,
-              "panelWarranty": 25,
+              "panelEfficiency": {
+                "value": 22.5,
+                "unit": "percent"
+              },
+              "panelWarranty": {
+                "value": 25,
+                "unit": "years"
+              },
               "inverterType": "String Inverter",
-              "inverterEfficiency": 98.5,
+              "inverterEfficiency": {
+                "value": 98.5,
+                "unit": "percent"
+              },
               "mountingType": "Rooftop"
             },
             "beckn:estimatedGeneration": {
@@ -153,7 +164,7 @@
             "commissioningDays": 2,
             "totalDays": 15
           },
-          "beckn:customerLocation": {
+          "beckn:installationLocation": {
             "@type": "beckn:Location",
             "geo": {
               "type": "Point",
@@ -167,17 +178,6 @@
               "schema:postalCode": "560001",
               "schema:addressCountry": "IN"
             }
-          },
-          "beckn:assignedAgent": {
-            "agentId": "agent-solar-001",
-            "agentName": "Rajesh Kumar",
-            "agentPhone": "+91-9876543211",
-            "agentEmail": "rajesh.kumar@solarinstaller.com"
-          },
-          "beckn:contactDetails": {
-            "customerPhone": "+91-9876543210",
-            "customerEmail": "customer@example.com",
-            "emergencyContact": "+91-9876543212"
           }
         }
       },
@@ -185,7 +185,7 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Payment",
         "beckn:id": "payment-solar-rooftop-001",
-        "beckn:method": "POSTPAID",
+        "beckn:method": "PREPAID",
         "beckn:status": "NOT-PAID",
         "beckn:amount": {
           "currency": "INR",
@@ -212,8 +212,7 @@
             "value": 800,
             "unit": "kWh"
           }
-        },
-        "beckn:providerNotes": "Site survey scheduled for tomorrow. Customer has confirmed south-facing roof."
+        }
       },
       "beckn:orderValue": {
         "currency": "INR",

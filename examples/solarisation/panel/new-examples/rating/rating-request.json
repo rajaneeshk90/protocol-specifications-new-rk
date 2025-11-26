@@ -14,29 +14,13 @@
   },
   "message": {
     "id": "order-solar-rooftop-001",
-    "value": 5,
-    "feedback_form": [
-      {
-        "question": "How would you rate the overall installation quality?",
-        "answer": {
-          "type": "rating",
-          "value": 5
-        }
-      },
-      {
-        "question": "How satisfied are you with the technician's professionalism?",
-        "answer": {
-          "type": "rating",
-          "value": 5
-        }
-      },
-      {
-        "question": "How would you rate the system's performance so far?",
-        "answer": {
-          "type": "rating",
-          "value": 4
-        }
-      }
-    ]
+    "ratingValue": 5,
+    "bestRating": 5,
+    "worstRating": 1,
+    "category": "fulfillment",
+    "feedback": {
+      "comments": "Excellent solar installation experience! The team was professional, the installation was completed on time, and the system is working perfectly. The agent was knowledgeable and the entire process was smooth from inspection to commissioning.",
+      "tags": ["professional-team", "on-time-completion", "quality-installation", "knowledgeable-staff", "smooth-process"]
+    }
   }
 }

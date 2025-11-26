@@ -1,10 +1,10 @@
 {
   "context": {
     "version": "2.0.0",
-    "action": "on_select",
+    "action": "on_status",
     "domain": "beckn.one:solar:rooftop-installation:1.0",
-    "timestamp": "2025-11-20T10:15:02Z",
-    "message_id": "msg-on-select-solar-rooftop-001",
+    "timestamp": "2025-11-21T14:00:02Z",
+    "message_id": "msg-on-status-inspection-scheduled-001",
     "transaction_id": "txn-solar-rooftop-001",
     "bap_id": "example-bap.com",
     "bap_uri": "https://api.example-bap.com/beckn/v2",
@@ -20,14 +20,41 @@
       "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
       "@type": "beckn:Order",
       "beckn:id": "order-solar-rooftop-001",
-      "beckn:orderStatus": "QUOTE_REQUESTED",
+      "beckn:orderStatus": "IN_PROGRESS",
       "beckn:seller": "provider-solar-installer-001",
       "beckn:buyer": "buyer-homeowner-001",
+      "beckn:invoice": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "schema:Invoice",
+        "beckn:id": "inv-solar-rooftop-001",
+        "beckn:number": "INV-2025-001",
+        "beckn:issueDate": "2025-11-20",
+        "beckn:dueDate": "2025-11-25",
+        "beckn:payee": "provider-solar-installer-001",
+        "beckn:payer": "buyer-homeowner-001",
+        "beckn:totals": {
+          "currency": "INR",
+          "value": 750000
+        },
+        "schema:customer": {
+          "email": "customer@example.com",
+          "phone": "+91-9876543210",
+          "legalName": "John Doe",
+          "address": {
+            "streetAddress": "123 MG Road",
+            "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
+            "postalCode": "560001",
+            "addressCountry": "IN"
+          }
+        }
+      },
       "beckn:orderItems": [
         {
           "@type": "beckn:OrderItem",
           "beckn:lineId": "order-item-solar-001",
           "beckn:orderedItem": "item-solar-rooftop-100kw",
+          "beckn:quantity": 1,
           "beckn:acceptedOffer": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
             "@type": "beckn:Offer",
@@ -41,8 +68,10 @@
               "item-solar-rooftop-100kw"
             ],
             "beckn:price": {
-              "currency": "INR",
-              "price": 750000
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+              "@type": "schema:PriceSpecification",
+              "schema:priceCurrency": "INR",
+              "schema:price": 750000
             },
             "beckn:offerAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
@@ -118,6 +147,10 @@
             "beckn:roi": {
               "value": 13.9,
               "unit": "percent_per_year"
+            },
+            "beckn:customerRequirements": {
+              "preferredInstallationDate": "2025-12-01",
+              "specialInstructions": "Install panels facing south with optimal tilt"
             }
           }
         }
@@ -126,29 +159,90 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Fulfillment",
         "beckn:id": "fulfillment-solar-rooftop-001",
-        "beckn:status": "PENDING",
+        "beckn:mode": "DIGITAL",
+        "beckn:status": "SITE_INSPECTION_SCHEDULED",
         "beckn:deliveryAttributes": {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
           "@type": "beckn:SolarRooftopFulfillment",
-          "beckn:installationLocation": {
-            "geo": {
-              "type": "Point",
-              "coordinates": [77.6212, 12.9342]
-            },
-            "address": {
-              "@type": "schema:PostalAddress",
-              "schema:streetAddress": "123, MG Road, Koramangala",
-              "schema:addressLocality": "Bangalore",
-              "schema:addressRegion": "Karnataka",
-              "schema:postalCode": "560034",
-              "schema:addressCountry": "IN"
-            }
-          },
           "beckn:installationTimeline": {
             "surveyDays": 3,
             "installationDays": 10,
-            "commissioningDays": 2
+            "commissioningDays": 2,
+            "totalDays": 15
+          },
+          "beckn:installationLocation": {
+            "@type": "beckn:Location",
+            "geo": {
+              "type": "Point",
+              "coordinates": [77.5946, 12.9716]
+            },
+            "address": {
+              "@type": "schema:PostalAddress",
+              "schema:streetAddress": "123 MG Road",
+              "schema:addressLocality": "Bangalore",
+              "schema:addressRegion": "Karnataka",
+              "schema:postalCode": "560001",
+              "schema:addressCountry": "IN"
+            }
+          },
+          "beckn:assignedAgent": {
+            "agentId": "agent-solar-001",
+            "agentName": "Rajesh Kumar",
+            "agentPhone": "+91-9876543211",
+            "agentEmail": "rajesh.kumar@solarinstaller.com",
+            "agentPhoto": "https://example.com/agents/rajesh-kumar.jpg"
+          },
+          "beckn:inspectionSchedule": {
+            "scheduledDate": "2025-11-22",
+            "scheduledTime": "10:00:00",
+            "duration": "2 hours",
+            "inspectorName": "Rajesh Kumar",
+            "customerConfirmation": "confirmed"
+          },
+          "beckn:statusUpdates": {
+            "lastUpdate": "2025-11-21T14:00:00Z",
+            "currentStage": "site_inspection_scheduled",
+            "nextMilestone": "site_inspection",
+            "progressPercentage": 15
           }
+        }
+      },
+      "beckn:payment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Payment",
+        "beckn:id": "payment-solar-rooftop-001",
+        "beckn:method": "POSTPAID",
+        "beckn:status": "PAID",
+        "beckn:amount": {
+          "currency": "INR",
+          "value": 5000
+        },
+        "beckn:descriptor": {
+          "@type": "beckn:Descriptor",
+          "schema:description": "Site inspection fee"
+        }
+      },
+      "beckn:orderAttributes": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
+        "@type": "beckn:SolarRooftopOrder",
+        "beckn:requestType": "installation_booking",
+        "beckn:customerDetails": {
+          "propertyType": "residential",
+          "roofType": "RCC",
+          "electricityBill": {
+            "value": 8000,
+            "currency": "INR"
+          },
+          "monthlyConsumption": {
+            "value": 800,
+            "unit": "kWh"
+          }
+        },
+        "beckn:confirmationDetails": {
+          "confirmedBy": "customer",
+          "confirmationTimestamp": "2025-11-20T10:45:00Z",
+          "termsAccepted": true,
+          "paymentInitiated": true
         }
       },
       "beckn:orderValue": {
@@ -178,3 +272,4 @@
     }
   }
 }
+
