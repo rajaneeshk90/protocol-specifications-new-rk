@@ -1,0 +1,24 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "discover",
+    "domain": "beckn.one:financial-services:loan:1.0",
+    "timestamp": "2025-11-20T10:00:00Z",
+    "message_id": "msg-discover-loan-001",
+    "transaction_id": "txn-loan-001",
+    "bap_id": "example-bap.com",
+    "bap_uri": "https://api.example-bap.com/beckn/v2",
+    "ttl": "PT30S",
+    "schema_context": [
+      "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld"
+    ]
+  },
+  "message": {
+    "text_search": "solar panel installation loan",
+    "filters": {
+      "type": "jsonpath",
+      "expression": "$[?(@.beckn:itemAttributes.beckn:loanPurpose == 'solar_installation' && @.beckn:itemAttributes.beckn:loanAmountRange.min.value <= 705000 && @.beckn:itemAttributes.beckn:loanAmountRange.max.value >= 705000)]"
+    }
+  }
+}
+

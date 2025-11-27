@@ -1,0 +1,27 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "rating",
+    "domain": "beckn.one:financial-services:loan:1.0",
+    "timestamp": "2025-12-22T10:00:00Z",
+    "message_id": "msg-rating-loan-001",
+    "transaction_id": "txn-loan-001",
+    "bap_id": "example-bap.com",
+    "bap_uri": "https://api.example-bap.com/beckn/v2",
+    "bpp_id": "example-bank-bpp.com",
+    "bpp_uri": "https://api.example-bank-bpp.com/beckn/v2",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "id": "order-loan-001",
+    "ratingValue": 5,
+    "bestRating": 5,
+    "worstRating": 1,
+    "category": "fulfillment",
+    "feedback": {
+      "comments": "Excellent loan processing experience! The entire process was smooth and transparent. Documentation was clear, approval was quick, and disbursements were on time. The customer support team was very helpful throughout the journey.",
+      "tags": ["quick-approval", "transparent-process", "timely-disbursement", "helpful-support", "smooth-experience"]
+    }
+  }
+}
+

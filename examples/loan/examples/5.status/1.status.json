@@ -1,0 +1,24 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "status",
+    "domain": "beckn.one:financial-services:loan:1.0",
+    "timestamp": "2025-11-25T10:00:02Z",
+    "message_id": "msg-on-status-loan-tranche1-001",
+    "transaction_id": "txn-loan-001",
+    "bap_id": "example-bap.com",
+    "bap_uri": "https://api.example-bap.com/beckn/v2",
+    "bpp_id": "example-bank-bpp.com",
+    "bpp_uri": "https://api.example-bank-bpp.com/beckn/v2",
+    "ttl": "PT30S",
+    "schema_context": [
+      "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld"
+    ]
+  },
+  "message": {
+    "order": {
+      "beckn:id": "order-loan-001"
+    }
+  }
+}
+

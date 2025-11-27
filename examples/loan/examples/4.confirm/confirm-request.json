@@ -1,0 +1,156 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "confirm",
+    "domain": "beckn.one:financial-services:loan:1.0",
+    "timestamp": "2025-11-20T11:00:00Z",
+    "message_id": "msg-confirm-loan-001",
+    "transaction_id": "txn-loan-001",
+    "bap_id": "example-bap.com",
+    "bap_uri": "https://api.example-bap.com/beckn/v2",
+    "bpp_id": "example-bank-bpp.com",
+    "bpp_uri": "https://api.example-bank-bpp.com/beckn/v2",
+    "ttl": "PT30S",
+    "schema_context": [
+      "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld"
+    ]
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "order-loan-001",
+      "beckn:orderStatus": "CONFIRMED",
+      "beckn:seller": "provider-green-bank-001",
+      "beckn:buyer": "buyer-customer-001",
+      "beckn:invoice": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "schema:Invoice",
+        "schema:customer": {
+          "email": "john.doe@example.com",
+          "phone": "+91-9876543210",
+          "legalName": "John Doe",
+          "address": {
+            "streetAddress": "123 MG Road",
+            "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
+            "postalCode": "560001",
+            "addressCountry": "IN"
+          }
+        }
+      },
+      "beckn:orderItems": [
+        {
+          "@type": "beckn:OrderItem",
+          "beckn:lineId": "order-item-loan-001",
+          "beckn:orderedItem": "item-green-loan-standard",
+          "beckn:acceptedOffer": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-green-loan-standard-10yr",
+            "beckn:items": [
+              "item-green-loan-standard"
+            ]
+          },
+          "beckn:orderItemAttributes": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld",
+            "@type": "beckn:LoanApplication",
+            "beckn:requestedLoanAmount": {
+              "value": 705000,
+              "currency": "INR"
+            },
+            "beckn:requestedTenure": {
+              "value": 120,
+              "unit": "months"
+            },
+            "beckn:loanPurpose": {
+              "type": "solar_installation",
+              "vendorDetails": {
+                "vendorId": "provider-solar-installer-001",
+                "vendorName": "Solar Installer Co.",
+                "proposalId": "PROP-2025-001",
+                "proposalAmount": {
+                  "value": 705000,
+                  "currency": "INR"
+                }
+              }
+            },
+            "beckn:applicantDetails": {
+              "fullName": "John Doe",
+              "dateOfBirth": "1985-06-15",
+              "gender": "male",
+              "maritalStatus": "married",
+              "dependents": 2,
+              "educationLevel": "graduate",
+              "residenceType": "owned",
+              "residenceYears": 5
+            },
+            "beckn:employmentDetails": {
+              "employmentType": "salaried",
+              "employerName": "Tech Solutions Pvt Ltd",
+              "designation": "Senior Manager",
+              "monthlyIncome": {
+                "value": 150000,
+                "currency": "INR"
+              },
+              "workEmail": "john.doe@techsolutions.com"
+            },
+            "beckn:financialDetails": {
+              "bankAccountNumber": "XXXX-XXXX-1234",
+              "bankName": "HDFC Bank",
+              "ifscCode": "HDFC0001234",
+              "panNumber": "ABCDE1234F",
+              "aadharNumber": "XXXX-XXXX-5678",
+              "existingLoans": [
+                {
+                  "loanType": "home_loan",
+                  "outstandingAmount": {
+                    "value": 2500000,
+                    "currency": "INR"
+                  },
+                  "monthlyEMI": {
+                    "value": 25000,
+                    "currency": "INR"
+                  }
+                }
+              ],
+              "creditScore": 780
+            }
+          }
+        }
+      ],
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "fulfillment-loan-001",
+        "beckn:status": "PENDING",
+        "beckn:deliveryAttributes": {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld",
+          "@type": "beckn:LoanDisbursement",
+          "beckn:disbursementMethod": "direct_vendor_payment",
+          "beckn:disbursementSchedule": {
+            "type": "tranche_based",
+            "schedule": "40-30-30"
+          },
+          "beckn:vendorBankDetails": {
+            "vendorId": "provider-solar-installer-001",
+            "vendorName": "Solar Installer Co.",
+            "accountNumber": "XXXX-XXXX-9876",
+            "bankName": "ICICI Bank",
+            "ifscCode": "ICIC0009876"
+          }
+        }
+      },
+      "beckn:orderAttributes": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld",
+        "@type": "beckn:LoanOrder",
+        "beckn:applicationType": "new_loan",
+        "beckn:disbursementPreference": {
+          "method": "direct_vendor_payment",
+          "schedule": "40-30-30"
+        }
+      }
+    }
+  }
+}
+

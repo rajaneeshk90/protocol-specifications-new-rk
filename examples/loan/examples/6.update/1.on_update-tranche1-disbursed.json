@@ -1,0 +1,187 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_update",
+    "domain": "beckn.one:financial-services:loan:1.0",
+    "timestamp": "2025-11-25T10:00:02Z",
+    "message_id": "msg-on-status-loan-tranche1-001",
+    "transaction_id": "txn-loan-001",
+    "bap_id": "example-bap.com",
+    "bap_uri": "https://api.example-bap.com/beckn/v2",
+    "bpp_id": "example-bank-bpp.com",
+    "bpp_uri": "https://api.example-bank-bpp.com/beckn/v2",
+    "ttl": "PT30S",
+    "schema_context": [
+      "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld"
+    ]
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "order-loan-001",
+      "beckn:orderStatus": "IN_PROGRESS",
+      "beckn:seller": "provider-green-bank-001",
+      "beckn:buyer": "buyer-customer-001",
+      "beckn:invoice": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "schema:Invoice",
+        "schema:customer": {
+          "email": "john.doe@example.com",
+          "phone": "+91-9876543210",
+          "legalName": "John Doe",
+          "address": {
+            "streetAddress": "123 MG Road",
+            "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
+            "postalCode": "560001",
+            "addressCountry": "IN"
+          }
+        }
+      },
+      "beckn:orderItems": [
+        {
+          "@type": "beckn:OrderItem",
+          "beckn:lineId": "order-item-loan-001",
+          "beckn:orderedItem": "item-green-loan-standard",
+          "beckn:acceptedOffer": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-green-loan-standard-10yr",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Green Energy Loan Standard - 10 Year Plan"
+            },
+            "beckn:provider": "provider-green-bank-001",
+            "beckn:items": [
+              "item-green-loan-standard"
+            ],
+            "beckn:offerAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld",
+              "@type": "beckn:LoanTerms",
+              "beckn:tenure": {
+                "value": 120,
+                "unit": "months"
+              },
+              "beckn:interestRate": {
+                "value": 9.5,
+                "unit": "percent_per_annum",
+                "type": "reducing_balance"
+              }
+            }
+          },
+          "beckn:orderItemAttributes": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld",
+            "@type": "beckn:LoanApplication",
+            "beckn:approvedLoanAmount": {
+              "value": 705000,
+              "currency": "INR"
+            },
+            "beckn:approvedTenure": {
+              "value": 120,
+              "unit": "months"
+            },
+            "beckn:loanAccountNumber": "LOAN-2025-001234",
+            "beckn:calculatedEMI": {
+              "value": 9156,
+              "currency": "INR",
+              "frequency": "monthly"
+            },
+            "beckn:firstEMIDate": "2025-12-05",
+            "beckn:disbursedAmount": {
+              "value": 282000,
+              "currency": "INR"
+            },
+            "beckn:outstandingPrincipal": {
+              "value": 705000,
+              "currency": "INR"
+            }
+          }
+        }
+      ],
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "fulfillment-loan-001",
+        "beckn:status": "TRANCHE_1_DISBURSED",
+        "beckn:deliveryAttributes": {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld",
+          "@type": "beckn:LoanDisbursement",
+          "beckn:disbursementMethod": "direct_vendor_payment",
+          "beckn:disbursementSchedule": {
+            "type": "tranche_based",
+            "schedule": "40-30-30",
+            "tranches": [
+              {
+                "trancheNumber": 1,
+                "percentage": 40,
+                "amount": {
+                  "value": 282000,
+                  "currency": "INR"
+                },
+                "trigger": "loan_approval_and_agreement_signing",
+                "recipientType": "vendor",
+                "recipientId": "provider-solar-installer-001",
+                "status": "DISBURSED",
+                "disbursementDate": "2025-11-25",
+                "utrNumber": "UTR-2025-001234567",
+                "disbursementReference": "DISB-TRANCHE1-001234"
+              },
+              {
+                "trancheNumber": 2,
+                "percentage": 30,
+                "amount": {
+                  "value": 211500,
+                  "currency": "INR"
+                },
+                "trigger": "installation_milestone_50_percent_with_vendor_invoice",
+                "recipientType": "vendor",
+                "recipientId": "provider-solar-installer-001",
+                "status": "PENDING"
+              },
+              {
+                "trancheNumber": 3,
+                "percentage": 30,
+                "amount": {
+                  "value": 211500,
+                  "currency": "INR"
+                },
+                "trigger": "installation_completion_and_commissioning_certificate",
+                "recipientType": "vendor",
+                "recipientId": "provider-solar-installer-001",
+                "status": "PENDING"
+              }
+            ]
+          },
+          "beckn:statusUpdates": {
+            "lastUpdate": "2025-11-25T10:00:00Z",
+            "currentStage": "tranche_1_disbursed",
+            "nextMilestone": "installation_progress_50_percent",
+            "message": "First tranche of ₹282,000 has been disbursed to vendor account. EMI repayment will start from 2025-12-05."
+          }
+        }
+      },
+      "beckn:orderAttributes": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld",
+        "@type": "beckn:LoanOrder",
+        "beckn:applicationType": "new_loan",
+        "beckn:disbursementPreference": {
+          "method": "direct_vendor_payment",
+          "schedule": "40-30-30"
+        },
+        "beckn:repaymentSchedule": {
+          "firstEMIDate": "2025-12-05",
+          "emiAmount": {
+            "value": 9156,
+            "currency": "INR"
+          },
+          "frequency": "monthly",
+          "totalEMIs": 120,
+          "repaymentMode": "auto_debit",
+          "bankAccountNumber": "XXXX-XXXX-1234"
+        }
+      }
+    }
+  }
+}
+

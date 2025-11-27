@@ -1,0 +1,27 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_rating",
+    "domain": "beckn.one:financial-services:loan:1.0",
+    "timestamp": "2025-12-22T10:00:02Z",
+    "message_id": "msg-on-rating-loan-001",
+    "transaction_id": "txn-loan-001",
+    "bap_id": "example-bap.com",
+    "bap_uri": "https://api.example-bap.com/beckn/v2",
+    "bpp_id": "example-bank-bpp.com",
+    "bpp_uri": "https://api.example-bank-bpp.com/beckn/v2",
+    "ttl": "PT30S",
+    "schema_context": [
+      "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld"
+    ]
+  },
+  "message": {
+    "received": true,
+    "feedbackForm": {
+      "url": "https://greenbank.com/feedback/portal",
+      "mime_type": "application/xml",
+      "submission_id": "feedback-loan-2025-001234"
+    }
+  }
+}
+

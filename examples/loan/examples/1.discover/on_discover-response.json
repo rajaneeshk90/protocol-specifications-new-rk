@@ -1,0 +1,516 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_discover",
+    "domain": "beckn.one:financial-services:loan:1.0",
+    "timestamp": "2025-11-20T10:00:02Z",
+    "message_id": "msg-on-discover-loan-001",
+    "transaction_id": "txn-loan-001",
+    "bap_id": "example-bap.com",
+    "bap_uri": "https://api.example-bap.com/beckn/v2",
+    "bpp_id": "example-bank-bpp.com",
+    "bpp_uri": "https://api.example-bank-bpp.com/beckn/v2",
+    "ttl": "PT30S",
+    "schema_context": [
+      "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld"
+    ]
+  },
+  "message": {
+    "catalogs": [
+      {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Catalog",
+        "beckn:id": "catalog-green-loans-001",
+        "beckn:descriptor": {
+          "@type": "beckn:Descriptor",
+          "schema:name": "Green Energy Financing Solutions"
+        },
+        "beckn:items": [
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Item",
+            "beckn:id": "item-green-loan-standard",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Green Energy Loan - Standard",
+              "schema:description": "Flexible loan for residential and commercial solar panel installations with competitive interest rates"
+            },
+            "beckn:provider": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+              "@type": "beckn:Provider",
+              "beckn:id": "provider-green-bank-001",
+              "beckn:descriptor": {
+                "@type": "beckn:Descriptor",
+                "schema:name": "Green Bank",
+                "beckn:shortDesc": "India's leading green financing bank",
+                "schema:image": [
+                  "https://greenbank.com/logo.png"
+                ]
+              },
+              "beckn:rateable": true,
+              "beckn:rating": {
+                "@type": "beckn:Rating",
+                "beckn:ratingValue": 4.5,
+                "beckn:ratingCount": 2340
+              }
+            },
+            "beckn:itemAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld",
+              "@type": "beckn:LoanProduct",
+              "beckn:loanPurpose": "solar_installation",
+              "beckn:loanAmountRange": {
+                "min": {
+                  "value": 100000,
+                  "currency": "INR"
+                },
+                "max": {
+                  "value": 5000000,
+                  "currency": "INR"
+                }
+              },
+              "beckn:tenureOptions": [
+                {
+                  "value": 60,
+                  "unit": "months"
+                },
+                {
+                  "value": 84,
+                  "unit": "months"
+                },
+                {
+                  "value": 120,
+                  "unit": "months"
+                },
+                {
+                  "value": 180,
+                  "unit": "months"
+                },
+                {
+                  "value": 240,
+                  "unit": "months"
+                }
+              ],
+              "beckn:interestRateRange": {
+                "min": {
+                  "value": 8.5,
+                  "unit": "percent_per_annum"
+                },
+                "max": {
+                  "value": 12.5,
+                  "unit": "percent_per_annum"
+                },
+                "type": "reducing_balance"
+              },
+              "beckn:processingFee": {
+                "type": "percentage",
+                "value": 1.5,
+                "maxAmount": {
+                  "value": 25000,
+                  "currency": "INR"
+                }
+              },
+              "beckn:eligibility": {
+                "minAge": 21,
+                "maxAge": 65,
+                "minIncome": {
+                  "value": 25000,
+                  "currency": "INR",
+                  "period": "monthly"
+                },
+                "creditScoreMin": 650,
+                "employmentType": ["salaried", "self_employed", "business_owner"],
+                "requiredDocuments": [
+                  "identity_proof",
+                  "address_proof",
+                  "income_proof",
+                  "bank_statements_6_months",
+                  "vendor_proposal",
+                  "property_documents"
+                ]
+              },
+              "beckn:features": [
+                "direct_vendor_disbursement",
+                "flexible_emi",
+                "no_prepayment_charges",
+                "tax_benefits_eligible",
+                "online_application",
+                "doorstep_documentation"
+              ],
+              "beckn:disbursementModel": {
+                "type": "tranche_based",
+                "maxTranches": 3,
+                "trancheOptions": [
+                  {
+                    "schedule": "40-30-30",
+                    "description": "40% on approval, 30% at 50% installation, 30% on completion"
+                  },
+                  {
+                    "schedule": "50-50",
+                    "description": "50% on approval, 50% on completion"
+                  },
+                  {
+                    "schedule": "100",
+                    "description": "100% on approval (for pre-approved customers)"
+                  }
+                ]
+              },
+              "beckn:repaymentOptions": [
+                "monthly_emi",
+                "quarterly_emi",
+                "step_up_emi",
+                "bullet_repayment"
+              ]
+            }
+          },
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Item",
+            "beckn:id": "item-green-loan-premium",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Green Energy Loan - Premium",
+              "schema:description": "Premium loan with lower interest rates for high-value installations and excellent credit profiles"
+            },
+            "beckn:provider": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+              "@type": "beckn:Provider",
+              "beckn:id": "provider-green-bank-001",
+              "beckn:descriptor": {
+                "@type": "beckn:Descriptor",
+                "schema:name": "Green Bank",
+                "beckn:shortDesc": "India's leading green financing bank",
+                "schema:image": [
+                  "https://greenbank.com/logo.png"
+                ]
+              },
+              "beckn:rateable": true,
+              "beckn:rating": {
+                "@type": "beckn:Rating",
+                "beckn:ratingValue": 4.5,
+                "beckn:ratingCount": 2340
+              }
+            },
+            "beckn:itemAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld",
+              "@type": "beckn:LoanProduct",
+              "beckn:loanPurpose": "solar_installation",
+              "beckn:loanAmountRange": {
+                "min": {
+                  "value": 500000,
+                  "currency": "INR"
+                },
+                "max": {
+                  "value": 10000000,
+                  "currency": "INR"
+                }
+              },
+              "beckn:tenureOptions": [
+                {
+                  "value": 60,
+                  "unit": "months"
+                },
+                {
+                  "value": 84,
+                  "unit": "months"
+                },
+                {
+                  "value": 120,
+                  "unit": "months"
+                },
+                {
+                  "value": 180,
+                  "unit": "months"
+                },
+                {
+                  "value": 240,
+                  "unit": "months"
+                },
+                {
+                  "value": 300,
+                  "unit": "months"
+                }
+              ],
+              "beckn:interestRateRange": {
+                "min": {
+                  "value": 7.5,
+                  "unit": "percent_per_annum"
+                },
+                "max": {
+                  "value": 10.5,
+                  "unit": "percent_per_annum"
+                },
+                "type": "reducing_balance"
+              },
+              "beckn:processingFee": {
+                "type": "percentage",
+                "value": 1.0,
+                "maxAmount": {
+                  "value": 50000,
+                  "currency": "INR"
+                }
+              },
+              "beckn:eligibility": {
+                "minAge": 21,
+                "maxAge": 70,
+                "minIncome": {
+                  "value": 100000,
+                  "currency": "INR",
+                  "period": "monthly"
+                },
+                "creditScoreMin": 750,
+                "employmentType": ["salaried", "self_employed", "business_owner"],
+                "requiredDocuments": [
+                  "identity_proof",
+                  "address_proof",
+                  "income_proof",
+                  "bank_statements_12_months",
+                  "itr_last_3_years",
+                  "vendor_proposal",
+                  "property_documents"
+                ]
+              },
+              "beckn:features": [
+                "direct_vendor_disbursement",
+                "flexible_emi",
+                "no_prepayment_charges",
+                "tax_benefits_eligible",
+                "online_application",
+                "dedicated_relationship_manager",
+                "priority_processing",
+                "free_credit_insurance"
+              ],
+              "beckn:disbursementModel": {
+                "type": "tranche_based",
+                "maxTranches": 4,
+                "trancheOptions": [
+                  {
+                    "schedule": "40-30-30",
+                    "description": "40% on approval, 30% at 50% installation, 30% on completion"
+                  },
+                  {
+                    "schedule": "25-25-25-25",
+                    "description": "25% on approval, 25% at 33% installation, 25% at 66% installation, 25% on completion"
+                  },
+                  {
+                    "schedule": "50-50",
+                    "description": "50% on approval, 50% on completion"
+                  },
+                  {
+                    "schedule": "100",
+                    "description": "100% on approval (for pre-approved customers)"
+                  }
+                ]
+              },
+              "beckn:repaymentOptions": [
+                "monthly_emi",
+                "quarterly_emi",
+                "step_up_emi",
+                "bullet_repayment",
+                "moratorium_period_available"
+              ]
+            }
+          }
+        ],
+        "beckn:offers": [
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-green-loan-standard-10yr",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Green Energy Loan Standard - 10 Year Plan"
+            },
+            "beckn:items": [
+              "item-green-loan-standard"
+            ],
+            "beckn:provider": "provider-green-bank-001",
+            "beckn:offerAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld",
+              "@type": "beckn:LoanTerms",
+              "beckn:tenure": {
+                "value": 120,
+                "unit": "months"
+              },
+              "beckn:interestRate": {
+                "value": 9.5,
+                "unit": "percent_per_annum",
+                "type": "reducing_balance"
+              },
+              "beckn:processingFee": {
+                "type": "percentage",
+                "value": 1.5
+              },
+              "beckn:emiCalculationBasis": "reducing_balance",
+              "beckn:prepaymentCharges": "nil",
+              "beckn:latePenalty": {
+                "type": "percentage",
+                "value": 2,
+                "basis": "per_month_on_overdue_amount"
+              },
+              "beckn:disbursementSchedule": {
+                "type": "tranche_based",
+                "defaultSchedule": "40-30-30",
+                "tranches": [
+                  {
+                    "trancheNumber": 1,
+                    "percentage": 40,
+                    "trigger": "loan_approval_and_agreement_signing"
+                  },
+                  {
+                    "trancheNumber": 2,
+                    "percentage": 30,
+                    "trigger": "installation_milestone_50_percent_with_vendor_invoice"
+                  },
+                  {
+                    "trancheNumber": 3,
+                    "percentage": 30,
+                    "trigger": "installation_completion_and_commissioning_certificate"
+                  }
+                ]
+              },
+              "beckn:repaymentStartsFrom": "first_disbursement_date",
+              "beckn:taxBenefits": {
+                "eligible": true,
+                "section": "80C_and_24",
+                "description": "Tax deduction on principal and interest as per Income Tax Act"
+              }
+            }
+          },
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-green-loan-standard-15yr",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Green Energy Loan Standard - 15 Year Plan"
+            },
+            "beckn:items": [
+              "item-green-loan-standard"
+            ],
+            "beckn:provider": "provider-green-bank-001",
+            "beckn:offerAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld",
+              "@type": "beckn:LoanTerms",
+              "beckn:tenure": {
+                "value": 180,
+                "unit": "months"
+              },
+              "beckn:interestRate": {
+                "value": 10.0,
+                "unit": "percent_per_annum",
+                "type": "reducing_balance"
+              },
+              "beckn:processingFee": {
+                "type": "percentage",
+                "value": 1.5
+              },
+              "beckn:emiCalculationBasis": "reducing_balance",
+              "beckn:prepaymentCharges": "nil",
+              "beckn:latePenalty": {
+                "type": "percentage",
+                "value": 2,
+                "basis": "per_month_on_overdue_amount"
+              },
+              "beckn:disbursementSchedule": {
+                "type": "tranche_based",
+                "defaultSchedule": "40-30-30",
+                "tranches": [
+                  {
+                    "trancheNumber": 1,
+                    "percentage": 40,
+                    "trigger": "loan_approval_and_agreement_signing"
+                  },
+                  {
+                    "trancheNumber": 2,
+                    "percentage": 30,
+                    "trigger": "installation_milestone_50_percent_with_vendor_invoice"
+                  },
+                  {
+                    "trancheNumber": 3,
+                    "percentage": 30,
+                    "trigger": "installation_completion_and_commissioning_certificate"
+                  }
+                ]
+              },
+              "beckn:repaymentStartsFrom": "first_disbursement_date",
+              "beckn:taxBenefits": {
+                "eligible": true,
+                "section": "80C_and_24",
+                "description": "Tax deduction on principal and interest as per Income Tax Act"
+              }
+            }
+          },
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-green-loan-premium-10yr",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Green Energy Loan Premium - 10 Year Plan"
+            },
+            "beckn:items": [
+              "item-green-loan-premium"
+            ],
+            "beckn:provider": "provider-green-bank-001",
+            "beckn:offerAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld",
+              "@type": "beckn:LoanTerms",
+              "beckn:tenure": {
+                "value": 120,
+                "unit": "months"
+              },
+              "beckn:interestRate": {
+                "value": 8.5,
+                "unit": "percent_per_annum",
+                "type": "reducing_balance"
+              },
+              "beckn:processingFee": {
+                "type": "percentage",
+                "value": 1.0
+              },
+              "beckn:emiCalculationBasis": "reducing_balance",
+              "beckn:prepaymentCharges": "nil",
+              "beckn:latePenalty": {
+                "type": "percentage",
+                "value": 1.5,
+                "basis": "per_month_on_overdue_amount"
+              },
+              "beckn:disbursementSchedule": {
+                "type": "tranche_based",
+                "defaultSchedule": "40-30-30",
+                "tranches": [
+                  {
+                    "trancheNumber": 1,
+                    "percentage": 40,
+                    "trigger": "loan_approval_and_agreement_signing"
+                  },
+                  {
+                    "trancheNumber": 2,
+                    "percentage": 30,
+                    "trigger": "installation_milestone_50_percent_with_vendor_invoice"
+                  },
+                  {
+                    "trancheNumber": 3,
+                    "percentage": 30,
+                    "trigger": "installation_completion_and_commissioning_certificate"
+                  }
+                ]
+              },
+              "beckn:repaymentStartsFrom": "first_disbursement_date",
+              "beckn:taxBenefits": {
+                "eligible": true,
+                "section": "80C_and_24",
+                "description": "Tax deduction on principal and interest as per Income Tax Act"
+              },
+              "beckn:additionalBenefits": [
+                "free_credit_insurance_first_year",
+                "dedicated_relationship_manager",
+                "priority_customer_service"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

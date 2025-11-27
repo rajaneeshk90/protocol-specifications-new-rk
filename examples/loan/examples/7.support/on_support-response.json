@@ -1,0 +1,29 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_support",
+    "domain": "beckn.one:financial-services:loan:1.0",
+    "bpp_id": "example-bank-bpp.com",
+    "bpp_uri": "https://api.example-bank-bpp.com/beckn/v2",
+    "transaction_id": "txn-loan-001",
+    "message_id": "msg-on-support-loan-001",
+    "timestamp": "2025-12-15T14:00:02Z",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "support": {
+      "name": "Green Bank Loan Support Team",
+      "phone": "18002100200",
+      "email": "loansupport@greenbank.com",
+      "url": "https://support.greenbank.com/ticket/SUP-LOAN-20251215-001",
+      "hours": "Mon–Fri 9AM-6PM IST, Sat 10AM-4PM IST",
+      "channels": [
+        "PHONE",
+        "EMAIL",
+        "WEB",
+        "CHAT"
+      ]
+    }
+  }
+}
+
