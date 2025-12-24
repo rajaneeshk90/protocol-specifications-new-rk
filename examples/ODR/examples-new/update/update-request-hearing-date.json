@@ -1,0 +1,41 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "update",
+    "domain": "beckn.one:services:odr:1.0",
+    "timestamp": "2023-05-25T05:23:03.443Z",
+    "message_id": "166a5633-66d2-4ec8-bdcb-65cfeb1e4697",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "bap_id": "odr-bap.becknprotocol.io",
+    "bap_uri": "https://odr-network-bap.becknprotocol.io/",
+    "bpp_id": "odr-bpp.becknprotocol.io",
+    "bpp_uri": "https://odr-network-bpp.becknprotocol.io",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "update_target": "order.fulfillments[0].stops[0].time",
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "fcbc405b6608",
+      "beckn:fulfillments": [
+        {
+          "@type": "beckn:Fulfillment",
+          "beckn:stops": [
+            {
+              "@type": "beckn:Stop",
+              "beckn:time": {
+                "label": "Hearing Date",
+                "range": {
+                  "start": "2023-06-27T00:00:00.00Z",
+                  "end": "2023-08-02T00:00:00.00Z"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+

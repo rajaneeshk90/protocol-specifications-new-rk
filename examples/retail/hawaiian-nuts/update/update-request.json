@@ -1,0 +1,50 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "update",
+    "domain": "beckn.one:commerce:retail:1.0",
+    "timestamp": "2025-12-22T10:15:00+10:00",
+    "message_id": "msg-update-001",
+    "transaction_id": "txn-macadamia-journey-001",
+    "bap_id": "aloha-buyer-app.hawaii.com",
+    "bap_uri": "https://aloha-buyer-app.hawaii.com",
+    "bpp_id": "aloha-seller-platform.hawaii.com",
+    "bpp_uri": "https://aloha-seller-platform.hawaii.com",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "order-macadamia-20250127-001",
+      "beckn:orderStatus": "UPDATE_REQUESTED",
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "fulfillment-hotel-delivery",
+        "beckn:deliveryAttributes": {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/GroceryDelivery/v1/context.jsonld",
+          "@type": "GroceryDelivery",
+          "deliveryLocation": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Location",
+            "beckn:address": {
+              "@type": "schema:PostalAddress",
+              "schema:streetAddress": "2365 Kalakaua Ave",
+              "schema:addressLocality": "Honolulu",
+              "schema:addressRegion": "HI",
+              "schema:postalCode": "96815",
+              "schema:addressCountry": "US"
+            },
+            "beckn:geo": {
+              "type": "Point",
+              "coordinates": [-157.8267, 21.2770]
+            },
+            "beckn:additionalInfo": "Royal Hawaiian Hotel, Room 920 (Room changed)"
+          },
+          "updateReason": "Changed hotel room - please deliver to Room 920"
+        }
+      }
+    }
+  }
+}

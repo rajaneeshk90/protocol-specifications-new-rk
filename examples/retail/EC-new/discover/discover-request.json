@@ -1,0 +1,32 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "discover",
+    "domain": "beckn.one:commerce:retail:1.0",
+    "timestamp": "2023-11-06T09:41:09.673Z",
+    "message_id": "6104c0a3-d1d1-4ded-aaa4-76e4caf727ce",
+    "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+    "bap_id": "farm-fresh-bap-id",
+    "bap_uri": "https://55a6-124-123-32-28.ngrok-free.app",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "text_search": "earphone",
+    "filters": {
+      "type": "jsonpath",
+      "expression": "$[?(@.beckn:itemAttributes.retail:category == 'electronics')]"
+    },
+    "spatial": [
+      {
+        "op": "s_dwithin",
+        "targets": "$['beckn:availableAt'][*]['geo']",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [77.0266383, 28.4594965]
+        },
+        "distanceMeters": 50000
+      }
+    ]
+  }
+}
+

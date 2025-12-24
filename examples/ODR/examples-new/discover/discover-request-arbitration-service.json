@@ -1,0 +1,21 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "discover",
+    "domain": "beckn.one:services:odr:1.0",
+    "timestamp": "2023-05-25T05:23:03.443Z",
+    "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "bap_id": "odr-bap.becknprotocol.io",
+    "bap_uri": "https://odr-network-bap.becknprotocol.io/",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "text_search": "arbitration service",
+    "filters": {
+      "type": "jsonpath",
+      "expression": "$[?(@.beckn:itemAttributes.odr:serviceType == 'arbitration-service')]"
+    }
+  }
+}
+

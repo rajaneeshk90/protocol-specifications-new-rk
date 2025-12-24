@@ -1,0 +1,186 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_cancel",
+    "domain": "beckn.one:services:odr:1.0",
+    "timestamp": "2023-05-25T05:23:03.443Z",
+    "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "bap_id": "odr-bap.becknprotocol.io",
+    "bap_uri": "https://odr-network-bap.becknprotocol.io/",
+    "bpp_id": "alpha-odr-bpp.becknprotocol.io",
+    "bpp_uri": "https://alpha-odr-network-bpp.becknprotocol.io",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "fcbc405b6608",
+      "beckn:status": "CANCELLED",
+      "beckn:createdAt": "2023-11-25T05:23:03.443Z",
+      "beckn:seller": {
+        "@type": "beckn:Seller",
+        "beckn:id": "ODR001",
+        "beckn:descriptor": {
+          "@type": "beckn:Descriptor",
+          "schema:name": "Alpha",
+          "beckn:shortDesc": "Alpha Pvt Ltd., India.",
+          "beckn:longDesc": "Alpha Pvt Ltd., India. provides online dispute resolution services. Our platform facilitates easy access to high quality service providers which helps avoid hassles of court, saving time and money and relationships.",
+          "schema:image": [
+            "https://www.alpha.com/content/dam/alpha/india/assets/images/header/logo.png"
+          ],
+          "beckn:additionalInfo": {
+            "url": "https://www.alpha.com/content/aboutus"
+          }
+        }
+      },
+      "beckn:orderItems": [
+        {
+          "@type": "beckn:OrderItem",
+          "beckn:item": {
+            "@type": "beckn:Item",
+            "beckn:id": "ALPHA-ARB-01",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "beckn:code": "arbitration-service",
+              "schema:name": "Arbitration Services"
+            }
+          },
+          "beckn:seller": {
+            "beckn:id": "ODR001"
+          }
+        }
+      ],
+      "beckn:orderValue": {
+        "@type": "beckn:OrderValue",
+        "beckn:totalValue": {
+          "schema:currency": "INR",
+          "schema:value": "12500"
+        },
+        "beckn:breakup": [
+          {
+            "@type": "beckn:BreakupItem",
+            "beckn:title": "Base fee",
+            "beckn:value": {
+              "schema:currency": "INR",
+              "schema:value": "7000"
+            }
+          },
+          {
+            "@type": "beckn:BreakupItem",
+            "beckn:title": "Agent fees",
+            "beckn:value": {
+              "schema:currency": "INR",
+              "schema:value": "5000"
+            }
+          },
+          {
+            "@type": "beckn:BreakupItem",
+            "beckn:title": "Fee per hearing",
+            "beckn:value": {
+              "schema:currency": "INR",
+              "schema:value": "500"
+            }
+          },
+          {
+            "@type": "beckn:BreakupItem",
+            "beckn:title": "Cancellation fees",
+            "beckn:value": {
+              "schema:currency": "INR",
+              "schema:value": "5000"
+            }
+          }
+        ]
+      },
+      "beckn:billing": {
+        "@type": "beckn:Billing",
+        "schema:name": "John Doe",
+        "schema:email": "john.doe@example.com",
+        "beckn:address": "21A, ABC Appartments, HSR Layout, Bengaluru",
+        "beckn:city": "Bengaluru"
+      },
+      "beckn:fulfillments": [
+        {
+          "@type": "beckn:Fulfillment",
+          "beckn:customer": {
+            "@type": "beckn:Customer",
+            "beckn:person": {
+              "schema:name": "John Doe"
+            },
+            "beckn:contact": {
+              "schema:telephone": "+91-9999999999",
+              "schema:email": "john.doe@example.com"
+            }
+          },
+          "beckn:agent": {
+            "@type": "beckn:Agent",
+            "beckn:person": {
+              "beckn:id": "fsjks743DGS",
+              "schema:name": "Mr Adam Smith"
+            },
+            "beckn:contact": {
+              "schema:telephone": "+91-7898765665",
+              "schema:email": "adam.smith@odr.com"
+            }
+          },
+          "beckn:state": {
+            "@type": "beckn:State",
+            "beckn:descriptor": {
+              "beckn:code": "dispute-cancelled",
+              "schema:name": "Dispute Order Cancelled"
+            },
+            "beckn:updatedAt": "2023-11-26T05:23:03.443Z"
+          }
+        }
+      ],
+      "beckn:payments": [
+        {
+          "@type": "beckn:Payment",
+          "beckn:type": "ON-ORDER",
+          "beckn:params": {
+            "amount": "12000",
+            "currency": "INR"
+          },
+          "beckn:status": "PAID",
+          "beckn:time": {
+            "range": {
+              "start": "2023-06-01T00:00:00.000Z",
+              "end": "2023-06-30T23:59:59.000Z"
+            }
+          }
+        }
+      ],
+      "beckn:cancellationTerms": [
+        {
+          "@type": "beckn:CancellationTerm",
+          "beckn:fulfillmentState": {
+            "beckn:descriptor": {
+              "beckn:code": "dispute-hearing-in-progress"
+            }
+          },
+          "beckn:cancellationFee": {
+            "percentage": "30%"
+          },
+          "beckn:externalRef": {
+            "mimetype": "text/html",
+            "url": "https://alpha.in/charge/tnc.html"
+          }
+        }
+      ],
+      "beckn:docs": [
+        {
+          "@type": "beckn:Document",
+          "beckn:descriptor": {
+            "beckn:code": "case-document",
+            "schema:name": "Case Documentation",
+            "beckn:shortDesc": "Download all the case documents from here"
+          },
+          "beckn:mimeType": "application/pdf",
+          "beckn:url": "https://xyz.com/case-doc/04389d8c-6a50-4664-9c08-4ee45fef44e8.pdf"
+        }
+      ]
+    }
+  }
+}
+

@@ -1,0 +1,80 @@
+{
+  "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/beckn.jsonld",
+  "context": {
+    "domain": "beckn.one:services:supply-chain:assembly:1.0",
+    "location": {
+      "country": {
+        "code": "DE"
+      }
+    },
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
+    "action": "discover",
+    "timestamp": "2023-05-25T05:23:03.443Z",
+    "version": "2.0.0",
+    "bap_uri": "https://supply-chain-protocol-network.becknprotocol.io/",
+    "bap_id": "supply-chain-protocol.becknprotocol.io",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "beckn:intent": {
+      "beckn:seller": {
+        "beckn:locations": [
+          {
+            "beckn:circle": {
+              "beckn:gps": "30.876877, 73.868969",
+              "beckn:radius": {
+                "beckn:type": "CONSTANT",
+                "beckn:value": "3",
+                "beckn:unit": "miles"
+              }
+            }
+          }
+        ],
+        "schema:rating": "gte>4"
+      },
+      "beckn:category": {
+        "schema:code": "assembly",
+        "beckn:tags": [
+          {
+            "@type": "beckn:Tag",
+            "schema:code": "product-info",
+            "schema:name": "Product Information",
+            "beckn:list": [
+              {
+                "@type": "beckn:Tag",
+                "schema:name": "product-type",
+                "schema:value": "electronics"
+              }
+            ]
+          },
+          {
+            "@type": "beckn:Tag",
+            "schema:code": "assembly-info",
+            "schema:name": "Assembly Information",
+            "beckn:list": [
+              {
+                "@type": "beckn:Tag",
+                "schema:name": "assembly-method",
+                "schema:value": "automated"
+              }
+            ]
+          },
+          {
+            "@type": "beckn:Tag",
+            "schema:code": "scale-info",
+            "schema:name": "Scale Information",
+            "beckn:list": [
+              {
+                "@type": "beckn:Tag",
+                "schema:name": "scale-type",
+                "schema:value": "industrial"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
+

@@ -1,0 +1,25 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_rating",
+    "domain": "beckn.one:commerce:retail:1.0",
+    "timestamp": "2023-11-06T10:14:10.295Z",
+    "message_id": "b0c5b14f-a7db-4329-b7e2-42a5f6486085",
+    "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+    "bap_id": "farm-fresh-bap-id",
+    "bap_uri": "https://55a6-124-123-32-28.ngrok-free.app",
+    "bpp_id": "farm-fresh-bpp-subId",
+    "bpp_uri": "https://4e21-124-123-32-28.ngrok-free.app",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "feedback_form": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:FeedbackForm",
+      "beckn:id": "feedback-form-001",
+      "beckn:url": "https://inds-network-bpp.becknprotocol.io/feedback/portal",
+      "beckn:mimeType": "text/html"
+    }
+  }
+}
+

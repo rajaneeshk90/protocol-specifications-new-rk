@@ -1,0 +1,135 @@
+{
+  "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/beckn.jsonld",
+  "context": {
+    "domain": "beckn.one:services:supply-chain:assembly:1.0",
+    "location": {
+      "country": {
+        "code": "DE"
+      }
+    },
+    "action": "on_select",
+    "version": "2.0.0",
+    "bap_uri": "https://supply-chain-protocol-network.becknprotocol.io/",
+    "bap_id": "supply-chain-protocol.becknprotocol.io",
+    "bpp_id": "bpp.supply-chain.makerspace.io",
+    "bpp_uri": "https://bpp.supply-chain.makerspace.io",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62195",
+    "message_id": "13abc9ad-3d5e-4f68-83cb-d85f96b81cd5",
+    "timestamp": "2023-05-25T05:23:03.443Z",
+    "ttl": "PT30M"
+  },
+  "message": {
+    "beckn:order": {
+      "beckn:seller": {
+        "@type": "beckn:Organization",
+        "beckn:id": "1",
+        "schema:name": "Makerspace",
+        "beckn:shortDesc": "Makerspace",
+        "beckn:longDesc": "Makerspace, Hof.",
+        "schema:image": [
+          {
+            "schema:url": "makerspace_logo.png",
+            "beckn:sizeType": "sm"
+          }
+        ]
+      },
+      "beckn:items": [
+        {
+          "@type": "beckn:Item",
+          "beckn:id": "66b7b9bad166-4a3f-ada6-ca063dc9d321",
+          "schema:name": "Intermittent assembly type",
+          "schema:image": [
+            {
+              "schema:url": "https://makerspace/assembly/intermittent.img",
+              "beckn:sizeType": "sm"
+            }
+          ],
+          "beckn:categoryIds": [
+            "p2c3"
+          ],
+          "beckn:tags": [
+            {
+              "@type": "beckn:Tag",
+              "schema:code": "product-info",
+              "schema:name": "Product Information",
+              "beckn:list": [
+                {
+                  "@type": "beckn:Tag",
+                  "schema:name": "product-type",
+                  "schema:value": "electronics"
+                }
+              ]
+            },
+            {
+              "@type": "beckn:Tag",
+              "schema:code": "assembly-info",
+              "schema:name": "Assembly Information",
+              "beckn:list": [
+                {
+                  "@type": "beckn:Tag",
+                  "schema:name": "assembly-method",
+                  "schema:value": "automated"
+                }
+              ]
+            },
+            {
+              "@type": "beckn:Tag",
+              "schema:code": "scale-info",
+              "schema:name": "Scale Information",
+              "beckn:list": [
+                {
+                  "@type": "beckn:Tag",
+                  "schema:name": "scale-type",
+                  "schema:value": "industrial"
+                }
+              ]
+            }
+          ],
+          "beckn:xinput": {
+            "beckn:required": true,
+            "beckn:head": {
+              "schema:name": "Configuration Form Assembly",
+              "beckn:index": {
+                "beckn:min": 0,
+                "beckn:cur": 0,
+                "beckn:max": 0
+              },
+              "beckn:headings": [
+                "Configuration Details for Assembly Service"
+              ]
+            },
+            "beckn:form": {
+              "beckn:mimeType": "text/html",
+              "schema:url": "https://formurl/orderdetails/assembly",
+              "beckn:resubmit": false,
+              "beckn:auth": {
+                "schema:code": "jwt",
+                "schema:value": "eyJhbGciOiJIUzI.eyJzdWIiOiIxMjM0NTY3O.SflKxwRJSMeKKF2QT4"
+              }
+            }
+          },
+          "beckn:price": {
+            "@type": "beckn:Price",
+            "schema:currency": "EUR",
+            "schema:value": "starting from 50 EUR"
+          }
+        }
+      ],
+      "beckn:fulfillments": [
+        {
+          "@type": "beckn:Fulfillment",
+          "beckn:id": "f1"
+        }
+      ],
+      "beckn:orderValue": {
+        "@type": "beckn:OrderValue",
+        "beckn:price": {
+          "@type": "beckn:Price",
+          "schema:currency": "EUR",
+          "schema:value": "50"
+        }
+      }
+    }
+  }
+}
+

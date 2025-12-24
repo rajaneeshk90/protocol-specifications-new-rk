@@ -1,0 +1,134 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_discover",
+    "domain": "beckn.one:services:learning:1.0",
+    "timestamp": "2023-02-22T10:30:18.145Z",
+    "message_id": "7db91181-718f-4720-83de-88e36e9f854e",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "bap_id": "sample.bap.io",
+    "bap_uri": "https://sample.bap.io/",
+    "bpp_id": "example.springboard.io",
+    "bpp_uri": "https://example.springboard.io",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "catalogs": [
+      {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Catalog",
+        "beckn:id": "catalog-courses-001",
+        "beckn:descriptor": {
+          "@type": "beckn:Descriptor",
+          "schema:name": "Catalog for English courses",
+          "beckn:shortDesc": "example Springboard Digital literacy program",
+          "schema:image": [
+            "https://infyspringboard.onwingspan.com/web/assets/images/exampleheadstart/app_logos/landing-new.png"
+          ]
+        },
+        "beckn:categories": [
+          {
+            "@type": "beckn:Category",
+            "beckn:id": "LANGUAGE-COURSES",
+            "beckn:code": "LANGUAGE-COURSES",
+            "schema:name": "Language Courses"
+          },
+          {
+            "@type": "beckn:Category",
+            "beckn:id": "SKILL-DEVELOPMENT-COURSES",
+            "beckn:code": "SKILL-DEVELOPMENT-COURSES",
+            "schema:name": "Skill development Courses"
+          },
+          {
+            "@type": "beckn:Category",
+            "beckn:id": "TECHNICAL-COURSES",
+            "beckn:code": "TECHNICAL-COURSES",
+            "schema:name": "Technical Courses"
+          },
+          {
+            "@type": "beckn:Category",
+            "beckn:id": "SELF-PACED-COURSES",
+            "beckn:code": "SELF-PACED-COURSES",
+            "schema:name": "Self Paced Courses"
+          }
+        ],
+        "beckn:items": [
+          {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Item",
+            "beckn:id": "d4975df5-b18c-4772-80ad-368669856d52",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Everyday Conversational English",
+              "beckn:shortDesc": "Elevate your daily conversations with confidence through our 'Everyday Conversational English' course.",
+              "beckn:longDesc": "<p><strong>Course Overview:</strong><br>Welcome to 'Everyday Conversational English,' your key to mastering essential language skills for real-life communication. Tailored for all levels, this course offers:</p><ol><li><strong>Practical Vocabulary:</strong><br>Learn everyday expressions for seamless communication.</li><li><strong>Interactive Role-Playing:</strong><br>Apply knowledge through immersive exercises for real-world scenarios.</li><li><strong>Cultural Insights:</strong><br>Gain cultural nuances to connect authentically in conversations.</li><li><strong>Real-Life Scenarios:</strong><br>Navigate common situations with confidence-building tools.</li><li><strong>Quiz Assessments:</strong><br>Reinforce learning through quizzes for ongoing skill development.</li></ol><p><strong>Why Take This Course:</strong></p><ul><li><strong>Personal & Professional Growth:</strong><br>Enhance personal connections and gain a professional edge.</li><li><strong>Cultural Fluency:</strong><br>Understand and engage with diverse cultures confidently.</li><li><strong>Life-Long Skill:</strong><br>Develop a valuable skill applicable across various life stages.</li></ul><p>Join 'Everyday Conversational English' and elevate your communication for meaningful connections and success.</p>",
+              "schema:image": [
+                "https://infyspringboard.onwingspan.com/web/assets/images/exampleheadstart/everyday-conversational-english.png"
+              ],
+              "beckn:media": [
+                {
+                  "url": "https://infyspringboard.onwingspan.com/web/courses/exampleheadstart/everyday-conversational-english/preview/"
+                }
+              ]
+            },
+            "beckn:categoryIds": ["LANGUAGE-COURSES", "SELF-PACED-COURSES"],
+            "beckn:provider": {
+              "beckn:id": "example",
+              "beckn:descriptor": {
+                "@type": "beckn:Descriptor",
+                "schema:name": "example Springboard"
+              }
+            },
+            "beckn:price": {
+              "schema:currency": "INR",
+              "schema:value": "0"
+            },
+            "beckn:rating": "4.5",
+            "beckn:rateable": true,
+            "beckn:quantity": {
+              "maximum": 1
+            },
+            "beckn:creator": {
+              "@type": "beckn:Creator",
+              "beckn:descriptor": {
+                "schema:name": "Prof. Emma Sullivan",
+                "beckn:shortDesc": "Experienced language educator dedicated to fostering practical conversational skills and cultural fluency",
+                "beckn:longDesc": "Hello, I'm Prof. Emma Sullivan, your guide in 'Everyday Conversational English.' With over a decade of experience, I'm here to make language learning dynamic and culturally enriching. Let's explore practical communication skills together for personal and professional growth. Join me on this exciting journey!",
+                "schema:image": [
+                  "https://infyspringboard.onwingspan.com/web/assets/images/exampleheadstart/ins/1.png"
+                ]
+              }
+            },
+            "beckn:itemAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/Course/v1/context.jsonld",
+              "@type": "beckn:Course",
+              "course:learnerLevel": "Beginner",
+              "course:learningObjective": "By the end of the course, learners will confidently navigate everyday conversations, demonstrating improved fluency, cultural awareness, and effective communication skills.",
+              "course:prerequisites": [
+                "Should have a basic understanding of English",
+                "Access to a computer or internet to access the course online"
+              ],
+              "course:languageCode": "en",
+              "course:duration": "P20H"
+            }
+          }
+        ],
+        "beckn:fulfillments": [
+          {
+            "@type": "beckn:Fulfillment",
+            "beckn:agent": {
+              "@type": "beckn:Agent",
+              "beckn:person": {
+                "schema:name": "example Springboard"
+              },
+              "beckn:contact": {
+                "schema:email": "support@infy.com"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+

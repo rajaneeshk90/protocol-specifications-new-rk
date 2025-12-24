@@ -1,0 +1,19 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "status",
+    "domain": "beckn.one:services:learning:1.0",
+    "timestamp": "2022-12-12T09:55:41.161Z",
+    "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "bap_id": "sample.bap.io",
+    "bap_uri": "https://sample.bap.io/",
+    "bpp_id": "example.springboard.io",
+    "bpp_uri": "https://example.springboard.io",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "order_id": "12424kh"
+  }
+}
+

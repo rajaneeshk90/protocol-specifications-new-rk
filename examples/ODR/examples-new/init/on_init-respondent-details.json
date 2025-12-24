@@ -1,0 +1,138 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_init",
+    "domain": "beckn.one:services:odr:1.0",
+    "timestamp": "2023-05-25T05:23:03.443Z",
+    "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6609",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "bap_id": "odr-bap.becknprotocol.io",
+    "bap_uri": "https://odr-network-bap.becknprotocol.io/",
+    "bpp_id": "alpha-odr-bpp.becknprotocol.io",
+    "bpp_uri": "https://alpha-odr-network-bpp.becknprotocol.io",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "fcbc405b6608",
+      "beckn:seller": {
+        "@type": "beckn:Seller",
+        "beckn:id": "ODR001",
+        "beckn:descriptor": {
+          "@type": "beckn:Descriptor",
+          "schema:name": "Alpha",
+          "beckn:shortDesc": "Alpha Pvt Ltd., India.",
+          "beckn:longDesc": "Alpha Pvt Ltd., India. provides online dispute resolution services. Our platform facilitates easy access to high quality service providers which helps avoid hassles of court, saving time and money and relationships.",
+          "schema:image": [
+            "https://www.alpha.com/content/dam/alpha/india/assets/images/header/logo.png"
+          ],
+          "beckn:additionalInfo": {
+            "url": "https://www.alpha.com/content/aboutus"
+          }
+        },
+        "beckn:categories": [
+          {
+            "@type": "beckn:Category",
+            "beckn:id": "ODRCAT001",
+            "beckn:code": "civil-dispute",
+            "schema:name": "Civil Dispute"
+          }
+        ]
+      },
+      "beckn:orderItems": [
+        {
+          "@type": "beckn:OrderItem",
+          "beckn:item": {
+            "@type": "beckn:Item",
+            "beckn:id": "ALPHA-ARB-01",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "beckn:code": "arbitration-service",
+              "schema:name": "Arbitration Services"
+            },
+            "beckn:categoryIds": ["ODRCAT001"]
+          },
+          "beckn:seller": {
+            "beckn:id": "ODR001"
+          },
+          "beckn:xinput": {
+            "@type": "beckn:XInput",
+            "beckn:head": {
+              "beckn:descriptor": {
+                "schema:name": "Respondent Details"
+              },
+              "beckn:index": {
+                "min": 0,
+                "cur": 0,
+                "max": 2
+              },
+              "beckn:headings": ["Respondent Details", "Consent Form", "Dispute Details"]
+            },
+            "beckn:form": {
+              "beckn:mimeType": "text/html",
+              "beckn:url": "https://6vs8xnx5i7.alpha.co.in/agreement/xinput/formid/respondent-details"
+            },
+            "beckn:required": true
+          }
+        }
+      ],
+      "beckn:orderValue": {
+        "@type": "beckn:OrderValue",
+        "beckn:totalValue": {
+          "schema:currency": "INR",
+          "schema:value": "2500"
+        },
+        "beckn:breakup": [
+          {
+            "@type": "beckn:BreakupItem",
+            "beckn:title": "Base fee",
+            "beckn:value": {
+              "schema:currency": "INR",
+              "schema:value": "2000"
+            }
+          },
+          {
+            "@type": "beckn:BreakupItem",
+            "beckn:title": "Fee per hearing",
+            "beckn:value": {
+              "schema:currency": "INR",
+              "schema:value": "500"
+            }
+          }
+        ]
+      },
+      "beckn:billing": {
+        "@type": "beckn:Billing",
+        "schema:name": "John Doe",
+        "schema:email": "john.doe@example.com",
+        "beckn:address": "21A, ABC Appartments, HSR Layout, Bengaluru",
+        "beckn:city": "Bengaluru"
+      },
+      "beckn:fulfillments": [
+        {
+          "@type": "beckn:Fulfillment",
+          "beckn:customer": {
+            "@type": "beckn:Customer",
+            "beckn:person": {
+              "schema:name": "John Doe"
+            },
+            "beckn:contact": {
+              "schema:telephone": "+91-9999999999",
+              "schema:email": "john.doe@example.com"
+            }
+          },
+          "beckn:state": {
+            "@type": "beckn:State",
+            "beckn:descriptor": {
+              "beckn:code": "respondent-details-pending",
+              "schema:name": "Awaiting Respondent Details"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+

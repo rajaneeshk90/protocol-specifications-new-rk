@@ -1,0 +1,22 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "status",
+    "domain": "beckn.one:commerce:retail:1.0",
+    "timestamp": "2025-12-23T10:00:00+10:00",
+    "message_id": "msg-status-001",
+    "transaction_id": "txn-macadamia-journey-001",
+    "bap_id": "aloha-buyer-app.hawaii.com",
+    "bap_uri": "https://aloha-buyer-app.hawaii.com",
+    "bpp_id": "aloha-seller-platform.hawaii.com",
+    "bpp_uri": "https://aloha-seller-platform.hawaii.com",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "order-macadamia-20250127-001"
+    }
+  }
+}

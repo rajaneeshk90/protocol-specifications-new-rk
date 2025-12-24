@@ -1,0 +1,258 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_status",
+    "domain": "beckn.one:services:learning:1.0",
+    "timestamp": "2023-02-20T15:21:36.925Z",
+    "message_id": "d514a38f-e112-4bb8-a3d8-b8e5d8dea82d",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "bap_id": "sample.bap.io",
+    "bap_uri": "https://sample.bap.io/",
+    "bpp_id": "example.springboard.io",
+    "bpp_uri": "https://example.springboard.io",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "12424kh",
+      "beckn:seller": {
+        "@type": "beckn:Seller",
+        "beckn:id": "example",
+        "beckn:descriptor": {
+          "@type": "beckn:Descriptor",
+          "schema:name": "example Springboard",
+          "beckn:shortDesc": "example Springboard Digital literacy program",
+          "schema:image": [
+            "https://infyspringboard.onwingspan.com/web/assets/images/exampleheadstart/app_logos/landing-new.png"
+          ]
+        },
+        "beckn:categories": [
+          {
+            "@type": "beckn:Category",
+            "beckn:id": "LANGUAGE-COURSES",
+            "beckn:code": "LANGUAGE-COURSES",
+            "schema:name": "Language Courses"
+          },
+          {
+            "@type": "beckn:Category",
+            "beckn:id": "SELF-PACED-COURSES",
+            "beckn:code": "SELF-PACED-COURSES",
+            "schema:name": "Self Paced Courses"
+          }
+        ]
+      },
+      "beckn:orderItems": [
+        {
+          "@type": "beckn:OrderItem",
+          "beckn:item": {
+            "@type": "beckn:Item",
+            "beckn:id": "d4975df5-b18c-4772-80ad-368669856d52",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Everyday Conversational English",
+              "beckn:shortDesc": "Elevate your daily conversations with confidence through our 'Everyday Conversational English' course.",
+              "schema:image": [
+                "https://infyspringboard.onwingspan.com/web/assets/images/exampleheadstart/everyday-conversational-english.png"
+              ]
+            },
+            "beckn:categoryIds": ["LANGUAGE-COURSES", "SELF-PACED-COURSES"],
+            "beckn:price": {
+              "schema:currency": "INR",
+              "schema:value": "150"
+            },
+            "beckn:rating": "4.5",
+            "beckn:rateable": true,
+            "beckn:creator": {
+              "@type": "beckn:Creator",
+              "beckn:descriptor": {
+                "schema:name": "Prof. Emma Sullivan"
+              }
+            },
+            "beckn:addOns": [
+              {
+                "@type": "beckn:AddOn",
+                "beckn:id": "course-outline",
+                "beckn:descriptor": {
+                  "schema:name": "Course Outline",
+                  "beckn:longDesc": "Outline for the course",
+                  "beckn:media": [
+                    {
+                      "mimetype": "application/pdf",
+                      "url": "https://infyspringboard.onwingspan.com/web/courses/exampleheadstart/everyday-conversational-english/outline.pdf"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "beckn:AddOn",
+                "beckn:id": "prelim-quiz",
+                "beckn:descriptor": {
+                  "schema:name": "Preliminary Quiz",
+                  "beckn:longDesc": "Take this preliminary quiz to see if you will benefit from the course!",
+                  "beckn:media": [
+                    {
+                      "mimetype": "text/html",
+                      "url": "https://infyspringboard.onwingspan.com/web/courses/exampleheadstart/everyday-conversational-english/prelim-quiz"
+                    }
+                  ]
+                }
+              }
+            ],
+            "beckn:itemAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/Course/v1/context.jsonld",
+              "@type": "beckn:Course",
+              "course:learnerLevel": "Beginner",
+              "course:learningObjective": "By the end of the course, learners will confidently navigate everyday conversations, demonstrating improved fluency, cultural awareness, and effective communication skills.",
+              "course:prerequisites": [
+                "Should have a basic understanding of English",
+                "Access to a computer or internet to access the course online"
+              ],
+              "course:languageCode": "en",
+              "course:duration": "P20H"
+            }
+          },
+          "beckn:seller": {
+            "beckn:id": "example"
+          }
+        }
+      ],
+      "beckn:fulfillments": [
+        {
+          "@type": "beckn:Fulfillment",
+          "beckn:state": {
+            "@type": "beckn:State",
+            "beckn:descriptor": {
+              "beckn:code": "COMPLETED",
+              "schema:name": "COMPLETED"
+            },
+            "beckn:updatedAt": "2023-02-06T09:55:41.161Z"
+          },
+          "beckn:agent": {
+            "@type": "beckn:Agent",
+            "beckn:person": {
+              "schema:name": "example Springboard"
+            },
+            "beckn:contact": {
+              "schema:email": "support@infy.com"
+            }
+          },
+          "beckn:customer": {
+            "@type": "beckn:Customer",
+            "beckn:person": {
+              "schema:name": "Jane Doe",
+              "beckn:age": "13",
+              "schema:gender": "female",
+              "beckn:tags": [
+                {
+                  "code": "professional-details",
+                  "name": "Professional Details",
+                  "list": [
+                    {
+                      "code": "profession",
+                      "value": "student"
+                    }
+                  ]
+                }
+              ]
+            },
+            "beckn:contact": {
+              "schema:telephone": "+91-9663088848",
+              "schema:email": "jane.doe@example.com"
+            }
+          },
+          "beckn:stops": [
+            {
+              "@type": "beckn:Stop",
+              "beckn:id": "0",
+              "beckn:instructions": {
+                "schema:name": "content-video-1",
+                "beckn:longDesc": "Description About the Content",
+                "beckn:media": [
+                  {
+                    "mimetype": "video/mp4",
+                    "url": "https://embedded-video-player-url/play"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "beckn:Stop",
+              "beckn:id": "1",
+              "beckn:instructions": {
+                "schema:name": "content-video-2",
+                "beckn:longDesc": "Description About the Content",
+                "beckn:media": [
+                  {
+                    "mimetype": "video/mp4",
+                    "url": "https://embedded-video-player-url/play"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "beckn:Stop",
+              "beckn:id": "2",
+              "beckn:instructions": {
+                "schema:name": "content-pdf",
+                "beckn:longDesc": "Description About the Content",
+                "beckn:media": [
+                  {
+                    "mimetype": "application/pdf",
+                    "url": "https://link-to-the-document/"
+                  }
+                ]
+              }
+            }
+          ],
+          "beckn:tags": [
+            {
+              "code": "course-completion-details",
+              "name": "Content Completion Details",
+              "list": [
+                {
+                  "code": "course-certificate",
+                  "name": "Course certificate",
+                  "value": "https://link-to-certificate"
+                },
+                {
+                  "code": "course-badge",
+                  "name": "Course Badge",
+                  "value": "https://link-to-badge"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "beckn:orderValue": {
+        "@type": "beckn:OrderValue",
+        "beckn:totalValue": {
+          "schema:currency": "INR",
+          "schema:value": "150"
+        }
+      },
+      "beckn:billing": {
+        "@type": "beckn:Billing",
+        "schema:name": "Jane Doe",
+        "schema:telephone": "+91-9663088848",
+        "schema:email": "jane.doe@example.com",
+        "beckn:address": "No 27, XYZ Lane, etc"
+      },
+      "beckn:payments": [
+        {
+          "@type": "beckn:Payment",
+          "beckn:params": {
+            "amount": "150",
+            "currency": "INR"
+          },
+          "beckn:type": "PRE-ORDER",
+          "beckn:status": "PAID",
+          "beckn:collectedBy": "bpp"
+        }
+      ]
+    }
+  }
+}
+

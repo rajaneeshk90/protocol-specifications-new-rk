@@ -1,0 +1,81 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "init",
+    "domain": "beckn.one:commerce:retail:1.0",
+    "timestamp": "2025-12-22T10:08:00+10:00",
+    "message_id": "msg-init-001",
+    "transaction_id": "txn-macadamia-journey-001",
+    "bap_id": "aloha-buyer-app.hawaii.com",
+    "bap_uri": "https://aloha-buyer-app.hawaii.com",
+    "bpp_id": "aloha-seller-platform.hawaii.com",
+    "bpp_uri": "https://aloha-seller-platform.hawaii.com",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:orderStatus": "INIT_REQUESTED",
+      "beckn:seller": "provider-mauna-loa-store",
+      "beckn:buyer": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Buyer",
+        "beckn:id": "buyer-sarah-johnson",
+        "beckn:role": "BUYER",
+        "beckn:name": "Sarah Johnson",
+        "beckn:address": "2365 Kalakaua Ave, Royal Hawaiian Hotel, Room 815, Honolulu, HI 96815, US",
+        "beckn:email": "sarah.johnson@email.com",
+        "beckn:phone": "+1-808-555-0123"
+      },
+      "beckn:orderItems": [
+        {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:OrderItem",
+          "beckn:lineId": "line-001",
+          "beckn:orderedItem": "item-macadamia-honey-roasted-150g",
+          "beckn:quantity": 3
+        }
+      ],
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "fulfillment-hotel-delivery",
+        "beckn:mode": "DELIVERY",
+        "beckn:deliveryAttributes": {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/GroceryDelivery/v1/context.jsonld",
+          "@type": "GroceryDelivery",
+          "deliveryType": "home_delivery",
+          "deliveryWindow": {
+            "startTime": "2025-01-28T14:00:00+10:00",
+            "endTime": "2025-01-28T18:00:00+10:00"
+          },
+          "deliveryLocation": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Location",
+            "beckn:address": {
+              "@type": "schema:PostalAddress",
+              "schema:streetAddress": "2365 Kalakaua Ave",
+              "schema:addressLocality": "Honolulu",
+              "schema:addressRegion": "HI",
+              "schema:postalCode": "96815",
+              "schema:addressCountry": "US"
+            },
+            "beckn:geo": {
+              "type": "Point",
+              "coordinates": [-157.8267, 21.2770]
+            },
+            "beckn:additionalInfo": "Royal Hawaiian Hotel, Room 815"
+          },
+          "deliveryContact": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Contact",
+            "schema:name": "Sarah Johnson",
+            "schema:telephone": "+1-808-555-0123",
+            "schema:email": "sarah.johnson@email.com"
+          }
+        }
+      }
+    }
+  }
+}

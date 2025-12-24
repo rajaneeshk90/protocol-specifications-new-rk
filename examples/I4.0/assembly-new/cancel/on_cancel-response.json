@@ -1,0 +1,194 @@
+{
+  "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/beckn.jsonld",
+  "context": {
+    "domain": "beckn.one:services:supply-chain:assembly:1.0",
+    "location": {
+      "country": {
+        "code": "DE"
+      }
+    },
+    "action": "on_cancel",
+    "version": "2.0.0",
+    "bap_uri": "https://supply-chain-protocol-network.becknprotocol.io/",
+    "bap_id": "supply-chain-protocol.becknprotocol.io",
+    "bpp_id": "bpp.supply-chain.makerspace.io",
+    "bpp_uri": "https://bpp.supply-chain.makerspace.io",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62195",
+    "message_id": "92083fe0-372d-4e24-a902-108f3eb78e42",
+    "timestamp": "2023-05-25T05:23:04.443Z",
+    "ttl": "PT30M"
+  },
+  "message": {
+    "beckn:order": {
+      "beckn:id": "b989c9a9-f603-4d44-b38d-26fd72286b38",
+      "beckn:seller": {
+        "@type": "beckn:Organization",
+        "beckn:id": "1",
+        "schema:name": "Makerspace",
+        "beckn:shortDesc": "Makerspace",
+        "beckn:longDesc": "Makerspace, Hof",
+        "schema:image": [
+          {
+            "schema:url": "makerspace_logo.png",
+            "beckn:sizeType": "sm"
+          }
+        ]
+      },
+      "beckn:items": [
+        {
+          "@type": "beckn:Item",
+          "beckn:id": "66b7b9bad166-4a3f-ada6-ca063dc9d321",
+          "schema:name": "Intermittent assembly service",
+          "schema:image": [
+            {
+              "schema:url": "https://makerspace/assembly/intermittent.img",
+              "beckn:sizeType": "sm"
+            }
+          ],
+          "beckn:categoryIds": [
+            "p2c3"
+          ],
+          "beckn:tags": [
+            {
+              "@type": "beckn:Tag",
+              "schema:code": "product-info",
+              "schema:name": "Product Information",
+              "beckn:list": [
+                {
+                  "@type": "beckn:Tag",
+                  "schema:name": "product-type",
+                  "schema:value": "electronics"
+                }
+              ]
+            },
+            {
+              "@type": "beckn:Tag",
+              "schema:code": "assembly-info",
+              "schema:name": "Assembly Information",
+              "beckn:list": [
+                {
+                  "@type": "beckn:Tag",
+                  "schema:name": "assembly-method",
+                  "schema:value": "automated"
+                }
+              ]
+            },
+            {
+              "@type": "beckn:Tag",
+              "schema:code": "scale-info",
+              "schema:name": "Scale Information",
+              "beckn:list": [
+                {
+                  "@type": "beckn:Tag",
+                  "schema:name": "scale-type",
+                  "schema:value": "industrial"
+                }
+              ]
+            }
+          ],
+          "beckn:price": {
+            "@type": "beckn:Price",
+            "schema:currency": "EUR",
+            "schema:value": "starting from 200 EUR"
+          }
+        }
+      ],
+      "beckn:fulfillments": [
+        {
+          "@type": "beckn:Fulfillment",
+          "beckn:id": "fid1",
+          "beckn:state": {
+            "@type": "beckn:State",
+            "schema:code": "CANCELLED",
+            "beckn:shortDesc": "cancellation reason...",
+            "beckn:updatedAt": "2023-05-25T05:23:04.443Z"
+          },
+          "beckn:customer": {
+            "@type": "beckn:Customer",
+            "schema:contact": {
+              "@type": "beckn:Contact",
+              "schema:email": "fox.judie@abc.org",
+              "schema:phone": "+91-81347776660"
+            },
+            "beckn:person": {
+              "@type": "beckn:Person",
+              "schema:name": "Judie Fox"
+            }
+          }
+        }
+      ],
+      "beckn:billing": {
+        "@type": "beckn:Billing",
+        "schema:name": "Industry buyer",
+        "beckn:address": "B005 aspire heights, Jurong East, SGP, 680230",
+        "beckn:state": {
+          "schema:name": "Jurong East"
+        },
+        "beckn:city": {
+          "schema:name": "Jurong East"
+        },
+        "schema:email": "nobody@nomail.com",
+        "schema:phone": "9886098860"
+      },
+      "beckn:payments": [
+        {
+          "@type": "beckn:Payment",
+          "beckn:collectedBy": "BPP",
+          "beckn:params": {
+            "beckn:amount": "250",
+            "beckn:currency": "EUR",
+            "beckn:bankCode": "INB0004321",
+            "beckn:bankAccountNumber": "1234002341",
+            "beckn:sourceBankCode": "DYF8765447",
+            "beckn:sourceBankAccountNumber": "25373894794747",
+            "beckn:transactionId": "a35b56cf-e5cf-41f1-9b5d-fa99d8d5ac8c"
+          },
+          "beckn:status": "PAID",
+          "beckn:type": "PRE-ORDER"
+        }
+      ],
+      "beckn:orderValue": {
+        "@type": "beckn:OrderValue",
+        "beckn:breakup": [
+          {
+            "@type": "beckn:BreakupItem",
+            "beckn:price": {
+              "@type": "beckn:Price",
+              "schema:currency": "EUR",
+              "schema:value": "200"
+            },
+            "schema:title": "Base Price"
+          },
+          {
+            "@type": "beckn:BreakupItem",
+            "beckn:price": {
+              "@type": "beckn:Price",
+              "schema:currency": "EUR",
+              "schema:value": "50"
+            },
+            "schema:title": "Tax"
+          }
+        ],
+        "beckn:price": {
+          "@type": "beckn:Price",
+          "schema:currency": "EUR",
+          "schema:value": "250"
+        }
+      },
+      "beckn:cancellationTerms": [
+        {
+          "@type": "beckn:CancellationTerm",
+          "beckn:cancellationFee": {
+            "@type": "beckn:Fee",
+            "beckn:amount": {
+              "@type": "beckn:Price",
+              "schema:currency": "EUR",
+              "schema:value": "100"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+

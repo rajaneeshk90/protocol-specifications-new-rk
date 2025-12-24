@@ -1,0 +1,23 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "support",
+    "domain": "beckn.one:services:learning:1.0",
+    "timestamp": "2022-12-12T09:55:41.161Z",
+    "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+    "bap_id": "onest.becknprotocol.io",
+    "bap_uri": "https://onest-network.becknprotocol.io/",
+    "bpp_id": "example.springboard.io",
+    "bpp_uri": "https://example.springboard.io",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "support": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Support",
+      "beckn:orderId": "d4975df5"
+    }
+  }
+}
+

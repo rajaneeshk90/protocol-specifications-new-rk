@@ -1,0 +1,39 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "select",
+    "domain": "beckn.one:commerce:retail:1.0",
+    "timestamp": "2023-11-06T09:44:47.217Z",
+    "message_id": "6d098f3a-4873-4b2e-935e-e4d6be92eb01",
+    "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+    "bap_id": "farm-fresh-bap-id",
+    "bap_uri": "https://55a6-124-123-32-28.ngrok-free.app",
+    "bpp_id": "farm-fresh-bpp-subId",
+    "bpp_uri": "https://4e21-124-123-32-28.ngrok-free.app",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:orderStatus": "QUOTE_REQUESTED",
+      "beckn:seller": "provider-venky-bazaar",
+      "beckn:orderItems": [
+        {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:OrderItem",
+          "beckn:lineId": "line-001",
+          "beckn:orderedItem": "item-flask-mh500-yellow",
+          "beckn:quantity": 2
+        }
+      ],
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "f1",
+        "beckn:mode": "DELIVERY"
+      }
+    }
+  }
+}
+
