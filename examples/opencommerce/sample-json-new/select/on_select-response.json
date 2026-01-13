@@ -1,0 +1,103 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_select",
+    "domain": "beckn.one:commerce:retail:1.0",
+    "timestamp": "2023-11-06T09:44:47.229Z",
+    "message_id": "6d098f3a-4873-4b2e-935e-e4d6be92eb01",
+    "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+    "bap_id": "dsnp-bap-id",
+    "bap_uri": "https://55a6-124-123-32-28.ngrok-free.app",
+    "bpp_id": "dsnp-bpp-id",
+    "bpp_uri": "https://4e21-124-123-32-28.ngrok-free.app",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:orderStatus": "QUOTE_PROVIDED",
+      "beckn:seller": "provider-worldhikes",
+      "beckn:orderItems": [
+        {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:OrderItem",
+          "beckn:lineId": "line-001",
+          "beckn:orderedItem": "item-adventure-sunglasses",
+          "beckn:acceptedOffer": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-adventure-sunglasses",
+            "beckn:descriptor": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+              "@type": "beckn:Descriptor",
+              "schema:name": "Adventure Sunglasses",
+              "beckn:shortDesc": "Experience the outdoors in style with our Adventure Sunglasses. These high-quality sunglasses provide UV protection and are designed for maximum comfort during your treks and hikes.",
+              "schema:image": [
+                {
+                  "@type": "schema:ImageObject",
+                  "schema:url": "https://m.media-amazon.com/images/I/61kQ4hs3LpL._AC_UY1100_.jpg"
+                }
+              ]
+            },
+            "beckn:price": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+              "@type": "schema:PriceSpecification",
+              "schema:priceCurrency": "INR",
+              "schema:price": 999.0
+            }
+          },
+          "beckn:quantity": 2,
+          "beckn:price": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "schema:PriceSpecification",
+            "schema:priceCurrency": "INR",
+            "schema:price": 1998.0
+          },
+          "beckn:orderItemAttributes": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/RetailItem/v1/context.jsonld",
+            "@type": "beckn:RetailItem",
+            "retail:category": "outdoor_gear",
+            "retail:subcategory": "sunglasses",
+            "retail:brand": "WorldHikes",
+            "retail:features": [
+              "UV Protection",
+              "Polarized Lenses",
+              "Durable Frames",
+              "Lightweight"
+            ]
+          }
+        }
+      ],
+      "beckn:orderValue": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "schema:PriceSpecification",
+        "schema:priceCurrency": "INR",
+        "schema:price": 2000.0,
+        "beckn:components": [
+          {
+            "@type": "beckn:PriceComponent",
+            "beckn:type": "UNIT",
+            "beckn:value": 1998.0,
+            "beckn:currency": "INR",
+            "beckn:description": "Item price (2 × ₹999)"
+          },
+          {
+            "@type": "beckn:PriceComponent",
+            "beckn:type": "TAX",
+            "beckn:value": 2.0,
+            "beckn:currency": "INR",
+            "beckn:description": "Taxes"
+          }
+        ]
+      },
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "f1",
+        "beckn:mode": "DELIVERY",
+        "beckn:status": "SERVICEABLE"
+      }
+    }
+  }
+}

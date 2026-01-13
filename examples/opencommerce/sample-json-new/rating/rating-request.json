@@ -1,0 +1,29 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "rating",
+    "domain": "beckn.one:commerce:retail:1.0",
+    "timestamp": "2023-11-06T10:14:10.295Z",
+    "message_id": "b0c5b14f-a7db-4329-b7e2-42a5f6486085",
+    "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+    "bap_id": "dsnp-bap-id",
+    "bap_uri": "https://55a6-124-123-32-28.ngrok-free.app",
+    "bpp_id": "dsnp-bpp-id",
+    "bpp_uri": "https://4e21-124-123-32-28.ngrok-free.app",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "ratings": [
+      {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Rating",
+        "beckn:id": "rating-order-001",
+        "beckn:rateableId": "b989c9a9-f603-4d44-b38d-26fd72286b38",
+        "beckn:rateableType": "ORDER",
+        "beckn:ratingValue": 8,
+        "beckn:maxRating": 10
+      }
+    ]
+  }
+}
+
