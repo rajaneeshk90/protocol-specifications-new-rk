@@ -1,0 +1,23 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_track",
+    "domain": "beckn.one:tourism:trekking:1.0",
+    "timestamp": "2023-11-06T10:14:10.295Z",
+    "message_id": "fd585827-7607-4ce8-b257-9597b0ed0f52",
+    "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+    "bap_id": "tourism-bap",
+    "bap_uri": "https://tourism-bap.url",
+    "bpp_id": "tourism-bpp",
+    "bpp_uri": "https://tourism-bpp.url",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "tracking": {
+      "id": "tracking-oid0909",
+      "beckn:orderId": "oid0909",
+      "beckn:url": "https://tourism-provider.com/track/3210fedcba98"
+    }
+  }
+}
+

@@ -1,0 +1,87 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_status",
+    "domain": "beckn.one:tourism:trekking:1.0",
+    "timestamp": "2023-11-06T10:14:10.295Z",
+    "message_id": "b8c1e69c-fbbc-439b-a5de-2adcc74fa0da",
+    "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+    "bap_id": "tourism-bap",
+    "bap_uri": "https://tourism-bap.url",
+    "bpp_id": "tourism-bpp",
+    "bpp_uri": "https://tourism-bpp.url",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "oid0909",
+      "beckn:orderStatus": "IN_PROGRESS",
+      "beckn:seller": "provider-worldhikes",
+      "beckn:buyer": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Buyer",
+        "beckn:id": "buyer-shubham-thakur",
+        "beckn:role": "BUYER",
+        "beckn:name": "Shubham Thakur",
+        "beckn:email": "thakur.s@gmail.com",
+        "beckn:phone": "+919191223433"
+      },
+      "beckn:orderItems": [
+        {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:OrderItem",
+          "beckn:lineId": "line-001",
+          "beckn:orderedItem": "item-hampta-pass-trek",
+          "beckn:acceptedOffer": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-hampta-pass-trek",
+            "beckn:descriptor": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+              "@type": "beckn:Descriptor",
+              "schema:name": "Hampta Pass Trek - Manali",
+              "beckn:shortDesc": "One of the Most Dramatic Crossover Treks in the Himalayas."
+            },
+            "beckn:price": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+              "@type": "schema:PriceSpecification",
+              "schema:priceCurrency": "INR",
+              "schema:price": 1200.0
+            }
+          },
+          "beckn:quantity": 2,
+          "beckn:price": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "schema:PriceSpecification",
+            "schema:priceCurrency": "INR",
+            "schema:price": 2400.0
+          }
+        }
+      ],
+      "beckn:orderValue": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "schema:PriceSpecification",
+        "schema:priceCurrency": "INR",
+        "schema:price": 3000.0
+      },
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "f1",
+        "beckn:mode": "TREK_EXPEDITION",
+        "beckn:status": "ORDER_BOOKED",
+        "beckn:statusDescription": "Trek booking confirmed"
+      },
+      "beckn:payment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Payment",
+        "beckn:id": "payment-001",
+        "beckn:status": "PAID",
+        "beckn:txnRef": "tid0101"
+      }
+    }
+  }
+}
+

@@ -1,0 +1,31 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "cancel",
+    "domain": "beckn.one:tourism:trekking:1.0",
+    "timestamp": "2023-11-06T10:14:10.295Z",
+    "message_id": "c53b2e4b-ff6d-434b-ba2c-329a3260b3e9",
+    "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+    "bap_id": "tourism-bap",
+    "bap_uri": "https://tourism-bap.url",
+    "bpp_id": "tourism-bpp",
+    "bpp_uri": "https://tourism-bpp.url",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "oid0909",
+      "beckn:orderStatus": "CONFIRMED",
+      "beckn:orderItems": [
+        {
+          "beckn:lineId": "line-001",
+          "beckn:orderedItem": "item-hampta-pass-trek",
+          "beckn:quantity": 2
+        }
+      ]
+    }
+  }
+}
+

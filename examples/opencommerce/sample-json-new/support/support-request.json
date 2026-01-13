@@ -14,16 +14,19 @@
   },
   "message": {
     "support": {
-      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-      "@type": "beckn:Support",
-      "beckn:refId": "894789-43954",
-      "beckn:contact": {
-        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-        "@type": "beckn:Contact",
-        "schema:telephone": "+91 4444444444",
-        "schema:email": "me@gmail.com"
-      }
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/main/schema/core/v2/context.jsonld",
+      "@type": "beckn:SupportInfo",
+      "name": "RetailMart Support Team",
+      "phone": "18001234567",
+      "email": "support@retailmart.com",
+      "url": "https://support.retailmart.com/ticket/SUP-20250730-001",
+      "hours": "Mon–Sun 24/7 IST",
+      "channels": [
+        "PHONE",
+        "EMAIL",
+        "WEB",
+        "CHAT"
+      ]
     }
   }
 }
-

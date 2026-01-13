@@ -1,0 +1,55 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "select",
+    "domain": "beckn.one:tourism:trekking:1.0",
+    "timestamp": "2023-11-06T09:41:09.708Z",
+    "message_id": "6d098f3a-4873-4b2e-935e-e4d6be92eb01",
+    "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+    "bap_id": "tourism-bap",
+    "bap_uri": "https://tourism-bap.url",
+    "bpp_id": "tourism-bpp",
+    "bpp_uri": "https://tourism-bpp.url",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:orderStatus": "QUOTE_REQUESTED",
+      "beckn:seller": "provider-worldhikes",
+      "beckn:orderItems": [
+        {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:OrderItem",
+          "beckn:lineId": "line-001",
+          "beckn:orderedItem": "item-hampta-pass-trek",
+          "beckn:quantity": 2,
+          "beckn:acceptedOffer": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-hampta-pass-trek",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Hampta Pass Trek - Manali"
+            },
+            "beckn:items": ["item-hampta-pass-trek"],
+            "beckn:price": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+              "@type": "schema:PriceSpecification",
+              "schema:priceCurrency": "INR",
+              "schema:price": 1200.0
+            }
+          }
+        }
+      ],
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "f1",
+        "beckn:mode": "TREK_EXPEDITION"
+      }
+    }
+  }
+}
+

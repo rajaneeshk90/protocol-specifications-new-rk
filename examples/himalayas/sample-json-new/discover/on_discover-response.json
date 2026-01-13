@@ -1,0 +1,174 @@
+{
+    "context": {
+        "version": "2.0.0",
+        "action": "on_discover",
+        "domain": "beckn.one:tourism:trekking:1.0",
+        "timestamp": "2023-11-06T09:41:09.708Z",
+        "message_id": "6104c0a3-d1d1-4ded-aaa4-76e4caf727ce",
+        "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+        "bap_id": "tourism-bap",
+        "bap_uri": "https://tourism-bap.url",
+        "bpp_id": "tourism-bpp",
+        "bpp_uri": "https://tourism-bpp.url",
+        "ttl": "PT10M"
+    },
+    "message": {
+        "catalogs": [
+            {
+                "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                "@type": "beckn:Catalog",
+                "beckn:descriptor": {
+                    "@type": "beckn:Descriptor",
+                    "schema:name": "TravelBuddy"
+                },
+                "beckn:sellers": [
+                    {
+                        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                        "@type": "beckn:Seller",
+                        "beckn:id": "provider-worldhikes",
+                        "beckn:descriptor": {
+                            "@type": "beckn:Descriptor",
+                            "schema:name": "WorldHikes",
+                            "beckn:shortDesc": "Premier trekking and adventure company in the Himalayas"
+                        },
+                        "beckn:availableAt": [
+                            {
+                                "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                                "@type": "beckn:Location",
+                                "beckn:id": "location-manali",
+                                "beckn:descriptor": {
+                                    "@type": "beckn:Descriptor",
+                                    "schema:name": "WorldHikes - Manali Office"
+                                },
+                                "beckn:geo": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        77.23599,
+                                        32.19742
+                                    ]
+                                }
+                            }
+                        ],
+                        "beckn:categories": [
+                            {
+                                "@type": "beckn:Category",
+                                "beckn:id": "c1",
+                                "beckn:descriptor": {
+                                    "@type": "beckn:Descriptor",
+                                    "schema:name": "Leisure Tourism"
+                                }
+                            },
+                            {
+                                "@type": "beckn:Category",
+                                "beckn:id": "c2",
+                                "beckn:descriptor": {
+                                    "@type": "beckn:Descriptor",
+                                    "schema:name": "Adventure Trekking"
+                                }
+                            }
+                        ],
+                        "beckn:items": [
+                            {
+                                "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                                "@type": "beckn:Item",
+                                "beckn:id": "item-hampta-pass-trek",
+                                "beckn:descriptor": {
+                                    "@type": "beckn:Descriptor",
+                                    "schema:name": "Hampta Pass Trek - Manali",
+                                    "beckn:shortDesc": "One of the Most Dramatic Crossover Treks in the Himalayas.",
+                                    "beckn:longDesc": "Hampta Pass Trek - Manali Quick Facts: Start/End Point: Manali, Duration: 5 Days & 4 Nights, Camp Altitude: 4,280 ft, Difficulty: Easy or Moderate, Distance: 35 kms",
+                                    "schema:image": [
+                                        {
+                                            "@type": "schema:ImageObject",
+                                            "schema:url": "https://retail-bpp-infra2.becknprotocol.io/attachments/view/274.jpeg"
+                                        }
+                                    ]
+                                },
+                                "beckn:categoryIds": [
+                                    "c1",
+                                    "c2"
+                                ],
+                                "beckn:itemAttributes": {
+                                    "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/TourismItem/v1/context.jsonld",
+                                    "@type": "TourismItem",
+                                    "tourism:category": "trekking",
+                                    "tourism:difficulty": "moderate",
+                                    "tourism:duration": "5 days",
+                                    "tourism:distance": "35 km",
+                                    "tourism:maxAltitude": "14065 ft",
+                                    "tourism:tags": [
+                                        "Trekking",
+                                        "Himalayas",
+                                        "Adventure"
+                                    ]
+                                }
+                            }
+                        ],
+                        "beckn:offers": [
+                            {
+                                "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                                "@type": "beckn:Offer",
+                                "beckn:id": "offer-hampta-pass-trek",
+                                "beckn:descriptor": {
+                                    "@type": "beckn:Descriptor",
+                                    "schema:name": "Hampta Pass Trek - Manali"
+                                },
+                                "beckn:items": [
+                                    "item-hampta-pass-trek"
+                                ],
+                                "beckn:price": {
+                                    "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                                    "@type": "schema:PriceSpecification",
+                                    "schema:priceCurrency": "INR",
+                                    "schema:price": 1200.0
+                                }
+                            }
+                        ],
+                        "beckn:fulfillments": [
+                            {
+                                "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                                "@type": "beckn:Fulfillment",
+                                "beckn:id": "f1",
+                                "beckn:mode": "TREK_EXPEDITION",
+                                "beckn:fulfillmentAttributes": {
+                                    "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/TourismFulfillment/v1/context.jsonld",
+                                    "@type": "TourismFulfillment",
+                                    "startLocation": {
+                                        "@type": "beckn:Location",
+                                        "beckn:descriptor": {
+                                            "@type": "beckn:Descriptor",
+                                            "schema:name": "Manali - Jobra"
+                                        },
+                                        "beckn:geo": {
+                                            "type": "Point",
+                                            "coordinates": [
+                                                77.23599,
+                                                32.19742
+                                            ]
+                                        }
+                                    },
+                                    "endLocation": {
+                                        "@type": "beckn:Location",
+                                        "beckn:descriptor": {
+                                            "@type": "beckn:Descriptor",
+                                            "schema:name": "Chhatru"
+                                        },
+                                        "beckn:geo": {
+                                            "type": "Point",
+                                            "coordinates": [
+                                                77.37117,
+                                                32.31783
+                                            ]
+                                        }
+                                    },
+                                    "startTime": "2024-04-15T08:00:00.000Z",
+                                    "endTime": "2024-04-18T08:00:00.000Z"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

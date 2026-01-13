@@ -1,0 +1,119 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_select",
+    "domain": "beckn.one:tourism:trekking:1.0",
+    "timestamp": "2023-11-06T09:41:09.708Z",
+    "message_id": "6d098f3a-4873-4b2e-935e-e4d6be92eb01",
+    "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+    "bap_id": "tourism-bap",
+    "bap_uri": "https://tourism-bap.url",
+    "bpp_id": "tourism-bpp",
+    "bpp_uri": "https://tourism-bpp.url",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:orderStatus": "QUOTE_PROVIDED",
+      "beckn:seller": "provider-worldhikes",
+      "beckn:orderItems": [
+        {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:OrderItem",
+          "beckn:lineId": "line-001",
+          "beckn:orderedItem": "item-hampta-pass-trek",
+          "beckn:acceptedOffer": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-hampta-pass-trek",
+            "beckn:descriptor": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+              "@type": "beckn:Descriptor",
+              "schema:name": "Hampta Pass Trek - Manali",
+              "beckn:shortDesc": "One of the Most Dramatic Crossover Treks in the Himalayas.",
+              "schema:image": [
+                {
+                  "@type": "schema:ImageObject",
+                  "schema:url": "https://retail-bpp-infra2.becknprotocol.io/attachments/view/274.jpeg"
+                }
+              ]
+            },
+            "beckn:price": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+              "@type": "schema:PriceSpecification",
+              "schema:priceCurrency": "INR",
+              "schema:price": 1200.0
+            }
+          },
+          "beckn:quantity": 2,
+          "beckn:price": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "schema:PriceSpecification",
+            "schema:priceCurrency": "INR",
+            "schema:price": 2400.0
+          },
+          "beckn:orderItemAttributes": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/TourismItem/v1/context.jsonld",
+            "@type": "TourismItem",
+            "tourism:category": "trekking",
+            "tourism:difficulty": "moderate",
+            "tourism:duration": "5 days",
+            "tourism:tags": ["Trekking", "Himalayas"]
+          }
+        }
+      ],
+      "beckn:orderValue": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "schema:PriceSpecification",
+        "schema:priceCurrency": "INR",
+        "schema:price": 3000.0,
+        "beckn:components": [
+          {
+            "@type": "beckn:PriceComponent",
+            "beckn:type": "UNIT",
+            "beckn:value": 2400.0,
+            "beckn:currency": "INR",
+            "beckn:description": "Trek price (2 × ₹1200)"
+          },
+          {
+            "@type": "beckn:PriceComponent",
+            "beckn:type": "TAX",
+            "beckn:value": 600.0,
+            "beckn:currency": "INR",
+            "beckn:description": "Taxes"
+          }
+        ]
+      },
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "f1",
+        "beckn:mode": "TREK_EXPEDITION",
+        "beckn:status": "SERVICEABLE",
+        "beckn:fulfillmentAttributes": {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/TourismFulfillment/v1/context.jsonld",
+          "@type": "TourismFulfillment",
+          "startLocation": {
+            "@type": "beckn:Location",
+            "beckn:geo": {
+              "type": "Point",
+              "coordinates": [77.23599, 32.19742]
+            }
+          },
+          "endLocation": {
+            "@type": "beckn:Location",
+            "beckn:geo": {
+              "type": "Point",
+              "coordinates": [77.37117, 32.31783]
+            }
+          },
+          "startTime": "2024-04-15T08:00:00.000Z",
+          "endTime": "2024-04-18T08:00:00.000Z"
+        }
+      }
+    }
+  }
+}
+

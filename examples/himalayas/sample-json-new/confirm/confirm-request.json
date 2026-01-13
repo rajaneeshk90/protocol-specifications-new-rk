@@ -1,0 +1,84 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "confirm",
+    "domain": "beckn.one:tourism:trekking:1.0",
+    "timestamp": "2023-11-06T10:14:10.280Z",
+    "message_id": "58d0a142-68e3-48d9-92e8-fbc791e44949",
+    "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+    "bap_id": "tourism-bap",
+    "bap_uri": "https://tourism-bap.url",
+    "bpp_id": "tourism-bpp",
+    "bpp_uri": "https://tourism-bpp.url",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "order-hampta-trek-20231106-001",
+      "beckn:orderStatus": "CONFIRM_REQUESTED",
+      "beckn:seller": "provider-worldhikes",
+      "beckn:buyer": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Buyer",
+        "beckn:id": "buyer-shubham-thakur",
+        "beckn:role": "BUYER",
+        "beckn:name": "Shubham Thakur",
+        "beckn:address": "123, Terminal 1, Kempegowda Int'l Airport Rd, A - Block, Gangamuthanahalli, Karnataka 560300, India",
+        "beckn:email": "thakur.s@gmail.com",
+        "beckn:phone": "+919191223433"
+      },
+      "beckn:orderItems": [
+        {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:OrderItem",
+          "beckn:lineId": "line-001",
+          "beckn:orderedItem": "item-hampta-pass-trek",
+          "beckn:quantity": 2,
+          "beckn:acceptedOffer": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-hampta-pass-trek",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Hampta Pass Trek - Manali"
+            },
+            "beckn:price": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+              "@type": "schema:PriceSpecification",
+              "schema:priceCurrency": "INR",
+              "schema:price": 1200.0
+            }
+          }
+        }
+      ],
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "f1"
+      },
+      "beckn:payment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Payment",
+        "beckn:id": "payment-001",
+        "beckn:status": "PAID",
+        "beckn:txnRef": "tid0101",
+        "beckn:amount": {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "schema:PriceSpecification",
+          "schema:priceCurrency": "INR",
+          "schema:price": 3000.0
+        },
+        "beckn:acceptedPaymentMethod": [
+          "NetBanking"
+        ],
+        "beckn:paymentParams": {
+          "bank_code": "INB0004321",
+          "bank_account_number": "1234002341"
+        }
+      }
+    }
+  }
+}
+

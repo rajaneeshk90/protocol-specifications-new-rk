@@ -1,0 +1,38 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "discover",
+    "domain": "beckn.one:tourism:trekking:1.0",
+    "timestamp": "2023-11-06T09:41:09.673Z",
+    "message_id": "6104c0a3-d1d1-4ded-aaa4-76e4caf727ce",
+    "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+    "bap_id": "tourism-bap",
+    "bap_uri": "https://tourism-bap.url",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "text_search": "trekking",
+    "temporal": [
+      {
+        "op": "t_overlaps",
+        "targets": "$['beckn:availableAt'][*]['time']",
+        "range": {
+          "start": "2023-04-14T14:30:00.000Z",
+          "end": "2023-04-16T14:30:00.000Z"
+        }
+      }
+    ],
+    "spatial": [
+      {
+        "op": "s_dwithin",
+        "targets": "$['beckn:availableAt'][*]['geo']",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [77.23599, 32.19742]
+        },
+        "distanceMeters": 50000
+      }
+    ]
+  }
+}
+

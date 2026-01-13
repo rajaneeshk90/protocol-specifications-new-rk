@@ -1,0 +1,172 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "on_init",
+    "domain": "beckn.one:tourism:trekking:1.0",
+    "timestamp": "2023-11-06T09:45:40.421Z",
+    "message_id": "06f49c01-65b7-4754-8b37-ab4e33688154",
+    "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+    "bap_id": "tourism-bap",
+    "bap_uri": "https://tourism-bap.url",
+    "bpp_id": "tourism-bpp",
+    "bpp_uri": "https://tourism-bpp.url",
+    "ttl": "PT10M"
+  },
+  "message": {
+    "order": {
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "order-hampta-trek-20231106-001",
+      "beckn:orderNumber": "ORD-WH-001",
+      "beckn:orderStatus": "INITIALIZED",
+      "beckn:seller": "provider-worldhikes",
+      "beckn:buyer": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Buyer",
+        "beckn:id": "buyer-shubham-thakur",
+        "beckn:role": "BUYER",
+        "beckn:name": "Shubham Thakur",
+        "beckn:address": "123, Terminal 1, Kempegowda Int'l Airport Rd, A - Block, Gangamuthanahalli, Karnataka 560300, India",
+        "beckn:email": "thakur.s@gmail.com",
+        "beckn:phone": "+919191223433"
+      },
+      "beckn:orderItems": [
+        {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:OrderItem",
+          "beckn:lineId": "line-001",
+          "beckn:orderedItem": "item-hampta-pass-trek",
+          "beckn:acceptedOffer": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-hampta-pass-trek",
+            "beckn:descriptor": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+              "@type": "beckn:Descriptor",
+              "schema:name": "Hampta Pass Trek - Manali",
+              "beckn:shortDesc": "One of the Most Dramatic Crossover Treks in the Himalayas."
+            },
+            "beckn:price": {
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+              "@type": "schema:PriceSpecification",
+              "schema:priceCurrency": "INR",
+              "schema:price": 1200.0
+            }
+          },
+          "beckn:quantity": 2,
+          "beckn:price": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "schema:PriceSpecification",
+            "schema:priceCurrency": "INR",
+            "schema:price": 2400.0
+          },
+          "beckn:orderItemAttributes": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/TourismItem/v1/context.jsonld",
+            "@type": "TourismItem",
+            "tourism:category": "trekking",
+            "tourism:difficulty": "moderate",
+            "tourism:duration": "5 days",
+            "tourism:tags": ["Trekking", "Himalayas"]
+          }
+        }
+      ],
+      "beckn:orderValue": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "schema:PriceSpecification",
+        "schema:priceCurrency": "INR",
+        "schema:price": 3000.0,
+        "beckn:components": [
+          {
+            "@type": "beckn:PriceComponent",
+            "beckn:type": "UNIT",
+            "beckn:value": 2400.0,
+            "beckn:currency": "INR",
+            "beckn:description": "Trek price (2 × ₹1200)"
+          },
+          {
+            "@type": "beckn:PriceComponent",
+            "beckn:type": "TAX",
+            "beckn:value": 600.0,
+            "beckn:currency": "INR",
+            "beckn:description": "Taxes"
+          }
+        ]
+      },
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "f1",
+        "beckn:mode": "TREK_EXPEDITION",
+        "beckn:status": "PENDING",
+        "beckn:fulfillmentAttributes": {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/TourismFulfillment/v1/context.jsonld",
+          "@type": "TourismFulfillment",
+          "startLocation": {
+            "@type": "beckn:Location",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Manali - Jobra"
+            },
+            "beckn:geo": {
+              "type": "Point",
+              "coordinates": [77.23599, 32.19742]
+            }
+          },
+          "endLocation": {
+            "@type": "beckn:Location",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Chhatru"
+            },
+            "beckn:geo": {
+              "type": "Point",
+              "coordinates": [77.37117, 32.31783]
+            }
+          },
+          "startTime": "2024-04-15T08:00:00.000Z",
+          "endTime": "2024-04-18T08:00:00.000Z",
+          "customerContact": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Contact",
+            "schema:name": "Shubham Thakur",
+            "schema:telephone": "+919122343344"
+          }
+        }
+      },
+      "beckn:payment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Payment",
+        "beckn:id": "payment-001",
+        "beckn:status": "NOT-PAID",
+        "beckn:amount": {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "schema:PriceSpecification",
+          "schema:priceCurrency": "INR",
+          "schema:price": 3000.0
+        },
+        "beckn:beneficiary": "BPP",
+        "beckn:acceptedPaymentMethod": [
+          "Card",
+          "UPI",
+          "NetBanking"
+        ],
+        "beckn:paymentParams": {
+          "bank_code": "INB0004321",
+          "bank_account_number": "1234002341"
+        }
+      },
+      "beckn:orderAttributes": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/TourismOrder/v1/context.jsonld",
+        "@type": "TourismOrder",
+        "cancellationTerms": [
+          {
+            "cancelBy": "2023-04-13T09:41:09.708Z",
+            "cancellationFeePercentage": 30,
+            "refundEligible": true
+          }
+        ]
+      }
+    }
+  }
+}
+
