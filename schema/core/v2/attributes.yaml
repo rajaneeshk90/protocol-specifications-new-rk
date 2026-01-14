@@ -16,14 +16,14 @@ components:
   schemas:
     Catalog:
       type: object
-      required: ["@context", "@type", "beckn:id", "beckn:descriptor", "beckn:items"]
+      required: ["@context", "@type", "beckn:id", "beckn:descriptor", "beckn:bppId", "beckn:bppUri", "beckn:items"]
       additionalProperties: false
       properties:
         "@context":
           type: string
           format: uri
           description: JSON-LD context URI for the core Catalog schema
-          enum: ["https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld"]
+          enum: ["https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/main/schema/core/v2/context.jsonld"]
         "@type":
           type: string
           description: Type of the catalog
@@ -38,8 +38,21 @@ components:
           type: string
           description: Reference to the provider that owns this catalog
           example: "tech-store-001"
+        "beckn:bppId":
+          type: string
+          description: BPP (Beckn Protocol Provider) identifier that publishes this catalog
+          example: "bpp.example.com"
+        "beckn:bppUri":
+          type: string
+          format: uri
+          description: BPP (Beckn Protocol Provider) URI endpoint
+          example: "https://bpp.example.com"
         "beckn:validity":
           $ref: '#/components/schemas/TimePeriod'
+        "beckn:isActive":
+          type: boolean
+          description: Whether the catalog is active
+          default: true
         beckn:items:  # semantic entities
           type: array
           description: >
@@ -59,7 +72,7 @@ components:
           type: string
           format: uri
           description: JSON-LD context URI for the core Item schema
-          enum: ["https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld"]
+          enum: ["https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/main/schema/core/v2/context.jsonld"]
         "@type":
           type: string
           description: Type of the core item
@@ -117,25 +130,21 @@ components:
         "@context":
           type: string
           format: uri
-          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld"
+          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/main/schema/core/v2/context.jsonld"
         "@type":
           type: string
           enum: ["beckn:Offer"]
           x-jsonld: { "@id": "schema:Offer" }
-
         beckn:id:
           type: string
           description: Unique id for this offer
           x-jsonld: { "@id": "schema:identifier" }
-
         beckn:descriptor:
           $ref: "#/components/schemas/Descriptor"
-
         beckn:provider:
           $ref: "#/components/schemas/Provider/properties/beckn:id"
           description: Seller / provider of this offer
           x-jsonld: { "@id": "schema:seller" }
-
         # Single source of truth for base item(s)
         beckn:items:
           type: array
@@ -143,46 +152,36 @@ components:
           items: { $ref: "#/components/schemas/Item/properties/beckn:id" }
           description: Base item(s) the offer applies to (single or bundle)
           x-jsonld: { "@id": "schema:itemOffered" }
-
         # Optional extras
         beckn:addOns:
           type: array
           items: { $ref: "#/components/schemas/Offer/properties/beckn:id" }
           description: Optional extra Offers that can be attached (e.g., warranty, gift wrap)
           x-jsonld: { "@id": "schema:addOn" }
-
         beckn:addOnItems:
           type: array
           items: { $ref: "#/components/schemas/Item/properties/beckn:id" }
           description: Optional extras modeled as items (e.g., toppings, accessories)
           x-jsonld: { "@id": "schema:addOn" }
-
+        beckn:isActive:
+          type: boolean
+          description: Whether the offer is active
+          default: true
         beckn:validity:
           $ref: "#/components/schemas/TimePeriod"
           description: Offer validity window
           x-jsonld: { "@id": "schema:availabilityStarts|schema:availabilityEnds" }
-
         beckn:price:
           $ref: "#/components/schemas/PriceSpecification"
           description: Price snapshot; detailed models can live in offerAttributes
           x-jsonld: { "@id": "schema:priceSpecification" }
-
         beckn:eligibleRegion: 
           type: array
           items:
             $ref: '#/components/schemas/Location'
           description: Regions where the offer is eligible
-
         beckn:acceptedPaymentMethod:
           $ref: '#/components/schemas/AcceptedPaymentMethod'
-
-        beckn:itemCondition:
-          type: string
-          enum: ["NEW", "USED", "REFURBISHED", "DAMAGED"]
-          description: Condition of the item being offered
-          example: "NEW"
-          x-jsonld: { "@id": "schema:itemCondition" }
-
         beckn:offerAttributes:
           $ref: "#/components/schemas/Attributes"
           description: Attribute Pack attachment (pricing models, discounts, rail terms, etc.)          
@@ -212,7 +211,7 @@ components:
       description: Payment methods accepted for this offer
       items:
         type: string
-        enum: ["UPI", "CreditCard", "DebitCard", "Wallet", "BankTransfer", "Cash", "ApplePay"]
+        enum: ["UPI", "CREDIT_CARD", "DEBIT_CARD", "WALLET", "BANK_TRANSFER", "CASH", "APPLE_PAY"]
       example: ["UPI", "Card", "Wallet"]
       x-jsonld: { "@id": "beckn:acceptedPaymentMethod" }
 
@@ -243,6 +242,37 @@ components:
         "beckn:providerAttributes":
           $ref: '#/components/schemas/Attributes'
 
+    Quantity:
+      type: object
+      additionalProperties: false
+      properties:
+        unitText:
+          type: string
+          description: Unit for the quoted price (e.g., kWh, minute, hour, month)
+          example: "kWh"
+          x-jsonld: { "@id": "schema:unitText" }
+        unitCode:
+          type: string
+          description: Unit code for the quoted price (e.g., KWH, MIN, H, MON)
+          example: "KWH"
+          x-jsonld: { "@id": "schema:unitCode" }
+        unitQuantity:
+          type: number
+          description: Quantity of the unit
+          example: 1
+          x-jsonld: { "@id": "schema:Number" }
+        minQuantity:
+          type: number
+          description: Minimum quantity for this price
+          example: 1
+          x-jsonld: { "@id": "schema:Number" }
+        maxQuantity:
+          type: number
+          description: Maximum quantity for this price
+          example: 100
+          x-jsonld: { "@id": "schema:Number" }
+      x-jsonld: { "@id": "schema:QuantitativeValue" }
+
     PriceSpecification:
       type: object
       additionalProperties: true
@@ -250,34 +280,8 @@ components:
         currency: { type: string, description: ISO 4217 code }
         value:    { type: number, description: Total value for this price specification }
         applicableQuantity:
-          type: object
-          properties:
-            unitText:
-              type: string
-              description: Unit for the quoted price (e.g., kWh, minute, hour, month)
-              example: "kWh"
-              x-jsonld: { "@id": "schema:unitText" }
-            unitCode:
-              type: string
-              description: Unit code for the quoted price (e.g., KWH, MIN, H, MON)
-              example: "KWH"
-              x-jsonld: { "@id": "schema:unitCode" }
-            unitQuantity:
-              type: number
-              description: Quantity of the unit
-              example: 1
-              x-jsonld: { "@id": "schema:Number" }
-            minQuantity:
-              type: number
-              description: Minimum quantity for this price
-              example: 1
-              x-jsonld: { "@id": "schema:Number" }
-            maxQuantity:
-              type: number
-              description: Maximum quantity for this price
-              example: 100
-              x-jsonld: { "@id": "schema:Number" }
-        x-jsonld: { "@id": "schema:eligibleQuantity" }
+          $ref: '#/components/schemas/Quantity'
+          x-jsonld: { "@id": "schema:eligibleQuantity" }
         components:
           type: array
           description: Optional components (tax, shipping, discount, fee, surcharge)
@@ -599,7 +603,6 @@ components:
       required:
         - "@context"
         - "@type"
-        - beckn:id
         - beckn:orderStatus
         - beckn:seller
         - beckn:buyer
@@ -608,7 +611,7 @@ components:
         "@context":
           type: string
           format: uri
-          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld"
+          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/main/schema/core/v2/context.jsonld"
         "@type":
           type: string
           enum: ["beckn:Order"]
@@ -621,7 +624,8 @@ components:
         beckn:orderStatus:
           type: string
           description: Order status/state
-          x-jsonld: { "@id": "schema:OrderStatus" }
+          enum: ["CREATED","PENDING","CONFIRMED","INPROGRESS","PARTIALLYFULFILLED","COMPLETED","CANCELLED","REJECTED","FAILED","RETURNED","REFUNDED","ONHOLD"]
+          x-jsonld: { "@id": "beckn:orderStatus" }
 
         beckn:orderNumber:
           type: string
@@ -633,7 +637,7 @@ components:
           x-jsonld: { "@id": "schema:seller" }
 
         beckn:buyer:
-          $ref: "#/components/schemas/Buyer/properties/beckn:id"
+          $ref: "#/components/schemas/Buyer"
           x-jsonld: { "@id": "schema:customer" }
 
         beckn:orderItems:
@@ -674,7 +678,7 @@ components:
 
     OrderItem:
       type: object
-      required: ["beckn:lineId","beckn:orderedItem","beckn:quantity"]
+      required: ["beckn:orderedItem"]
       properties:
         beckn:lineId:
           type: string
@@ -687,8 +691,8 @@ components:
           description: Offer applied to this line (if different from order-level)
           x-jsonld: { "@id": "schema:acceptedOffer" }
         beckn:quantity:
-          type: number
-          x-jsonld: { "@id": "schema:orderQuantity" }
+          $ref: "#/components/schemas/Quantity"
+          x-jsonld: { "@id": "beckn:quantity" }
         beckn:price:
           $ref: "#/components/schemas/PriceSpecification"
           description: Line price composition (unit/tax/delivery/discount)
@@ -710,7 +714,7 @@ components:
         "@context":
           type: string
           format: uri
-          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld"
+          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/main/schema/core/v2/context.jsonld"
         "@type":
           type: string
           enum: ["beckn:Invoice"]
@@ -756,17 +760,12 @@ components:
     Fulfillment:
       type: object
       additionalProperties: false
-      required: [
-        "@context",
-        "@type",
-        "beckn:id",
-        "beckn:mode"
-      ]
+      required: ["@context","@type","beckn:mode"]
       properties:
         "@context":
           type: string
           format: uri
-          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld"
+          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/main/schema/core/v2/context.jsonld"
         "@type":
           type: string
           enum: ["beckn:Fulfillment"]
@@ -776,11 +775,10 @@ components:
           description: Fulfillment identifier
           x-jsonld: { "@id": "schema:identifier" }
         # Optional minimal status/links that are mode-agnostic. Rich details live in packs.
-        beckn:status:
+        beckn:fulfillmentStatus:
           type: string
-          description: Network-defined status code (e.g., OutForDelivery, ReadyForPickup, Confirmed)
-          enum: ["PENDING","CONFIRMED","COMPLETED","CANCELLED","QUOTED"]
-          x-jsonld: { "@id": "schema:orderStatus" } # closest general status anchor
+          description: Fulfillment status code (e.g., OutForDelivery, ReadyForPickup, Confirmed)
+          x-jsonld: { "@id": "beckn:fulfillmentStatus" }
         beckn:mode:
           type: string
           enum: ["DELIVERY","PICKUP","RESERVATION","DIGITAL"]
@@ -812,34 +810,16 @@ components:
       x-jsonld:
         '@type': 'schema:TrackAction'
       properties:
-        target:
-          type: object
-          description: schema.org EntryPoint
-          x-jsonld:
-            '@type': 'schema:EntryPoint'
-          properties:
-            url:
-              type: string
-              format: uri
-              description: Tracking page URL
-              x-jsonld:
-                '@id': 'schema:url'
-          additionalProperties: true
-        deliveryMethod:
+        id:
           type: string
-          enum: ["DELIVERY","PICKUP","RESERVATION","DIGITAL"]
-          description: |
-            DELIVERY    → last-mile / parcel logistics
-            PICKUP      → customer collects from a place
-            RESERVATION → entitlement/booking is fulfilled (tickets, seats, appointments)
-            DIGITAL     → digital good / license access
-          x-jsonld:
-            '@id': 'schema:deliveryMethod'    
-        reservationId:
+          description: Tracking action identifier
+          x-jsonld: { "@id": "schema:identifier" }
+        url:
           type: string
-          description: Unique identifier for the reservation (schema.org Reservation.reservationId).
+          format: uri
+          description: Tracking page URL
           x-jsonld:
-            '@id': 'schema:reservationId'
+            '@id': 'schema:url'
       additionalProperties: true            
 
     # -----------------------------
@@ -848,13 +828,13 @@ components:
     Payment:
       type: object
       additionalProperties: false
-      required: ["@context","@type","beckn:id","beckn:method","beckn:status"]
+      required: ["@context","@type","beckn:paymentStatus"]
       # Core payment semantics: rail + status + references. Rail payloads live in payment packs (UPI/Card/BNPL/Wallet).
       properties:
         "@context":
           type: string
           format: uri
-          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld"
+          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/main/schema/core/v2/context.jsonld"
         "@type":
           type: string
           enum: ["beckn:Payment"]
@@ -863,10 +843,11 @@ components:
           type: string
           description: Payment record identifier
           x-jsonld: { "@id": "schema:identifier" }
-        beckn:status:
+        beckn:paymentStatus:
           type: string
           description: Payment lifecycle status (Pending | Authorized | Captured | Failed | Refunded | PartialRefund …)
-          x-jsonld: { "@id": "schema:paymentStatus" } # schema:PaymentStatusType vocabulary
+          enum: ["INITIATED","PENDING","AUTHORIZED","CAPTURED","COMPLETED","FAILED","CANCELLED","REFUNDED","PARTIALLY_REFUNDED","CHARGEBACK","DISPUTED","EXPIRED","REVERSED","VOIDED","SETTLED","ON_HOLD","ADJUSTED"]
+          x-jsonld: { "@id": "beckn:paymentStatus" }
         beckn:amount:
           type: object
           description: Amount associated with this payment action
@@ -894,6 +875,7 @@ components:
         beckn:beneficiary:
           type: string
           description: Who will be the beneficiary or recipient of the payment
+          enum: ["BPP","BAP","BUYER"]
           example: "BPP"
           x-jsonld: { "@id": "schema:beneficiary" }
         beckn:paymentAttributes:
@@ -914,7 +896,7 @@ components:
         "@context":
           type: string
           format: uri
-          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld"
+          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/main/schema/core/v2/context.jsonld"
         "@type":
           type: string
           enum: ["beckn:Buyer"]
@@ -932,6 +914,15 @@ components:
           type: string
           description: Human-readable display name
           x-jsonld: { "@id": "schema:name" }
+        beckn:telephone:
+          type: string
+          description: Telephone number
+          x-jsonld: { "@id": "schema:telephone" }
+        beckn:email:
+          type: string
+          format: email
+          description: Email Address
+          x-jsonld: { "@id": "schema:email" }
         beckn:taxID:
           type: string
           description: Tax identifier for the buyer.
@@ -950,7 +941,16 @@ components:
       description: >
         Canonical support contact for an entity, mapped to schema.org ContactPoint.
       additionalProperties: false
+      required: ["@context", "@type"]
       properties:
+        "@context":
+          type: string
+          format: uri
+          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/main/schema/core/v2/context.jsonld"
+        "@type":
+          type: string
+          enum: ["beckn:SupportInfo"]
+          x-jsonld: { "@id": "beckn:SupportInfo" }
         name:
           type: string
           description: Name of the support organization or contact.
@@ -973,7 +973,7 @@ components:
           description: Available support channels.
           items:
             type: string
-            enum: [phone, email, web, chat, whatsapp, in_app, other]
+            enum: ["PHONE","EMAIL","WEB","CHAT","WHATSAPP","IN_APP","OTHER"]
       example:
         name: "Acme Support"
         phone: "+91-80-1234-5678"
@@ -995,7 +995,16 @@ components:
       description: >
         Non-streaming tracking handle per legacy semantics (url/transport/status).
       additionalProperties: false
+      required: ["@context", "@type", "tl_method", "url", "trackingStatus"]
       properties:
+        "@context":
+          type: string
+          format: uri
+          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/main/schema/core/v2/context.jsonld"
+        "@type":
+          type: string
+          enum: ["beckn:Tracking"]
+          x-jsonld: { "@id": "beckn:Tracking" }
         tl_method:
           type: string
           enum: [http/get, http/post, http/redirect, ws/handle, custom]
@@ -1004,47 +1013,54 @@ components:
           type: string
           format: uri
           description: Link/handle to off-network tracking UI or endpoint.
-        status:
+        trackingStatus:
           type: string
-          enum: [active, disabled, completed]
+          enum: [ACTIVE, DISABLED, COMPLETED]
         expires_at:
           type: string
           format: date-time
           description: ISO 8601 expiry timestamp for the tracking handle.
-      required: [tl_method, url, status]
       example:
         tl_method: "http/get"
         url: "https://track.bpp.example?order_id=ORD-123"
-        status: "active"
+        trackingStatus: "active"
         expires_at: "2025-10-16T18:30:00Z"
       x-jsonld:
         '@type': 'schema:TrackAction'
         'schema:target':    '$.url'           # URL to track → EntryPoint(target)
-        'schema:deliveryMethod': '$.tl_method' # best-effort mapping
-        'schema:actionStatus': '$.status'
+        'schema:deliveryMethod': '$.tl_method'
+        'beckn:trackingStatus': '$.trackingStatus'
 
     RatingInput:
       type: object
       additionalProperties: false
-      required: [id, value]
+      required: ["@context","@type","id","ratingValue"]
       properties:
+        "@context":
+          type: string
+          format: uri
+          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/main/schema/core/v2/context.jsonld"
+        "@type":
+          type: string
+          enum: ["beckn:RatingInput"]
+          x-jsonld: { "@id": "beckn:RatingInput" }
         id:
           type: string
           description: Target entity ID being rated (order/item/fulfillment/provider/agent).
-        value:
+        ratingValue:
           type: number
           description: Numeric rating value (legacy usually 1–5).  # remains permissive
           minimum: 0
-        best:
+        bestRating:
           type: number
           description: Maximum of the rating scale (default 5 if omitted).
-        worst:
+        worstRating:
           type: number
           description: Minimum of the rating scale (default 1 or 0 if omitted).
         category:
           type: string
           description: What is being rated.
-          enum: [order, item, fulfillment, provider, agent, other]
+          enum: [ORDER, FULFILLMENT, ITEM, PROVIDER, AGENT, OTHER]
         feedback:
           type: object
           additionalProperties: false
@@ -1063,7 +1079,16 @@ components:
     Form:
       description: Describes a form
       type: object
+      required: ["@context", "@type"]
       properties:
+        "@context":
+          type: string
+          format: uri
+          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/main/schema/core/v2/context.jsonld"
+        "@type":
+          type: string
+          enum: ["beckn:Form"]
+          x-jsonld: { "@id": "beckn:Form" }
         url:
           description: The URL from where the form can be fetched. The content fetched from the url must be processed as per the mime_type specified in this object. Once fetched, the rendering platform can choosed to render the form as-is as an embeddable element; or process it further to blend with the theme of the application. In case the interface is non-visual, the the render can process the form data and reproduce it as per the standard specified in the form.
           type: string

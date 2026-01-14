@@ -8,6 +8,7 @@
     "beckn": "./vocab.jsonld#",
     
     "ChargingService": "beckn:ChargingService",
+    "ChargingStation": "beckn:ChargingStation",
 
     "name": "schema:name",
     "description": "schema:description",
@@ -28,14 +29,79 @@
     "areaServed": "schema:areaServed",
     "category": "schema:category",
 
-    "connectorId": "beckn:connectorId",
-    "connectorType": "beckn:connectorType",
-    "powerType": "beckn:powerType",
-    "connectorFormat": "beckn:connectorFormat",
-    "chargingSpeed": "beckn:chargingSpeed",
-    "stationStatus": "beckn:stationStatus"
+    "chargingStation": "beckn:chargingStation",
+    "amenityFeature": {
+      "@id": "beckn:amenityFeature",
+      "@type": "@id"
+    },
+    "connectorType": {
+      "@id": "beckn:connectorType",
+      "@type": "@id"
+    },
+    "powerType": {
+      "@id": "beckn:powerType",
+      "@type": "@id"
+    },
+    "connectorFormat": {
+      "@id": "beckn:connectorFormat",
+      "@type": "@id"
+    },
+    "chargingSpeed": {
+      "@id": "beckn:chargingSpeed",
+      "@type": "@id"
+    },
+    "vehicleType": {
+      "@id": "beckn:vehicleType",
+      "@type": "@id"
+    },
+    "parkingType": {
+      "@id": "beckn:parkingType",
+      "@type": "@id"
+    },
+
+    "RESTAURANT": "beckn:AmenityRestaurant",
+    "Restaurant": "beckn:AmenityRestaurant",
+    "RESTROOM": "beckn:AmenityRestroom",
+    "Restroom": "beckn:AmenityRestroom",
+    "WI-FI": "beckn:AmenityWiFi",
+    "Wi-Fi": "beckn:AmenityWiFi",
+    "WiFi": "beckn:AmenityWiFi",
+    "PARKING": "beckn:AmenityParking",
+    "Parking": "beckn:AmenityParking",
+
+    "CCS2": "beckn:ConnectorTypeCCS2",
+    "Type2": "beckn:ConnectorTypeType2",
+    "CHAdeMO": "beckn:ConnectorTypeCHAdeMO",
+    "GB_T": "beckn:ConnectorTypeGBT",
+    "GB/T": "beckn:ConnectorTypeGBT",
+    "GB-T": "beckn:ConnectorTypeGBT",
+
+    "AC_SINGLE_PHASE": "beckn:PowerTypeACSinglePhase",
+    "AC_3_PHASE": "beckn:PowerTypeAC3Phase",
+    "AC_THREE_PHASE": "beckn:PowerTypeAC3Phase",
+    "DC": "beckn:PowerTypeDC",
+
+    "SOCKET": "beckn:ConnectorFormatSocket",
+    "CABLE": "beckn:ConnectorFormatCable",
+
+    "SLOW": "beckn:ChargingSpeedSlow",
+    "NORMAL": "beckn:ChargingSpeedNormal",
+    "FAST": "beckn:ChargingSpeedFast",
+    "ULTRAFAST": "beckn:ChargingSpeedUltraFast",
+
+    "OnStreet": "beckn:ParkingTypeOnStreet",
+    "OffStreet": "beckn:ParkingTypeOffStreet",
+    "Basement": "beckn:ParkingTypeBasement",
+    "Mall": "beckn:ParkingTypeMall",
+    "FuelStation": "beckn:ParkingTypeFuelStation",
+    "Fuel Station": "beckn:ParkingTypeFuelStation",
+    "Office": "beckn:ParkingTypeOffice",
+    "Hotel": "beckn:ParkingTypeHotel",
+
+    "2-WHEELER": "beckn:VehicleType2Wheeler",
+    "3-WHEELER": "beckn:VehicleType3Wheeler",
+    "4-WHEELER": "beckn:VehicleType4Wheeler"
   },
 
   "@graph": []
 }
-
