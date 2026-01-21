@@ -1,0 +1,109 @@
+# Beckn Protocol 2.0 - Spectral Style Guide Rules
+# Validation for api/beckn.yaml and schema/*/attributes.yaml
+
+extends: ["spectral:oas"]
+
+rules:
+  # =============================================================================
+  # 1. ENDPOINT PATH NAMING - must use snake_case
+  # =============================================================================
+  
+  path-snake-case:
+    description: API path segments must use snake_case
+    message: "Path '{{property}}' must use snake_case (e.g., /beckn/browser_search)"
+    severity: error
+    given: "$.paths[*]~"
+    then:
+      function: pattern
+      functionOptions:
+        # Allow: /beckn, /beckn/discover, /beckn/on_select, /beckn/v2/catalog/publish
+        # Path segments must be lowercase letters, numbers, underscores only
+        match: "^(/[a-z][a-z0-9_]*)+$"
+
+  # =============================================================================
+  # 2. PROPERTY NAMING - must use camelCase
+  # =============================================================================
+  # Checks that property names are camelCase
+  # Known exceptions (will show as warnings to review):
+  # - @context, @type, @id (JSON-LD)
+  # - beckn:*, schema:* (namespaced properties)
+  
+  property-camel-case:
+    description: Property names must be camelCase (except JSON-LD @ and namespace prefixes)
+    message: "Property '{{property}}' should be camelCase"
+    severity: warn
+    given: "$.components.schemas[*].properties[*]~"
+    then:
+      function: pattern
+      functionOptions:
+        # Allow: camelCase, @prefixed (JSON-LD), namespaced (beckn:, schema:)
+        match: "^(@[a-zA-Z]+|[a-z]+:[a-zA-Z]+|[a-z][a-zA-Z0-9]*)$"
+
+  # =============================================================================
+  # 3. ENUM VALUES - must use SCREAMING_SNAKE_CASE
+  # =============================================================================
+  # Checks that enum values are SCREAMING_SNAKE_CASE
+  # Known exceptions (will show as warnings to review):
+  # - MIME types (text/html, application/json)
+  # - URLs
+  # - Industry codes (CCS2, Type2, CHAdeMO)
+  # - JSON-LD types (beckn:Form, schema:Thing)
+  
+  enum-screaming-snake-case:
+    description: Enum values must be SCREAMING_SNAKE_CASE
+    message: "Enum value '{{value}}' should be SCREAMING_SNAKE_CASE"
+    severity: warn
+    given: "$.components.schemas[*].properties[*].enum[*]"
+    then:
+      function: pattern
+      functionOptions:
+        # Allow: SCREAMING_SNAKE_CASE, numbers (2_WHEELER), JSON-LD (beckn:X), 
+        # industry codes (CCS2), MIME types, URLs
+        match: "^([A-Z][A-Z0-9]*(_[A-Z0-9]+)*|[0-9]+_[A-Z_]+|[a-z]+:[A-Za-z]+|[A-Z][A-Za-z0-9]+|[a-z]+/[a-z+.-]+|https?://.*)$"
+
+  enum-screaming-snake-case-array:
+    description: Enum values in arrays must be SCREAMING_SNAKE_CASE
+    message: "Enum value '{{value}}' should be SCREAMING_SNAKE_CASE"
+    severity: warn
+    given: "$.components.schemas[*].properties[*].items.enum[*]"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^([A-Z][A-Z0-9]*(_[A-Z0-9]+)*|[0-9]+_[A-Z_]+|[a-z]+:[A-Za-z]+|[A-Z][A-Za-z0-9]+|[a-z]+/[a-z+.-]+|https?://.*)$"
+
+  # =============================================================================
+  # 4. SCHEMA NAMING - must use PascalCase
+  # =============================================================================
+  # Checks that schema/class names are PascalCase
+  
+  schema-pascal-case:
+    description: Schema names must be PascalCase
+    message: "Schema '{{property}}' should be PascalCase"
+    severity: warn
+    given: "$.components.schemas[*]~"
+    then:
+      function: pattern
+      functionOptions:
+        # Allow: PascalCase, with acronyms (GeoJSONGeometry, URLInfo)
+        match: "^[A-Z][a-zA-Z0-9]*$"
+
+  # =============================================================================
+  # DISABLED RULES
+  # =============================================================================
+  
+  # Beckn uses custom @context and @type properties
+  oas3-valid-media-example: off
+  oas3-valid-schema-example: off
+  
+  # These require more work to fix across the spec
+  operation-operationId: off
+  operation-description: off
+  operation-tags: off
+  operation-tag-defined: off
+  oas3-unused-component: off
+  info-contact: off
+  oas3-api-servers: off
+  
+  # Pre-existing OpenAPI structure issues - to be fixed separately
+  oas3-schema: off
+  array-items: off

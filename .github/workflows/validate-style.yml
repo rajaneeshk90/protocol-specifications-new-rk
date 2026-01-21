@@ -1,0 +1,49 @@
+name: Style Guide Validation
+
+on:
+  pull_request:
+    branches: [main, master]
+    paths:
+      - 'schema/**'
+      - 'api/**'
+      - 'docs/**'
+      - 'validation/**'
+  push:
+    branches: [main, master]
+    paths:
+      - 'schema/**'
+      - 'api/**'
+      - 'docs/**'
+      - 'validation/**'
+
+jobs:
+  spectral-lint:
+    name: Spectral OpenAPI Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Spectral
+        run: npm install -g @stoplight/spectral-cli
+
+      - name: Lint API spec
+        run: spectral lint api/beckn.yaml --ruleset validation/spectral/.spectral.yaml
+
+      - name: Lint Core schema
+        run: spectral lint schema/core/v2/attributes.yaml --ruleset validation/spectral/.spectral.yaml
+
+      - name: Lint EV Charging schemas
+        run: |
+          spectral lint schema/EvChargingService/v1/attributes.yaml --ruleset validation/spectral/.spectral.yaml
+          spectral lint schema/EvChargingSession/v1/attributes.yaml --ruleset validation/spectral/.spectral.yaml
+          spectral lint schema/EvChargingOffer/v1/attributes.yaml --ruleset validation/spectral/.spectral.yaml
+          spectral lint schema/EvChargingPointOperator/v1/attributes.yaml --ruleset validation/spectral/.spectral.yaml
+
+      - name: Lint Payment Settlement schema
+        run: spectral lint schema/PaymentSettlement/v1/attributes.yaml --ruleset validation/spectral/.spectral.yaml

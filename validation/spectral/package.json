@@ -1,0 +1,17 @@
+{
+  "name": "beckn-protocol-validation-spectral",
+  "version": "1.0.0",
+  "description": "Spectral validation for Beckn Protocol 2.0 Specifications",
+  "scripts": {
+    "lint": "spectral lint ../../api/beckn.yaml ../../schema/core/v2/attributes.yaml ../../schema/*/v1/attributes.yaml --ruleset .spectral.yaml",
+    "lint:api": "spectral lint ../../api/beckn.yaml --ruleset .spectral.yaml",
+    "lint:schemas": "spectral lint ../../schema/core/v2/attributes.yaml ../../schema/*/v1/attributes.yaml --ruleset .spectral.yaml",
+    "validate": "npm run lint"
+  },
+  "devDependencies": {
+    "@stoplight/spectral-cli": "^6.11.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
