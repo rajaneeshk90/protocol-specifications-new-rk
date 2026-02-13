@@ -1,0 +1,30 @@
+{
+    "context": {
+        "version": "2.0.0",
+        "action": "update",
+        "domain": "beckn.one:mobility:publictransport:1.0",
+        "timestamp": "2023-05-25T04:41:16Z",
+        "message_id": "0d3d2c49-050a-4018-ace9-24ede7de512e",
+        "transaction_id": "7afe44fd-d947-4a0a-81bc-d286784df2c1",
+        "bap_id": "beckn-sandbox-bap.becknprotocol.io",
+        "bap_uri": "https://sandbox-bap-network.becknprotocol.io",
+        "bpp_id": "example-bpp.in",
+        "bpp_uri": "https://api.example-bpp.in/path/to/url",
+        "ttl": "PT30S"
+    },
+    "message": {
+        "order": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Order",
+            "beckn:id": "order-metro-7751bd26",
+            "beckn:buyer": {
+                "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                "@type": "beckn:Buyer",
+                "beckn:id": "buyer-002",
+                "schema:displayName": "Hemant Sharma",
+                "schema:email": "hemant.updated@gmail.com",
+                "schema:telephone": "+91-9896569363"
+            }
+        }
+    }
+}

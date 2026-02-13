@@ -1,0 +1,174 @@
+{
+    "context": {
+        "version": "2.0.0",
+        "action": "on_update",
+        "domain": "beckn.one:mobility:ridehailing:1.0",
+        "timestamp": "2023-03-23T04:42:16Z",
+        "message_id": "0d3d2c49-050a-4018-ace9-24ede7de512f",
+        "transaction_id": "7afe44fd-d947-4a0a-81bc-d286784df2c1",
+        "bap_id": "beckn-sandbox-bap.becknprotocol.io",
+        "bap_uri": "https://sandbox-bap-network.becknprotocol.io",
+        "bpp_id": "example-bpp.in",
+        "bpp_uri": "https://api.example-bpp.in/path/to/url",
+        "ttl": "PT30S"
+    },
+    "message": {
+        "order": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Order",
+            "beckn:id": "7751bd26-3fdc-47ca-9b64-e998dc5abe68",
+            "beckn:orderStatus": "INPROGRESS",
+            "beckn:seller": "1",
+            "beckn:buyer": {
+                "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                "@type": "beckn:Buyer",
+                "beckn:id": "buyer-001",
+                "schema:displayName": "John Doe",
+                "schema:telephone": "+91-9897867564"
+            },
+            "beckn:orderItems": [
+                {
+                    "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                    "@type": "beckn:OrderItem",
+                    "beckn:orderedItem": "item-economy-001",
+                    "beckn:quantity": 1,
+                    "beckn:price": {
+                        "currency": "INR",
+                        "value": 195
+                    },
+                    "beckn:orderItemAttributes": {
+                        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                        "@type": "mobility:RideAttributes",
+                        "mobility:vehicleCategory": "SEDAN",
+                        "mobility:seatingCapacity": 4,
+                        "mobility:farePolicy": {
+                            "mobility:minFare": "₹ 30",
+                            "mobility:minDistance": "2 km",
+                            "mobility:ratePerKm": "₹ 12",
+                            "mobility:waitingChargePerMin": "₹ 1"
+                        }
+                    },
+                    "beckn:acceptedOffer": {
+                        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                        "@type": "beckn:Offer",
+                        "beckn:id": "offer-economy-001",
+                        "beckn:descriptor": {
+                            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                            "@type": "beckn:Descriptor",
+                            "schema:name": "Economy Ride"
+                        },
+                        "beckn:items": ["item-economy-001"],
+                        "beckn:price": {
+                            "currency": "INR",
+                            "value": 195
+                        }
+                    }
+                }
+            ],
+            "beckn:orderValue": {
+                "currency": "INR",
+                "value": 195,
+                "beckn:components": [
+                    {
+                        "beckn:type": "UNIT",
+                        "beckn:description": "Base Fare",
+                        "currency": "INR",
+                        "value": 30
+                    },
+                    {
+                        "beckn:type": "UNIT",
+                        "beckn:description": "Per km fare (updated)",
+                        "currency": "INR",
+                        "value": 165
+                    }
+                ]
+            },
+            "beckn:fulfillment": {
+                "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                "@type": "beckn:Fulfillment",
+                "beckn:id": "fulf_5cf064d5-4c0a-42d3-b73d-5f19a6f7468e",
+                "beckn:mode": "RESERVATION",
+                "beckn:fulfillmentStatus": "RIDE_IN_PROGRESS",
+                "beckn:deliveryAttributes": {
+                    "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                    "@type": "mobility:RideFulfillment",
+                    "mobility:pickup": {
+                        "@type": "schema:Place",
+                        "geo": {
+                            "@type": "schema:GeoCoordinates",
+                            "schema:latitude": 13.008935,
+                            "schema:longitude": 77.6444085
+                        }
+                    },
+                    "mobility:dropoff": {
+                        "@type": "schema:Place",
+                        "geo": {
+                            "@type": "schema:GeoCoordinates",
+                            "schema:latitude": 12.9800000,
+                            "schema:longitude": 77.5900000
+                        },
+                        "schema:address": {
+                            "@type": "schema:PostalAddress",
+                            "schema:streetAddress": "New Destination, Updated Street",
+                            "schema:addressLocality": "Updated Locality",
+                            "schema:addressRegion": "Karnataka",
+                            "schema:addressCountry": "India"
+                        }
+                    },
+                    "mobility:driver": {
+                        "@type": "schema:Person",
+                        "schema:name": "RAGHAVENDRA J"
+                    },
+                    "mobility:vehicle": {
+                        "@type": "mobility:Vehicle",
+                        "mobility:category": "AUTO_RICKSHAW"
+                    }
+                }
+            },
+            "beckn:payment": {
+                "@type": "beckn:Payment",
+                "beckn:id": "7f7896dd-787e-4a0b-8675-e9e6fe93bb8f",
+                "beckn:type": "ON-FULFILLMENT",
+                "beckn:collectedBy": "BPP",
+                "beckn:status": "NOT-PAID",
+                "beckn:params": {
+                    "amount": "184",
+                    "currency": "INR"
+                }
+            },
+            "beckn:invoice": {
+                "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                "@type": "beckn:Invoice",
+                "beckn:id": "inv-ride-001",
+                "beckn:number": "INV-2023-0001",
+                "beckn:issueDate": "2023-03-23",
+                "beckn:payee": "1",
+                "beckn:payer": "buyer-001",
+                "beckn:totals": {
+                    "currency": "INR",
+                    "value": 195,
+                    "beckn:components": [
+                        {
+                            "beckn:type": "UNIT",
+                            "beckn:description": "Base Fare",
+                            "currency": "INR",
+                            "value": 30
+                        },
+                        {
+                            "beckn:type": "UNIT",
+                            "beckn:description": "Per km fare (updated)",
+                            "currency": "INR",
+                            "value": 165
+                        }
+                    ]
+                },
+                "beckn:invoiceAttributes": {
+                    "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                    "@type": "beckn:InvoiceAttributes",
+                    "beckn:taxRegime": "GST",
+                    "beckn:gstin": "29ABCDE1234F1Z5"
+                }
+            }
+        }
+    }
+}

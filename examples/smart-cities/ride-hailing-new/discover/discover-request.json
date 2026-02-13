@@ -1,0 +1,30 @@
+{
+    "context": {
+        "version": "2.0.0",
+        "action": "discover",
+        "domain": "beckn.one:mobility:ridehailing:1.0",
+        "timestamp": "2023-03-23T04:41:16Z",
+        "message_id": "6104c0a3-d1d1-4ded-aaa4-76e4caf727ce",
+        "transaction_id": "7afe44fd-d947-4a0a-81bc-d286784df2c1",
+        "bap_id": "beckn-sandbox-bap.becknprotocol.io",
+        "bap_uri": "https://sandbox-bap-network.becknprotocol.io",
+        "ttl": "PT30S"
+    },
+    "message": {
+        "text_search": "taxi ride",
+        "spatial": [
+            {
+                "op": "s_dwithin",
+                "targets": "$['beckn:availableAt'][*]['geo']",
+                "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                        [77.5939631, 12.903561],
+                        [77.5939631, 12.903561]
+                    ]
+                },
+                "distanceMeters": 5000
+            }
+        ]
+    }
+}

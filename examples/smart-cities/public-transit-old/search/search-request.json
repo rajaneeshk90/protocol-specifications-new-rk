@@ -1,0 +1,29 @@
+{
+    "context": {
+        "country": "IND",
+        "domain": "mobility:publictransport:0.8.0",
+        "timestamp": "2023-05-25T04:41:16Z",
+        "bap_id": "beckn-sandbox-bap.becknprotocol.io",
+        "transaction_id": "7afe44fd-d947-4a0a-81bc-d286784df2c1",
+        "city": "std:080",
+        "core_version": "0.9.4",
+        "action": "search",
+        "bap_uri": "https://sandbox-bap-network.becknprotocol.io"
+    },
+    "message": {
+        "intent": {
+            "fulfillment": {
+                "start": {
+                    "location": {
+                        "gps": "28.700939,77.272102"
+                    }
+                },
+                "end": {
+                    "location": {
+                        "gps": "28.5866263,77.2562282"
+                    }
+                }
+            }
+        }
+    }
+}
