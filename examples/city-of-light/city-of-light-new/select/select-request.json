@@ -1,0 +1,66 @@
+{
+    "context": {
+        "version": "2.0.0",
+        "action": "select",
+        "domain": "beckn.one:tourism:events:1.0",
+        "timestamp": "2023-05-25T05:23:03.443Z",
+        "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "bap_id": "ps-bap-network.becknprotocol.io",
+        "bap_uri": "https://ps-bap-network.becknprotocol.io",
+        "bpp_id": "sandbox-bpp-network.becknprotocol.io",
+        "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io/",
+        "ttl": "PT10M"
+    },
+    "message": {
+        "order": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Order",
+            "beckn:orderStatus": "CREATED",
+            "beckn:seller": "touring-paris-001",
+            "beckn:buyer": {
+                "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                "@type": "beckn:Buyer",
+                "beckn:id": "buyer-lisa-001",
+                "schema:displayName": "Lisa",
+                "schema:telephone": "876756454"
+            },
+            "beckn:orderItems": [
+                {
+                    "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                    "@type": "beckn:OrderItem",
+                    "beckn:orderedItem": "item-concert-001",
+                    "beckn:quantity": 1,
+                    "beckn:price": {
+                        "currency": "EUR",
+                        "value": 57
+                    },
+                    "beckn:orderItemAttributes": {
+                        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                        "@type": "tourism:EventAttributes",
+                        "tourism:eventType": "CONCERT",
+                        "tourism:category": "Music",
+                        "tourism:venue": "Accor Arena, Paris",
+                        "tourism:eventDate": "2023-06-10",
+                        "tourism:eventTime": "18:30"
+                    },
+                    "beckn:acceptedOffer": {
+                        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                        "@type": "beckn:Offer",
+                        "beckn:id": "offer-concert-standard",
+                        "beckn:descriptor": {
+                            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                            "@type": "beckn:Descriptor",
+                            "schema:name": "Standard Ticket"
+                        },
+                        "beckn:items": ["item-concert-001"],
+                        "beckn:price": {
+                            "currency": "EUR",
+                            "value": 57
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

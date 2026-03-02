@@ -1,0 +1,171 @@
+{
+    "context": {
+        "version": "2.0.0",
+        "action": "on_discover",
+        "domain": "beckn.one:tourism:events:1.0",
+        "timestamp": "2023-05-25T05:23:03.443Z",
+        "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "bap_id": "odr-bap.becknprotocol.io",
+        "bap_uri": "https://odr-network-bap.becknprotocol.io/",
+        "bpp_id": "alpha-odr-bpp.becknprotocol.io",
+        "bpp_uri": "https://alpha-odr-network-bpp.becknprotocol.io",
+        "ttl": "PT10M"
+    },
+    "message": {
+        "catalogs": [
+            {
+                "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                "@type": "beckn:Catalog",
+                "beckn:id": "catalog-touring-paris",
+                "beckn:descriptor": {
+                    "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                    "@type": "beckn:Descriptor",
+                    "schema:name": "TouringParis"
+                },
+                "beckn:providerId": "touring-paris-001",
+                "beckn:items": [
+                    {
+                        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                        "@type": "beckn:Item",
+                        "beckn:id": "item-concert-001",
+                        "beckn:descriptor": {
+                            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                            "@type": "beckn:Descriptor",
+                            "schema:name": "Arctic Monkeys Music Concert",
+                            "schema:description": "Get ready to dance the night away with Arctic Monkeys's high energy performances in France",
+                            "schema:image": [
+                                "https://retail-bpp-infra2.becknprotocol.io/attachments/view/433.jpg"
+                            ]
+                        },
+                        "beckn:provider": {
+                            "beckn:id": "touring-paris-001",
+                            "beckn:descriptor": {
+                                "schema:name": "TouringParis"
+                            }
+                        },
+                        "beckn:itemAttributes": {
+                            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                            "@type": "tourism:EventAttributes",
+                            "tourism:eventType": "CONCERT",
+                            "tourism:category": "Music",
+                            "tourism:venue": "Accor Arena, Paris",
+                            "tourism:eventDate": "2023-06-10",
+                            "tourism:eventTime": "18:30",
+                            "tourism:duration": "2 hours",
+                            "tourism:language": "English",
+                            "tourism:handicapAccess": true
+                        }
+                    },
+                    {
+                        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                        "@type": "beckn:Item",
+                        "beckn:id": "item-museum-001",
+                        "beckn:descriptor": {
+                            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                            "@type": "beckn:Descriptor",
+                            "schema:name": "Orsay Museum Exhibition",
+                            "schema:description": "Experience the beauty of french art and culture at the Orsay Museum",
+                            "schema:image": [
+                                "https://retail-bpp-infra2.becknprotocol.io/attachments/view/434.webp"
+                            ]
+                        },
+                        "beckn:provider": {
+                            "beckn:id": "touring-paris-001",
+                            "beckn:descriptor": {
+                                "schema:name": "TouringParis"
+                            }
+                        },
+                        "beckn:itemAttributes": {
+                            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                            "@type": "tourism:EventAttributes",
+                            "tourism:eventType": "EXHIBITION",
+                            "tourism:category": "Art",
+                            "tourism:venue": "Orsay Museum, Paris",
+                            "tourism:timings": "9:30 AM to 6:00 PM",
+                            "tourism:language": "French, English",
+                            "tourism:handicapAccess": true
+                        }
+                    },
+                    {
+                        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                        "@type": "beckn:Item",
+                        "beckn:id": "item-louvre-001",
+                        "beckn:descriptor": {
+                            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                            "@type": "beckn:Descriptor",
+                            "schema:name": "Louvre Museum Exhibition",
+                            "schema:description": "Step into the world of art, culture and architecture of centuries past at the Louvre Museum",
+                            "schema:image": [
+                                "https://retail-bpp-infra2.becknprotocol.io/attachments/view/441.jpg"
+                            ]
+                        },
+                        "beckn:provider": {
+                            "beckn:id": "touring-paris-001",
+                            "beckn:descriptor": {
+                                "schema:name": "TouringParis"
+                            }
+                        },
+                        "beckn:itemAttributes": {
+                            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                            "@type": "tourism:EventAttributes",
+                            "tourism:eventType": "EXHIBITION",
+                            "tourism:category": "Art",
+                            "tourism:venue": "Louvre Museum, Paris",
+                            "tourism:timings": "9:30 AM to 6:00 PM",
+                            "tourism:language": "French, English",
+                            "tourism:handicapAccess": true
+                        }
+                    }
+                ],
+                "beckn:offers": [
+                    {
+                        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                        "@type": "beckn:Offer",
+                        "beckn:id": "offer-concert-standard",
+                        "beckn:descriptor": {
+                            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                            "@type": "beckn:Descriptor",
+                            "schema:name": "Arctic Monkeys Concert - Standard Ticket"
+                        },
+                        "beckn:items": ["item-concert-001"],
+                        "beckn:price": {
+                            "currency": "EUR",
+                            "value": 57
+                        }
+                    },
+                    {
+                        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                        "@type": "beckn:Offer",
+                        "beckn:id": "offer-museum-entry",
+                        "beckn:descriptor": {
+                            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                            "@type": "beckn:Descriptor",
+                            "schema:name": "Orsay Museum Entry"
+                        },
+                        "beckn:items": ["item-museum-001"],
+                        "beckn:price": {
+                            "currency": "EUR",
+                            "value": 16
+                        }
+                    },
+                    {
+                        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                        "@type": "beckn:Offer",
+                        "beckn:id": "offer-louvre-entry",
+                        "beckn:descriptor": {
+                            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                            "@type": "beckn:Descriptor",
+                            "schema:name": "Louvre Museum Entry"
+                        },
+                        "beckn:items": ["item-louvre-001"],
+                        "beckn:price": {
+                            "currency": "EUR",
+                            "value": 17
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "context": {
+        "domain": "retail:CityOfLight",
+        "location": {
+            "country": {
+                "code": "IND"
+            }
+        },
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
+        "action": "on_select",
+        "timestamp": "2023-05-25T05:23:03.443Z",
+        "version": "1.1.0",
+        "bap_uri": "https://odr-network-bap.becknprotocol.io/",
+        "bap_id": "odr-bap.becknprotocol.io",
+        "bpp_id": "alpha-odr-bpp.becknprotocol.io",
+        "bpp_uri": "https://alpha-odr-network-bpp.becknprotocol.io",
+        "ttl": "PT10M"
+    },
+    "message": {
+        "order": {
+            "provider": {
+                "id": "./retail.kirana/ind.blr/177@retail-bpp-infra2.becknprotocol.io.provider",
+                "descriptor": {
+                    "name": "TouringParis"
+                }
+            },
+            "items": [
+                {
+                    "id": "./retail.kirana/ind.blr/485@retail-bpp-infra2.becknprotocol.io.item",
+                    "descriptor": {
+                        "images": [
+                            {
+                                "url": "https://retail-bpp-infra2.becknprotocol.io/attachments/view/433.jpg"
+                            }
+                        ],
+                        "name": "Arctic Monkeys Music Concert",
+                        "short_desc": "Get ready to dance the night away with Arctic Monkeys's high energy performances in France"
+                    },
+                    "price": {
+                        "listed_value": "57.0",
+                        "currency": "INR",
+                        "value": "57.0"
+                    }
+                }
+            ],
+            "fulfillments": [
+                {
+                    "id": "1",
+                    "stops": [
+                        {
+                            "type": "start",
+                            "location": {
+                                "gps": "48.86176,2.38081"
+                            },
+                            "time": {
+                                "timestamp": "2024-04-15T08:00:00.000Z"
+                            }
+                        },
+                        {
+                            "type": "end",
+                            "location": {
+                                "gps": "48.86005,2.32656"
+                            },
+                            "time": {
+                                "timestamp": "2024-04-18T08:00:00.000Z"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "quote": {
+                "price": {
+                    "listed_value": "57.0",
+                    "offered_value": "57.0",
+                    "currency": "INR",
+                    "value": "57.0"
+                },
+                "breakup": [
+                    {
+                        "price": {
+                            "listed_value": "57.0",
+                            "offered_value": "57.0",
+                            "currency": "INR",
+                            "value": "57.0"
+                        },
+                        "title": "Item 1",
+                        "item": {
+                            "id": "./retail.kirana/ind.blr/485@retail-bpp-infra2.becknprotocol.io.item"
+                        }
+                    }
+                ],
+                "ttl": "PT15M"
+            }
+        }
+    }
+}

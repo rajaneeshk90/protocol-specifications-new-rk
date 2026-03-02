@@ -1,0 +1,118 @@
+{
+    "context": {
+        "version": "2.0.0",
+        "action": "on_cancel",
+        "domain": "beckn.one:tourism:events:1.0",
+        "timestamp": "2023-05-25T05:23:03.443Z",
+        "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "bap_id": "odr-bap.becknprotocol.io",
+        "bap_uri": "https://odr-network-bap.becknprotocol.io/",
+        "bpp_id": "alpha-odr-bpp.becknprotocol.io",
+        "bpp_uri": "https://alpha-odr-network-bpp.becknprotocol.io",
+        "ttl": "PT10M"
+    },
+    "message": {
+        "order": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Order",
+            "beckn:id": "order-event-oid0987",
+            "beckn:orderStatus": "CANCELLED",
+            "beckn:seller": "touring-paris-001",
+            "beckn:orderItems": [
+                {
+                    "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                    "@type": "beckn:OrderItem",
+                    "beckn:orderedItem": "item-concert-001",
+                    "beckn:quantity": 1,
+                    "beckn:price": {
+                        "currency": "EUR",
+                        "value": 57
+                    },
+                    "beckn:orderItemAttributes": {
+                        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                        "@type": "tourism:EventAttributes",
+                        "tourism:eventType": "CONCERT",
+                        "tourism:category": "Music",
+                        "tourism:venue": "Accor Arena, Paris",
+                        "tourism:eventDate": "2023-06-10",
+                        "tourism:eventTime": "18:30"
+                    },
+                    "beckn:acceptedOffer": {
+                        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                        "@type": "beckn:Offer",
+                        "beckn:id": "offer-concert-standard",
+                        "beckn:descriptor": {
+                            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                            "@type": "beckn:Descriptor",
+                            "schema:name": "Standard Ticket"
+                        },
+                        "beckn:items": ["item-concert-001"],
+                        "beckn:price": {
+                            "currency": "EUR",
+                            "value": 57
+                        }
+                    }
+                }
+            ],
+            "beckn:orderValue": {
+                "currency": "EUR",
+                "value": 0,
+                "beckn:components": [
+                    {
+                        "beckn:type": "UNIT",
+                        "beckn:description": "Ticket Price (Refunded)",
+                        "currency": "EUR",
+                        "value": 0
+                    }
+                ]
+            },
+            "beckn:fulfillment": {
+                "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                "@type": "beckn:Fulfillment",
+                "beckn:id": "fulfillment-event-001",
+                "beckn:mode": "RESERVATION",
+                "beckn:fulfillmentStatus": "CANCELLED",
+                "beckn:deliveryAttributes": {
+                    "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                    "@type": "tourism:EventFulfillment",
+                    "tourism:eventStart": {
+                        "@type": "schema:Place",
+                        "geo": {
+                            "@type": "schema:GeoCoordinates",
+                            "schema:latitude": 48.86176,
+                            "schema:longitude": 2.38081
+                        },
+                        "schema:name": "Accor Arena, Paris"
+                    },
+                    "tourism:eventDate": "2024-04-15T08:00:00.000Z"
+                }
+            },
+            "beckn:cancellation": {
+                "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                "@type": "beckn:Cancellation",
+                "beckn:reason": "Change in plan"
+            },
+            "beckn:payment": {
+                "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                "@type": "beckn:Payment",
+                "beckn:id": "payment-001",
+                "beckn:paymentStatus": "REFUNDED",
+                "beckn:beneficiary": "BPP",
+                "beckn:amount": {
+                    "amount": "57",
+                    "currency": "EUR"
+                }
+            },
+            "beckn:buyer": {
+                "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+                "@type": "beckn:Buyer",
+                "beckn:id": "buyer-lisa-001",
+                "schema:displayName": "Lisa",
+                "schema:telephone": "876756454",
+                "schema:email": "LisaS@mailinator.com"
+            },
+            "beckn:invoice": "https://sandbox-bpp-network.becknprotocol.io/invoices/INV-2024-AM-001-CANCEL.pdf"
+        }
+    }
+}

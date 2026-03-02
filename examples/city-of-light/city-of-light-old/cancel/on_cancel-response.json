@@ -1,0 +1,81 @@
+{
+    "context": {
+        "domain": "retail:CityOfLight",
+        "location": {
+            "country": {
+                "code": "IND"
+            }
+        },
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
+        "action": "on_cancel",
+        "timestamp": "2023-05-25T05:23:03.443Z",
+        "version": "1.1.0",
+        "bap_uri": "https://odr-network-bap.becknprotocol.io/",
+        "bap_id": "odr-bap.becknprotocol.io",
+        "bpp_id": "alpha-odr-bpp.becknprotocol.io",
+        "bpp_uri": "https://alpha-odr-network-bpp.becknprotocol.io",
+        "ttl": "PT10M"
+    },
+    "message": {
+        "order": {
+            "id": "oid0987",
+            "provider": {
+                "id": "./retail.kirana/ind.blr/177@retail-bpp-infra2.becknprotocol.io.provider",
+                "descriptor": {
+                    "name": "TouringParis"
+                }
+            },
+            "items": [
+                {
+                    "id": "./retail.kirana/ind.blr/485@retail-bpp-infra2.becknprotocol.io.item",
+                    "descriptor": {
+                        "name": "Arctic Monkeys Music Concert"
+                    },
+                    "price": {
+                        "listed_value": "57.0",
+                        "currency": "INR",
+                        "value": "57.0"
+                    }
+                }
+            ],
+            "fulfillments": [
+                {
+                    "id": "1",
+                    "customer": {
+                        "person": {
+                            "name": "Lisa"
+                        },
+                        "contact": {
+                            "phone": "876756454",
+                            "email": "LisaS@mailinator.com"
+                        }
+                    },
+                    "state": {
+                        "descriptor": {
+                            "code": "CANCELLED"
+                        }
+                    }
+                }
+            ],
+            "quote": {
+                "price": {
+                    "listed_value": "57.0",
+                    "offered_value": "57.0",
+                    "currency": "INR",
+                    "value": "57.0"
+                }
+            },
+            "payments": [
+                {
+                    "status": "NOT-PAID",
+                    "type": "POST-FULFILLMENT",
+                    "params": {
+                        "amount": "57.0",
+                        "currency": "INR"
+                    }
+                }
+            ]
+        }
+    }
+}

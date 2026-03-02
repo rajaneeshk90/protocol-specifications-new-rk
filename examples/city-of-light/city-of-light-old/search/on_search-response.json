@@ -1,0 +1,164 @@
+{
+    "context": {
+        "domain": "retail:CityOfLight",
+        "location": {
+            "country": {
+                "code": "IND"
+            }
+        },
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
+        "action": "on_search",
+        "timestamp": "2023-05-25T05:23:03.443Z",
+        "version": "1.1.0",
+        "bap_uri": "https://odr-network-bap.becknprotocol.io/",
+        "bap_id": "odr-bap.becknprotocol.io",
+        "bpp_id": "alpha-odr-bpp.becknprotocol.io",
+        "bpp_uri": "https://alpha-odr-network-bpp.becknprotocol.io",
+        "ttl": "PT10M"
+    },
+    "message": {
+        "catalog": {
+            "descriptor": {
+                "name": "HBO"
+            },
+            "providers": [
+                {
+                    "id": "./retail.kirana/ind.blr/177@retail-bpp-infra2.becknprotocol.io.provider",
+                    "descriptor": {
+                        "name": "TouringParis"
+                    },
+                    "locations": [
+                        {
+                            "id": "./retail.kirana/ind.blr/106@retail-bpp-infra2.becknprotocol.io.provider_location",
+                            "gps": "26.846694,80.946166"
+                        }
+                    ],
+                    "fulfillments": [
+                        {
+                            "id": "1",
+                            "stops": [
+                                {
+                                    "type": "start",
+                                    "location": {
+                                        "gps": "48.86176,2.38081"
+                                    },
+                                    "time": {
+                                        "timestamp": "2024-04-15T08:00:00.000Z"
+                                    }
+                                },
+                                {
+                                    "type": "end",
+                                    "location": {
+                                        "gps": "48.86005,2.32656"
+                                    },
+                                    "time": {
+                                        "timestamp": "2024-04-18T08:00:00.000Z"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "items": [
+                        {
+                            "id": "./retail.kirana/ind.blr/485@retail-bpp-infra2.becknprotocol.io.item",
+                            "descriptor": {
+                                "images": [
+                                    {
+                                        "url": "https://retail-bpp-infra2.becknprotocol.io/attachments/view/433.jpg"
+                                    }
+                                ],
+                                "name": "Arctic Monkeys Music Concert",
+                                "short_desc": "Get ready to dance the night away with Arctic Monkeys's high energy performances in France",
+                                "long_desc": "Get ready for an unforgettable night of rock and roll as the Arctic Monkeys take the stage live in concert in Paris."
+                            },
+                            "matched": true,
+                            "location_ids": [
+                                "./retail.kirana/ind.blr/106@retail-bpp-infra2.becknprotocol.io.provider_location"
+                            ],
+                            "fulfillment_ids": [
+                                "1"
+                            ],
+                            "recommended": true,
+                            "price": {
+                                "listed_value": "57.0",
+                                "currency": "INR",
+                                "value": "57.0"
+                            },
+                            "tags": [
+                                {
+                                    "descriptor": {
+                                        "name": "item-cataegory"
+                                    },
+                                    "list": [
+                                        {
+                                            "descriptor": {
+                                                "name": "category"
+                                            },
+                                            "value": "Tourism"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "descriptor": {
+                                        "name": "search-tags"
+                                    },
+                                    "list": [
+                                        {
+                                            "value": "Festival"
+                                        },
+                                        {
+                                            "value": "Concert"
+                                        },
+                                        {
+                                            "value": "Music"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "./retail.kirana/ind.blr/487@retail-bpp-infra2.becknprotocol.io.item",
+                            "descriptor": {
+                                "images": [
+                                    {
+                                        "url": "https://retail-bpp-infra2.becknprotocol.io/attachments/view/434.webp"
+                                    }
+                                ],
+                                "name": "Orsay Museum Exhibition",
+                                "short_desc": "Experience the beauty of french art and culture at the Orsay Museum"
+                            },
+                            "location_ids": [
+                                "./retail.kirana/ind.blr/106@retail-bpp-infra2.becknprotocol.io.provider_location"
+                            ],
+                            "fulfillment_ids": [
+                                "2"
+                            ],
+                            "recommended": true,
+                            "price": {
+                                "listed_value": "16.0",
+                                "currency": "INR",
+                                "value": "16.0"
+                            },
+                            "tags": [
+                                {
+                                    "descriptor": {
+                                        "name": "item-cataegory"
+                                    },
+                                    "list": [
+                                        {
+                                            "descriptor": {
+                                                "name": "category"
+                                            },
+                                            "value": "Tourism"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

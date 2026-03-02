@@ -1,0 +1,31 @@
+{
+    "context": {
+        "version": "2.0.0",
+        "action": "discover",
+        "timestamp": "2023-05-25T05:23:03.443Z",
+        "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "bap_id": "ps-bap-network.becknprotocol.io",
+        "bap_uri": "https://ps-bap-network.becknprotocol.io",
+        "bpp_id": "sandbox-bpp-network.becknprotocol.io",
+        "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io/",
+        "ttl": "PT10M",
+        "schema_context": [
+            "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/tourism/v1/context.jsonld"
+        ]
+    },
+    "message": {
+        "text_search": "Paris France tourism concert museum",
+        "spatial": [
+            {
+                "op": "s_dwithin",
+                "targets": "$['beckn:availableAt'][*]['geo']",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [2.38081, 48.86176]
+                },
+                "distanceMeters": 50000
+            }
+        ]
+    }
+}
