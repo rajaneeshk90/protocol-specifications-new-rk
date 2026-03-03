@@ -16,13 +16,22 @@
     "order": {
       "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
       "@type": "beckn:Order",
-      "beckn:orderStatus": "QUOTE_PROVIDED",
+      "beckn:orderStatus": "PENDING",
       "beckn:seller": "provider-venky-bazaar",
+      "beckn:buyer": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Buyer",
+        "beckn:id": "buyer-motiur-rehman",
+        "beckn:role": "BUYER",
+        "beckn:name": "Motiur Rehman",
+        "beckn:address": "123, Terminal 1, Kempegowda Int'l Airport Rd, A - Block, Gangamuthanahalli, Karnataka 560300, India",
+        "beckn:email": "nc.rehman@gmail.com",
+        "beckn:phone": "+919191223433"
+      },
       "beckn:orderItems": [
         {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
           "@type": "beckn:OrderItem",
-          "beckn:lineId": "line-001",
           "beckn:orderedItem": "item-flask-mh500-yellow",
           "beckn:acceptedOffer": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
@@ -31,18 +40,18 @@
             "beckn:descriptor": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
               "@type": "beckn:Descriptor",
-              "schema:name": "Isothermal Stainless Steel Hiking Flask MH500 Yellow - Water bottle",
-              "beckn:shortDesc": "InstaCuppa Stainless Steel Thermos Flask Water Bottle with Sports Sipper Lid, Double Walled Vacuum Insulation",
-              "schema:image": [
-                "https://tourism-bpp-infra2.becknprotocol.io/attachments/view/253.jpg"
-              ]
+              "schema:name": "Isothermal Stainless Steel Hiking Flask MH500 Yellow - Water bottle"
             },
+            "beckn:items": ["item-flask-mh500-yellow"],
+            "beckn:provider": "provider-venky-bazaar",
             "beckn:price": {
               "currency": "INR",
               "value": 1200.0
             }
           },
-          "beckn:quantity": 2,
+          "beckn:quantity": {
+            "unitQuantity": 2
+          },
           "beckn:price": {
             "currency": "INR",
             "value": 2400.0
@@ -61,27 +70,47 @@
       "beckn:orderValue": {
         "currency": "INR",
         "value": 3000.0,
-        "beckn:components": [
+        "components": [
           {
-            "beckn:type": "UNIT",
-            "beckn:description": "Item price (2 × ₹1200)",
+            "type": "UNIT",
+            "description": "Item price (2 × ₹1200)",
             "currency": "INR",
             "value": 2400.0
           },
           {
-            "beckn:type": "TAX",
-            "beckn:description": "Taxes",
+            "type": "TAX",
+            "description": "Taxes",
             "currency": "INR",
             "value": 600.0
           }
         ]
       },
       "beckn:fulfillment": {
-        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-        "@type": "beckn:Fulfillment",
         "beckn:id": "f1",
-        "beckn:mode": "DELIVERY",
-        "beckn:status": "SERVICEABLE"
+        "beckn:deliveryAttributes": {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/retail/v2/context.jsonld",
+          "@type": "retail:RetailCoreFulfillmentAttributes",
+          "supportedFulfillmentTypes": ["DELIVERY"],
+          "deliveryDetails": {
+            "address": {
+              "address": {
+                "streetAddress": "123, Terminal 1, Kempegowda Int'l Airport Rd, A - Block",
+                "addressLocality": "Gangamuthanahalli",
+                "addressRegion": "Karnataka",
+                "postalCode": "560300",
+                "addressCountry": "IND"
+              },
+              "geo": {
+                "type": "Point",
+                "coordinates": [77.708736, 13.2008459]
+              }
+            },
+            "contact": {
+              "name": "Motiur Rehman",
+              "phone": "+919246394908"
+            }
+          }
+        }
       }
     }
   }

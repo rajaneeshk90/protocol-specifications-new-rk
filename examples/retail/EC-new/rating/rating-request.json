@@ -18,10 +18,10 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Rating",
         "beckn:id": "rating-order-001",
-        "beckn:rateableId": "b989c9a9-f603-4d44-b38d-26fd72286b38",
-        "beckn:rateableType": "ORDER",
-        "beckn:ratingValue": 8,
-        "beckn:maxRating": 10
+        "category": "SERVICE",
+        "ratingValue": "8",
+        "bestRating": 10,
+        "worstRating": 1
       }
     ]
   }

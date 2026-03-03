@@ -34,7 +34,6 @@
         {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
           "@type": "beckn:OrderItem",
-          "beckn:lineId": "line-001",
           "beckn:orderedItem": "item-flask-mh500-yellow",
           "beckn:acceptedOffer": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
@@ -43,15 +42,18 @@
             "beckn:descriptor": {
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
               "@type": "beckn:Descriptor",
-              "schema:name": "Isothermal Stainless Steel Hiking Flask MH500 Yellow - Water bottle",
-              "beckn:shortDesc": "InstaCuppa Stainless Steel Thermos Flask Water Bottle with Sports Sipper Lid, Double Walled Vacuum Insulation"
+              "schema:name": "Isothermal Stainless Steel Hiking Flask MH500 Yellow - Water bottle"
             },
+            "beckn:items": ["item-flask-mh500-yellow"],
+            "beckn:provider": "provider-venky-bazaar",
             "beckn:price": {
               "currency": "INR",
               "value": 1200.0
             }
           },
-          "beckn:quantity": 2,
+          "beckn:quantity": {
+            "unitQuantity": 2
+          },
           "beckn:price": {
             "currency": "INR",
             "value": 2400.0
@@ -70,16 +72,16 @@
       "beckn:orderValue": {
         "currency": "INR",
         "value": 3000.0,
-        "beckn:components": [
+        "components": [
           {
-            "beckn:type": "UNIT",
-            "beckn:description": "Item price (2 × ₹1200)",
+            "type": "UNIT",
+            "description": "Item price (2 × ₹1200)",
             "currency": "INR",
             "value": 2400.0
           },
           {
-            "beckn:type": "TAX",
-            "beckn:description": "Taxes",
+            "type": "TAX",
+            "description": "Taxes",
             "currency": "INR",
             "value": 600.0
           }
@@ -94,45 +96,34 @@
         "beckn:statusDescription": "Order is getting packed ...",
         "beckn:statusUpdatedAt": "2023-05-26T05:23:04.443Z",
         "beckn:deliveryAttributes": {
-          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/RetailDelivery/v1/context.jsonld",
-          "@type": "RetailDelivery",
-          "deliveryType": "home_delivery",
-          "pickupLocation": {
-            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-            "@type": "beckn:Location",
-            "beckn:id": "store-venky-bazaar-blr",
-            "beckn:descriptor": {
-              "@type": "beckn:Descriptor",
-              "schema:name": "Venky.Mahadevan@Bazaar - Bangalore"
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/retail/v2/context.jsonld",
+          "@type": "retail:RetailCoreFulfillmentAttributes",
+          "supportedFulfillmentTypes": ["DELIVERY"],
+          "deliveryDetails": {
+            "address": {
+              "address": {
+                "streetAddress": "123, Terminal 1, Kempegowda Int'l Airport Rd, A - Block",
+                "addressLocality": "Gangamuthanahalli",
+                "addressRegion": "Karnataka",
+                "postalCode": "560300",
+                "addressCountry": "IND"
+              },
+              "geo": {
+                "type": "Point",
+                "coordinates": [77.708736, 13.2008459]
+              }
             },
-            "beckn:geo": {
-              "type": "Point",
-              "coordinates": [77.596316, 12.909955]
+            "contact": {
+              "name": "Motiur Rehman",
+              "phone": "+919246394908"
             }
           },
-          "deliveryLocation": {
-            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-            "@type": "beckn:Location",
-            "beckn:address": {
-              "@type": "schema:PostalAddress",
-              "schema:streetAddress": "123, Terminal 1, Kempegowda Int'l Airport Rd, A - Block",
-              "schema:addressLocality": "Gangamuthanahalli",
-              "schema:addressRegion": "Karnataka",
-              "schema:postalCode": "560300",
-              "schema:addressCountry": "IND"
-            },
-            "beckn:geo": {
-              "type": "Point",
-              "coordinates": [77.708736, 13.2008459]
-            }
+          "sla": {
+            "min": "PT2H",
+            "max": "PT4H",
+            "unitBasis": "ORDER_CONFIRMATION"
           },
-          "deliveryContact": {
-            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-            "@type": "beckn:Contact",
-            "schema:name": "Motiur Rehman",
-            "schema:telephone": "+919246394908",
-            "schema:email": "nc.rehman@gmail.com"
-          }
+          "handling": ["FRAGILE"]
         }
       },
       "beckn:payment": {
@@ -149,20 +140,30 @@
       },
       "beckn:invoice": "https://4e21-124-123-32-28.ngrok-free.app/invoices/ORD-VB-001.pdf",
       "beckn:orderAttributes": {
-        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/RetailOrder/v1/context.jsonld",
-        "@type": "RetailOrder",
-        "cancellationTerms": [
-          {
-            "fulfillmentState": "ORDER_CONFIRMED",
-            "cancellationFee": 0.00,
-            "refundEligible": true
-          },
-          {
-            "fulfillmentState": "ORDER_PACKED",
-            "cancellationFee": 100.00,
-            "refundEligible": true
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/retail/v2/context.jsonld",
+        "@type": "retail:RetailCoreOrderAttributes",
+        "buyerInstructions": "Please handle with care",
+        "deliveryPreferences": {
+          "leaveAtDoor": false,
+          "contactless": true,
+          "preferredTimeSlot": {
+            "start": "2023-11-06T14:00:00Z",
+            "end": "2023-11-06T18:00:00Z"
           }
-        ]
+        },
+        "invoicePreferences": {
+          "taxId": {
+            "scheme": "GSTIN",
+            "country": "IN",
+            "value": "29ABCDE1234F1Z5"
+          },
+          "companyName": "Rehman Enterprises",
+          "email": "nc.rehman@gmail.com"
+        },
+        "source": {
+          "channel": "mobile-app",
+          "campaignId": "DIWALI2023"
+        }
       }
     }
   }

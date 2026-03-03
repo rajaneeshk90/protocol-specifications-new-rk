@@ -16,20 +16,16 @@
     "support": {
       "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
       "@type": "beckn:Support",
-      "beckn:id": "support-ticket-001",
-      "beckn:refId": "d4975df5-b18c-4772-80ad",
-      "beckn:status": "OPEN",
-      "beckn:contact": {
-        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-        "@type": "beckn:Contact",
-        "schema:telephone": "+91 9876543298",
-        "schema:email": "abcd.support@support.com"
-      },
-      "beckn:callbackContact": {
-        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-        "@type": "beckn:Contact",
-        "schema:telephone": "+91 8765495826"
-      }
+      "phone": "+91 9876543298",
+      "email": "abcd.support@support.com",
+      "url": "https://support.example.com",
+      "hours": "24/7",
+      "channels": [
+        "PHONE",
+        "EMAIL",
+        "WEB",
+        "CHAT"
+      ]
     }
   }
 }

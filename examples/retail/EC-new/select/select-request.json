@@ -16,7 +16,7 @@
     "order": {
       "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
       "@type": "beckn:Order",
-      "beckn:orderStatus": "INITIATED",
+      "beckn:orderStatus": "PENDING",
       "beckn:seller": "provider-venky-bazaar",
       "beckn:buyer": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
@@ -32,16 +32,51 @@
         {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
           "@type": "beckn:OrderItem",
-          "beckn:lineId": "line-001",
           "beckn:orderedItem": "item-flask-mh500-yellow",
-          "beckn:quantity": 2
+          "beckn:quantity": {
+            "unitQuantity": 2
+          },
+          "beckn:price": {
+            "currency": "INR",
+            "value": 2400.0
+          },
+          "beckn:acceptedOffer": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-flask-mh500-yellow",
+            "beckn:items": ["item-flask-mh500-yellow"],
+            "beckn:price": {
+              "currency": "INR",
+              "value": 1200.0
+            }
+          }
         }
       ],
       "beckn:fulfillment": {
-        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-        "@type": "beckn:Fulfillment",
-        "beckn:id": "f1",
-        "beckn:mode": "DELIVERY"
+        "beckn:deliveryAttributes": {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/retail/v2/context.jsonld",
+          "@type": "retail:RetailCoreFulfillmentAttributes",
+          "supportedFulfillmentTypes": ["DELIVERY"],
+          "deliveryDetails": {
+            "address": {
+              "address": {
+                "streetAddress": "123, Terminal 1, Kempegowda Int'l Airport Rd, A - Block",
+                "addressLocality": "Gangamuthanahalli",
+                "addressRegion": "Karnataka",
+                "postalCode": "560300",
+                "addressCountry": "IND"
+              },
+              "geo": {
+                "type": "Point",
+                "coordinates": [77.708736, 13.2008459]
+              }
+            },
+            "contact": {
+              "name": "Motiur Rehman",
+              "phone": "+919246394908"
+            }
+          }
+        }
       }
     }
   }

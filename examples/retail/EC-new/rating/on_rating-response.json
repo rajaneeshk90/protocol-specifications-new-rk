@@ -13,12 +13,13 @@
     "ttl": "PT10M"
   },
   "message": {
+    "received": true,
     "feedback_form": {
       "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
       "@type": "beckn:FeedbackForm",
-      "beckn:id": "feedback-form-001",
-      "beckn:url": "https://inds-network-bpp.becknprotocol.io/feedback/portal",
-      "beckn:mimeType": "text/html"
+      "id": "feedback-form-001",
+      "url": "https://inds-network-bpp.becknprotocol.io/feedback/portal",
+      "mimeType": "text/html"
     }
   }
 }

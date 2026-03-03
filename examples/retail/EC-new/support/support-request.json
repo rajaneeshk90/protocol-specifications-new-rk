@@ -14,14 +14,13 @@
   },
   "message": {
     "support": {
-      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-      "@type": "beckn:Support",
-      "beckn:refId": "894789-43954",
-      "beckn:contact": {
+      "refId": "894789-43954",
+      "refType": "ORDER",
+      "support": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Contact",
-        "schema:telephone": "+91 4444444444",
-        "schema:email": "me@gmail.com"
+        "phone": "+91 4444444444",
+        "email": "me@gmail.com"
       }
     }
   }
