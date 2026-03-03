@@ -16,8 +16,18 @@
     "order": {
       "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
       "@type": "beckn:Order",
-      "beckn:orderStatus": "QUOTE_REQUESTED",
+      "beckn:orderStatus": "INITIATED",
       "beckn:seller": "provider-venky-bazaar",
+      "beckn:buyer": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Buyer",
+        "beckn:id": "buyer-motiur-rehman",
+        "beckn:role": "BUYER",
+        "beckn:name": "Motiur Rehman",
+        "beckn:address": "123, Terminal 1, Kempegowda Int'l Airport Rd, A - Block, Gangamuthanahalli, Karnataka 560300, India",
+        "beckn:email": "nc.rehman@gmail.com",
+        "beckn:phone": "+919191223433"
+      },
       "beckn:orderItems": [
         {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",

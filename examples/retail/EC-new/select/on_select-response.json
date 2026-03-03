@@ -34,25 +34,18 @@
               "schema:name": "Isothermal Stainless Steel Hiking Flask MH500 Yellow - Water bottle",
               "beckn:shortDesc": "InstaCuppa Stainless Steel Thermos Flask Water Bottle with Sports Sipper Lid, Double Walled Vacuum Insulation",
               "schema:image": [
-                {
-                  "@type": "schema:ImageObject",
-                  "schema:url": "https://tourism-bpp-infra2.becknprotocol.io/attachments/view/253.jpg"
-                }
+                "https://tourism-bpp-infra2.becknprotocol.io/attachments/view/253.jpg"
               ]
             },
             "beckn:price": {
-              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-              "@type": "schema:PriceSpecification",
-              "schema:priceCurrency": "INR",
-              "schema:price": 1200.0
+              "currency": "INR",
+              "value": 1200.0
             }
           },
           "beckn:quantity": 2,
           "beckn:price": {
-            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-            "@type": "schema:PriceSpecification",
-            "schema:priceCurrency": "INR",
-            "schema:price": 2400.0
+            "currency": "INR",
+            "value": 2400.0
           },
           "beckn:orderItemAttributes": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/RetailItem/v1/context.jsonld",
@@ -66,24 +59,20 @@
         }
       ],
       "beckn:orderValue": {
-        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-        "@type": "schema:PriceSpecification",
-        "schema:priceCurrency": "INR",
-        "schema:price": 3000.0,
+        "currency": "INR",
+        "value": 3000.0,
         "beckn:components": [
           {
-            "@type": "beckn:PriceComponent",
             "beckn:type": "UNIT",
-            "beckn:value": 2400.0,
-            "beckn:currency": "INR",
-            "beckn:description": "Item price (2 × ₹1200)"
+            "beckn:description": "Item price (2 × ₹1200)",
+            "currency": "INR",
+            "value": 2400.0
           },
           {
-            "@type": "beckn:PriceComponent",
             "beckn:type": "TAX",
-            "beckn:value": 600.0,
-            "beckn:currency": "INR",
-            "beckn:description": "Taxes"
+            "beckn:description": "Taxes",
+            "currency": "INR",
+            "value": 600.0
           }
         ]
       },

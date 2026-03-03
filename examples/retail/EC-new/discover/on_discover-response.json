@@ -56,8 +56,6 @@
               }
             ],
             "beckn:rateable": true,
-            "beckn:matched": true,
-            "beckn:recommended": true,
             "beckn:provider": {
               "beckn:id": "provider-venky-bazaar",
               "beckn:descriptor": {
@@ -98,18 +96,6 @@
               "schema:endDate": "2023-12-31T23:59:59Z"
             },
             "beckn:provider": "provider-venky-bazaar"
-          }
-        ],
-        "beckn:fulfillments": [
-          {
-            "@type": "beckn:Fulfillment",
-            "beckn:id": "f1",
-            "beckn:mode": "DELIVERY"
-          },
-          {
-            "@type": "beckn:Fulfillment",
-            "beckn:id": "f2",
-            "beckn:mode": "SELF_PICKUP"
           }
         ]
       }

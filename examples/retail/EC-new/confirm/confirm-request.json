@@ -47,21 +47,13 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Payment",
         "beckn:id": "payment-001",
-        "beckn:status": "PAID",
-        "beckn:txnRef": "raz816863816313",
+        "beckn:paymentStatus": "PAID",
+        "beckn:beneficiary": "BPP",
         "beckn:amount": {
-          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-          "@type": "schema:PriceSpecification",
-          "schema:priceCurrency": "INR",
-          "schema:price": 3000.0
+          "amount": "3000",
+          "currency": "INR"
         },
-        "beckn:acceptedPaymentMethod": [
-          "NetBanking"
-        ],
-        "beckn:paymentParams": {
-          "bank_code": "INB0004321",
-          "bank_account_number": "1234002341"
-        }
+        "beckn:txnRef": "raz816863816313"
       }
     }
   }
