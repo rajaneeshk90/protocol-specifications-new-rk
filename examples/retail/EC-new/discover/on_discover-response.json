@@ -44,8 +44,8 @@
             },
             "beckn:category": {
               "@type": "schema:CategoryCode",
-              "schema:codeValue": "grocery",
-              "schema:name": "Grocery"
+              "schema:codeValue": "home_and_kitchen",
+              "schema:name": "Home & Kitchen"
             },
             "beckn:availableAt": [
               {
@@ -64,13 +64,56 @@
               }
             },
             "beckn:itemAttributes": {
-              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/RetailItem/v1/context.jsonld",
-              "@type": "beckn:RetailItem",
-              "retail:category": "grocery",
-              "retail:subcategory": "water_bottle",
-              "retail:brand": "InstaCuppa",
-              "retail:material": "Stainless Steel",
-              "retail:features": ["Vacuum Insulation", "Sports Sipper Lid", "Double Walled", "Leak-Proof", "BPA Free"]
+              "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/retail/v2/context.jsonld",
+              "@type": "hk:HomeAndKitchenItemAttributes",
+              "identity": {
+                "brand": "InstaCuppa",
+                "originCountry": "IN"
+              },
+              "physical": {
+                "weight": {
+                  "value": 350,
+                  "unit": "G"
+                },
+                "volume": {
+                  "value": 500,
+                  "unit": "ML"
+                },
+                "dimensions": {
+                  "unit": "CM",
+                  "length": 25,
+                  "breadth": 7,
+                  "height": 7
+                },
+                "appearance": {
+                  "color": "Yellow",
+                  "material": "Stainless Steel",
+                  "finish": "Matte"
+                }
+              },
+              "packagedGoodsDeclaration": {
+                "manufacturerOrPacker": {
+                  "type": "MANUFACTURER",
+                  "name": "InstaCuppa India Pvt Ltd",
+                  "address": "Bangalore, Karnataka, India"
+                },
+                "commonOrGenericName": "Vacuum Insulated Water Bottle",
+                "netQuantity": {
+                  "value": 1,
+                  "unit": "UNIT"
+                }
+              },
+              "careInstructions": "Hand wash only. Do not use in microwave or dishwasher. Avoid abrasive cleaners.",
+              "usage": {
+                "indoorOnly": false,
+                "outdoorOnly": false,
+                "compatibleWith": ["Hot beverages", "Cold beverages", "Sports activities", "Hiking"]
+              },
+              "warranty": {
+                "duration": "P1Y",
+                "type": "MANUFACTURER",
+                "terms": "Covers manufacturing defects only. Does not cover damage from misuse."
+              }
             }
           }
         ],

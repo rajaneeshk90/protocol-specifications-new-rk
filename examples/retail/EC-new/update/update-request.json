@@ -38,7 +38,7 @@
         }
       ],
       "beckn:fulfillment": {
-        "beckn:id": "fulfillment-delivery",
+        "beckn:id": "f1",
         "beckn:deliveryAttributes": {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/retail/v2/context.jsonld",
           "@type": "retail:RetailCoreFulfillmentAttributes",

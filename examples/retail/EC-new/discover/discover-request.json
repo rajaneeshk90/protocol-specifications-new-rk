@@ -11,10 +11,10 @@
     "ttl": "PT30S"
   },
   "message": {
-    "text_search": "earphone",
+    "text_search": "water bottle flask",
     "filters": {
       "type": "jsonpath",
-      "expression": "$[?(@.beckn:itemAttributes.retail:category == 'electronics')]"
+      "expression": "$[?(@.beckn:category.schema:codeValue == 'home_and_kitchen')]"
     },
     "spatial": [
       {
@@ -22,7 +22,7 @@
         "targets": "$['beckn:availableAt'][*]['geo']",
         "geometry": {
           "type": "Point",
-          "coordinates": [77.0266383, 28.4594965]
+          "coordinates": [77.596316, 12.909955]
         },
         "distanceMeters": 50000
       }

@@ -17,7 +17,7 @@
       "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
       "@type": "beckn:Order",
       "beckn:id": "order-flask-20231106-001",
-      "beckn:orderStatus": "PENDING",
+      "beckn:orderStatus": "CONFIRM_REQUESTED",
       "beckn:seller": "provider-venky-bazaar",
       "beckn:buyer": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
@@ -54,6 +54,7 @@
         }
       ],
       "beckn:fulfillment": {
+        "beckn:id": "f1",
         "beckn:deliveryAttributes": {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/retail/v2/context.jsonld",
           "@type": "retail:RetailCoreFulfillmentAttributes",

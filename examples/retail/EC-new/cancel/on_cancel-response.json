@@ -59,13 +59,32 @@
             "value": 2400.0
           },
           "beckn:orderItemAttributes": {
-            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/RetailItem/v1/context.jsonld",
-            "@type": "beckn:RetailItem",
-            "retail:category": "grocery",
-            "retail:subcategory": "water_bottle",
-            "retail:brand": "InstaCuppa",
-            "retail:material": "Stainless Steel",
-            "retail:features": ["Vacuum Insulation", "Sports Sipper Lid", "Double Walled", "Leak-Proof", "BPA Free"]
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/retail/v2/context.jsonld",
+            "@type": "hk:HomeAndKitchenItemAttributes",
+            "identity": {
+              "brand": "InstaCuppa",
+              "originCountry": "IN"
+            },
+            "physical": {
+              "weight": {
+                "value": 350,
+                "unit": "G"
+              },
+              "volume": {
+                "value": 500,
+                "unit": "ML"
+              },
+              "appearance": {
+                "color": "Yellow",
+                "material": "Stainless Steel",
+                "finish": "Matte"
+              }
+            },
+            "careInstructions": "Hand wash only. Do not use in microwave or dishwasher.",
+            "warranty": {
+              "duration": "P1Y",
+              "type": "MANUFACTURER"
+            }
           }
         }
       ],
@@ -90,7 +109,7 @@
       "beckn:fulfillment": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Fulfillment",
-        "beckn:id": "fulfillment-delivery",
+        "beckn:id": "f1",
         "beckn:mode": "DELIVERY",
         "beckn:status": "CANCELLED",
         "beckn:statusDescription": "Cancelled due to order delay",
