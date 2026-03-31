@@ -31,6 +31,8 @@
         }
       ],
       "contractAttributes": {
+        "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/EmployerHiringContractAttributes/v2.1/context.jsonld",
+        "@type": "EmployerHiringContractAttributes",
         "role_title": "Senior Java Developer",
         "role_location": {
           "city": "Bangalore",

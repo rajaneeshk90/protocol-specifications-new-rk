@@ -17,16 +17,22 @@
       },
       "channels": [
         {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:SupportChannel",
           "type": "EMAIL",
           "contact": "hiring-support@metro-rail-corp.example.com",
           "availability": "Mon-Fri 9:00-18:00 IST"
         },
         {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:SupportChannel",
           "type": "PHONE",
           "contact": "+91-22-12345678",
           "availability": "Mon-Fri 10:00-17:00 IST"
         },
         {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:SupportChannel",
           "type": "CHAT",
           "url": "https://metro-rail-corp.example.com/support/chat",
           "availability": "24/7 automated, agent hours Mon-Fri 9:00-18:00 IST"

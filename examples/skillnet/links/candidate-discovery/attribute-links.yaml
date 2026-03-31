@@ -1,0 +1,12 @@
+resourceAttributes: 
+  context: https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/CandidateProfileResourceAttributes/v2.1/context.jsonld
+  type: CandidateProfileResourceAttributes
+offerAttributes: 
+  context: https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/CandidateAvailabilityOfferAttributes/v2.1/context.jsonld
+  type: CandidateAvailabilityOfferAttributes
+contractAttributes: 
+  context: https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/EmployerHiringContractAttributes/v2.1/context.jsonld
+  type: EmployerHiringContractAttributes
+performanceAttributes: 
+  context: https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/HiringProcessPerformanceAttributes/v2.1/context.jsonld
+  type: HiringProcessPerformanceAttributes

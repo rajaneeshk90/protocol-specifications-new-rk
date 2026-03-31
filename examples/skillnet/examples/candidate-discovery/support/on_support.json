@@ -17,16 +17,22 @@
       },
       "channels": [
         {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:SupportChannel",
           "type": "EMAIL",
           "contact": "employer-support@talent-platform.example.com",
           "availability": "Mon-Fri 9:00-18:00 IST"
         },
         {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:SupportChannel",
           "type": "PHONE",
           "contact": "+91-80-98765432",
           "availability": "Mon-Fri 10:00-17:00 IST"
         },
         {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:SupportChannel",
           "type": "CHAT",
           "url": "https://talent-platform.example.com/support/employer-chat",
           "availability": "24/7 automated, agent hours Mon-Fri 9:00-18:00 IST"

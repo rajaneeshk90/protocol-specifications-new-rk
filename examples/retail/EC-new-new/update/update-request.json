@@ -49,6 +49,25 @@
             }
           }
         }
+      ],
+      "commitments": [
+        {
+          "id": "commitment-flask-001",
+          "status": {
+            "descriptor": {
+              "code": "DRAFT"
+            }
+          },
+          "resources": [
+            {
+              "id": "item-flask-mh500-yellow"
+            }
+          ],
+          "offer": {
+            "id": "offer-flask-mh500-yellow",
+            "resourceIds": ["item-flask-mh500-yellow"]
+          }
+        }
       ]
     }
   }

@@ -25,7 +25,9 @@
           ],
           "offer": {
             "id": "offer-cand-p42-001",
-            "resourceIds": ["cand-profile-p42"]
+            "resourceIds": [
+              "cand-profile-p42"
+            ]
           }
         }
       ],
@@ -37,6 +39,8 @@
             "code": "EMPLOYER"
           },
           "participantAttributes": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Participant",
             "company_website": "https://itservices-corp.example.com",
             "industry": "Information Technology",
             "contact_person": "Priya Sharma",
@@ -45,6 +49,8 @@
         }
       ],
       "contractAttributes": {
+        "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/EmployerHiringContractAttributes/v2.1/context.jsonld",
+        "@type": "EmployerHiringContractAttributes",
         "role_title": "Senior Java Developer",
         "role_location": {
           "city": "Bangalore",

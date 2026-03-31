@@ -30,6 +30,8 @@
                             "short_desc": "Supervise civil works for metro rail viaduct construction in Mumbai suburbs"
                         },
                         "resourceAttributes": {
+                            "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/HiringJobResourceAttributes/v2.1/context.jsonld",
+                            "@type": "HiringJobResourceAttributes",
                             "job_type": "FULL_TIME",
                             "work_mode": "ONSITE",
                             "industry_type": {
@@ -72,6 +74,8 @@
                             "job-mrc-001"
                         ],
                         "offerAttributes": {
+                            "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/HiringJobOfferAttributes/v2.1/context.jsonld",
+                            "@type": "HiringJobOfferAttributes",
                             "compensation_currency": "INR",
                             "compensation_min": 400000,
                             "compensation_max": 600000,

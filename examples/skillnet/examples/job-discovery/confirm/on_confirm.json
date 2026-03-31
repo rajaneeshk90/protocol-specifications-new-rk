@@ -29,6 +29,8 @@
                 "shortDesc": "Supervise civil works for metro rail viaduct construction in Mumbai suburbs"
               },
               "resourceAttributes": {
+                "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/HiringJobResourceAttributes/v2.1/context.jsonld",
+                "@type": "HiringJobResourceAttributes",
                 "job_type": "FULL_TIME",
                 "work_mode": "ONSITE",
                 "industry_type": {
@@ -54,14 +56,24 @@
                     "mandatory": false
                   }
                 ],
-                "tags": ["civil", "viaduct", "site supervisor", "metro", "infrastructure"]
+                "tags": [
+                  "civil",
+                  "viaduct",
+                  "site supervisor",
+                  "metro",
+                  "infrastructure"
+                ]
               }
             }
           ],
           "offer": {
             "id": "offer-mrc-001",
-            "resourceIds": ["job-mrc-001"],
+            "resourceIds": [
+              "job-mrc-001"
+            ],
             "offerAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/HiringJobOfferAttributes/v2.1/context.jsonld",
+              "@type": "HiringJobOfferAttributes",
               "compensation_currency": "INR",
               "compensation_min": 400000,
               "compensation_max": 600000,
@@ -81,6 +93,8 @@
             "code": "CANDIDATE"
           },
           "participantAttributes": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Participant",
             "email": "ravi.kumar@example.com",
             "phone": "+91-9876543210",
             "credential_refs": [
@@ -99,6 +113,8 @@
             "code": "EMPLOYER"
           },
           "participantAttributes": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Participant",
             "website": "https://metro-rail-corp.example.com",
             "industry": "Infrastructure & Construction"
           }
@@ -111,25 +127,45 @@
             "code": "COMPLETE"
           },
           "performanceAttributes": {
+            "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/JobApplicationPerformanceAttributes/v2.1/context.jsonld",
+            "@type": "JobApplicationPerformanceAttributes",
             "verification_method": "VC",
             "per_requirement_results": [
-              { "category": "DEGREE", "subtype": "BTECH_CIVIL", "result": "PASS", "mandatory": true },
-              { "category": "EXPERIENCE", "subtype": "SITE_SUPERVISION_6M", "result": "SKIPPED", "mandatory": false }
+              {
+                "category": "DEGREE",
+                "subtype": "BTECH_CIVIL",
+                "result": "PASS",
+                "mandatory": true
+              },
+              {
+                "category": "EXPERIENCE",
+                "subtype": "SITE_SUPERVISION_6M",
+                "result": "SKIPPED",
+                "mandatory": false
+              }
             ],
             "proof_hash": "sha256-7a3b9d...",
-            "issuer_dids_verified": ["did:example:university-mumbai"],
+            "issuer_dids_verified": [
+              "did:example:university-mumbai"
+            ],
             "routed_to_provider": true,
             "routing_timestamp": "2026-03-18T10:24:20+05:30"
           }
         }
       ],
       "contractAttributes": {
+        "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/JobApplicationContractAttributes/v2.1/context.jsonld",
+        "@type": "JobApplicationContractAttributes",
         "application_reference": "APP-2026-0042-RV",
         "submitted_at": "2026-03-18T10:22:00+05:30",
         "verification_summary": {
           "overall_result": "PASS",
-          "verified_categories": ["DEGREE"],
-          "verified_subtypes": ["BTECH_CIVIL"],
+          "verified_categories": [
+            "DEGREE"
+          ],
+          "verified_subtypes": [
+            "BTECH_CIVIL"
+          ],
           "checked_at": "2026-03-18T10:24:00+05:30",
           "proof_metadata_hash": "sha256-7a3b9d..."
         },

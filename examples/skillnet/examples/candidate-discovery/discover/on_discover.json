@@ -30,6 +30,8 @@
                 "short_desc": "4 years Java experience, Spring Boot, microservices, open to remote"
               },
               "resourceAttributes": {
+                "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/CandidateProfileResourceAttributes/v2.1/context.jsonld",
+                "@type": "CandidateProfileResourceAttributes",
                 "skills": [
                   { "category": "SKILL", "subtype": "Java_SE_11", "level": "PROFESSIONAL",
                     "attested": true,
@@ -61,6 +63,8 @@
               "id": "offer-cand-p42-001",
               "resourceIds": ["cand-profile-p42"],
               "offerAttributes": {
+                "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/CandidateAvailabilityOfferAttributes/v2.1/context.jsonld",
+                "@type": "CandidateAvailabilityOfferAttributes",
                 "desired_compensation_currency": "INR",
                 "desired_compensation_min": 1200000,
                 "desired_compensation_max": 1600000,

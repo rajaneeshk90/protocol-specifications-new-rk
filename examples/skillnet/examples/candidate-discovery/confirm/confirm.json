@@ -25,7 +25,9 @@
           ],
           "offer": {
             "id": "offer-cand-p42-001",
-            "resourceIds": ["cand-profile-p42"]
+            "resourceIds": [
+              "cand-profile-p42"
+            ]
           }
         }
       ],
@@ -37,6 +39,8 @@
             "code": "EMPLOYER"
           },
           "participantAttributes": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Participant",
             "company_website": "https://itservices-corp.example.com",
             "industry": "Information Technology",
             "contact_person": "Priya Sharma",
@@ -51,13 +55,20 @@
             "code": "PENDING"
           },
           "performanceAttributes": {
+            "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/HiringProcessPerformanceAttributes/v2.1/context.jsonld",
+            "@type": "HiringProcessPerformanceAttributes",
             "stage": "SCREENING"
           }
         }
       ],
       "contractAttributes": {
+        "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/EmployerHiringContractAttributes/v2.1/context.jsonld",
+        "@type": "EmployerHiringContractAttributes",
         "role_title": "Senior Java Developer",
-        "role_location": { "city": "Bangalore", "country": "IN" },
+        "role_location": {
+          "city": "Bangalore",
+          "country": "IN"
+        },
         "role_work_mode": "REMOTE",
         "proposed_joining_date": "2026-04-28",
         "offer_expiry": "2026-03-25T23:59:59+05:30",

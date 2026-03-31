@@ -29,6 +29,8 @@
                 "shortDesc": "4 years Java experience, Spring Boot, microservices, open to remote"
               },
               "resourceAttributes": {
+                "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/CandidateProfileResourceAttributes/v2.1/context.jsonld",
+                "@type": "CandidateProfileResourceAttributes",
                 "skills": [
                   {
                     "category": "SKILL",
@@ -71,15 +73,21 @@
                     "label": "Computer programming"
                   }
                 ],
-                "job_type_preference": ["FULL_TIME"],
+                "job_type_preference": [
+                  "FULL_TIME"
+                ],
                 "overall_verification_status": "PARTIALLY_VERIFIED"
               }
             }
           ],
           "offer": {
             "id": "offer-cand-p42-001",
-            "resourceIds": ["cand-profile-p42"],
+            "resourceIds": [
+              "cand-profile-p42"
+            ],
             "offerAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/CandidateAvailabilityOfferAttributes/v2.1/context.jsonld",
+              "@type": "CandidateAvailabilityOfferAttributes",
               "desired_compensation_currency": "INR",
               "desired_compensation_min": 1200000,
               "desired_compensation_max": 1600000,
@@ -89,7 +97,9 @@
                 "start": "2026-04-18T00:00:00+05:30",
                 "end": "2026-05-31T23:59:59+05:30"
               },
-              "preferred_contract_types": ["FULL_TIME"]
+              "preferred_contract_types": [
+                "FULL_TIME"
+              ]
             }
           }
         }
@@ -102,6 +112,8 @@
             "code": "EMPLOYER"
           },
           "participantAttributes": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Participant",
             "company_website": "https://itservices-corp.example.com",
             "industry": "Information Technology",
             "contact_person": "Priya Sharma",
@@ -115,6 +127,8 @@
             "code": "CANDIDATE"
           },
           "participantAttributes": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Participant",
             "availability": "WITHIN_30_DAYS",
             "notice_period_days": 30,
             "preferred_work_mode": "REMOTE"
@@ -128,18 +142,28 @@
             "code": "CANCELLED"
           },
           "performanceAttributes": {
+            "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/HiringProcessPerformanceAttributes/v2.1/context.jsonld",
+            "@type": "HiringProcessPerformanceAttributes",
             "stage": "OFFER_EXTENDED",
             "verification_requested": true,
             "verification_summary": {
               "overall_result": "PASS",
-              "verified_categories": ["SKILL", "CERTIFICATION"],
-              "verified_subtypes": ["Java_SE_11", "AWS_SAA"],
+              "verified_categories": [
+                "SKILL",
+                "CERTIFICATION"
+              ],
+              "verified_subtypes": [
+                "Java_SE_11",
+                "AWS_SAA"
+              ],
               "checked_at": "2026-03-18T15:30:00+05:30"
             }
           }
         }
       ],
       "contractAttributes": {
+        "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/EmployerHiringContractAttributes/v2.1/context.jsonld",
+        "@type": "EmployerHiringContractAttributes",
         "role_title": "Senior Java Developer",
         "role_location": {
           "city": "Bangalore",
