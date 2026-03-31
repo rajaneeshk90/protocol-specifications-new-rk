@@ -1,0 +1,109 @@
+{
+  "context": {
+    "domain": "hiring-candidates",
+    "action": "on_select",
+    "version": "2.1.0",
+    "bpp_id": "talent-platform.example.com",
+    "transaction_id": "txn-002-priya",
+    "message_id": "msg-104",
+    "timestamp": "2026-03-18T11:15:05+05:30"
+  },
+  "message": {
+    "contract": {
+      "status": {
+        "code": "DRAFT"
+      },
+      "commitments": [
+        {
+          "status": {
+            "descriptor": {
+              "code": "DRAFT"
+            }
+          },
+          "resources": [
+            {
+              "id": "cand-profile-p42",
+              "descriptor": {
+                "name": "Mid-level Java Developer",
+                "shortDesc": "4 years Java experience, Spring Boot, microservices, open to remote"
+              },
+              "resourceAttributes": {
+                "skills": [
+                  {
+                    "category": "SKILL",
+                    "subtype": "Java_SE_11",
+                    "level": "PROFESSIONAL",
+                    "attested": true,
+                    "proof_request_url": "https://dedi.example.net/proof-request/did:ex:cand42/skill/Java_SE_11"
+                  },
+                  {
+                    "category": "SKILL",
+                    "subtype": "Spring_Boot",
+                    "level": "PROFESSIONAL",
+                    "attested": false
+                  },
+                  {
+                    "category": "CERTIFICATION",
+                    "subtype": "AWS_SAA",
+                    "attested": true,
+                    "proof_request_url": "https://dedi.example.net/proof-request/did:ex:cand42/cert/AWS_SAA"
+                  }
+                ],
+                "experience_level": "MID",
+                "experience_years": 4,
+                "location_preference": {
+                  "preferred_locations": [
+                    {
+                      "city": "Bangalore",
+                      "country": "IN"
+                    }
+                  ],
+                  "work_mode_preference": "REMOTE"
+                },
+                "availability": "WITHIN_30_DAYS",
+                "open_to_relocation": false,
+                "industry_preference": [
+                  {
+                    "@context": "https://unstats.un.org/unsd/classifications/Econ/isic",
+                    "@type": "IndustryCode",
+                    "code": "6201",
+                    "label": "Computer programming"
+                  }
+                ],
+                "job_type_preference": ["FULL_TIME"],
+                "overall_verification_status": "PARTIALLY_VERIFIED"
+              }
+            }
+          ],
+          "offer": {
+            "id": "offer-cand-p42-001",
+            "resourceIds": ["cand-profile-p42"],
+            "offerAttributes": {
+              "desired_compensation_currency": "INR",
+              "desired_compensation_min": 1200000,
+              "desired_compensation_max": 1600000,
+              "desired_compensation_period": "ANNUAL",
+              "notice_period_days": 30,
+              "availability_window": {
+                "start": "2026-04-18T00:00:00+05:30",
+                "end": "2026-05-31T23:59:59+05:30"
+              },
+              "preferred_contract_types": ["FULL_TIME"]
+            }
+          }
+        }
+      ],
+      "performance": [
+        {
+          "id": "perf-hiring-001",
+          "status": {
+            "code": "PENDING"
+          },
+          "performanceAttributes": {
+            "stage": "SCREENING"
+          }
+        }
+      ]
+    }
+  }
+}

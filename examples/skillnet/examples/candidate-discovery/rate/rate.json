@@ -1,0 +1,58 @@
+{
+  "context": {
+    "domain": "hiring-candidates",
+    "action": "rate",
+    "version": "2.1.0",
+    "bap_id": "hr-platform.example.com",
+    "bap_uri": "https://hr-platform.example.com/beckn/",
+    "transaction_id": "txn-002-priya",
+    "message_id": "msg-124",
+    "timestamp": "2026-03-22T10:00:00+05:30"
+  },
+  "message": {
+    "ratingInputs": [
+      {
+        "target": {
+          "id": "contract-cand-p42-001",
+          "descriptor": {
+            "name": "Hiring Process Experience",
+            "code": "CONTRACT"
+          }
+        },
+        "range": {
+          "min": 1,
+          "max": 5,
+          "value": 4
+        }
+      },
+      {
+        "target": {
+          "id": "cand-profile-p42",
+          "descriptor": {
+            "name": "Candidate Profile Quality",
+            "code": "RESOURCE"
+          }
+        },
+        "range": {
+          "min": 1,
+          "max": 5,
+          "value": 5
+        }
+      },
+      {
+        "target": {
+          "id": "perf-hiring-001",
+          "descriptor": {
+            "name": "Hiring Pipeline Management",
+            "code": "PERFORMANCE"
+          }
+        },
+        "range": {
+          "min": 1,
+          "max": 5,
+          "value": 4
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "context": {
+    "domain": "hiring-jobs",
+    "action": "on_support",
+    "version": "2.1.0",
+    "bpp_id": "metro-rail-jobs.example.com",
+    "transaction_id": "txn-001-ravi",
+    "message_id": "msg-015",
+    "timestamp": "2026-03-19T10:00:03+05:30"
+  },
+  "message": {
+    "support": {
+      "orderId": "contract-mrc-ravi-001",
+      "descriptor": {
+        "name": "Metro Rail Corp Hiring Support",
+        "shortDesc": "Support for job applications and credential verification queries"
+      },
+      "channels": [
+        {
+          "type": "EMAIL",
+          "contact": "hiring-support@metro-rail-corp.example.com",
+          "availability": "Mon-Fri 9:00-18:00 IST"
+        },
+        {
+          "type": "PHONE",
+          "contact": "+91-22-12345678",
+          "availability": "Mon-Fri 10:00-17:00 IST"
+        },
+        {
+          "type": "CHAT",
+          "url": "https://metro-rail-corp.example.com/support/chat",
+          "availability": "24/7 automated, agent hours Mon-Fri 9:00-18:00 IST"
+        }
+      ]
+    }
+  }
+}

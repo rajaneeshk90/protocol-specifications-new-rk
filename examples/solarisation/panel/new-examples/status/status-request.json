@@ -10,7 +10,10 @@
     "bap_uri": "https://api.example-bap.com/beckn/v2",
     "bpp_id": "example-bpp.com",
     "bpp_uri": "https://api.example-bpp.com/beckn/v2",
-    "ttl": "PT30S"
+    "ttl": "PT30S",
+    "schema_context": [
+      "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld"
+    ]
   },
   "message": {
     "order": {

@@ -24,9 +24,9 @@
         "@type": "beckn:Buyer",
         "beckn:id": "buyer-shubham-thakur",
         "beckn:role": "BUYER",
-        "beckn:name": "Shubham Thakur",
+        "beckn:displayName": "Shubham Thakur",
         "beckn:email": "thakur.s@gmail.com",
-        "beckn:phone": "+919191223433"
+        "beckn:telephone": "+919191223433"
       },
       "beckn:orderItems": [
         {
@@ -84,4 +84,3 @@
     }
   }
 }
-

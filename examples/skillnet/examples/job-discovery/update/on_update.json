@@ -1,0 +1,155 @@
+{
+  "context": {
+    "domain": "hiring-jobs",
+    "action": "on_update",
+    "version": "2.1.0",
+    "bpp_id": "metro-rail-jobs.example.com",
+    "transaction_id": "txn-001-ravi",
+    "message_id": "msg-011",
+    "timestamp": "2026-03-18T14:00:10+05:30"
+  },
+  "message": {
+    "contract": {
+      "id": "contract-mrc-ravi-001",
+      "status": {
+        "code": "ACTIVE"
+      },
+      "commitments": [
+        {
+          "status": {
+            "descriptor": {
+              "code": "ACTIVE"
+            }
+          },
+          "resources": [
+            {
+              "id": "job-mrc-001",
+              "descriptor": {
+                "name": "Site Supervisor — Civil",
+                "shortDesc": "Supervise civil works for metro rail viaduct construction in Mumbai suburbs"
+              },
+              "resourceAttributes": {
+                "job_type": "FULL_TIME",
+                "work_mode": "ONSITE",
+                "industry_type": {
+                  "@context": "https://unstats.un.org/unsd/classifications/Econ/isic",
+                  "@type": "IndustryCode",
+                  "code": "4120",
+                  "label": "Construction of buildings"
+                },
+                "location": {
+                  "city": "Mumbai",
+                  "region": "Maharashtra",
+                  "country": "IN"
+                },
+                "requirements": [
+                  {
+                    "category": "DEGREE",
+                    "subtype": "BTECH_CIVIL",
+                    "mandatory": true
+                  },
+                  {
+                    "category": "EXPERIENCE",
+                    "subtype": "SITE_SUPERVISION_6M",
+                    "mandatory": false
+                  }
+                ],
+                "tags": ["civil", "viaduct", "site supervisor", "metro", "infrastructure"]
+              }
+            }
+          ],
+          "offer": {
+            "id": "offer-mrc-001",
+            "resourceIds": ["job-mrc-001"],
+            "offerAttributes": {
+              "compensation_currency": "INR",
+              "compensation_min": 400000,
+              "compensation_max": 600000,
+              "compensation_period": "ANNUAL",
+              "openings_count": 3,
+              "application_deadline": "2026-04-30T23:59:59+05:30",
+              "probation_period_months": 3
+            }
+          }
+        }
+      ],
+      "participants": [
+        {
+          "id": "participant-ravi-001",
+          "descriptor": {
+            "name": "Ravi Kumar",
+            "code": "CANDIDATE"
+          },
+          "participantAttributes": {
+            "email": "ravi.kumar@example.com",
+            "phone": "+91-9876543210",
+            "credential_refs": [
+              {
+                "category": "DEGREE",
+                "subtype": "BTECH_CIVIL",
+                "proof_request_url": "https://dedi.example.net/proof-request/did:ex:ravi/degree/BTECH_CIVIL"
+              },
+              {
+                "category": "EXPERIENCE",
+                "subtype": "SITE_SUPERVISION_6M",
+                "proof_request_url": "https://dedi.example.net/proof-request/did:ex:ravi/exp/SITE_SUPERVISION_6M"
+              }
+            ]
+          }
+        },
+        {
+          "id": "participant-mrc-001",
+          "descriptor": {
+            "name": "Metro Rail Corporation",
+            "code": "EMPLOYER"
+          },
+          "participantAttributes": {
+            "website": "https://metro-rail-corp.example.com",
+            "industry": "Infrastructure & Construction"
+          }
+        }
+      ],
+      "performance": [
+        {
+          "id": "perf-verification-001",
+          "status": {
+            "code": "IN_PROGRESS"
+          },
+          "performanceAttributes": {
+            "verification_method": "VC",
+            "per_requirement_results": [
+              {
+                "category": "DEGREE",
+                "subtype": "BTECH_CIVIL",
+                "result": "PASS",
+                "mandatory": true
+              },
+              {
+                "category": "EXPERIENCE",
+                "subtype": "SITE_SUPERVISION_6M",
+                "result": "PENDING",
+                "mandatory": false
+              }
+            ],
+            "proof_hash": "sha256-7a3b9d2e4f1c8b6a5d3e7f9c1b4a6d8e0f2c5a7b9d1e3f",
+            "issuer_dids_verified": ["did:example:university-mumbai"],
+            "routed_to_provider": true,
+            "routing_timestamp": "2026-03-18T10:24:20+05:30"
+          }
+        }
+      ],
+      "contractAttributes": {
+        "application_reference": "APP-2026-0042-RV",
+        "submitted_at": "2026-03-18T10:22:00+05:30",
+        "reverification_requested": true,
+        "reverification_requirements": [
+          {
+            "category": "EXPERIENCE",
+            "subtype": "SITE_SUPERVISION_6M",
+            "mandatory": false
+          }
+        ]
+      }
+    }
+  }
+}

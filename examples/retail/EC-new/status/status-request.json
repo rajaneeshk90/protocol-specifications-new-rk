@@ -14,7 +14,91 @@
   },
   "message": {
     "order": {
-      "beckn:id": "b989c9a9-f603-4d44-b38d-26fd72286b38"
+      "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+      "@type": "beckn:Order",
+      "beckn:id": "order-flask-20231106-001",
+      "beckn:orderStatus": "CONFIRMED",
+      "beckn:seller": "provider-venky-bazaar",
+      "beckn:buyer": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Buyer",
+        "beckn:id": "buyer-motiur-rehman",
+        "beckn:role": "BUYER",
+        "beckn:displayName": "Motiur Rehman",
+        "beckn:email": "nc.rehman@gmail.com",
+        "beckn:telephone": "+919191223433"
+      },
+      "beckn:orderItems": [
+        {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@type": "beckn:OrderItem",
+          "beckn:orderedItem": "item-flask-mh500-yellow",
+          "beckn:quantity": {
+            "unitQuantity": 2
+          },
+          "beckn:price": {
+            "currency": "INR",
+            "value": 2400.0
+          },
+          "beckn:acceptedOffer": {
+            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+            "@type": "beckn:Offer",
+            "beckn:id": "offer-flask-mh500-yellow",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "Isothermal Stainless Steel Hiking Flask MH500 Yellow"
+            },
+            "beckn:items": ["item-flask-mh500-yellow"],
+            "beckn:provider": "provider-venky-bazaar",
+            "beckn:price": {
+              "currency": "INR",
+              "value": 1200.0
+            }
+          }
+        }
+      ],
+      "beckn:fulfillment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/retail/v2/context.jsonld",
+        "@type": "beckn:Fulfillment",
+        "beckn:id": "f1",
+        "beckn:mode": "DELIVERY",
+        "beckn:deliveryAttributes": {
+          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/retail/v2/context.jsonld",
+          "@type": "retail:RetailCoreFulfillmentAttributes",
+          "supportedFulfillmentTypes": ["DELIVERY"],
+          "deliveryDetails": {
+            "address": {
+              "address": {
+                "streetAddress": "123, Terminal 1, Kempegowda Int'l Airport Rd, A - Block",
+                "addressLocality": "Gangamuthanahalli",
+                "addressRegion": "Karnataka",
+                "postalCode": "560300",
+                "addressCountry": "IND"
+              },
+              "geo": {
+                "type": "Point",
+                "coordinates": [77.708736, 13.2008459]
+              }
+            },
+            "contact": {
+              "name": "Motiur Rehman",
+              "phone": "+919246394908"
+            }
+          }
+        }
+      },
+      "beckn:payment": {
+        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+        "@type": "beckn:Payment",
+        "beckn:id": "payment-001",
+        "beckn:paymentStatus": "COMPLETED",
+        "beckn:beneficiary": "BPP",
+        "beckn:amount": {
+          "amount": "3000",
+          "currency": "INR"
+        },
+        "beckn:txnRef": "raz816863816313"
+      }
     }
   }
 }

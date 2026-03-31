@@ -24,10 +24,9 @@
         "@type": "beckn:Buyer",
         "beckn:id": "buyer-santosh-kumar",
         "beckn:role": "BUYER",
-        "beckn:name": "Santosh Kumar",
-        "beckn:address": "151-e, janpath road, New Delhi, India",
+        "beckn:displayName": "Santosh Kumar",
         "beckn:email": "santosh.k@gmail.com",
-        "beckn:phone": "+916251423251"
+        "beckn:telephone": "+916251423251"
       },
       "beckn:orderItems": [
         {
@@ -56,7 +55,8 @@
       "beckn:fulfillment": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Fulfillment",
-        "beckn:id": "fulfillment-delivery"
+        "beckn:id": "fulfillment-delivery",
+        "beckn:mode": "DELIVERY"
       },
       "beckn:payment": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",

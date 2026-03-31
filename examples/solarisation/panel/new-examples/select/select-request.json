@@ -59,13 +59,17 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Fulfillment",
         "beckn:id": "fulfillment-solar-installation-001",
+        "beckn:mode": "DELIVERY",
         "beckn:deliveryAttributes": {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
           "@type": "beckn:SolarRooftopFulfillment",
           "beckn:installationLocation": {
             "geo": {
               "type": "Point",
-              "coordinates": [77.6212, 12.9342]
+              "coordinates": [
+                77.6212,
+                12.9342
+              ]
             },
             "address": {
               "@type": "schema:PostalAddress",

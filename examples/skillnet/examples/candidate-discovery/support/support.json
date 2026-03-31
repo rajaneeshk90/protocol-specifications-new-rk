@@ -1,0 +1,21 @@
+{
+  "context": {
+    "domain": "hiring-candidates",
+    "action": "support",
+    "version": "2.1.0",
+    "bap_id": "hr-platform.example.com",
+    "bap_uri": "https://hr-platform.example.com/beckn/",
+    "transaction_id": "txn-002-priya",
+    "message_id": "msg-122",
+    "timestamp": "2026-03-21T11:00:00+05:30"
+  },
+  "message": {
+    "support": {
+      "orderId": "contract-cand-p42-001",
+      "descriptor": {
+        "name": "Hiring Process Inquiry",
+        "shortDesc": "Need assistance with interview scheduling and candidate credential verification status"
+      }
+    }
+  }
+}

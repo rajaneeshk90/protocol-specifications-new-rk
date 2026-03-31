@@ -1,0 +1,34 @@
+{
+  "context": {
+    "domain": "hiring-candidates",
+    "action": "select",
+    "version": "2.1.0",
+    "bap_id": "hr-platform.example.com",
+    "bap_uri": "https://hr-platform.example.com/beckn/",
+    "transaction_id": "txn-002-priya",
+    "message_id": "msg-103",
+    "timestamp": "2026-03-18T11:15:00+05:30"
+  },
+  "message": {
+    "contract": {
+      "commitments": [
+        {
+          "status": {
+            "descriptor": {
+              "code": "DRAFT"
+            }
+          },
+          "resources": [
+            {
+              "id": "cand-profile-p42"
+            }
+          ],
+          "offer": {
+            "id": "offer-cand-p42-001",
+            "resourceIds": ["cand-profile-p42"]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -25,10 +25,9 @@
         "@type": "beckn:Buyer",
         "beckn:id": "buyer-john-doe",
         "beckn:role": "BUYER",
-        "beckn:name": "John Doe",
-        "beckn:address": "456 Pine St, Los Angeles, CA 90001, USA",
+        "beckn:displayName": "John Doe",
         "beckn:email": "john.doe@email.com",
-        "beckn:phone": "+1-555-987-6543"
+        "beckn:telephone": "+1-555-987-6543"
       },
       "beckn:orderItems": [
         {
@@ -50,7 +49,7 @@
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
               "@type": "schema:PriceSpecification",
               "schema:priceCurrency": "USD",
-              "schema:price": 280.00
+              "schema:price": 280.0
             },
             "beckn:addOnItems": [
               {
@@ -61,7 +60,7 @@
                 "schema:price": {
                   "@type": "schema:PriceSpecification",
                   "schema:priceCurrency": "USD",
-                  "schema:price": 35.00
+                  "schema:price": 35.0
                 }
               },
               {
@@ -72,7 +71,7 @@
                 "schema:price": {
                   "@type": "schema:PriceSpecification",
                   "schema:priceCurrency": "USD",
-                  "schema:price": 25.00
+                  "schema:price": 25.0
                 }
               },
               {
@@ -83,7 +82,7 @@
                 "schema:price": {
                   "@type": "schema:PriceSpecification",
                   "schema:priceCurrency": "USD",
-                  "schema:price": 25.00
+                  "schema:price": 25.0
                 }
               }
             ]
@@ -93,7 +92,7 @@
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
             "@type": "schema:PriceSpecification",
             "schema:priceCurrency": "USD",
-            "schema:price": 280.00
+            "schema:price": 280.0
           },
           "beckn:orderItemAttributes": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FlightService/v1/context.jsonld",
@@ -120,26 +119,26 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "schema:PriceSpecification",
         "schema:priceCurrency": "USD",
-        "schema:price": 307.70,
+        "schema:price": 307.7,
         "beckn:components": [
           {
             "@type": "beckn:PriceComponent",
             "beckn:type": "UNIT",
-            "beckn:value": 280.00,
+            "beckn:value": 280.0,
             "beckn:currency": "USD",
             "beckn:description": "Base fare"
           },
           {
             "@type": "beckn:PriceComponent",
             "beckn:type": "FEE",
-            "beckn:value": 15.00,
+            "beckn:value": 15.0,
             "beckn:currency": "USD",
             "beckn:description": "Airport facility charges"
           },
           {
             "@type": "beckn:PriceComponent",
             "beckn:type": "TAX",
-            "beckn:value": 12.70,
+            "beckn:value": 12.7,
             "beckn:currency": "USD",
             "beckn:description": "Federal excise tax"
           }
@@ -161,7 +160,7 @@
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
           "@type": "schema:PriceSpecification",
           "schema:priceCurrency": "USD",
-          "schema:price": 307.70
+          "schema:price": 307.7
         },
         "beckn:txnRef": "TXN-DL-20251201-002",
         "beckn:refundRef": "REFUND-DL-20251202-002",
@@ -174,11 +173,10 @@
         "pnr": "DL8Y56",
         "bookingReference": "BK-DL-002",
         "cancellationDate": "2025-12-02T10:00:00-08:00",
-        "cancellationFee": 200.00,
-        "refundAmount": 107.70,
+        "cancellationFee": 200.0,
+        "refundAmount": 107.7,
         "refundStatus": "PROCESSED"
       }
     }
   }
 }
-

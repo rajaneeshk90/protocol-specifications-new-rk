@@ -1,0 +1,44 @@
+{
+  "context": {
+    "domain": "hiring-jobs",
+    "action": "rate",
+    "version": "2.1.0",
+    "bap_id": "jobseeker-app.example.com",
+    "bap_uri": "https://jobseeker-app.example.com/beckn/",
+    "transaction_id": "txn-001-ravi",
+    "message_id": "msg-016",
+    "timestamp": "2026-03-19T11:00:00+05:30"
+  },
+  "message": {
+    "ratingInputs": [
+      {
+        "target": {
+          "id": "contract-mrc-ravi-001",
+          "descriptor": {
+            "name": "Job Application Experience",
+            "code": "CONTRACT"
+          }
+        },
+        "range": {
+          "min": 1,
+          "max": 5,
+          "value": 4
+        }
+      },
+      {
+        "target": {
+          "id": "perf-verification-001",
+          "descriptor": {
+            "name": "Credential Verification Service",
+            "code": "PERFORMANCE"
+          }
+        },
+        "range": {
+          "min": 1,
+          "max": 5,
+          "value": 5
+        }
+      }
+    ]
+  }
+}

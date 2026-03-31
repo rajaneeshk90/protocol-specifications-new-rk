@@ -22,6 +22,7 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Fulfillment",
         "beckn:id": "fulfillment-hotel-delivery",
+        "beckn:mode": "DELIVERY",
         "beckn:deliveryAttributes": {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/GroceryDelivery/v1/context.jsonld",
           "@type": "GroceryDelivery",
@@ -38,7 +39,10 @@
             },
             "beckn:geo": {
               "type": "Point",
-              "coordinates": [-157.8267, 21.2770]
+              "coordinates": [
+                -157.8267,
+                21.277
+              ]
             },
             "beckn:additionalInfo": "Royal Hawaiian Hotel, Room 920 (Room changed)"
           },

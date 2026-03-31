@@ -1,0 +1,40 @@
+{
+  "context": {
+    "domain": "hiring-candidates",
+    "action": "on_rate",
+    "version": "2.1.0",
+    "bpp_id": "talent-platform.example.com",
+    "transaction_id": "txn-002-priya",
+    "message_id": "msg-125",
+    "timestamp": "2026-03-22T10:00:03+05:30"
+  },
+  "message": {
+    "ratingInputs": [
+      {
+        "target": {
+          "id": "contract-cand-p42-001",
+          "descriptor": {
+            "name": "Hiring Process Experience",
+            "code": "CONTRACT"
+          }
+        },
+        "range": {
+          "min": 1,
+          "max": 5,
+          "value": 4
+        },
+        "feedbackFormSubmission": {
+          "id": "https://talent-platform.example.com/forms/feedback-employer-hiring-v1",
+          "submissionId": "fb-sub-002-priya",
+          "data": {
+            "profile_accuracy": "Very accurate — skills and experience matched the profile",
+            "verification_quality": "Thorough — VC-backed attestation gave confidence in claimed skills",
+            "pipeline_transparency": "Good — could see stage transitions, but would like real-time notifications",
+            "improvement": "Add calendar integration for interview scheduling"
+          },
+          "submittedAt": "2026-03-22T10:00:03+05:30"
+        }
+      }
+    ]
+  }
+}

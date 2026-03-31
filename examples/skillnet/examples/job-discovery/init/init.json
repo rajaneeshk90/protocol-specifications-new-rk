@@ -1,0 +1,54 @@
+{
+  "context": {
+    "domain": "hiring-jobs",
+    "action": "init",
+    "version": "2.1.0",
+    "bap_id": "jobseeker-app.example.com",
+    "bap_uri": "https://jobseeker-app.example.com/beckn/",
+    "transaction_id": "txn-001-ravi",
+    "message_id": "msg-005",
+    "timestamp": "2026-03-18T09:30:00+05:30"
+  },
+  "message": {
+    "contract": {
+      "commitments": [
+        {
+          "status": {
+            "descriptor": {
+              "code": "DRAFT"
+            }
+          },
+          "resources": [
+            {
+              "id": "job-mrc-001"
+            }
+          ],
+          "offer": {
+            "id": "offer-mrc-001",
+            "resourceIds": ["job-mrc-001"]
+          }
+        }
+      ],
+      "participants": [
+        {
+          "id": "participant-ravi-001",
+          "descriptor": {
+            "name": "Ravi Kumar",
+            "code": "CANDIDATE"
+          },
+          "participantAttributes": {
+            "email": "ravi.kumar@example.com",
+            "phone": "+91-9876543210",
+            "credential_refs": [
+              {
+                "category": "DEGREE",
+                "subtype": "BTECH_CIVIL",
+                "proof_request_url": "https://dedi.example.net/proof-request/did:ex:ravi/degree/BTECH_CIVIL"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

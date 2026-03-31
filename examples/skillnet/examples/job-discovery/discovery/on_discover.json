@@ -1,0 +1,88 @@
+{
+    "context": {
+        "domain": "hiring-jobs",
+        "action": "on_discover",
+        "version": "2.1.0",
+        "bpp_id": "metro-rail-jobs.example.com",
+        "transaction_id": "txn-001-ravi",
+        "message_id": "msg-002",
+        "timestamp": "2026-03-18T09:00:02+05:30"
+    },
+    "message": {
+        "catalogs": [
+            {
+                "id": "cat-metro-2026-03",
+                "descriptor": {
+                    "name": "Metro Rail Corporation — Job Listings",
+                    "shortDesc": "Active job openings at Metro Rail Corporation for civil infrastructure projects"
+                },
+                "provider": {
+                    "id": "provider-metro-rail-corp",
+                    "descriptor": {
+                        "name": "Metro Rail Corporation"
+                    }
+                },
+                "resources": [
+                    {
+                        "id": "job-mrc-001",
+                        "descriptor": {
+                            "name": "Site Supervisor — Civil",
+                            "short_desc": "Supervise civil works for metro rail viaduct construction in Mumbai suburbs"
+                        },
+                        "resourceAttributes": {
+                            "job_type": "FULL_TIME",
+                            "work_mode": "ONSITE",
+                            "industry_type": {
+                                "@context": "https://unstats.un.org/unsd/classifications/Econ/isic",
+                                "@type": "IndustryCode",
+                                "code": "4120",
+                                "label": "Construction of buildings"
+                            },
+                            "location": {
+                                "city": "Mumbai",
+                                "region": "Maharashtra",
+                                "country": "IN"
+                            },
+                            "requirements": [
+                                {
+                                    "category": "DEGREE",
+                                    "subtype": "BTECH_CIVIL",
+                                    "mandatory": true
+                                },
+                                {
+                                    "category": "EXPERIENCE",
+                                    "subtype": "SITE_SUPERVISION_6M",
+                                    "mandatory": false
+                                }
+                            ],
+                            "tags": [
+                                "civil",
+                                "viaduct",
+                                "site supervisor",
+                                "metro",
+                                "infrastructure"
+                            ]
+                        }
+                    }
+                ],
+                "offers": [
+                    {
+                        "id": "offer-mrc-001",
+                        "resourceIds": [
+                            "job-mrc-001"
+                        ],
+                        "offerAttributes": {
+                            "compensation_currency": "INR",
+                            "compensation_min": 400000,
+                            "compensation_max": 600000,
+                            "compensation_period": "ANNUAL",
+                            "openings_count": 3,
+                            "application_deadline": "2026-04-30T23:59:59+05:30",
+                            "probation_period_months": 3
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

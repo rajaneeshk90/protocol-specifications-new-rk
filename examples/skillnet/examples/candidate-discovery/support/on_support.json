@@ -1,0 +1,37 @@
+{
+  "context": {
+    "domain": "hiring-candidates",
+    "action": "on_support",
+    "version": "2.1.0",
+    "bpp_id": "talent-platform.example.com",
+    "transaction_id": "txn-002-priya",
+    "message_id": "msg-123",
+    "timestamp": "2026-03-21T11:00:03+05:30"
+  },
+  "message": {
+    "support": {
+      "orderId": "contract-cand-p42-001",
+      "descriptor": {
+        "name": "Talent Platform Hiring Support",
+        "shortDesc": "Support for employer hiring processes, interview coordination, and credential verification"
+      },
+      "channels": [
+        {
+          "type": "EMAIL",
+          "contact": "employer-support@talent-platform.example.com",
+          "availability": "Mon-Fri 9:00-18:00 IST"
+        },
+        {
+          "type": "PHONE",
+          "contact": "+91-80-98765432",
+          "availability": "Mon-Fri 10:00-17:00 IST"
+        },
+        {
+          "type": "CHAT",
+          "url": "https://talent-platform.example.com/support/employer-chat",
+          "availability": "24/7 automated, agent hours Mon-Fri 9:00-18:00 IST"
+        }
+      ]
+    }
+  }
+}

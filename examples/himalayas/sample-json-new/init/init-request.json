@@ -23,10 +23,9 @@
         "@type": "beckn:Buyer",
         "beckn:id": "buyer-shubham-thakur",
         "beckn:role": "BUYER",
-        "beckn:name": "Shubham Thakur",
-        "beckn:address": "123, Terminal 1, Kempegowda Int'l Airport Rd, A - Block, Gangamuthanahalli, Karnataka 560300, India",
+        "beckn:displayName": "Shubham Thakur",
         "beckn:email": "thakur.s@gmail.com",
-        "beckn:phone": "+919191223433"
+        "beckn:telephone": "+919191223433"
       },
       "beckn:orderItems": [
         {
@@ -71,4 +70,3 @@
     }
   }
 }
-

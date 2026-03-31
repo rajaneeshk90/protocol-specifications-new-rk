@@ -23,10 +23,9 @@
         "@type": "beckn:Buyer",
         "beckn:id": "buyer-motiur-rehman",
         "beckn:role": "BUYER",
-        "beckn:name": "Motiur Rehman",
-        "beckn:address": "123, Terminal 1, Kempegowda Int'l Airport Rd, A - Block, Gangamuthanahalli, Karnataka 560300, India",
+        "beckn:displayName": "Motiur Rehman",
         "beckn:email": "nc.rehman@gmail.com",
-        "beckn:phone": "+919191223433"
+        "beckn:telephone": "+919191223433"
       },
       "beckn:orderItems": [
         {

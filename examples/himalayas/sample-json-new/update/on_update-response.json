@@ -24,7 +24,7 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Buyer",
         "beckn:id": "buyer-shubham-thakur",
-        "beckn:name": "Shubham Thakur"
+        "beckn:displayName": "Shubham Thakur"
       },
       "beckn:orderItems": [
         {
@@ -77,4 +77,3 @@
     }
   }
 }
-

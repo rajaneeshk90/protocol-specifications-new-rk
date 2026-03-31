@@ -1,0 +1,70 @@
+{
+  "context": {
+    "domain": "hiring-jobs",
+    "action": "confirm",
+    "version": "2.1.0",
+    "bap_id": "jobseeker-app.example.com",
+    "transaction_id": "txn-001-ravi",
+    "message_id": "msg-006",
+    "timestamp": "2026-03-18T10:22:00+05:30"
+  },
+  "message": {
+    "contract": {
+      "id": "contract-mrc-ravi-001",
+      "commitments": [
+        {
+          "status": {
+            "descriptor": {
+              "code": "DRAFT"
+            }
+          },
+          "resources": [
+            {
+              "id": "job-mrc-001"
+            }
+          ],
+          "offer": {
+            "id": "offer-mrc-001",
+            "resourceIds": ["job-mrc-001"]
+          }
+        }
+      ],
+      "participants": [
+        {
+          "id": "participant-ravi-001",
+          "descriptor": {
+            "name": "Ravi Kumar",
+            "code": "CANDIDATE"
+          },
+          "participantAttributes": {
+            "email": "ravi.kumar@example.com",
+            "phone": "+91-9876543210",
+            "credential_refs": [
+              {
+                "category": "DEGREE",
+                "subtype": "BTECH_CIVIL",
+                "proof_request_url": "https://dedi.example.net/proof-request/did:ex:ravi/degree/BTECH_CIVIL"
+              }
+            ]
+          }
+        }
+      ],
+      "performance": [
+        {
+          "id": "perf-verification-001",
+          "status": {
+            "code": "PENDING"
+          },
+          "performanceAttributes": {
+            "verification_method": "VC"
+          }
+        }
+      ],
+      "contractAttributes": {
+        "application_reference": "APP-2026-0042-RV",
+        "submitted_at": "2026-03-18T10:22:00+05:30",
+        "reverification_requested": false
+      }
+    }
+  }
+}

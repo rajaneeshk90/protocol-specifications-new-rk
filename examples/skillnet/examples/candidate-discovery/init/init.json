@@ -1,0 +1,63 @@
+{
+  "context": {
+    "domain": "hiring-candidates",
+    "action": "init",
+    "version": "2.1.0",
+    "bap_id": "hr-platform.example.com",
+    "bap_uri": "https://hr-platform.example.com/beckn/",
+    "transaction_id": "txn-002-priya",
+    "message_id": "msg-105",
+    "timestamp": "2026-03-18T12:00:00+05:30"
+  },
+  "message": {
+    "contract": {
+      "commitments": [
+        {
+          "status": {
+            "descriptor": {
+              "code": "DRAFT"
+            }
+          },
+          "resources": [
+            {
+              "id": "cand-profile-p42"
+            }
+          ],
+          "offer": {
+            "id": "offer-cand-p42-001",
+            "resourceIds": ["cand-profile-p42"]
+          }
+        }
+      ],
+      "participants": [
+        {
+          "id": "participant-employer-001",
+          "descriptor": {
+            "name": "IT Services Corp",
+            "code": "EMPLOYER"
+          },
+          "participantAttributes": {
+            "company_website": "https://itservices-corp.example.com",
+            "industry": "Information Technology",
+            "contact_person": "Priya Sharma",
+            "contact_email": "priya.sharma@itservices-corp.example.com"
+          }
+        }
+      ],
+      "contractAttributes": {
+        "role_title": "Senior Java Developer",
+        "role_location": {
+          "city": "Bangalore",
+          "country": "IN"
+        },
+        "role_work_mode": "REMOTE",
+        "proposed_joining_date": "2026-04-28",
+        "offer_expiry": "2026-03-25T23:59:59+05:30",
+        "offered_compensation_currency": "INR",
+        "offered_compensation_amount": 1400000,
+        "offered_compensation_period": "ANNUAL",
+        "candidate_response": "PENDING"
+      }
+    }
+  }
+}

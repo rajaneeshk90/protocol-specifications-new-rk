@@ -24,10 +24,9 @@
         "@type": "beckn:Buyer",
         "beckn:id": "buyer-shubham-thakur",
         "beckn:role": "BUYER",
-        "beckn:name": "Shubham Thakur",
-        "beckn:address": "123, Terminal 1, Kempegowda Int'l Airport Rd, A - Block, Gangamuthanahalli, Karnataka 560300, India",
+        "beckn:displayName": "Shubham Thakur",
         "beckn:email": "thakur.s@gmail.com",
-        "beckn:phone": "+919191223433"
+        "beckn:telephone": "+919191223433"
       },
       "beckn:orderItems": [
         {
@@ -65,7 +64,10 @@
             "tourism:category": "trekking",
             "tourism:difficulty": "moderate",
             "tourism:duration": "5 days",
-            "tourism:tags": ["Trekking", "Himalayas"]
+            "tourism:tags": [
+              "Trekking",
+              "Himalayas"
+            ]
           }
         }
       ],
@@ -104,14 +106,20 @@
             "@type": "beckn:Location",
             "beckn:geo": {
               "type": "Point",
-              "coordinates": [77.23599, 32.19742]
+              "coordinates": [
+                77.23599,
+                32.19742
+              ]
             }
           },
           "endLocation": {
             "@type": "beckn:Location",
             "beckn:geo": {
               "type": "Point",
-              "coordinates": [77.37117, 32.31783]
+              "coordinates": [
+                77.37117,
+                32.31783
+              ]
             }
           },
           "startTime": "2024-04-15T08:00:00.000Z",
@@ -159,4 +167,3 @@
     }
   }
 }
-

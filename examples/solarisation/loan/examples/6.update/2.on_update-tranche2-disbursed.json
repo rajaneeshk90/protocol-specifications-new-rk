@@ -105,6 +105,7 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Fulfillment",
         "beckn:id": "fulfillment-loan-001",
+        "beckn:mode": "DELIVERY",
         "beckn:status": "TRANCHE_2_DISBURSED",
         "beckn:deliveryAttributes": {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FinancialServices/v1/context.jsonld",
@@ -193,4 +194,3 @@
     }
   }
 }
-

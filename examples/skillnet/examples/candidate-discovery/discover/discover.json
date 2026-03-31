@@ -1,0 +1,26 @@
+{
+  "context": {
+    "domain": "hiring-candidates",
+    "action": "discover",
+    "version": "2.1.0",
+    "bap_id": "hr-platform.example.com",
+    "bap_uri": "https://hr-platform.example.com/beckn/",
+    "transaction_id": "txn-002-priya",
+    "message_id": "msg-101",
+    "timestamp": "2026-03-18T11:00:00+05:30",
+    "schema_context": [
+      "https://schema.beckn.io/core/v2/context.jsonld#generalised",
+      "https://schema.beckn.io/CandidateProfileResourceAttributes/context.jsonld",
+      "https://schema.beckn.io/CandidateAvailabilityOfferAttributes/context.jsonld"
+    ]
+  },
+  "message": {
+    "intent": {
+      "textSearch": "mid-level Java developer remote available within 30 days",
+      "filters": {
+        "type": "jsonpath",
+        "expression": "$.catalogs[*].resources[*] ? (@.resourceAttributes.experience_level == 'MID' && @.resourceAttributes.availability == 'WITHIN_30_DAYS' && @.resourceAttributes.location_preference.work_mode_preference == 'REMOTE')"
+      }
+    }
+  }
+}

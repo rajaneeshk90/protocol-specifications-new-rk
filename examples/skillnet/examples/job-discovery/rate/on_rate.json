@@ -1,0 +1,39 @@
+{
+  "context": {
+    "domain": "hiring-jobs",
+    "action": "on_rate",
+    "version": "2.1.0",
+    "bpp_id": "metro-rail-jobs.example.com",
+    "transaction_id": "txn-001-ravi",
+    "message_id": "msg-017",
+    "timestamp": "2026-03-19T11:00:03+05:30"
+  },
+  "message": {
+    "ratingInputs": [
+      {
+        "target": {
+          "id": "contract-mrc-ravi-001",
+          "descriptor": {
+            "name": "Job Application Experience",
+            "code": "CONTRACT"
+          }
+        },
+        "range": {
+          "min": 1,
+          "max": 5,
+          "value": 4
+        },
+        "feedbackFormSubmission": {
+          "id": "https://metro-rail-corp.example.com/forms/feedback-hiring-experience-v1",
+          "submissionId": "fb-sub-001-ravi",
+          "data": {
+            "clarity": "Very clear",
+            "verification_speed": "Fast — completed within minutes",
+            "improvement": "Add real-time status updates during verification"
+          },
+          "submittedAt": "2026-03-19T11:00:03+05:30"
+        }
+      }
+    ]
+  }
+}

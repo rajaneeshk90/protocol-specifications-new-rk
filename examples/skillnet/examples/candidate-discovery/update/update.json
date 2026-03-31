@@ -1,0 +1,49 @@
+{
+  "context": {
+    "domain": "hiring-candidates",
+    "action": "update",
+    "version": "2.1.0",
+    "bap_id": "hr-platform.example.com",
+    "bap_uri": "https://hr-platform.example.com/beckn/",
+    "transaction_id": "txn-002-priya",
+    "message_id": "msg-118",
+    "timestamp": "2026-03-20T15:00:00+05:30"
+  },
+  "message": {
+    "contract": {
+      "id": "contract-cand-p42-001",
+      "commitments": [
+        {
+          "status": {
+            "descriptor": {
+              "code": "ACTIVE"
+            }
+          },
+          "resources": [
+            {
+              "id": "cand-profile-p42"
+            }
+          ],
+          "offer": {
+            "id": "offer-cand-p42-001",
+            "resourceIds": ["cand-profile-p42"]
+          }
+        }
+      ],
+      "contractAttributes": {
+        "role_title": "Senior Java Developer",
+        "role_location": {
+          "city": "Bangalore",
+          "country": "IN"
+        },
+        "role_work_mode": "REMOTE",
+        "proposed_joining_date": "2026-05-05",
+        "offer_expiry": "2026-03-28T23:59:59+05:30",
+        "offered_compensation_currency": "INR",
+        "offered_compensation_amount": 1500000,
+        "offered_compensation_period": "ANNUAL",
+        "candidate_response": "NEGOTIATING"
+      }
+    }
+  }
+}

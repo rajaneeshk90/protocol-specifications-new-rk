@@ -58,6 +58,7 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Fulfillment",
         "beckn:id": "fulfillment-hotel-stay",
+        "beckn:mode": "DELIVERY",
         "beckn:type": "hotel_stay",
         "beckn:time": {
           "@type": "beckn:TimePeriod",
@@ -81,4 +82,3 @@
     }
   }
 }
-

@@ -23,10 +23,9 @@
         "@type": "beckn:Buyer",
         "beckn:id": "buyer-sarah-johnson",
         "beckn:role": "BUYER",
-        "beckn:name": "Sarah Johnson",
-        "beckn:address": "2365 Kalakaua Ave, Royal Hawaiian Hotel, Room 815, Honolulu, HI 96815, US",
+        "beckn:displayName": "Sarah Johnson",
         "beckn:email": "sarah.johnson@email.com",
-        "beckn:phone": "+1-808-555-0123"
+        "beckn:telephone": "+1-808-555-0123"
       },
       "beckn:orderItems": [
         {
@@ -63,7 +62,10 @@
             },
             "beckn:geo": {
               "type": "Point",
-              "coordinates": [-157.8267, 21.2770]
+              "coordinates": [
+                -157.8267,
+                21.277
+              ]
             },
             "beckn:additionalInfo": "Royal Hawaiian Hotel, Room 815"
           },

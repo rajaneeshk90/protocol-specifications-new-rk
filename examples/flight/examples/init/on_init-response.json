@@ -25,10 +25,9 @@
         "@type": "beckn:Buyer",
         "beckn:id": "buyer-fide-beckn",
         "beckn:role": "BUYER",
-        "beckn:name": "Fide Beckn",
-        "beckn:address": "123 Market St, San Francisco, CA 94102, USA",
+        "beckn:displayName": "Fide Beckn",
         "beckn:email": "beckn@eminds.ai",
-        "beckn:phone": "+1-555-123-4567"
+        "beckn:telephone": "+1-555-123-4567"
       },
       "beckn:orderItems": [
         {
@@ -50,7 +49,7 @@
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
               "@type": "schema:PriceSpecification",
               "schema:priceCurrency": "USD",
-              "schema:price": 280.00
+              "schema:price": 280.0
             },
             "beckn:addOnItems": [
               {
@@ -61,7 +60,7 @@
                 "schema:price": {
                   "@type": "schema:PriceSpecification",
                   "schema:priceCurrency": "USD",
-                  "schema:price": 35.00
+                  "schema:price": 35.0
                 }
               },
               {
@@ -72,7 +71,7 @@
                 "schema:price": {
                   "@type": "schema:PriceSpecification",
                   "schema:priceCurrency": "USD",
-                  "schema:price": 25.00
+                  "schema:price": 25.0
                 }
               },
               {
@@ -83,7 +82,7 @@
                 "schema:price": {
                   "@type": "schema:PriceSpecification",
                   "schema:priceCurrency": "USD",
-                  "schema:price": 25.00
+                  "schema:price": 25.0
                 }
               }
             ]
@@ -93,7 +92,7 @@
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
             "@type": "schema:PriceSpecification",
             "schema:priceCurrency": "USD",
-            "schema:price": 280.00
+            "schema:price": 280.0
           },
           "beckn:orderItemAttributes": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/FlightService/v1/context.jsonld",
@@ -142,7 +141,7 @@
               },
               "checked": {
                 "includedCount": 0,
-                "feePerBag": 35.00,
+                "feePerBag": 35.0,
                 "maxWeight": 23,
                 "maxWeightUnit": "KG"
               }
@@ -154,47 +153,47 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "schema:PriceSpecification",
         "schema:priceCurrency": "USD",
-        "schema:price": 392.70,
+        "schema:price": 392.7,
         "beckn:components": [
           {
             "@type": "beckn:PriceComponent",
             "beckn:type": "UNIT",
-            "beckn:value": 280.00,
+            "beckn:value": 280.0,
             "beckn:currency": "USD",
             "beckn:description": "Base fare (1 × $280.00)"
           },
           {
             "@type": "beckn:PriceComponent",
             "beckn:type": "UNIT",
-            "beckn:value": 35.00,
+            "beckn:value": 35.0,
             "beckn:currency": "USD",
             "beckn:description": "Checked baggage"
           },
           {
             "@type": "beckn:PriceComponent",
             "beckn:type": "UNIT",
-            "beckn:value": 25.00,
+            "beckn:value": 25.0,
             "beckn:currency": "USD",
             "beckn:description": "Seat selection"
           },
           {
             "@type": "beckn:PriceComponent",
             "beckn:type": "UNIT",
-            "beckn:value": 25.00,
+            "beckn:value": 25.0,
             "beckn:currency": "USD",
             "beckn:description": "Travel insurance"
           },
           {
             "@type": "beckn:PriceComponent",
             "beckn:type": "FEE",
-            "beckn:value": 15.00,
+            "beckn:value": 15.0,
             "beckn:currency": "USD",
             "beckn:description": "Airport facility charges"
           },
           {
             "@type": "beckn:PriceComponent",
             "beckn:type": "TAX",
-            "beckn:value": 12.70,
+            "beckn:value": 12.7,
             "beckn:currency": "USD",
             "beckn:description": "Federal excise tax (4.5%)"
           }
@@ -216,7 +215,7 @@
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
           "@type": "schema:PriceSpecification",
           "schema:priceCurrency": "USD",
-          "schema:price": 392.70
+          "schema:price": 392.7
         },
         "beckn:beneficiary": "BPP",
         "beckn:acceptedPaymentMethod": [
@@ -244,13 +243,13 @@
         "cancellationTerms": [
           {
             "condition": "More than 24 hours before departure",
-            "cancellationFee": 200.00,
+            "cancellationFee": 200.0,
             "refundEligible": true,
             "refundPercentage": 35
           },
           {
             "condition": "Less than 24 hours before departure",
-            "cancellationFee": 280.00,
+            "cancellationFee": 280.0,
             "refundEligible": false
           }
         ]
@@ -258,4 +257,3 @@
     }
   }
 }
-

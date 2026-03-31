@@ -24,10 +24,9 @@
         "@type": "beckn:Buyer",
         "beckn:id": "buyer-fide-beckn",
         "beckn:role": "BUYER",
-        "beckn:name": "Fide Beckn",
-        "beckn:address": "123 Market St, San Francisco, CA 94102, USA",
+        "beckn:displayName": "Fide Beckn",
         "beckn:email": "beckn@eminds.ai",
-        "beckn:phone": "+1-555-123-4567"
+        "beckn:telephone": "+1-555-123-4567"
       },
       "beckn:orderItems": [
         {
@@ -60,7 +59,8 @@
       "beckn:fulfillment": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Fulfillment",
-        "beckn:id": "fulfillment-dl145-flight"
+        "beckn:id": "fulfillment-dl145-flight",
+        "beckn:mode": "DELIVERY"
       },
       "beckn:payment": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
@@ -71,7 +71,7 @@
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
           "@type": "schema:PriceSpecification",
           "schema:priceCurrency": "USD",
-          "schema:price": 392.70
+          "schema:price": 392.7
         },
         "beckn:txnRef": "TXN-DL-20251201-001",
         "beckn:beneficiary": "BPP",

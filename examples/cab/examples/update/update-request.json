@@ -22,6 +22,7 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Fulfillment",
         "beckn:id": "fulfillment-ride-sedan",
+        "beckn:mode": "DELIVERY",
         "beckn:end": {
           "@type": "beckn:FulfillmentPoint",
           "beckn:location": {
@@ -41,7 +42,10 @@
             },
             "beckn:geo": {
               "type": "Point",
-              "coordinates": [100.5018, 13.7248]
+              "coordinates": [
+                100.5018,
+                13.7248
+              ]
             }
           }
         }
@@ -49,4 +53,3 @@
     }
   }
 }
-

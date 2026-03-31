@@ -1,0 +1,18 @@
+schema/EvChargingOffer/v1/vocab.jsonld:    "beckn": "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/EvChargingOffer/v1/#",
+schema/EvChargingOffer/v1/attributes.yaml:            - $ref: "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/core/v2/attributes.yaml#/components/schemas/PriceSpecification"
+schema/core/v2/vocab.jsonld:    "beckn": "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/core/v2/#",
+schema/core/v2/attributes.yaml:          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/core/v2/context.jsonld"
+schema/core/v2/attributes.yaml:          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/core/v2/context.jsonld"
+schema/core/v2/attributes.yaml:          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/core/v2/context.jsonld"
+schema/core/v2/attributes.yaml:          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/core/v2/context.jsonld"
+schema/core/v2/attributes.yaml:          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/core/v2/context.jsonld"
+schema/core/v2/attributes.yaml:          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/core/v2/context.jsonld"
+schema/core/v2/attributes.yaml:          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/core/v2/context.jsonld"
+schema/core/v2/attributes.yaml:          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/core/v2/context.jsonld"
+schema/core/v2/attributes.yaml:          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/core/v2/context.jsonld"
+schema/core/v2/attributes.yaml:          example: "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/core/v2/context.jsonld"
+schema/EvChargingSession/v1/vocab.jsonld:    "beckn": "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/EvChargingSession/v1/#",
+schema/PaymentSettlement/v1/vocab.jsonld:    "beckn": "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/PaymentSettlement/v1/#",
+schema/EvChargingService/v1/vocab.jsonld:    "beckn": "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/EvChargingService/v1/#",
+schema/EvChargingService/v1/attributes.yaml:                - $ref: "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/core/v2/attributes.yaml#/components/schemas/Location"
+schema/EvChargingPointOperator/v1/vocab.jsonld:    "beckn": "https://raw.githubusercontent.com/beckn/protocol-specifications-v2/refs/heads/main/schema/EvChargingPointOperator/v1/#",

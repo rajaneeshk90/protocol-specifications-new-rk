@@ -25,10 +25,9 @@
         "@type": "beckn:Buyer",
         "beckn:id": "buyer-santosh-kumar",
         "beckn:role": "BUYER",
-        "beckn:name": "Santosh Kumar",
-        "beckn:address": "151-e, janpath road, New Delhi, India",
+        "beckn:displayName": "Santosh Kumar",
         "beckn:email": "santosh.k@gmail.com",
-        "beckn:phone": "+916251423251"
+        "beckn:telephone": "+916251423251"
       },
       "beckn:orderItems": [
         {
@@ -66,7 +65,12 @@
             "retail:category": "outdoor_gear",
             "retail:subcategory": "sunglasses",
             "retail:brand": "WorldHikes",
-            "retail:features": ["UV Protection", "Polarized Lenses", "Durable Frames", "Lightweight"]
+            "retail:features": [
+              "UV Protection",
+              "Polarized Lenses",
+              "Durable Frames",
+              "Lightweight"
+            ]
           }
         }
       ],
@@ -112,7 +116,10 @@
             },
             "beckn:geo": {
               "type": "Point",
-              "coordinates": [77.695088, 12.936938]
+              "coordinates": [
+                77.695088,
+                12.936938
+              ]
             }
           },
           "deliveryLocation": {
@@ -128,7 +135,10 @@
             },
             "beckn:geo": {
               "type": "Point",
-              "coordinates": [77.708736, 13.2008459]
+              "coordinates": [
+                77.708736,
+                13.2008459
+              ]
             }
           },
           "deliveryContact": {
@@ -167,12 +177,12 @@
         "cancellationTerms": [
           {
             "fulfillmentState": "ORDER_CONFIRMED",
-            "cancellationFee": 0.00,
+            "cancellationFee": 0.0,
             "refundEligible": true
           },
           {
             "fulfillmentState": "ORDER_PACKED",
-            "cancellationFee": 100.00,
+            "cancellationFee": 100.0,
             "refundEligible": true
           }
         ]

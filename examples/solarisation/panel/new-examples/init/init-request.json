@@ -23,22 +23,6 @@
       "beckn:orderStatus": "INITIALIZED",
       "beckn:seller": "provider-solar-installer-001",
       "beckn:buyer": "buyer-homeowner-001",
-      "beckn:invoice": {
-        "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-        "@type": "schema:Invoice",
-        "schema:customer": {
-          "email": "customer@example.com",
-          "phone": "+91-9876543210",
-          "legalName": "John Doe",
-          "address": {
-            "streetAddress": "123 MG Road",
-            "addressLocality": "Bangalore",
-            "addressRegion": "Karnataka",
-            "postalCode": "560001",
-            "addressCountry": "IN"
-          }
-        }
-      },
       "beckn:orderItems": [
         {
           "@type": "beckn:OrderItem",
@@ -48,6 +32,11 @@
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
             "@type": "beckn:Offer",
             "beckn:id": "offer-solar-rooftop-100kw-001",
+            "beckn:descriptor": {
+              "@type": "beckn:Descriptor",
+              "schema:name": "100kW Solar Installation Package"
+            },
+            "beckn:provider": "provider-solar-installer-001",
             "beckn:items": [
               "item-solar-rooftop-100kw"
             ]
@@ -69,29 +58,25 @@
       "beckn:fulfillment": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Fulfillment",
-        "beckn:id": "fulfillment-solar-rooftop-001",
-        "beckn:mode": "DIGITAL",
-        "beckn:status": "PENDING",
+        "beckn:id": "fulfillment-solar-installation-001",
+        "beckn:mode": "DELIVERY",
         "beckn:deliveryAttributes": {
           "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/SolarRooftop/v1/context.jsonld",
           "@type": "beckn:SolarRooftopFulfillment",
-          "beckn:installationTimeline": {
-            "surveyDays": 3,
-            "installationDays": 10,
-            "commissioningDays": 2
-          },
           "beckn:installationLocation": {
-            "@type": "beckn:Location",
             "geo": {
               "type": "Point",
-              "coordinates": [77.5946, 12.9716]
+              "coordinates": [
+                77.6212,
+                12.9342
+              ]
             },
             "address": {
               "@type": "schema:PostalAddress",
-              "schema:streetAddress": "123 MG Road",
+              "schema:streetAddress": "123, MG Road, Koramangala",
               "schema:addressLocality": "Bangalore",
               "schema:addressRegion": "Karnataka",
-              "schema:postalCode": "560001",
+              "schema:postalCode": "560034",
               "schema:addressCountry": "IN"
             }
           }

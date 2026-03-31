@@ -24,10 +24,9 @@
         "@type": "beckn:Buyer",
         "beckn:id": "buyer-sarah-johnson",
         "beckn:role": "BUYER",
-        "beckn:name": "Sarah Johnson",
-        "beckn:address": "2365 Kalakaua Ave, Royal Hawaiian Hotel, Room 815, Honolulu, HI 96815, US",
+        "beckn:displayName": "Sarah Johnson",
         "beckn:email": "sarah.johnson@email.com",
-        "beckn:phone": "+1-808-555-0123"
+        "beckn:telephone": "+1-808-555-0123"
       },
       "beckn:orderItems": [
         {
@@ -41,7 +40,8 @@
       "beckn:fulfillment": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Fulfillment",
-        "beckn:id": "fulfillment-hotel-delivery"
+        "beckn:id": "fulfillment-hotel-delivery",
+        "beckn:mode": "DELIVERY"
       },
       "beckn:payment": {
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",

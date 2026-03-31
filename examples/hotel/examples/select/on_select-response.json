@@ -48,7 +48,7 @@
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
               "@type": "schema:PriceSpecification",
               "schema:priceCurrency": "USD",
-              "schema:price": 120.00
+              "schema:price": 120.0
             },
             "beckn:addOnItems": [
               {
@@ -59,7 +59,7 @@
                 "schema:price": {
                   "@type": "schema:PriceSpecification",
                   "schema:priceCurrency": "USD",
-                  "schema:price": 30.00
+                  "schema:price": 30.0
                 }
               },
               {
@@ -70,7 +70,7 @@
                 "schema:price": {
                   "@type": "schema:PriceSpecification",
                   "schema:priceCurrency": "USD",
-                  "schema:price": 45.00
+                  "schema:price": 45.0
                 }
               },
               {
@@ -81,7 +81,7 @@
                 "schema:price": {
                   "@type": "schema:PriceSpecification",
                   "schema:priceCurrency": "USD",
-                  "schema:price": 50.00
+                  "schema:price": 50.0
                 }
               }
             ]
@@ -95,7 +95,7 @@
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
             "@type": "schema:PriceSpecification",
             "schema:priceCurrency": "USD",
-            "schema:price": 120.00
+            "schema:price": 120.0
           },
           "beckn:orderItemAttributes": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/HotelService/v1/context.jsonld",
@@ -128,26 +128,26 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "schema:PriceSpecification",
         "schema:priceCurrency": "USD",
-        "schema:price": 672.00,
+        "schema:price": 672.0,
         "beckn:components": [
           {
             "@type": "beckn:PriceComponent",
             "beckn:type": "UNIT",
-            "beckn:value": 600.00,
+            "beckn:value": 600.0,
             "beckn:currency": "USD",
             "beckn:description": "Room charges (5 nights × $120)"
           },
           {
             "@type": "beckn:PriceComponent",
             "beckn:type": "FEE",
-            "beckn:value": 30.00,
+            "beckn:value": 30.0,
             "beckn:currency": "USD",
             "beckn:description": "Service charge"
           },
           {
             "@type": "beckn:PriceComponent",
             "beckn:type": "TAX",
-            "beckn:value": 42.00,
+            "beckn:value": 42.0,
             "beckn:currency": "USD",
             "beckn:description": "VAT (7%)"
           }
@@ -157,6 +157,7 @@
         "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
         "@type": "beckn:Fulfillment",
         "beckn:id": "fulfillment-hotel-stay",
+        "beckn:mode": "DELIVERY",
         "beckn:type": "hotel_stay",
         "beckn:time": {
           "@type": "beckn:TimePeriod",
@@ -168,4 +169,3 @@
     }
   }
 }
-

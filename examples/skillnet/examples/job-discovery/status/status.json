@@ -1,0 +1,35 @@
+{
+  "context": {
+    "domain": "hiring-jobs",
+    "action": "status",
+    "version": "2.1.0",
+    "bap_id": "jobseeker-app.example.com",
+    "bap_uri": "https://jobseeker-app.example.com/beckn/",
+    "transaction_id": "txn-001-ravi",
+    "message_id": "msg-008",
+    "timestamp": "2026-03-18T11:00:00+05:30"
+  },
+  "message": {
+    "contract": {
+      "id": "contract-mrc-ravi-001",
+      "commitments": [
+        {
+          "status": {
+            "descriptor": {
+              "code": "ACTIVE"
+            }
+          },
+          "resources": [
+            {
+              "id": "job-mrc-001"
+            }
+          ],
+          "offer": {
+            "id": "offer-mrc-001",
+            "resourceIds": ["job-mrc-001"]
+          }
+        }
+      ]
+    }
+  }
+}

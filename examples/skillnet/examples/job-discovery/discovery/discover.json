@@ -1,0 +1,38 @@
+{
+    "context": {
+      "domain": "hiring-jobs",
+      "action": "discover",
+      "version": "2.1.0",
+      "bap_id": "jobseeker-app.example.com",
+      "bap_uri": "https://jobseeker-app.example.com/beckn/",
+      "transaction_id": "txn-001-ravi",
+      "message_id": "msg-001",
+      "timestamp": "2026-03-18T09:00:00+05:30",
+      "schema_context": [
+        "https://schema.beckn.io/core/v2/context.jsonld#generalised",
+        "https://schema.beckn.io/HiringJobResourceAttributes/context.jsonld",
+        "https://schema.beckn.io/HiringJobOfferAttributes/context.jsonld"
+      ]
+    },
+    "message": {
+      "intent": {
+        "textSearch": "civil engineer site supervisor entry level Mumbai",
+        "filters": {
+          "type": "jsonpath",
+          "expression": "$.catalogs[*].resources[*] ? (@.resourceAttributes.job_type == 'FULL_TIME' && @.resourceAttributes.work_mode == 'ONSITE')"
+        },
+        "spatial": [
+          {
+            "op": "s_dwithin",
+            "targets": ["resourceAttributes.location"],
+            "geometry": {
+              "type": "Point",
+              "coordinates": [72.8777, 19.0760]
+            },
+            "distanceMeters": 30000
+          }
+        ]
+      }
+    }
+  }
+  

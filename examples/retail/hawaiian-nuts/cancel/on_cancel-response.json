@@ -25,10 +25,9 @@
         "@type": "beckn:Buyer",
         "beckn:id": "buyer-sarah-johnson",
         "beckn:role": "BUYER",
-        "beckn:name": "Sarah Johnson",
-        "beckn:address": "2365 Kalakaua Ave, Royal Hawaiian Hotel, Room 815, Honolulu, HI 96815, US",
+        "beckn:displayName": "Sarah Johnson",
         "beckn:email": "sarah.johnson@email.com",
-        "beckn:phone": "+1-808-555-0123"
+        "beckn:telephone": "+1-808-555-0123"
       },
       "beckn:orderItems": [
         {
@@ -50,7 +49,7 @@
               "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
               "@type": "schema:PriceSpecification",
               "schema:priceCurrency": "USD",
-              "schema:price": 10.50
+              "schema:price": 10.5
             }
           },
           "beckn:quantity": 2,
@@ -58,7 +57,7 @@
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
             "@type": "schema:PriceSpecification",
             "schema:priceCurrency": "USD",
-            "schema:price": 21.00
+            "schema:price": 21.0
           },
           "beckn:orderItemAttributes": {
             "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/GroceryItem/v1/context.jsonld",
@@ -70,9 +69,16 @@
             "grocery:category": "packaged_food",
             "grocery:subcategory": "nuts_and_seeds",
             "grocery:shelfLifeDays": 540,
-            "grocery:ingredients": ["Macadamia nuts", "Sea salt"],
-            "grocery:allergens": ["Tree nuts"],
-            "grocery:certifications": ["Kosher"],
+            "grocery:ingredients": [
+              "Macadamia nuts",
+              "Sea salt"
+            ],
+            "grocery:allergens": [
+              "Tree nuts"
+            ],
+            "grocery:certifications": [
+              "Kosher"
+            ],
             "grocery:storageInstructions": "Store at room temperature"
           }
         }
@@ -86,7 +92,7 @@
           {
             "@type": "beckn:PriceComponent",
             "beckn:type": "UNIT",
-            "beckn:value": 21.00,
+            "beckn:value": 21.0,
             "beckn:currency": "USD",
             "beckn:description": "Item price (2 × $10.50)"
           },
