@@ -24,10 +24,9 @@
             "name": "Venky.Mahadevan@Bazaar"
           },
           "participantAttributes": {
-            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-            "@type": "beckn:Seller",
-            "telephone": "+91 9876543210",
-            "gstin": "29AABCU9603R1ZM"
+            "@context": "https://schema.beckn.io/",
+            "@type": "beckn:Participant",
+            "telephone": "+91 9876543210"
           }
         },
         {
@@ -36,17 +35,10 @@
             "name": "Motiur Rehman"
           },
           "participantAttributes": {
-            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-            "@type": "beckn:Buyer",
+            "@context": "https://schema.beckn.io/",
+            "@type": "beckn:Participant",
             "email": "nc.rehman@gmail.com",
-            "telephone": "+919191223433",
-            "billingAddress": {
-              "streetAddress": "45, MG Road, Indiranagar",
-              "addressLocality": "Bangalore",
-              "addressRegion": "Karnataka",
-              "postalCode": "560038",
-              "addressCountry": "IND"
-            }
+            "telephone": "+919191223433"
           }
         }
       ],
@@ -65,7 +57,9 @@
           ],
           "offer": {
             "id": "offer-flask-mh500-yellow",
-            "resourceIds": ["item-flask-mh500-yellow"],
+            "resourceIds": [
+              "item-flask-mh500-yellow"
+            ],
             "descriptor": {
               "name": "Isothermal Stainless Steel Hiking Flask MH500 Yellow"
             },
@@ -76,8 +70,8 @@
               }
             },
             "offerAttributes": {
-              "@context": "https://schema.beckn.io/RetailOffer/v2.1/context.jsonld",
-              "@type": "rcoa:RetailOffer",
+              "@context": "https://raw.githubusercontent.com/beckn/local-retail/refs/heads/main/schema/RetailOffer/v2.1/context.jsonld",
+              "@type": "RetailOffer",
               "policies": {
                 "returns": {
                   "allowed": true,
@@ -106,7 +100,15 @@
                 },
                 "timing": [
                   {
-                    "daysOfWeek": ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
+                    "daysOfWeek": [
+                      "MON",
+                      "TUE",
+                      "WED",
+                      "THU",
+                      "FRI",
+                      "SAT",
+                      "SUN"
+                    ],
                     "timeRange": {
                       "start": "09:00",
                       "end": "21:00"
@@ -118,12 +120,16 @@
                 "start": "09:00",
                 "end": "21:00"
               },
-              "holidays": ["2026-01-26", "2026-08-15", "2026-12-25"]
+              "holidays": [
+                "2026-01-26",
+                "2026-08-15",
+                "2026-12-25"
+              ]
             }
           },
           "commitmentAttributes": {
-            "@context": "https://schema.beckn.io/RetailCommitment/v2.1/context.jsonld",
-            "@type": "rccma:RetailCommitment",
+            "@context": "https://raw.githubusercontent.com/beckn/local-retail/refs/heads/main/schema/RetailCommitment/v2.1/context.jsonld",
+            "@type": "RetailCommitment",
             "lineId": "LINE-001",
             "resourceId": "item-flask-mh500-yellow",
             "quantity": {
@@ -139,11 +145,15 @@
           "status": {
             "code": "PENDING"
           },
-          "commitmentIds": ["commitment-flask-001"],
+          "commitmentIds": [
+            "commitment-flask-001"
+          ],
           "performanceAttributes": {
-            "@context": "https://schema.beckn.io/RetailPerformance/v2.1/context.jsonld",
-            "@type": "rcpa:RetailPerformance",
-            "supportedPerformanceModes": ["DELIVERY"],
+            "@context": "https://raw.githubusercontent.com/beckn/local-retail/refs/heads/main/schema/RetailPerformance/v2.1/context.jsonld",
+            "@type": "PerformanceAttributes",
+            "supportedPerformanceModes": [
+              "DELIVERY"
+            ],
             "deliveryDetails": {
               "address": {
                 "streetAddress": "123, Terminal 1, Kempegowda Int'l Airport Rd, A - Block",
@@ -159,7 +169,14 @@
             },
             "operatingHours": [
               {
-                "daysOfWeek": [1, 2, 3, 4, 5, 6],
+                "daysOfWeek": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
                 "timeRange": {
                   "start": "09:00",
                   "end": "21:00"

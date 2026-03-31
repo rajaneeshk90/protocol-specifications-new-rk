@@ -1,0 +1,21 @@
+resourceAttributes: 
+  context: https://raw.githubusercontent.com/beckn/local-retail/refs/heads/main/schema/RetailResource/v2.1/context.jsonld
+  type: RetailResource
+offerAttributes: 
+  context: https://raw.githubusercontent.com/beckn/local-retail/refs/heads/main/schema/RetailOffer/v2.1/context.jsonld
+  type: RetailOffer
+contractAttributes: 
+  context: https://raw.githubusercontent.com/beckn/local-retail/refs/heads/main/schema/RetailContract/v2.1/context.jsonld
+  type: ContractAttributes
+performanceAttributes: 
+  context: https://raw.githubusercontent.com/beckn/local-retail/refs/heads/main/schema/RetailPerformance/v2.1/context.jsonld
+  type: PerformanceAttributes
+retailSettlementAttributes: 
+  context: https://raw.githubusercontent.com/beckn/local-retail/refs/heads/main/schema/RetailSettlement/v2.1/context.jsonld
+  type: RetailSettlement
+considerationAttributes: 
+  context: https://raw.githubusercontent.com/beckn/local-retail/refs/heads/main/schema/RetailConsideration/v2.1/context.jsonld
+  type: RetailConsideration
+commitmentAttributes: 
+  context: https://raw.githubusercontent.com/beckn/local-retail/refs/heads/main/schema/RetailCommitment/v2.1/context.jsonld
+  type: RetailCommitment

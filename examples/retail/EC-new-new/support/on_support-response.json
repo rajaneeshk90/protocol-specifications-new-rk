@@ -21,28 +21,28 @@
       },
       "channels": [
         {
-          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@context": "https://schema.beckn.io/",
           "@type": "beckn:SupportChannel",
           "type": "PHONE",
           "value": "+91 9876543298",
           "hours": "24/7"
         },
         {
-          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@context": "https://schema.beckn.io/",
           "@type": "beckn:SupportChannel",
           "type": "EMAIL",
           "value": "abcd.support@support.com",
           "hours": "24/7"
         },
         {
-          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@context": "https://schema.beckn.io/",
           "@type": "beckn:SupportChannel",
           "type": "WEB",
           "value": "https://support.example.com",
           "hours": "24/7"
         },
         {
-          "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
+          "@context": "https://schema.beckn.io/",
           "@type": "beckn:SupportChannel",
           "type": "CHAT",
           "value": "https://support.example.com/chat",

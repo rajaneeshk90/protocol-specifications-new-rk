@@ -39,8 +39,8 @@
             "code": "EMPLOYER"
           },
           "participantAttributes": {
-            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-            "@type": "beckn:Participant",
+            "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/Participant/v2.0/context.jsonld",
+            "@type": "Participant",
             "company_website": "https://itservices-corp.example.com",
             "industry": "Information Technology",
             "contact_person": "Priya Sharma",

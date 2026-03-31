@@ -24,10 +24,9 @@
             "name": "Venky.Mahadevan@Bazaar"
           },
           "participantAttributes": {
-            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-            "@type": "beckn:Seller",
-            "telephone": "+91 9876543210",
-            "gstin": "29AABCU9603R1ZM"
+            "@context": "https://schema.beckn.io/",
+            "@type": "beckn:Participant",
+            "telephone": "+91 9876543210"
           }
         },
         {
@@ -36,8 +35,8 @@
             "name": "Motiur Rehman"
           },
           "participantAttributes": {
-            "@context": "https://raw.githubusercontent.com/beckn/protocol-specifications-new/refs/heads/draft/schema/core/v2/context.jsonld",
-            "@type": "beckn:Buyer",
+            "@context": "https://schema.beckn.io/Participant/2.0/context.jsonld",
+            "@type": "beckn:Participant",
             "email": "nc.rehman@gmail.com",
             "telephone": "+919191223433"
           }
@@ -69,8 +68,8 @@
               }
             },
             "offerAttributes": {
-              "@context": "https://schema.beckn.io/RetailOffer/v2.1/context.jsonld",
-              "@type": "rcoa:RetailOffer",
+              "@context": "https://raw.githubusercontent.com/beckn/local-retail/refs/heads/main/schema/RetailOffer/v2.1/context.jsonld",
+              "@type": "RetailOffer",
               "policies": {
                 "returns": {
                   "allowed": true,
@@ -86,8 +85,8 @@
             }
           },
           "commitmentAttributes": {
-            "@context": "https://schema.beckn.io/RetailCommitment/v2.1/context.jsonld",
-            "@type": "rccma:RetailCommitment",
+            "@context": "https://raw.githubusercontent.com/beckn/local-retail/refs/heads/main/schema/RetailCommitment/v2.1/context.jsonld",
+            "@type": "RetailCommitment",
             "lineId": "LINE-001",
             "resourceId": "item-flask-mh500-yellow",
             "quantity": {
@@ -105,8 +104,8 @@
           },
           "commitmentIds": ["commitment-flask-001"],
           "performanceAttributes": {
-            "@context": "https://schema.beckn.io/RetailPerformance/v2.1/context.jsonld",
-            "@type": "rcpa:RetailPerformance",
+            "@context": "https://raw.githubusercontent.com/beckn/local-retail/refs/heads/main/schema/RetailPerformance/v2.1/context.jsonld",
+            "@type": "PerformanceAttributes",
             "supportedPerformanceModes": ["DELIVERY"],
             "deliveryDetails": {
               "address": {

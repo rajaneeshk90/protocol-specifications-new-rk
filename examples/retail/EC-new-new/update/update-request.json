@@ -19,8 +19,8 @@
         {
           "id": "f1",
           "performanceAttributes": {
-            "@context": "https://schema.beckn.io/RetailPerformance/v2.1/context.jsonld",
-            "@type": "rcpa:RetailPerformance",
+            "@context": "https://raw.githubusercontent.com/beckn/local-retail/refs/heads/main/schema/RetailPerformance/v2.1/context.jsonld",
+            "@type": "PerformanceAttributes",
             "supportedPerformanceModes": ["DELIVERY"],
             "deliveryDetails": {
               "address": {

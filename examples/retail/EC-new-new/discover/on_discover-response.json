@@ -46,8 +46,8 @@
               ]
             },
             "resourceAttributes": {
-              "@context": "https://schema.beckn.io/RetailResource/v2.1/context.jsonld",
-              "@type": "rcra:RetailResource",
+              "@context": "https://raw.githubusercontent.com/beckn/local-retail/refs/heads/main/schema/RetailResource/v2.1/context.jsonld",
+              "@type": "RetailResource",
               "identity": {
                 "brand": "InstaCuppa",
                 "originCountry": "IN"
@@ -106,8 +106,8 @@
               "endDate": "2023-12-31T23:59:59Z"
             },
             "offerAttributes": {
-              "@context": "https://schema.beckn.io/RetailOffer/v2.1/context.jsonld",
-              "@type": "rcoa:RetailOffer",
+              "@context": "https://raw.githubusercontent.com/beckn/local-retail/refs/heads/main/schema/RetailOffer/v2.1/context.jsonld",
+              "@type": "RetailOffer",
               "policies": {
                 "returns": {
                   "allowed": true,
