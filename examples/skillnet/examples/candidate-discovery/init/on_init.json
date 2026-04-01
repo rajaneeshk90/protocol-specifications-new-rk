@@ -1,11 +1,14 @@
 {
   "context": {
-    "domain": "hiring-candidates",
+    "domain": "Beckn.one/testnet",
     "action": "on_init",
-    "version": "2.1.0",
-    "bpp_id": "talent-platform.example.com",
-    "transaction_id": "txn-002-priya",
-    "message_id": "msg-106",
+    "version": "2.0.0",
+    "bapId": "hr-platform.example.com",
+    "bapUri": "https://hr-platform.example.com/beckn/",
+    "bppId": "talent-platform.example.com",
+    "bppUri": "https://talent-platform.example.com/beckn/",
+    "transactionId": "txn-002-priya",
+    "messageId": "msg-106",
     "timestamp": "2026-03-18T12:00:10+05:30"
   },
   "message": {

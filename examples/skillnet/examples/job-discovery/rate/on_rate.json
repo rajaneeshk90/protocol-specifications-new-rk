@@ -1,11 +1,14 @@
 {
   "context": {
-    "domain": "hiring-jobs",
+    "domain": "Beckn.one/testnet",
     "action": "on_rate",
-    "version": "2.1.0",
-    "bpp_id": "metro-rail-jobs.example.com",
-    "transaction_id": "txn-001-ravi",
-    "message_id": "msg-017",
+    "version": "2.0.0",
+    "bapId": "jobseeker-app.example.com",
+    "bapUri": "https://jobseeker-app.example.com/beckn/",
+    "bppId": "metro-rail-jobs.example.com",
+    "bppUri": "https://metro-rail-jobs.example.com/beckn/",
+    "transactionId": "txn-001-ravi",
+    "messageId": "msg-017",
     "timestamp": "2026-03-19T11:00:03+05:30"
   },
   "message": {

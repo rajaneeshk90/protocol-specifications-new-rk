@@ -1,84 +1,114 @@
 {
-    "context": {
-      "domain": "hiring-candidates",
-      "action": "on_discover",
-      "version": "2.1.0",
-      "bpp_id": "talent-platform.example.com",
-      "transaction_id": "txn-002-priya",
-      "message_id": "msg-102",
-      "timestamp": "2026-03-18T11:00:03+05:30"
-    },
-    "message": {
-      "catalogs": [
-        {
-          "id": "cat-talent-001",
+  "context": {
+    "domain": "Beckn.one/testnet",
+    "action": "on_discover",
+    "version": "2.0.0",
+    "bapId": "hr-platform.example.com",
+    "bapUri": "https://hr-platform.example.com/beckn/",
+    "bppId": "talent-platform.example.com",
+    "bppUri": "https://talent-platform.example.com/beckn/",
+    "transactionId": "txn-002-priya",
+    "messageId": "msg-102",
+    "timestamp": "2026-03-18T11:00:03+05:30"
+  },
+  "message": {
+    "catalogs": [
+      {
+        "id": "cat-talent-001",
+        "descriptor": {
+          "name": "Talent Platform — Candidate Profiles",
+          "shortDesc": "Verified candidate profiles available for hiring"
+        },
+        "provider": {
+          "id": "provider-talent-platform",
           "descriptor": {
-            "name": "Talent Platform — Candidate Profiles",
-            "shortDesc": "Verified candidate profiles available for hiring"
-          },
-          "provider": {
-            "id": "provider-talent-platform",
+            "name": "Talent Platform"
+          }
+        },
+        "resources": [
+          {
+            "id": "cand-profile-p42",
             "descriptor": {
-              "name": "Talent Platform"
-            }
-          },
-          "resources": [
-            {
-              "id": "cand-profile-p42",
-              "descriptor": {
-                "name": "Mid-level Java Developer",
-                "short_desc": "4 years Java experience, Spring Boot, microservices, open to remote"
+              "name": "Mid-level Java Developer",
+              "short_desc": "4 years Java experience, Spring Boot, microservices, open to remote"
+            },
+            "resourceAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/CandidateProfileResourceAttributes/v2.1/context.jsonld",
+              "@type": "CandidateProfileResourceAttributes",
+              "skills": [
+                {
+                  "category": "SKILL",
+                  "subtype": "Java_SE_11",
+                  "level": "PROFESSIONAL",
+                  "attested": true,
+                  "proof_request_url": "https://dedi.example.net/proof-request/did:ex:cand42/skill/Java_SE_11"
+                },
+                {
+                  "category": "SKILL",
+                  "subtype": "Spring_Boot",
+                  "level": "PROFESSIONAL",
+                  "attested": false
+                },
+                {
+                  "category": "CERTIFICATION",
+                  "subtype": "AWS_SAA",
+                  "attested": true,
+                  "proof_request_url": "https://dedi.example.net/proof-request/did:ex:cand42/cert/AWS_SAA"
+                }
+              ],
+              "experience_level": "MID",
+              "experience_years": 4,
+              "location_preference": {
+                "preferred_locations": [
+                  {
+                    "city": "Bangalore",
+                    "country": "IN"
+                  }
+                ],
+                "work_mode_preference": "REMOTE"
               },
-              "resourceAttributes": {
-                "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/CandidateProfileResourceAttributes/v2.1/context.jsonld",
-                "@type": "CandidateProfileResourceAttributes",
-                "skills": [
-                  { "category": "SKILL", "subtype": "Java_SE_11", "level": "PROFESSIONAL",
-                    "attested": true,
-                    "proof_request_url": "https://dedi.example.net/proof-request/did:ex:cand42/skill/Java_SE_11" },
-                  { "category": "SKILL", "subtype": "Spring_Boot", "level": "PROFESSIONAL",
-                    "attested": false },
-                  { "category": "CERTIFICATION", "subtype": "AWS_SAA", "attested": true,
-                    "proof_request_url": "https://dedi.example.net/proof-request/did:ex:cand42/cert/AWS_SAA" }
-                ],
-                "experience_level": "MID",
-                "experience_years": 4,
-                "location_preference": {
-                  "preferred_locations": [{ "city": "Bangalore", "country": "IN" }],
-                  "work_mode_preference": "REMOTE"
-                },
-                "availability": "WITHIN_30_DAYS",
-                "open_to_relocation": false,
-                "industry_preference": [
-                  { "@context": "https://unstats.un.org/unsd/classifications/Econ/isic",
-                    "@type": "IndustryCode", "code": "6201", "label": "Computer programming" }
-                ],
-                "job_type_preference": ["FULL_TIME"],
-                "overall_verification_status": "PARTIALLY_VERIFIED"
-              }
+              "availability": "WITHIN_30_DAYS",
+              "open_to_relocation": false,
+              "industry_preference": [
+                {
+                  "@context": "https://unstats.un.org/unsd/classifications/Econ/isic",
+                  "@type": "IndustryCode",
+                  "code": "6201",
+                  "label": "Computer programming"
+                }
+              ],
+              "job_type_preference": [
+                "FULL_TIME"
+              ],
+              "overall_verification_status": "PARTIALLY_VERIFIED"
             }
-          ],
-          "offers": [
-            {
-              "id": "offer-cand-p42-001",
-              "resourceIds": ["cand-profile-p42"],
-              "offerAttributes": {
-                "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/CandidateAvailabilityOfferAttributes/v2.1/context.jsonld",
-                "@type": "CandidateAvailabilityOfferAttributes",
-                "desired_compensation_currency": "INR",
-                "desired_compensation_min": 1200000,
-                "desired_compensation_max": 1600000,
-                "desired_compensation_period": "ANNUAL",
-                "notice_period_days": 30,
-                "availability_window": {
-                  "start": "2026-04-18T00:00:00+05:30",
-                  "end": "2026-05-31T23:59:59+05:30"
-                },
-                "preferred_contract_types": ["FULL_TIME"]
-              }
+          }
+        ],
+        "offers": [
+          {
+            "id": "offer-cand-p42-001",
+            "resourceIds": [
+              "cand-profile-p42"
+            ],
+            "offerAttributes": {
+              "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/CandidateAvailabilityOfferAttributes/v2.1/context.jsonld",
+              "@type": "CandidateAvailabilityOfferAttributes",
+              "desired_compensation_currency": "INR",
+              "desired_compensation_min": 1200000,
+              "desired_compensation_max": 1600000,
+              "desired_compensation_period": "ANNUAL",
+              "notice_period_days": 30,
+              "availability_window": {
+                "start": "2026-04-18T00:00:00+05:30",
+                "end": "2026-05-31T23:59:59+05:30"
+              },
+              "preferred_contract_types": [
+                "FULL_TIME"
+              ]
             }
-          ]
-        }
-      ]
-    }
+          }
+        ]
+      }
+    ]
   }
+}

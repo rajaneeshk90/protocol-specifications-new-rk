@@ -1,11 +1,14 @@
 {
   "context": {
-    "domain": "hiring-jobs",
+    "domain": "Beckn.one/testnet",
     "action": "on_select",
-    "version": "2.1.0",
-    "bpp_id": "metro-rail-jobs.example.com",
-    "transaction_id": "txn-001-ravi",
-    "message_id": "msg-004",
+    "version": "2.0.0",
+    "bapId": "jobseeker-app.example.com",
+    "bapUri": "https://jobseeker-app.example.com/beckn/",
+    "bppId": "metro-rail-jobs.example.com",
+    "bppUri": "https://metro-rail-jobs.example.com/beckn/",
+    "transactionId": "txn-001-ravi",
+    "messageId": "msg-004",
     "timestamp": "2026-03-18T09:05:03+05:30"
   },
   "message": {
@@ -55,13 +58,21 @@
                     "mandatory": false
                   }
                 ],
-                "tags": ["civil", "viaduct", "site supervisor", "metro", "infrastructure"]
+                "tags": [
+                  "civil",
+                  "viaduct",
+                  "site supervisor",
+                  "metro",
+                  "infrastructure"
+                ]
               }
             }
           ],
           "offer": {
             "id": "offer-mrc-001",
-            "resourceIds": ["job-mrc-001"],
+            "resourceIds": [
+              "job-mrc-001"
+            ],
             "offerAttributes": {
               "@context": "https://raw.githubusercontent.com/beckn/schemas/refs/heads/main/schema/HiringJobOfferAttributes/v2.1/context.jsonld",
               "@type": "HiringJobOfferAttributes",

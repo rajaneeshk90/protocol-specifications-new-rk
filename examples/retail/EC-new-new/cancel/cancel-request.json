@@ -2,7 +2,7 @@
   "context": {
     "version": "2.0.0",
     "action": "cancel",
-    "domain": "beckn.one:commerce:retail:1.0",
+    "domain": "Beckn.one/testnet",
     "timestamp": "2023-11-06T10:14:10.295Z",
     "messageId": "c53b2e4b-ff6d-434b-ba2c-329a3260b3e9",
     "transactionId": "8100d125-76a7-4588-88be-81b97657cd09",

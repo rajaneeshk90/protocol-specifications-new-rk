@@ -2,7 +2,7 @@
   "context": {
     "version": "2.0.0",
     "action": "on_track",
-    "domain": "beckn.one:commerce:retail:1.0",
+    "domain": "Beckn.one/testnet",
     "timestamp": "2023-11-06T10:14:10.295Z",
     "messageId": "fd585827-7607-4ce8-b257-9597b0ed0f52",
     "transactionId": "8100d125-76a7-4588-88be-81b97657cd09",
